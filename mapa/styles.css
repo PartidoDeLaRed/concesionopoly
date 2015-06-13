@@ -84,6 +84,12 @@ html,body{
   border-radius:2px;*/
 }
 
+#list{
+  height: 100%;
+  width: 20%;
+  float: left;
+  overflow:auto;
+}
 
 #map,
 #panorama {

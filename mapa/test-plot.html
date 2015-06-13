@@ -81,8 +81,8 @@
       .done(function( data ) {
         var rows = data.split('\n');
         // 1 porque sacamos 
-        // for ( var i = 1; i<rows.length; i++ ) {
-        for ( var i = 1; i<20; i++ ) {
+        for ( var i = 1; i<rows.length; i++ ) {
+        //for ( var i = 1; i<20; i++ ) {
           tds = rows[i].split('\t');
           if (tds[DIRECCION] != "#N/A" && tds[DIRECCION].indexOf('-') === -1){
 
@@ -100,14 +100,19 @@
                   lng: latlng.lng(),
                   title: 'Marker with InfoWindow',
                   infoWindow: {
-                            content: '<p>' + tds[EMPRESA] + ' ' + tds[DIRECCION] + '</p>'
-                          }
+                    content: '<p>' + tds[EMPRESA] + ' ' + tds[DIRECCION] + '</p>'
+                  }
 
                 });
+
+              salida =  "<div>" + tds[DIRECCION] + " <div > </div> </div>";
+              $("#list").append($(salida));
               //alert(tds[DIRECCION] + ", Buenos Aires, Argentina");
+
               } else {
+                // $("#list").append($("error"));
                 console.log( "ERROR", tds[DIRECCION] + ", Buenos Aires, Argentina");
-                }
+              }
             }
           });
             
@@ -155,10 +160,11 @@
   <div class="row">
     <div class="span11">
       <div class="popin">
+        <div id="list">
+
+        </div>
         <div id="map"></div>
       </div>
-    </div>
-    <div class="span6">
     </div>
   </div>
 
