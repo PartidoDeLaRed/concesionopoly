@@ -1,0 +1,24 @@
+{
+  "name": "concesionopoly",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DemocraciaEnRed/concesionopoly.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DemocraciaEnRed/concesionopoly/issues"
+  },
+  "homepage": "https://github.com/DemocraciaEnRed/concesionopoly#readme",
+  "devDependencies": {
+    "batch": "^0.5.2",
+    "csvtojson": "^0.3.21",
+    "superagent": "^1.2.0"
+  }
+}
