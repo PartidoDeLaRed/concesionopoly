@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": ""
+    "build": "./node_modules/stylus/bin/stylus ./app/css",
+    "watch": "./node_modules/stylus/bin/stylus ./app/css -w"
   },
   "repository": {
     "type": "git",

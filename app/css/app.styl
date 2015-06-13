@@ -1,0 +1,65 @@
+*
+  box-sizing: border-box
+
+body,
+html
+  margin: 0
+  padding: 0
+
+.tablero
+  position: relative
+  width: 650px
+  height: 650px
+  margin: 0 auto
+  max-width: 100%
+  max-height: 100%
+
+  .carta
+    width = 8.6142%
+    height = 11.2359%
+
+    position: absolute
+    border: 1px solid #000
+    text-align: center
+
+    &.on-top,
+    &.on-bottom
+      width: width
+      height: height
+
+    &.on-right,
+    &.on-left
+      width: height
+      height: width
+
+    &.esquina
+      width: height
+      height: height
+
+    &.on-right
+      right: 0
+
+    &.on-bottom
+      bottom: 0
+
+    &.on-left
+      left: 0
+
+    &.on-top
+      top: 0
+
+    for num in (2..10)
+      &#carta-{num}
+        left: height + width * (num - 2)
+
+    for num in (12..20)
+      &#carta-{num}
+        top: height + width * (num - 12)
+
+    for num in (22..30)
+      &#carta-{num}
+        right: height + width * (num - 22)
+
+    for num in (32..40)
+      &#carta-{num}
+        top: height + width * (num - 32)

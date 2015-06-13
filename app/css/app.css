@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+.tablero {
+  position: relative;
+  width: 650px;
+  height: 650px;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+.tablero .carta {
+  position: absolute;
+  border: 1px solid #000;
+  text-align: center;
+}
+.tablero .carta.on-top,
+.tablero .carta.on-bottom {
+  width: 8.6142%;
+  height: 11.2359%;
+}
+.tablero .carta.on-right,
+.tablero .carta.on-left {
+  width: 11.2359%;
+  height: 8.6142%;
+}
+.tablero .carta.esquina {
+  width: 11.2359%;
+  height: 11.2359%;
+}
+.tablero .carta.on-right {
+  right: 0;
+}
+.tablero .carta.on-bottom {
+  bottom: 0;
+}
+.tablero .carta.on-left {
+  left: 0;
+}
+.tablero .carta.on-top {
+  top: 0;
+}
+.tablero .carta#carta-2 {
+  left: 11.2359%;
+}
+.tablero .carta#carta-3 {
+  left: 19.8501%;
+}
+.tablero .carta#carta-4 {
+  left: 28.4643%;
+}
+.tablero .carta#carta-5 {
+  left: 37.078500000000005%;
+}
+.tablero .carta#carta-6 {
+  left: 45.6927%;
+}
+.tablero .carta#carta-7 {
+  left: 54.3069%;
+}
+.tablero .carta#carta-8 {
+  left: 62.9211%;
+}
+.tablero .carta#carta-9 {
+  left: 71.5353%;
+}
+.tablero .carta#carta-10 {
+  left: 80.1495%;
+}
+.tablero .carta#carta-12 {
+  top: 11.2359%;
+}
+.tablero .carta#carta-13 {
+  top: 19.8501%;
+}
+.tablero .carta#carta-14 {
+  top: 28.4643%;
+}
+.tablero .carta#carta-15 {
+  top: 37.078500000000005%;
+}
+.tablero .carta#carta-16 {
+  top: 45.6927%;
+}
+.tablero .carta#carta-17 {
+  top: 54.3069%;
+}
+.tablero .carta#carta-18 {
+  top: 62.9211%;
+}
+.tablero .carta#carta-19 {
+  top: 71.5353%;
+}
+.tablero .carta#carta-20 {
+  top: 80.1495%;
+}
+.tablero .carta#carta-22 {
+  right: 11.2359%;
+}
+.tablero .carta#carta-23 {
+  right: 19.8501%;
+}
+.tablero .carta#carta-24 {
+  right: 28.4643%;
+}
+.tablero .carta#carta-25 {
+  right: 37.078500000000005%;
+}
+.tablero .carta#carta-26 {
+  right: 45.6927%;
+}
+.tablero .carta#carta-27 {
+  right: 54.3069%;
+}
+.tablero .carta#carta-28 {
+  right: 62.9211%;
+}
+.tablero .carta#carta-29 {
+  right: 71.5353%;
+}
+.tablero .carta#carta-30 {
+  right: 80.1495%;
+}
+.tablero .carta#carta-32 {
+  top: 11.2359%;
+}
+.tablero .carta#carta-33 {
+  top: 19.8501%;
+}
+.tablero .carta#carta-34 {
+  top: 28.4643%;
+}
+.tablero .carta#carta-35 {
+  top: 37.078500000000005%;
+}
+.tablero .carta#carta-36 {
+  top: 45.6927%;
+}
+.tablero .carta#carta-37 {
+  top: 54.3069%;
+}
+.tablero .carta#carta-38 {
+  top: 62.9211%;
+}
+.tablero .carta#carta-39 {
+  top: 71.5353%;
+}
+.tablero .carta#carta-40 {
+  top: 80.1495%;
+}
