@@ -18,10 +18,7 @@
     "url": "https://github.com/DemocraciaEnRed/concesionopoly/issues"
   },
   "homepage": "https://github.com/DemocraciaEnRed/concesionopoly#readme",
-  "devDependencies": {
-    "batch": "^0.5.2",
-    "csvtojson": "^0.3.21",
-    "stylus": "^0.51.1",
-    "superagent": "^1.2.0"
+  "dependencies": {
+    "stylus": "^0.51.1"
   }
 }
