@@ -1,6 +1,6 @@
 *.sublime-workspace
 .DS_Store
 .idea
-dist
+build
 node_modules
 npm-debug.log
