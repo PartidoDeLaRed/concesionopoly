@@ -61,31 +61,43 @@
         zoom: 12
       });
 
-    $.ajax({ // ajax call starts
-        url: 'ConcesioneDB.json', // JQuery loads serverside.php
-        //data: 'button=' + $(this).val(), // Send value of the clicked button
-        dataType: 'json', // Choosing a JSON datatype
-      }).done(
-      function hola(data){
-        $.each(data, function(i, item) {
+      lugares = []
+      $.ajax({ // ajax call starts
+          url: 'ConcesioneDB.json', // JQuery loads serverside.php
+          //data: 'button=' + $(this).val(), // Send value of the clicked button
+          dataType: 'json', // Choosing a JSON datatype
+        }).done(
+          function hola(data){
+            $.each(data, function(i, item) {
 
-          console.log(item.Coordenadas);
-          //map.setCenter(item.Coordenadas.y, item.Coordenadas.x);
-          marker = map.addMarker({
-                    lat: item.Coordenadas.y,
-                    lng: item.Coordenadas.x,
-                    title: item.Concesión,
-                    //icon: "http://gmaps-samples.googlecode.com/svn/trunk/markers/blue/blank.png",
-                    infoWindow: {
-                      content: '<p>'  + item.Concesión + item.Domicilio + ', '  + ' monton: '+ item["Monto de canon"] + '</p>'
-                    }
+              console.log(item.Coordenadas);
+              //map.setCenter(item.Coordenadas.y, item.Coordenadas.x);
+              marker = map.addMarker({
+                        lat: item.Coordenadas.y,
+                        lng: item.Coordenadas.x,
+                        title: item.Concesión,
+                        //icon: "http://gmaps-samples.googlecode.com/svn/trunk/markers/blue/blank.png",
+                        infoWindow: {
+                          content: '<p>'  + item.Concesión + item.Domicilio + ', '  + ' monton: '+ item["Monto de canon"] + '</p>'
+                        }
 
-          });
+              });
+              salida =  "<div class='lista'" + "marker_id='"+ i + "'>" + item.Concesión + "</div> <br>";
+              $("#list").append($(salida));
+              lugares.push(marker);
+              $('.lista').mouseover(function(e){
+                console.log($(e.target).attr("marker_id"));
+                map.setZoom(15);
+                pos = lugares[$(e.target).attr("marker_id")].getPosition();
+                map.setCenter(pos['A'], pos['F'])
+              });
 
-        });
-        alert("done");
-      }
-    )
+            });
+            //lugares[0].setIcon("http://gmaps-samples.googlecode.com/svn/trunk/markers/blue/blank.png");
+            //alert("done");
+          }
+      )
+
     
     
     });
@@ -136,7 +148,6 @@ function procesar_números () {
 </script>
 </head>
 <body>
-
   <div class="row">
     <div class="span11">
       <div class="popin">
