@@ -2,9 +2,9 @@
 
 ### Install
 
-First, make sure to have [node.js](https://nodejs.org/) installed.
+First, make sure to have [node.js](https://nodejs.org/) installed, then:
 
-`npm install`
+`npm install --dev`
 
 ### Build Once
 

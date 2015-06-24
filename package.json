@@ -8,7 +8,7 @@
     "build:js": "./node_modules/browserify/bin/cmd.js -e ./app/js/concesionopoly.js -o ./build/concesionopoly.js",
     "build:css": "./node_modules/stylus/bin/stylus $(find './app/css' -iname '*.styl') --out ./build",
     "build:html": "./node_modules/jade/bin/jade.js $(find './app' -iname '*.jade') --out ./build",
-    "watch:js": "./node_modules/watch/bin/cli.js 'npm run build:js' ./app/js",
+    "watch:js": "./node_modules/watchify/bin/cmd.js -e ./app/js/concesionopoly.js -o ./build/concesionopoly.js",
     "watch:css": "npm run build:css -- -w",
     "watch:html": "npm run build:html -- -w",
     "build": "npm run build:js && npm run build:css && npm run build:html",
@@ -25,10 +25,11 @@
     "url": "https://github.com/DemocraciaEnRed/concesionopoly/issues"
   },
   "homepage": "https://github.com/DemocraciaEnRed/concesionopoly#readme",
-  "dependencies": {
+  "devDependencies": {
     "browserify": "^10.2.4",
     "jade": "^1.11.0",
     "stylus": "^0.51.1",
-    "watch": "^0.16.0"
+    "watch": "^0.16.0",
+    "watchify": "^3.2.3"
   }
 }
