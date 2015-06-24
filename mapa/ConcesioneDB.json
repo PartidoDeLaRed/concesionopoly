@@ -1,0 +1,256 @@
+[  {
+    "Legajo":1,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"49.029,00",
+    "Normativa aplicable/concesiones":"Decreto N° 667/GCBA/2010 A la fecha se sustancia readecuación del canon.",
+    "Concesión":"BUENOS AIRES DESIGN",
+    "Concesionario":"EMPRENDIMIENTO RECOLETA S.A.",
+    "Domicilio":"AV. PUEYRREDON 2501",
+    "Rubro":"PREDIOS COMERCIALES",
+    "Vencimiento":"17/11/2018",
+    "Coordenadas": {
+    "x":-58.393260,
+    "y":-34.585442
+    }
+  }
+,
+  {
+    "Legajo":2,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"80.000,00",
+    "Normativa aplicable/concesiones":"Permiso Ley 3399",
+    "Concesión":"HAPPENING",
+    "Concesionario":"HAPPENING S.A.",
+    "Domicilio":"AV. RAFAEL OBLIGADO 7030",
+    "Rubro":"GASTRONOMICOS",
+    "Vencimiento":"10/12/2015",
+    "Coordenadas": {
+    "x":-58.432399,
+    "y":-34.544108
+    }
+  }
+,
+  {
+    "Legajo":4,
+    "Tipo de canon":"Importe Fijo .",
+    "Monto de canon":"60.720,00",
+    "Normativa aplicable/concesiones":"Permiso Ley 3399",
+    "Concesión":"GARDINER",
+    "Concesionario":"FOOD CO S.A.",
+    "Domicilio":"AV. RAFAEL OBLIGADO 6311",
+    "Rubro":"GASTRONOMICOS",
+    "Vencimiento":"30/06/2014",
+    "Coordenadas": {
+    "x":-58.430401,
+    "y":-34.549899
+    }
+  }
+,
+  {
+    "Legajo":8,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"26.220,00",
+    "Normativa aplicable/concesiones":"Permiso Ley 3399",
+    "Concesión":"TEQUILA",
+    "Concesionario":"BRUC & BRUC S.A.",
+    "Domicilio":"AV. RAFAEL OBLIGADO 6211",
+    "Rubro":"GASTRONOMICOS",
+    "Vencimiento":"30/06/2014",
+    "Coordenadas": {
+    "x":-58.429762,
+    "y":-34.550471
+    }
+  }
+,
+  {
+    "Legajo":10,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"40.000,00",
+    "Normativa aplicable/concesiones":"Permiso Ley 3399. Incremento de canon previsto pendiente de firma",
+    "Concesión":"LOS PLATITOS",
+    "Concesionario":"ANALOS SA",
+    "Domicilio":"AV. RAFAEL OBLIGADO 7350",
+    "Rubro":"GASTRONOMICOS",
+    "Vencimiento":"10/12/2015",
+    "Coordenadas": {
+    "x":-58.435811,
+    "y":-34.542726
+    }
+  }
+,
+  {
+    "Legajo":13,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"12.000,00",
+    "Normativa aplicable/concesiones":"Permiso Ley 3399",
+    "Concesión":"KOTROKO'S",
+    "Concesionario":"RICARDO EPISCOPO",
+    "Domicilio":"AV. RAFAEL OBLIGADO 4151",
+    "Rubro":"GASTRONOMICOS",
+    "Vencimiento":"10/12/2015",
+    "Coordenadas": {
+    "x":-58.411081,
+    "y":-34.557754
+    }
+  }
+,
+  {
+    "Legajo":22,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"60.500,00",
+    "Normativa aplicable/concesiones":"Resolución N° 654/SPyS/98. Resolución Conjunta N° 092-MDEGC-MJGGC/13, se prorrogó la concesión por el plazo de 94 días.",
+    "Concesión":"ESTACIONAMIENTO 9 DE JULIO (STA. FE Y JUNCAL)",
+    "Concesionario":"PLAYAS SUBTERRANEAS S.A.",
+    "Domicilio":"9 DE JULIO Y JUNCA",
+    "Rubro":"PLAYAS DE ESTACIONAMIENTO",
+    "Vencimiento":"04/02/2018",
+    "Coordenadas": {
+    "x":-58.381982,
+    "y":-34.592834
+    }
+  }
+,
+  {
+    "Legajo":23,
+    "Tipo de canon":"importe Fijo",
+    "Monto de canon":"445.993,94",
+    "Normativa aplicable/concesiones":"Se desafectó Playa 9 de Julio Sur (Playa Remoción y Terminal Combis)",
+    "Concesión":"PLAYA SUBTERRANEA OBELISCO NORTE Y SUR",
+    "Concesionario":"PLAYAS SUBTERRANEAS S.A.",
+    "Domicilio":"9 DE JULIO Y SARMIENTO",
+    "Rubro":"PLAYAS DE ESTACIONAMIENTO",
+    "Vencimiento":"31/12/2018",
+    "Coordenadas": {
+    "x":-58.381730,
+    "y":-34.604987
+    }
+  }
+,
+  {
+    "Legajo":25,
+    "Tipo de canon":"Importe Variable",
+    "Monto de canon":"313,48",
+    "Normativa aplicable/concesiones":"Otorgado por aplicación Ley Nac. 24308, Decreto 1553/GCBA/97, Decreto 1187/GCBA/08",
+    "Concesión":"KIOSCO HOSPITAL ZUBIZARRETA",
+    "Concesionario":"ALONSO SAN MARTIN DIANA",
+    "Domicilio":"CHIVILCOY 3855",
+    "Rubro":"PERSONAS CON NECESIDADES ESPECIALES",
+    "Vencimiento":"Decreto 1553",
+    "Coordenadas": {
+    "x":-58.511259,
+    "y":-34.600338
+    }
+  }
+,
+  {
+    "Legajo":28,
+    "Tipo de canon":"Importe Variable",
+    "Monto de canon":"1.383,12",
+    "Normativa aplicable/concesiones":"Otorgado por aplicación Ley Nac. 24308, Decreto 1553/GCBA/97, Decreto 1187/GCBA/08",
+    "Concesión":"KIOSCO DIRECCION GENERAL DE RENTAS",
+    "Concesionario":"LUCERO CIPRIANO",
+    "Domicilio":"VIAMONTE 872",
+    "Rubro":"PERSONAS CON NECESIDADES ESPECIALES",
+    "Vencimiento":"Decreto 1553",
+    "Coordenadas": {
+    "x":-58.379278,
+    "y":-34.600154
+    }
+  }
+,
+  {
+    "Legajo":29,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"75.000,00",
+    "Normativa aplicable/concesiones":"Permiso Ley 3399",
+    "Concesión":"RODIZIO",
+    "Concesionario":"MAILLOL S.A.",
+    "Domicilio":"AV RAFAEL OBLIGADO 6551",
+    "Rubro":"GASTRONOMICOS",
+    "Vencimiento":"27/11/2014",
+    "Coordenadas": {
+    "x":-58.431046,
+    "y":-34.548134
+    }
+  }
+,
+  {
+    "Legajo":32,
+    "Tipo de canon":"Importe Variable",
+    "Monto de canon":"Importe Variable",
+    "Normativa aplicable/concesiones":"Otorgado por aplicación Ley Nac. 24308, Decreto 1553/GCBA/97, Decreto 1187/GCBA/08",
+    "Concesión":"KIOSCO HOSPITAL RIVADAVIA",
+    "Concesionario":"VICTOR RAUL FERREYRA",
+    "Domicilio":"AV. LAS HERAS 2670",
+    "Rubro":"PERSONAS CON NECESIDADES ESPECIALES",
+    "Vencimiento":"Decreto 1553",
+    "Coordenadas": {
+    "x":-58.400810,
+    "y":-34.584357
+    }
+  }
+,
+  {
+    "Legajo":34,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"14.637,00",
+    "Normativa aplicable/concesiones":"RES-946-1998. Resolución N°564/MDEGC/09. Exp. N° 87.030/96",
+    "Concesión":"PLAYA ESTACIONAMIENTO AV. 9 JULIO (E/ BELGRANO Y MEJICO)",
+    "Concesionario":"MEK S.A.",
+    "Domicilio":"AV. 9 JULIO Y BELGRANO",
+    "Rubro":"PLAYAS DE ESTACIONAMIENTO",
+    "Vencimiento":"02/11/2017",
+    "Coordenadas": {
+    "x":-58.381222,
+    "y":-34.613091
+    }
+  }
+,
+  {
+    "Legajo":40,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"220.000,00",
+    "Normativa aplicable/concesiones":"Decreto 167/13 - en el marco de la Ley 3399",
+    "Concesión":"SOLARIUM ING. AGRONOMO BENITO CARRASCO",
+    "Concesionario":"PUNTA CARRASCO S.A.",
+    "Domicilio":"AV. RAFAEL OBLIGADO 2221",
+    "Rubro":"GASTRONOMICOS",
+    "Vencimiento":"12/11/2016",
+    "Coordenadas": {
+    "x":-58.404757,
+    "y":-34.564364
+    }
+  }
+,
+  {
+    "Legajo":60,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"148.000,00",
+    "Normativa aplicable/concesiones":"EX-2014-13372415-MGEYA-DGLTSSASS",
+    "Concesión":"CEMIC",
+    "Concesionario":"CEMIC",
+    "Domicilio":"AV. LAS HERAS 2939",
+    "Rubro":"PREDIOS COMERCIALES",
+    "Vencimiento":"28/12/2003",
+    "Coordenadas": {
+    "x":-58.402733,
+    "y":-34.583313
+    }
+  }
+,
+  {
+    "Legajo":66,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"46.250,00",
+    "Normativa aplicable/concesiones":"Permiso Ley 3399",
+    "Concesión":"AQUELLOS AÑOS",
+    "Concesionario":"PIZZERIA BABIECA S.A.",
+    "Domicilio":"AV. RAFAEL OBLIGADO 6350",
+    "Rubro":"GASTRONOMICOS",
+    "Vencimiento":"31/12/2014",
+    "Coordenadas": {
+    "x":-58.430597,
+    "y":-34.549641
+    }
+  }
+]

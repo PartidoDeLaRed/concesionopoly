@@ -44,116 +44,96 @@
 
   <script type="text/javascript">
   // ["1", "Importe Fijo", "49.029,00", "Decreto N 667/GCBA/2010 A la fecha se sustancia readecuacin del canon.", "BUENOS AIRES DESIGN", "EMPRENDIMIENTO RECOLETA S.A.", "AV. PUEYRREDON 2501", "PREDIOS COMERCIALES", "17/11/2018"]
+
+
     TIPO_IMPORTE = 1;
     PRECIO = 2;
     NOMBRE = 4;
     EMPRESA = 5;
     DIRECCION = 6;
     
-    var map;
+    //var map;
     $(document).ready(function(){
       map = new GMaps({
         div: '#map',
-        lat: -12.043333,
-        lng: -77.028333
+        lat: -34.6158238,
+        lng: -58.4333203,
+        zoom: 12
       });
-      /*map.addMarker({
-        lat: -12.043333,
-        lng: -77.03,
-        title: 'Lima',
-        details: {
-          database_id: 42,
-          author: 'HPNeo'
-        },
-        click: function(e){
-          if(console.log)
-            console.log(e);
-          alert('You clicked in this marker');
-        }
-      });*/
 
-    $.ajax({
-      url: "../db/Concesiones%20-%20Consolidado.tsv",
-      beforeSend: function( xhr ) {
-        xhr.overrideMimeType( "text/plain; charset=x-user-defined" );
-      }
-    })
-      .done(function( data ) {
-        var rows = data.split('\n');
-        // 1 porque sacamos 
-        for ( var i = 1; i<rows.length; i++ ) {
-        //for ( var i = 1; i<20; i++ ) {
-          tds = rows[i].split('\t');
-          if (tds[DIRECCION] != "#N/A" && tds[DIRECCION].indexOf('-') === -1){
+    $.ajax({ // ajax call starts
+        url: 'ConcesioneDB.json', // JQuery loads serverside.php
+        //data: 'button=' + $(this).val(), // Send value of the clicked button
+        dataType: 'json', // Choosing a JSON datatype
+      }).done(
+      function hola(data){
+        $.each(data, function(i, item) {
 
-            //alert(tds[DIRECCION] + ", Buenos Aires");
-            //console.log( "Sample of data:", tds);
-            // console.log( "Sample of data:", tds[DIRECCION] + ", Buenos Aires, Argentina");
-            GMaps.geocode({
-            address: tds[DIRECCION] + ", Buenos Aires, Argentina",
-            callback: function(results, status) {
-              if (status == 'OK') {
-                var latlng = results[0].geometry.location;
-                map.setCenter(latlng.lat(), latlng.lng());
-                map.addMarker({
-                  lat: latlng.lat(),
-                  lng: latlng.lng(),
-                  title: 'Marker with InfoWindow',
-                  infoWindow: {
-                    content: '<p>' + tds[EMPRESA] + ' ' + tds[DIRECCION] + '</p>'
-                  }
+          console.log(item.Coordenadas);
+          //map.setCenter(item.Coordenadas.y, item.Coordenadas.x);
+          marker = map.addMarker({
+                    lat: item.Coordenadas.y,
+                    lng: item.Coordenadas.x,
+                    title: item.Concesión,
+                    //icon: "http://gmaps-samples.googlecode.com/svn/trunk/markers/blue/blank.png",
+                    infoWindow: {
+                      content: '<p>'  + item.Concesión + item.Domicilio + ', '  + ' monton: '+ item["Monto de canon"] + '</p>'
+                    }
 
-                });
-
-              salida =  "<div>" + tds[DIRECCION] + " <div > </div> </div>";
-              $("#list").append($(salida));
-              //alert(tds[DIRECCION] + ", Buenos Aires, Argentina");
-
-              } else {
-                // $("#list").append($("error"));
-                console.log( "ERROR", tds[DIRECCION] + ", Buenos Aires, Argentina");
-              }
-            }
           });
+
+        });
+        alert("done");
+      }
+    )
+    
+    
+    });
+
+function procesar_números () {
+          // 1 porque sacamos 
+        var j = 0;
+        //for (j; j<rows.length; i++ ) {
+        for (; j<20; j++ ) {
+          var tds = rows[j].split('\t');
+          if (tds[DIRECCION] != "#N/A" && tds[DIRECCION].indexOf('-') === -1){
+            // console.log( "Sample of data:", i);
+            // alert(tds[DIRECCION] + ", Buenos Aires");
+            console.log( "Sample of data:", tds[DIRECCION] + ", Buenos Aires, Argentina " + j);
+            GMaps.geocode({
+              address: tds[DIRECCION] + ", Buenos Aires, Argentina",
+              callback: function(results, status) {
+                if (status == 'OK') {
+                  var latlng = results[0].geometry.location;
+                  map.setCenter(latlng.lat(), latlng.lng());
+                  map.addMarker({
+                    lat: latlng.lat(),
+                    lng: latlng.lng(),
+                    title: 'Marker with InfoWindow',
+                    infoWindow: {
+                      content: '<p>' + tds[EMPRESA] + ', ' + tds[DIRECCION] + '</p>'
+                    }
+
+                  });
+
+                  salida =  "<div>" + tds[DIRECCION] + " <div > </div> </div>";
+                  $("#list").append($(salida));
+                  console.log( "Salio Bien", "OK");
+                  //alert(tds[DIRECCION] + ", Buenos Aires, Argentina");
+
+                } else {
+                  // $("#list").append($("error"));
+                  console.log( "ERROR", "Error"+i);
+                }
+              }
+            });
             
           }
-
+          i = j;
         }
-        /*if ( console && console.log ) {
-          console.log( "Sample of data:", data.slice( 0, 100 ) );
-        }*/
-      });
+}
 
-
-      /*GMaps.geocode({
-        address: "Castañon 1334, Buenos Aires",
-        callback: function(results, status) {
-          if (status == 'OK') {
-            var latlng = results[0].geometry.location;
-            map.setCenter(latlng.lat(), latlng.lng());
-            map.addMarker({
-              lat: latlng.lat(),
-              lng: latlng.lng(),
-              title: 'Marker with InfoWindow',
-              infoWindow: {
-                        content: '<p>Castañon 1334</p>'
-                      }
-
-            });
-          }
-        }
-      });*/
-
-/*      map.addMarker({
-        lat: -12.042,
-        lng: -77.028333,
-        title: 'Marker with InfoWindow',
-        infoWindow: {
-          content: '<p>HTML Content</p>'
-        }
-      });*/
-    });
-  </script>
+</script>
 </head>
 <body>
 
