@@ -85,11 +85,18 @@
               salida =  "<div class='lista'" + "marker_id='"+ i + "'>" + item.Concesión + "</div> <br>";
               $("#list").append($(salida));
               lugares.push(marker);
-              $('.lista').mouseover(function(e){
+              $('.lista').hover(function(e){
                 console.log($(e.target).attr("marker_id"));
                 map.setZoom(15);
-                pos = lugares[$(e.target).attr("marker_id")].getPosition();
-                map.setCenter(pos['A'], pos['F'])
+                var mark = lugares[$(e.target).attr("marker_id")];
+                mark.setIcon("http://gmaps-samples.googlecode.com/svn/trunk/markers/blue/blank.png");
+                pos = mark.getPosition();
+                map.setCenter(pos['A'], pos['F']);
+              });
+              $('.lista').on( "mouseleave", function(e){
+                map.setZoom(12);
+                mark = lugares[$(e.target).attr("marker_id")];
+                //mark.setIcon("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|FE7569");
               });
 
             });
