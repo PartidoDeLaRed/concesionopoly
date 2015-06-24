@@ -105,7 +105,20 @@
           }
       )
 
-    
+      var path = [[-34.654100, -58.528592], 
+                  [-34.615259, -58.530652], 
+                  [-34.550671, -58.501127], 
+                  [-34.530168, -58.454091], 
+                  [-34.589401, -58.358648]]; // Retiro
+
+      polygon = map.drawPolygon({
+      paths: path, // pre-defined polygon shape
+      strokeColor: '#BBD8E9',
+      strokeOpacity: 1,
+      strokeWeight: 3,
+      fillColor: '#BBD8E9',
+      fillOpacity: 0.2,
+      });
     
     });
 
