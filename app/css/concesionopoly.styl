@@ -6,6 +6,9 @@ html
   margin: 0
   padding: 0
 
+body
+  background-color: #fcfcfc
+
 .tablero
   position: relative
   width: 650px
@@ -13,12 +16,18 @@ html
   margin: 0 auto
   max-width: 100%
   max-height: 100%
+  background-image: url('img/concesionopoly/tablero.svg')
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: 100% 100%
 
-  .carta
+  .casillero
     width = 8.6142%
     height = 11.2359%
 
     position: absolute
+    opacity: .5
+    cursor: pointer
 
     &.on-top,
     &.on-bottom
@@ -30,7 +39,7 @@ html
       width: height
       height: width
 
-    &.esquina
+    &.on-corner
       width: height
       height: height
 
@@ -49,21 +58,21 @@ html
     colors = 228 169 102 185 126 103 11 47 49 317 30 289 60 323 68 140 32 175 214 215 318 245 158 81 163 247 53 326 311 99 44 55 153 239 204 131 187 78 200 122
 
     for hue, index in colors
-      &#carta-{index + 1}
+      &.c-{index + 1}:hover
         background-color: hsl(hue, 100%, 75%)
 
     for num in (2..10)
-      &#carta-{num}
+      &.c-{num}
         left: height + width * (num - 2)
 
     for num in (12..20)
-      &#carta-{num}
+      &.c-{num}
         top: height + width * (num - 12)
 
     for num in (22..30)
-      &#carta-{num}
+      &.c-{num}
         right: height + width * (num - 22)
 
     for num in (32..40)
-      &#carta-{num}
+      &.c-{num}
         top: height + width * (num - 32)
