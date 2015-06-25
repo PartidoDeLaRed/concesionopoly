@@ -83,32 +83,51 @@
 
               });
               marker.ident = i;
-              salida =  "<div class='lista'" + "marker_id='"+ i + "'>" + item.Concesión + "</div> <br>";
-              $("#list").append($(salida));
+
+              mas_info = $("<div class='mas_info'></div>");
+              mas_info.append($("<div>Monto de canon: " + item["Monto de canon"]+"</div>"));
+              mas_info.append($("<div>Tipo de canon: " + item["Tipo de canon"]+"</div>"));
+              mas_info.append($("<div>Concesionario: " + item.Concesionario+"</div>"));
+              mas_info.hide();
+
+              salida =  "<div class='lista'" + "marker_id='"+ i + "'>" + item.Concesión + "</div>";
+
+              salida_jq = $(salida);
+              salida_jq.append(mas_info);
+              // $(".mas_info").hide();
+
+              $("#list").append(salida_jq);
               lugares.push(marker);
               $('.lista').hover(function(e){
                 console.log($(e.target).attr("marker_id"));
-                // map.setZoom(15);
+                //map.setZoom(12);
                 var mark = lugares[$(e.target).attr("marker_id")];
                 mark.setIcon("http://gmaps-samples.googlecode.com/svn/trunk/markers/blue/blank.png");
                 /*pos = mark.getPosition();
                 map.setCenter(pos['A'], pos['F']);*/
               });
               $('.lista').on( "mouseleave", function(e){
-                map.setZoom(12);
+                //map.setZoom(12);
                 mark = lugares[$(e.target).attr("marker_id")];
                 mark.setIcon();
                 //mark.setIcon("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|FE7569");
               });
 
               $('.lista').on( "click", function(e){
-                var mark = lugares[$(e.target).attr("marker_id")];
+                var target = $(e.target);
+
+                //if( !target.find(".mas_info").is(':visible') && ! target.find(".mas_info").is(':animated')) {
+                  target.find(".mas_info").slideDown("slow"); // acá va un slide toogle, pero no me andaba
+                //} else {
+                  //target.find(".mas_info").slideUp("slow"); // acá va un slide toogle, pero no me andaba
+                //}
+                var mark = lugares[target.attr("marker_id")];
+                pos = mark.getPosition();
+                map.setCenter(pos['A'], pos['F']);
                 map.setZoom(15);
                 mark = lugares[$(e.target).attr("marker_id")];
                 mark.infoWindow.open(mark.map,mark);
                 //mark.setIcon();
-                pos = mark.getPosition();
-                map.setCenter(pos['A'], pos['F']);
                 //mark.setIcon("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|FE7569");
               });
 

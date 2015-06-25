@@ -119,3 +119,9 @@ code {
   font-family: 'Ubuntu Mono', 'Monaco', 'Andale Mono', 'Courier New', monospace;
   font-weight: bold;
 }
+
+.lista{
+  padding: 3px;
+  border-style: solid;
+  border-width: 2px;
+}
