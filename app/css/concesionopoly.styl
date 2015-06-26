@@ -9,7 +9,7 @@ html
 body
   background-color: #fcfcfc
 
-.tablero
+.board
   position: relative
   width: 650px
   height: 650px
@@ -21,13 +21,16 @@ body
   background-position: center center
   background-size: 100% 100%
 
-  .casillero
+  .square
     width = 8.6142%
     height = 11.2359%
 
     position: absolute
     opacity: .5
     cursor: pointer
+
+    &:hover
+      background-color: magenta
 
     &.on-top,
     &.on-bottom
@@ -55,24 +58,18 @@ body
     &.on-top
       top: 0
 
-    colors = 228 169 102 185 126 103 11 47 49 317 30 289 60 323 68 140 32 175 214 215 318 245 158 81 163 247 53 326 311 99 44 55 153 239 204 131 187 78 200 122
+    for num in (1..9)
+      &[data-square={s('"%s"', num)}]
+        left: round(height + width * (num - 1), 4)
 
-    for hue, index in colors
-      &.c-{index + 1}:hover
-        background-color: hsl(hue, 100%, 75%)
+    for num in (11..19)
+      &[data-square={s('"%s"', num)}]
+        top: round(height + width * (num - 11), 4)
 
-    for num in (2..10)
-      &.c-{num}
-        left: height + width * (num - 2)
+    for num in (21..29)
+      &[data-square={s('"%s"', num)}]
+        right: round(height + width * (num - 21), 4)
 
-    for num in (12..20)
-      &.c-{num}
-        top: height + width * (num - 12)
-
-    for num in (22..30)
-      &.c-{num}
-        right: height + width * (num - 22)
-
-    for num in (32..40)
-      &.c-{num}
-        top: height + width * (num - 32)
+    for num in (31..39)
+      &[data-square={s('"%s"', num)}]
+        top: round(height + width * (num - 31), 4)
