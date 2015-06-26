@@ -58,24 +58,26 @@ $(document).ready(function(){
           lugares.push(new Lugar(marker, item["Monto de canon"], safe_class_name(item["Rubro"])));
 
 
-          $('.lista').hover(function(e){
+          salida_jq.mouseenter(function(e){
             console.log($(e.target).attr("marker_id"));
             //map.setZoom(12);
             var mark = lugares[$(e.target).attr("marker_id")].marker;
             mark.setIcon("http://gmaps-samples.googlecode.com/svn/trunk/markers/blue/blank.png");
             /*pos = mark.getPosition();
             map.setCenter(pos['A'], pos['F']);*/
+            return false;
           });
-          $('.lista').on( "mouseleave", function(e){
+          salida_jq.on( "mouseleave", function(e){
             //map.setZoom(12);
             mark = lugares[$(e.target).attr("marker_id")].marker;
             mark.setIcon(ICONO_DEFAULT);
             //mark.setIcon("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|FE7569");
           });
 
-          $('.lista').on( "click", function(e){
+          salida_jq.on( "click", function(e){
+            console.log("Entré a un marker");
             var target = $(e.target);
-            target.find(".mas_info").slideDown("slow"); // acá va un slide toogle, pero no me andaba
+            target.find(".mas_info").slideToggle("slow"); // acá va un slide toogle, pero no me andaba
 
 /*            if (target.find(".mas_info").style.display == "none") {
 
