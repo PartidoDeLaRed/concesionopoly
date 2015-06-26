@@ -121,7 +121,21 @@ code {
 }
 
 .lista{
-  padding: 3px;
-  border-style: solid;
-  border-width: 2px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-bottom-width: 0;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.lista:hover {
+    background-color: #eee;
+}
+
+.mas_info {
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #eee;
+    font-weight: bold;
+    line-height: 17px;
 }
