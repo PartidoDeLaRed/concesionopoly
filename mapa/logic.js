@@ -54,18 +54,21 @@ $(document).ready(function(){
           marker.ident = i;
 
           $("#list").append(salida_jq);
-          lugares.push(marker);
+          
+          lugares.push(new Lugar(marker, item["Monto de canon"], safe_class_name(item["Rubro"])));
+
+
           $('.lista').hover(function(e){
             console.log($(e.target).attr("marker_id"));
             //map.setZoom(12);
-            var mark = lugares[$(e.target).attr("marker_id")];
+            var mark = lugares[$(e.target).attr("marker_id")].marker;
             mark.setIcon("http://gmaps-samples.googlecode.com/svn/trunk/markers/blue/blank.png");
             /*pos = mark.getPosition();
             map.setCenter(pos['A'], pos['F']);*/
           });
           $('.lista').on( "mouseleave", function(e){
             //map.setZoom(12);
-            mark = lugares[$(e.target).attr("marker_id")];
+            mark = lugares[$(e.target).attr("marker_id")].marker;
             mark.setIcon(ICONO_DEFAULT);
             //mark.setIcon("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|FE7569");
           });
@@ -80,12 +83,11 @@ $(document).ready(function(){
             } else {
               target.find(".mas_info").slideUp("slow"); // acá va un slide toogle, pero no me andaba
             }*/
-            var mark = lugares[target.attr("marker_id")];
+            var mark = lugares[target.attr("marker_id")].marker;
             pos = mark.getPosition();
             mark.setIcon(ICONO_DEFAULT);
             map.setCenter(pos['A'], pos['F']);
             map.setZoom(15);
-            mark = lugares[$(e.target).attr("marker_id")];
             mark.infoWindow.open(mark.map,mark);
             //mark.setIcon();
             //mark.setIcon("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|FE7569");
@@ -105,10 +107,16 @@ $(document).ready(function(){
         selector.change(function () {
           if (selector.val() == "todos"){
             $(".lista").show();
+            var ver_todos = true;
           } else {
             $(".lista").hide();
             console.log(selector.val());
             $("." + selector.val()).show();
+            var ver_todos = false;
+          }
+
+          for (var lugar in lugares){
+            lugares[lugar].marker.setVisible(lugares[lugar].rubro == selector.val() || ver_todos);
           }
         })
 
