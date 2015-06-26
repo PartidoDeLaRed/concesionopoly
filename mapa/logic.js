@@ -136,10 +136,10 @@ $(document).ready(function(){
               precio1 = lugares[$(a).attr("marker_id")].monto;
               precio2 = lugares[$(b).attr("marker_id")].monto;
               if (precio1<precio2){
-                return -1;
+                return 1;
               }
               if (precio1>precio2){
-                return 1;
+                return -1;
               }
               return 0;
             })
@@ -150,10 +150,10 @@ $(document).ready(function(){
               precio1 = lugares[$(a).attr("marker_id")].monto;
               precio2 = lugares[$(b).attr("marker_id")].monto;
               if (precio1<precio2){
-                return 1;
+                return -1;
               }
               if (precio1>precio2){
-                return -1;
+                return 1;
               }
               return 0;
             })
