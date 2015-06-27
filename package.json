@@ -30,7 +30,6 @@
     "babelify": "^6.1.2",
     "browserify": "^10.2.4",
     "emitter": "mango/emitter",
-    "emitter-es6": "pazguille/emitter-es6",
     "immutable": "^3.7.4",
     "jade": "^1.11.0",
     "stylus": "^0.51.1",

@@ -1,202 +1,276 @@
-export default [
+import Immutable from 'immutable'
+
+export default Immutable.fromJS([
   {
-    type: 'estate',
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000,
-    priceOptions: [ 500, 1500, 3000, 8000, 50000 ]
+    type: 'property',
+    priceOptions: [ 1000, 3000 ],
+    property: {
+      name: 'Canchas de Tenis Parque Sarmiento',
+      price: 1000
+    }
   },
   {
     type: 'luck',
-    amount: 4000
+    property: {
+      name: 'Canchas de Tenis Parque Sarmiento',
+      price: 1000
+    }
   },
   {
-    type: 'estate',
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000,
-    priceOptions: [ 500, 1500, 3000, 8000, 50000 ]
+    type: 'property',
+    priceOptions: [ 1000, 3000 ],
+    property: {
+      name: 'Canchas de Tenis Parque Sarmiento',
+      price: 1000
+    }
   },
   {
-    type: 'estate',
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000,
-    priceOptions: [ 500, 1500, 3000, 8000, 50000 ]
+    type: 'property',
+    priceOptions: [ 1000, 3000 ],
+    property: {
+      name: 'Canchas de Tenis Parque Sarmiento',
+      price: 1000
+    }
   },
   {
-    type: 'estate',
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000,
-    priceOptions: [ 500, 1500, 3000, 8000, 50000 ]
+    type: 'property',
+    priceOptions: [ 1000, 3000 ],
+    property: {
+      name: 'Canchas de Tenis Parque Sarmiento',
+      price: 1000
+    }
   },
   {
-    type: 'estate',
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000,
-    priceOptions: [ 500, 1500, 3000, 8000, 50000 ]
+    type: 'property',
+    priceOptions: [ 1000, 3000 ],
+    property: {
+      name: 'Canchas de Tenis Parque Sarmiento',
+      price: 1000
+    }
   },
   {
-    type: 'estate',
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000,
-    priceOptions: [ 500, 1500, 3000, 8000, 50000 ]
+    type: 'property',
+    priceOptions: [ 1000, 3000 ],
+    property: {
+      name: 'Canchas de Tenis Parque Sarmiento',
+      price: 1000
+    }
   },
   {
-    type: 'estate',
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000,
-    priceOptions: [ 500, 1500, 3000, 8000, 50000 ]
+    type: 'property',
+    priceOptions: [ 1000, 3000 ],
+    property: {
+      name: 'Canchas de Tenis Parque Sarmiento',
+      price: 1000
+    }
   },
   {
-    type: 'estate',
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000,
-    priceOptions: [ 500, 1500, 3000, 8000, 50000 ]
+    type: 'property',
+    priceOptions: [ 1000, 3000 ],
+    property: {
+      name: 'Canchas de Tenis Parque Sarmiento',
+      price: 1000
+    }
   },
   {
-    type: 'estate',
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000,
-    priceOptions: [ 500, 1500, 3000, 8000, 50000 ]
+    type: 'property',
+    priceOptions: [ 1000, 3000 ],
+    property: {
+      name: 'Canchas de Tenis Parque Sarmiento',
+      price: 1000
+    }
   },
   {
-    type: 'estate',
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000,
-    priceOptions: [ 500, 1500, 3000, 8000, 50000 ]
-  },
-  {
-    type: 'luck',
-    amount: 4000
-  },
-  {
-    type: 'estate',
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000,
-    priceOptions: [ 500, 1500, 3000, 8000, 50000 ]
-  },
-  {
-    type: 'estate',
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000,
-    priceOptions: [ 500, 1500, 3000, 8000, 50000 ]
-  },
-  {
-    type: 'luck',
-    amount: 4000
-  },
-  {
-    type: 'estate',
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000,
-    priceOptions: [ 500, 1500, 3000, 8000, 50000 ]
-  },
-  {
-    type: 'extraordinary-tax',
-    amount: 40000
-  },
-  {
-    type: 'estate',
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000,
-    priceOptions: [ 500, 1500, 3000, 8000, 50000 ]
-  },
-  {
-    type: 'estate',
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000,
-    priceOptions: [ 500, 1500, 3000, 8000, 50000 ]
+    type: 'property',
+    priceOptions: [ 1000, 3000 ],
+    property: {
+      name: 'Canchas de Tenis Parque Sarmiento',
+      price: 1000
+    }
   },
   {
     type: 'luck',
-    amount: -3000
+    property: {
+      name: 'Canchas de Tenis Parque Sarmiento',
+      price: 1000
+    }
   },
   {
-    type: 'estate',
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000,
-    priceOptions: [ 500, 1500, 3000, 8000, 50000 ]
+    type: 'property',
+    priceOptions: [ 1000, 3000 ],
+    property: {
+      name: 'Canchas de Tenis Parque Sarmiento',
+      price: 1000
+    }
   },
   {
-    type: 'extraordinary-tax',
-    amount: 40000
-  },
-  {
-    type: 'estate',
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000,
-    priceOptions: [ 500, 1500, 3000, 8000, 50000 ]
-  },
-  {
-    type: 'estate',
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000,
-    priceOptions: [ 500, 1500, 3000, 8000, 50000 ]
+    type: 'property',
+    priceOptions: [ 1000, 3000 ],
+    property: {
+      name: 'Canchas de Tenis Parque Sarmiento',
+      price: 1000
+    }
   },
   {
     type: 'luck',
-    amount: 4000
+    property: {
+      name: 'Canchas de Tenis Parque Sarmiento',
+      price: 1000
+    }
   },
   {
-    type: 'estate',
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000,
-    priceOptions: [ 500, 1500, 3000, 8000, 50000 ]
+    type: 'property',
+    priceOptions: [ 1000, 3000 ],
+    property: {
+      name: 'Canchas de Tenis Parque Sarmiento',
+      price: 1000
+    }
   },
   {
-    type: 'estate',
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000,
-    priceOptions: [ 500, 1500, 3000, 8000, 50000 ]
+    type: 'extraordinary-tax'
   },
   {
-    type: 'estate',
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000,
-    priceOptions: [ 500, 1500, 3000, 8000, 50000 ]
+    type: 'property',
+    priceOptions: [ 1000, 3000 ],
+    property: {
+      name: 'Canchas de Tenis Parque Sarmiento',
+      price: 1000
+    }
   },
   {
-    type: 'estate',
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000,
-    priceOptions: [ 500, 1500, 3000, 8000, 50000 ]
-  },
-  {
-    type: 'estate',
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000,
-    priceOptions: [ 500, 1500, 3000, 8000, 50000 ]
-  },
-  {
-    type: 'estate',
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000,
-    priceOptions: [ 500, 1500, 3000, 8000, 50000 ]
-  },
-  {
-    type: 'estate',
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000,
-    priceOptions: [ 500, 1500, 3000, 8000, 50000 ]
-  },
-  {
-    type: 'estate',
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000,
-    priceOptions: [ 500, 1500, 3000, 8000, 50000 ]
+    type: 'property',
+    priceOptions: [ 1000, 3000 ],
+    property: {
+      name: 'Canchas de Tenis Parque Sarmiento',
+      price: 1000
+    }
   },
   {
     type: 'luck',
-    amount: -4000
+    property: {
+      name: 'Canchas de Tenis Parque Sarmiento',
+      price: 1000
+    }
   },
   {
-    type: 'estate',
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000,
-    priceOptions: [ 500, 1500, 3000, 8000, 50000 ]
+    type: 'property',
+    priceOptions: [ 1000, 3000 ],
+    property: {
+      name: 'Canchas de Tenis Parque Sarmiento',
+      price: 1000
+    }
   },
   {
-    type: 'estate',
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000,
-    priceOptions: [ 500, 1500, 3000, 8000, 50000 ]
+    type: 'extraordinary-tax'
+  },
+  {
+    type: 'property',
+    priceOptions: [ 1000, 3000 ],
+    property: {
+      name: 'Canchas de Tenis Parque Sarmiento',
+      price: 1000
+    }
+  },
+  {
+    type: 'property',
+    priceOptions: [ 1000, 3000 ],
+    property: {
+      name: 'Canchas de Tenis Parque Sarmiento',
+      price: 1000
+    }
+  },
+  {
+    type: 'luck',
+    property: {
+      name: 'Canchas de Tenis Parque Sarmiento',
+      price: 1000
+    }
+  },
+  {
+    type: 'property',
+    priceOptions: [ 1000, 3000 ],
+    property: {
+      name: 'Canchas de Tenis Parque Sarmiento',
+      price: 1000
+    }
+  },
+  {
+    type: 'property',
+    priceOptions: [ 1000, 3000 ],
+    property: {
+      name: 'Canchas de Tenis Parque Sarmiento',
+      price: 1000
+    }
+  },
+  {
+    type: 'property',
+    priceOptions: [ 1000, 3000 ],
+    property: {
+      name: 'Canchas de Tenis Parque Sarmiento',
+      price: 1000
+    }
+  },
+  {
+    type: 'property',
+    priceOptions: [ 1000, 3000 ],
+    property: {
+      name: 'Canchas de Tenis Parque Sarmiento',
+      price: 1000
+    }
+  },
+  {
+    type: 'property',
+    priceOptions: [ 1000, 3000 ],
+    property: {
+      name: 'Canchas de Tenis Parque Sarmiento',
+      price: 1000
+    }
+  },
+  {
+    type: 'property',
+    priceOptions: [ 1000, 3000 ],
+    property: {
+      name: 'Canchas de Tenis Parque Sarmiento',
+      price: 1000
+    }
+  },
+  {
+    type: 'property',
+    priceOptions: [ 1000, 3000 ],
+    property: {
+      name: 'Canchas de Tenis Parque Sarmiento',
+      price: 1000
+    }
+  },
+  {
+    type: 'property',
+    priceOptions: [ 1000, 3000 ],
+    property: {
+      name: 'Canchas de Tenis Parque Sarmiento',
+      price: 1000
+    }
+  },
+  {
+    type: 'luck',
+    property: {
+      name: 'Canchas de Tenis Parque Sarmiento',
+      price: 1000
+    }
+  },
+  {
+    type: 'property',
+    priceOptions: [ 1000, 3000 ],
+    property: {
+      name: 'Canchas de Tenis Parque Sarmiento',
+      price: 1000
+    }
+  },
+  {
+    type: 'property',
+    priceOptions: [ 1000, 3000 ],
+    property: {
+      name: 'Canchas de Tenis Parque Sarmiento',
+      price: 1000
+    }
   }
-]
+])
