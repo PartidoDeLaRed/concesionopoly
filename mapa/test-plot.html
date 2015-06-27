@@ -1,41 +1,8 @@
-<!-- 
-<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-<script src="gmaps.js"></script>
-
-<div id="mouse_event_map"></div>
-
-<script type="text/javascript">
-
-  map = new GMaps({
-    div: '#mouse_event_map',
-    zoom: 16,
-    lat: -12.043333,
-    lng: -77.028333,
-    click: function(e) {
-      alert('click');
-    },
-    dragend: function(e) {
-      alert('dragend');
-    }
-  });
-
-  map.addMarker({
-    lat: -12.043333,
-    lng: -77.028333,
-    title: 'Lima',
-    click: function(e) {
-      alert('You clicked in this marker');
-    }
-  });
-</script>
- -->
-
-
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
-  <title>gmaps.js &mdash; the easiest way to use Google Maps</title>
+  <title>Concesionopoly</title>
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=true"></script>
   <script type="text/javascript" src="gmaps.js"></script>
@@ -43,135 +10,24 @@
   <link href='styles.css' rel='stylesheet' type='text/css' />
 
   <script type="text/javascript">
-  // ["1", "Importe Fijo", "49.029,00", "Decreto N 667/GCBA/2010 A la fecha se sustancia readecuacin del canon.", "BUENOS AIRES DESIGN", "EMPRENDIMIENTO RECOLETA S.A.", "AV. PUEYRREDON 2501", "PREDIOS COMERCIALES", "17/11/2018"]
+  </script>
 
-
-    TIPO_IMPORTE = 1;
-    PRECIO = 2;
-    NOMBRE = 4;
-    EMPRESA = 5;
-    DIRECCION = 6;
-    
-    //var map;
-    $(document).ready(function(){
-      map = new GMaps({
-        div: '#map',
-        lat: -34.6158238,
-        lng: -58.4333203,
-        zoom: 12
-      });
-
-      lugares = []
-      $.ajax({ // ajax call starts
-          url: 'ConcesioneDB.json', // JQuery loads serverside.php
-          //data: 'button=' + $(this).val(), // Send value of the clicked button
-          dataType: 'json', // Choosing a JSON datatype
-        }).done(
-          function hola(data){
-            $.each(data, function(i, item) {
-
-              console.log(item.Coordenadas);
-              //map.setCenter(item.Coordenadas.y, item.Coordenadas.x);
-              marker = map.addMarker({
-                        lat: item.Coordenadas.y,
-                        lng: item.Coordenadas.x,
-                        title: item.Concesión,
-                        //icon: "http://gmaps-samples.googlecode.com/svn/trunk/markers/blue/blank.png",
-                        infoWindow: {
-                          content: '<p>'  + item.Concesión + item.Domicilio + ', '  + ' monton: '+ item["Monto de canon"] + '</p>'
-                        }
-
-              });
-              salida =  "<div class='lista'" + "marker_id='"+ i + "'>" + item.Concesión + "</div> <br>";
-              $("#list").append($(salida));
-              lugares.push(marker);
-              $('.lista').hover(function(e){
-                console.log($(e.target).attr("marker_id"));
-                map.setZoom(15);
-                var mark = lugares[$(e.target).attr("marker_id")];
-                mark.setIcon("http://gmaps-samples.googlecode.com/svn/trunk/markers/blue/blank.png");
-                pos = mark.getPosition();
-                map.setCenter(pos['A'], pos['F']);
-              });
-              $('.lista').on( "mouseleave", function(e){
-                map.setZoom(12);
-                mark = lugares[$(e.target).attr("marker_id")];
-                //mark.setIcon("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|FE7569");
-              });
-
-            });
-            //lugares[0].setIcon("http://gmaps-samples.googlecode.com/svn/trunk/markers/blue/blank.png");
-            //alert("done");
-          }
-      )
-
-      var path = [[-34.654100, -58.528592], 
-                  [-34.615259, -58.530652], 
-                  [-34.550671, -58.501127], 
-                  [-34.530168, -58.454091], 
-                  [-34.589401, -58.358648]]; // Retiro
-
-      polygon = map.drawPolygon({
-      paths: path, // pre-defined polygon shape
-      strokeColor: '#BBD8E9',
-      strokeOpacity: 1,
-      strokeWeight: 3,
-      fillColor: '#BBD8E9',
-      fillOpacity: 0.2,
-      });
-    
-    });
-
-function procesar_números () {
-          // 1 porque sacamos 
-        var j = 0;
-        //for (j; j<rows.length; i++ ) {
-        for (; j<20; j++ ) {
-          var tds = rows[j].split('\t');
-          if (tds[DIRECCION] != "#N/A" && tds[DIRECCION].indexOf('-') === -1){
-            // console.log( "Sample of data:", i);
-            // alert(tds[DIRECCION] + ", Buenos Aires");
-            console.log( "Sample of data:", tds[DIRECCION] + ", Buenos Aires, Argentina " + j);
-            GMaps.geocode({
-              address: tds[DIRECCION] + ", Buenos Aires, Argentina",
-              callback: function(results, status) {
-                if (status == 'OK') {
-                  var latlng = results[0].geometry.location;
-                  map.setCenter(latlng.lat(), latlng.lng());
-                  map.addMarker({
-                    lat: latlng.lat(),
-                    lng: latlng.lng(),
-                    title: 'Marker with InfoWindow',
-                    infoWindow: {
-                      content: '<p>' + tds[EMPRESA] + ', ' + tds[DIRECCION] + '</p>'
-                    }
-
-                  });
-
-                  salida =  "<div>" + tds[DIRECCION] + " <div > </div> </div>";
-                  $("#list").append($(salida));
-                  console.log( "Salio Bien", "OK");
-                  //alert(tds[DIRECCION] + ", Buenos Aires, Argentina");
-
-                } else {
-                  // $("#list").append($("error"));
-                  console.log( "ERROR", "Error"+i);
-                }
-              }
-            });
-            
-          }
-          i = j;
-        }
-}
-
-</script>
 </head>
 <body>
   <div class="row">
     <div class="span11">
       <div class="popin">
         <div id="list">
+            <select id="selector">
+              <option value="todos">Ver Todos</option>
+            </select>
+            <select id="selector_orden">
+              <option value="">Seleccionar Orden</option>
+              <option value="Mm">Precio (Mayor a menor)</option>
+              <option value="mM">Precio (Menor a mayor</option>
+            </select>
+          <div id="items">
+          </div>
 
         </div>
         <div id="map"></div>
@@ -180,4 +36,6 @@ function procesar_números () {
   </div>
 
 </body>
+<script type="text/javascript" src="classes.js"></script>
+<script type="text/javascript" src="logic.js"></script>
 </html>
