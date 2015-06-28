@@ -6,6 +6,7 @@ function Lugar (marker, monto, rubro) {
     } else {
     	this.monto = 0;
     }
-    
     this.rubro = rubro;
+
+    
 }

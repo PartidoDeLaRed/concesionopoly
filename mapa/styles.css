@@ -84,10 +84,14 @@ html,body{
   border-radius:2px;*/
 }
 
-#list{
-  height: 100%;
+#list {
   width: 25%;
   float: left;
+  height: 100%;
+}
+
+#items {
+  height: 100%;
   overflow:auto;
 }
 
@@ -136,6 +140,35 @@ code {
     margin: 5px 0;
     padding: 10px;
     background-color: #eee;
-    font-weight: bold;
+    /*font-weight: bold;*/
+    display: table;
     line-height: 17px;
+}
+
+.field_name, .field_data{
+  display: inline-block;
+  width: 50%;
+  /*margin: 2px;*/
+  overflow:hidden;
+}
+
+
+.field_name{
+  text-align: right;
+  font-weight: bold;
+}
+
+.field_data{
+  text-align: left;
+  float: right;
+}
+
+.fields{
+  /*overflow: auto;
+  height: auto;*/
+  display: table-row;
+}
+
+.texto_field{
+  margin: 3px;
 }

@@ -1,21 +1,28 @@
 ICONO_DEFAULT = "https://storage.googleapis.com/support-kms-prod/SNP_2752125_en_v0";
-
+ICONO_HOVER = "http://gmaps-samples.googlecode.com/svn/trunk/markers/blue/blank.png"
  function safe_class_name(text){
   return text.replace(/[!\"#$%&'\(\)\*\+ ,\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '');
 }
 
 function agregar_callbacks(element){
   element.mouseenter(function(e){
-    console.log($(e.target).attr("marker_id"));
-    //map.setZoom(12);
-    var mark = lugares[$(e.target).attr("marker_id")].marker;
-    mark.setIcon("http://gmaps-samples.googlecode.com/svn/trunk/markers/blue/blank.png");
-    /*pos = mark.getPosition();
-    map.setCenter(pos['A'], pos['F']);*/
-    return false;
+    // este if es para prevenir a los hijos
+    if ($(e.target).attr("marker_id") != undefined){
+      console.log($(e.target).attr("marker_id"));
+      //map.setZoom(12);
+      var mark = lugares[$(e.target).attr("marker_id")].marker;
+      mark.setIcon(ICONO_HOVER);
+      /*pos = mark.getPosition();
+      map.setCenter(pos['A'], pos['F']);*/
+      return false;
+    }
   });
+
   element.on( "mouseleave", function(e){
     //map.setZoom(12);
+    if ($(e.target).attr("marker_id") == undefined){
+      return;
+    }
     mark = lugares[$(e.target).attr("marker_id")].marker;
     mark.setIcon(ICONO_DEFAULT);
     //mark.setIcon("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|FE7569");
@@ -24,22 +31,27 @@ function agregar_callbacks(element){
   element.on( "click", function(e){
     console.log("Entré a un marker");
     var target = $(e.target);
-    target.find(".mas_info").slideToggle("slow"); // acá va un slide toogle, pero no me andaba
+    if (target.attr("marker_id") == undefined){
+      return;
+    }
+    var to_expand = target.find(".mas_info");
 
-/*            if (target.find(".mas_info").style.display == "none") {
+    if (!to_expand.is(":visible")){
+      var mark = lugares[target.attr("marker_id")].marker;
+      pos = mark.getPosition();
+      mark.setIcon(ICONO_DEFAULT);
+      map.setCenter(pos['A'], pos['F']);
+      map.setZoom(15);
+      mark.infoWindow.open(mark.map,mark);
 
-      target.find(".mas_info").slideDown("slow"); // acá va un slide toogle, pero no me andaba
-    } else {
-      target.find(".mas_info").slideUp("slow"); // acá va un slide toogle, pero no me andaba
-    }*/
-    var mark = lugares[target.attr("marker_id")].marker;
-    pos = mark.getPosition();
-    mark.setIcon(ICONO_DEFAULT);
-    map.setCenter(pos['A'], pos['F']);
-    map.setZoom(15);
-    mark.infoWindow.open(mark.map,mark);
+      marker.infoWindow.close();
+      marker = mark; // temporal donde guardaremos el nodo a cerrar
+    
+    }
+
     //mark.setIcon();
     //mark.setIcon("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|FE7569");
+    to_expand.slideToggle("slow"); // acá va un slide toogle, pero no me andaba
   });
 }
 
@@ -65,21 +77,24 @@ $(document).ready(function(){
 
           //console.log(item.Coordenadas);
           mas_info = $("<div class='mas_info'></div>");
-          mas_info.append($("<div>Concesión: " + item["Concesión"]+"</div>"));
-          mas_info.append($("<div>Concesionario: " + item.Concesionario+"</div>"));
-          mas_info.append($("<div>Monto de canon: " + item["Monto de canon"]+"</div>"));
-          mas_info.append($("<div>Tipo de canon: " + item["Tipo de canon"]+"</div>"));
-          mas_info.append($("<div>Domicilio: " + item["Domicilio"]+"</div>"));
-          mas_info.append($("<div>Rubro: " + item["Rubro"]+"</div>"));
-          mas_info.append($("<div>Vencimiento: " + item["Vencimiento"]+"</div>"));
-          mas_info.append($("<div>Normativa: " + item["Normativa aplicable/concesiones"]+"</div>"));
+          mas_info.append($("<div class='fields'> <span class='field_name'> <span class='texto_field'> Concesión: </span></span> <span class='field_data'>" + item["Concesión"]+"</span></div>"));
+          mas_info.append($("<div class='fields'> <span class='field_name'> <span class='texto_field'> Concesionario: </span></span> <span class='field_data'>" + item.Concesionario+"</span></div>"));
+          mas_info.append($("<div class='fields'> <span class='field_name'> <span class='texto_field'> Monto de canon: </span></span> <span class='field_data'>" + item["Monto de canon"]+"</span></div>"));
+          mas_info.append($("<div class='fields'> <span class='field_name'> <span class='texto_field'> Tipo de canon: </span></span> <span class='field_data'>" + item["Tipo de canon"]+"</span></div>"));
+          mas_info.append($("<div class='fields'> <span class='field_name'> <span class='texto_field'> Domicilio: </span></span> <span class='field_data'>" + item["Domicilio"]+"</span></div>"));
+          mas_info.append($("<div class='fields'> <span class='field_name'> <span class='texto_field'> Rubro: </span></span> <span class='field_data'>" + item["Rubro"]+"</span></div>"));
+          mas_info.append($("<div class='fields'> <span class='field_name'> <span class='texto_field'> Vencimiento: </span></span> <span class='field_data'>" + item["Vencimiento"]+"</span></div>"));
+          mas_info.append($("<div class='fields'> <span class='field_name'> <span class='texto_field'> Normativa: </span></span> <span class='field_data'>" + item["Normativa aplicable/concesiones"]+"</span></div>"));
 
           salida =  "<div class='lista'" + "marker_id='"+ i + "'>" + item.Concesión + "</div>";
 
           salida_jq = $(salida);
+
           salida_jq.addClass(safe_class_name(item["Rubro"]));
           salida_jq.append(mas_info);
+
           rubros[item.Rubro] = 1; // identificador para que agarre la clave
+
           marker = map.addMarker({
                     lat: item.Coordenadas.y,
                     lng: item.Coordenadas.x,
@@ -105,9 +120,14 @@ $(document).ready(function(){
 
         var selector = $("#selector");
         for (var rubro in lista_rubros){
+          var nombre_rubro = lista_rubros[rubro];
+          if (nombre_rubro == "#N/A"){
+            nombre_rubro = "SIN CATEGORÍA"
+          }
+
           selector.append($('<option>', {
-            value: safe_class_name(lista_rubros[rubro]),
-            text: lista_rubros[rubro]
+            value: safe_class_name(nombre_rubro),
+            text: nombre_rubro
           }));
         };
 
