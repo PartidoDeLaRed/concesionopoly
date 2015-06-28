@@ -28,6 +28,20 @@ function agregar_callbacks(element){
     //mark.setIcon("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|FE7569");
   });
 
+// the smooth zoom function
+function smoothZoom (map, max, cnt) {
+    if (cnt >= max) {
+            return;
+        }
+    else {
+        z = google.maps.event.addListener(map, 'zoom_changed', function(event){
+            google.maps.event.removeListener(z);
+            smoothZoom(map, max, cnt + 1);
+        });
+        setTimeout(function(){map.setZoom(cnt)}, 80); // 80ms is what I found to work well on my system -- it might not work well on all systems
+    }
+} 
+
   element.on( "click", function(e){
     console.log("Entré a un marker");
     var target = $(e.target);
@@ -43,10 +57,12 @@ function agregar_callbacks(element){
       map.setCenter(pos['A'], pos['F']);
       map.setZoom(15);
       mark.infoWindow.open(mark.map,mark);
-
       marker.infoWindow.close();
       marker = mark; // temporal donde guardaremos el nodo a cerrar
+      $(".gm-style-iw").parent().stop().hide().fadeIn(1500);
     
+    } else{
+
     }
 
     //mark.setIcon();
@@ -105,6 +121,7 @@ $(document).ready(function(){
                     }
 
           });
+
           mas_info.hide();
           marker.ident = i;
 
