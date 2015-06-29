@@ -185,3 +185,9 @@ code {
 select{
   width: 100%;
 }
+
+.fill_space{
+  float: left;
+  margin-right: 3px;
+}
+  

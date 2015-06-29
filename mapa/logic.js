@@ -31,20 +31,6 @@ function agregar_callbacks(element){
     //mark.setIcon("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|FE7569");
   });
 
-// the smooth zoom function
-function smoothZoom (map, max, cnt) {
-    if (cnt >= max) {
-            return;
-        }
-    else {
-        z = google.maps.event.addListener(map, 'zoom_changed', function(event){
-            google.maps.event.removeListener(z);
-            smoothZoom(map, max, cnt + 1);
-        });
-        setTimeout(function(){map.setZoom(cnt)}, 80); // 80ms is what I found to work well on my system -- it might not work well on all systems
-    }
-} 
-
   element.on( "click", function(e){
     console.log("Entré a un marker");
     var target = $(e.target);
@@ -112,10 +98,13 @@ $(document).ready(function(){
           mas_info.append($("<div class='fields'> <span class='field_name'> <span class='texto_field'> Vencimiento: </span></span> <span class='field_data'>" + item["Vencimiento"]+"</span></div>"));
           mas_info.append($("<div class='fields'> <span class='field_name'> <span class='texto_field'> Normativa: </span></span> <span class='field_data'>" + item["Normativa aplicable/concesiones"]+"</span></div>"));
 
-          salida =  "<div class='lista'" + "marker_id='"+ i + "'> <span class='name_concesion'>" + item.Concesión + "</span></div>";
+          salida =  "<div class='lista'" + "marker_id='"+ i + "'> <span class='name_concesion'>" + item.Concesión.toUpperCase() + "</span></div>";
 
           salida_jq = $(salida);
-          salida_jq.prepend($(new Image()).attr('src', '' + lugar.icon).addClass('imagen_concesion'))
+          var new_div = $('<div></div>'); // deberíá googlear como se hace esto
+          new_div.addClass('fill_space');
+          new_div.append($(new Image()).attr('src', '' + lugar.icon).addClass('imagen_concesion'))
+          salida_jq.prepend(new_div);
           salida_jq.addClass(safe_class_name(item["Rubro"]));
           salida_jq.append(mas_info);
           mas_info.hide();
