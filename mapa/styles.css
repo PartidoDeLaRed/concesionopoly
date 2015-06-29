@@ -3,7 +3,14 @@ body{
   margin:0;
   padding:0;
   font-family: 'Helvetica', 'Arial', sans-serif;
+  font-size: 1em;
 }
+
+/*@media all and (max-width: 600px) {
+  body {
+    font-size: 1.05em;
+  }
+}*/
 
 h1{
   font-family: 'Convergence';
@@ -89,6 +96,11 @@ html,body{
   float: left;
   height: 100%;
 }
+@media all and (max-width: 600px) {
+  #list {
+    width: 40%;
+  }
+}
 
 #items {
   height: 100%;
@@ -103,20 +115,15 @@ html,body{
   background:#6699cc;
   float: right;
 }
+@media all and (max-width: 600px) {
+  #map,
+  #panorama {
+    width: 60%;
+  }  
+}
 
 .span11, .popin{
   height: 100%
-}
-
-#sponsors {
-  font-size: 12px;
-  text-align: center;
-  padding: 4px 6px;
-}
-
-#sponsors img {
-  height: 40px;
-  margin: 4px;
 }
 
 code {
@@ -140,16 +147,15 @@ code {
     margin: 5px 0;
     padding: 10px;
     background-color: #eee;
-    /*font-weight: bold;*/
-    display: table;
     line-height: 17px;
 }
+
 
 .field_name, .field_data{
   display: inline-block;
   width: 50%;
-  /*margin: 2px;*/
   overflow:hidden;
+  max-width: 300px;
 }
 
 
@@ -164,11 +170,18 @@ code {
 }
 
 .fields{
-  /*overflow: auto;
-  height: auto;*/
   display: table-row;
 }
 
 .texto_field{
   margin: 3px;
+}
+
+
+.name_concesion, .imagen_concesion{
+  vertical-align: middle;
+}
+
+select{
+  width: 100%;
 }

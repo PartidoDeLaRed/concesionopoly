@@ -1,6 +1,9 @@
 ICONO_DEFAULT = "https://storage.googleapis.com/support-kms-prod/SNP_2752125_en_v0";
+//ICONO_DEFAULT = "icons/icon1.png";
 ICONO_HOVER = "http://gmaps-samples.googlecode.com/svn/trunk/markers/blue/blank.png"
- function safe_class_name(text){
+
+
+function safe_class_name(text){
   return text.replace(/[!\"#$%&'\(\)\*\+ ,\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '');
 }
 
@@ -24,7 +27,7 @@ function agregar_callbacks(element){
       return;
     }
     mark = lugares[$(e.target).attr("marker_id")].marker;
-    mark.setIcon(ICONO_DEFAULT);
+    mark.setIcon(lugares[$(e.target).attr("marker_id")].icon);
     //mark.setIcon("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|FE7569");
   });
 
@@ -45,15 +48,21 @@ function smoothZoom (map, max, cnt) {
   element.on( "click", function(e){
     console.log("Entré a un marker");
     var target = $(e.target);
+    if (target.is("span") || target.is("img")){
+      console.log(target.parent);
+      target.parent().click();
+      return;
+    }
     if (target.attr("marker_id") == undefined){
       return;
     }
     var to_expand = target.find(".mas_info");
 
     if (!to_expand.is(":visible")){
-      var mark = lugares[target.attr("marker_id")].marker;
+      var lugar = lugares[target.attr("marker_id")];
+      var mark = lugar.marker;
       pos = mark.getPosition();
-      mark.setIcon(ICONO_DEFAULT);
+      mark.setIcon(lugar.icon);
       map.setCenter(pos['A'], pos['F']);
       map.setZoom(15);
       mark.infoWindow.open(mark.map,mark);
@@ -90,6 +99,7 @@ $(document).ready(function(){
     }).done(
       function hola(data){
         $.each(data, function(i, item) {
+          var lugar = new Lugar(item["Monto de canon"], safe_class_name(item["Rubro"]));
 
           //console.log(item.Coordenadas);
           mas_info = $("<div class='mas_info'></div>");
@@ -102,12 +112,13 @@ $(document).ready(function(){
           mas_info.append($("<div class='fields'> <span class='field_name'> <span class='texto_field'> Vencimiento: </span></span> <span class='field_data'>" + item["Vencimiento"]+"</span></div>"));
           mas_info.append($("<div class='fields'> <span class='field_name'> <span class='texto_field'> Normativa: </span></span> <span class='field_data'>" + item["Normativa aplicable/concesiones"]+"</span></div>"));
 
-          salida =  "<div class='lista'" + "marker_id='"+ i + "'>" + item.Concesión + "</div>";
+          salida =  "<div class='lista'" + "marker_id='"+ i + "'> <span class='name_concesion'>" + item.Concesión + "</span></div>";
 
           salida_jq = $(salida);
-
+          salida_jq.prepend($(new Image()).attr('src', '' + lugar.icon).addClass('imagen_concesion'))
           salida_jq.addClass(safe_class_name(item["Rubro"]));
           salida_jq.append(mas_info);
+          mas_info.hide();
 
           rubros[item.Rubro] = 1; // identificador para que agarre la clave
 
@@ -115,19 +126,19 @@ $(document).ready(function(){
                     lat: item.Coordenadas.y,
                     lng: item.Coordenadas.x,
                     title: item.Concesión,
-                    icon: ICONO_DEFAULT,
+                    icon: lugar.icon,
                     infoWindow: {
                       content: mas_info.html()
                     }
 
           });
 
-          mas_info.hide();
+          lugar.marker = marker;
           marker.ident = i;
 
           item_list.append(salida_jq);
           
-          lugares.push(new Lugar(marker, item["Monto de canon"], safe_class_name(item["Rubro"])));
+          lugares.push(lugar);
 
 
           agregar_callbacks(salida_jq);
