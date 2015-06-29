@@ -9,6 +9,9 @@ html
 body
   background-color: #fcfcfc
 
+.concesionopoly
+
+
 .board
   position: relative
   width: 650px
@@ -20,31 +23,33 @@ body
   background-repeat: no-repeat
   background-position: center center
   background-size: 100% 100%
+  box-shadow: 2px 2px 4px rgba(#000, .2)
 
-  .square
-    width = 8.6142%
-    height = 11.2359%
+  tile-width = 8.6142%
+  tile-height = 11.2359%
 
+  .tile
     position: absolute
-    opacity: .5
     cursor: pointer
+    box-shadow: inset 0 0 1px red
+    background-color: rgba(salmon, .2)
 
     &:hover
-      background-color: magenta
+      background-color: rgba(magenta, .2)
 
     &.on-top,
     &.on-bottom
-      width: width
-      height: height
+      width: tile-width
+      height: tile-height
 
     &.on-right,
     &.on-left
-      width: height
-      height: width
+      width: tile-height
+      height: tile-width
 
     &.on-corner
-      width: height
-      height: height
+      width: tile-height
+      height: tile-height
 
     &.on-right
       right: 0
@@ -58,18 +63,24 @@ body
     &.on-top
       top: 0
 
-    for num in (1..9)
-      &[data-square={s('"%s"', num)}]
-        left: round(height + width * (num - 1), 4)
+    for num in (1..8)
+      &[data-tile={s('"%s"', num)}]
+        right: round(tile-height + tile-width * (num - 1), 4)
 
-    for num in (11..19)
-      &[data-square={s('"%s"', num)}]
-        top: round(height + width * (num - 11), 4)
+    for num in (10..17)
+      &[data-tile={s('"%s"', num)}]
+        bottom: round(tile-height + tile-width * (num - 11), 4)
 
-    for num in (21..29)
-      &[data-square={s('"%s"', num)}]
-        right: round(height + width * (num - 21), 4)
+    for num in (19..26)
+      &[data-tile={s('"%s"', num)}]
+        left: round(tile-height + tile-width * (num - 21), 4)
 
-    for num in (31..39)
-      &[data-square={s('"%s"', num)}]
-        top: round(height + width * (num - 31), 4)
+    for num in (28..35)
+      &[data-tile={s('"%s"', num)}]
+        top: round(tile-height + tile-width * (num - 31), 4)
+
+  .chip
+    position: absolute
+    width: 30px
+    height: 30px
+    background-color: blue

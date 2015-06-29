@@ -1,7 +1,7 @@
 import { List } from 'immutable'
 import Emitter from 'emitter'
 import Dices from './dices'
-import squares from './squares'
+import tiles from './tiles'
 
 const dices = new Dices(2)
 
@@ -17,8 +17,8 @@ export default class Engine extends Emitter {
     }
   }
 
-  getSquares () {
-    return squares
+  getTiles () {
+    return tiles
   }
 
   addProperty (property) {
@@ -35,14 +35,14 @@ export default class Engine extends Emitter {
   }
 
   doTurn () {
-    if (this.position >= squares.size - 1) {
+    if (this.position >= tiles.size - 1) {
       return Promise.reject(() => new Error('GAME_ENDED'))
     }
 
     let dice = dices.flip()
     let newPosition = this.state.position + dice.total
-    if (newPosition >= squares.size - 1) newPosition = squares.size - 1
-    let newSquare = this.squares(newPosition)
+    if (newPosition >= tiles.size - 1) newPosition = tiles.size - 1
+    let newSquare = this.tiles(newPosition)
 
     this.state.position = newPosition
     this.state.square = newSquare
