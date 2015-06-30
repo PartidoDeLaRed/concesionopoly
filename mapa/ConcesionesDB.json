@@ -3265,7 +3265,7 @@
   {
     "Legajo":568,
     "Tipo de canon":"Importe Fijo",
-    "Monto de canon":"25.300.00",
+    "Monto de canon":"25.300,00",
     "Normativa aplicable/concesiones":"Permiso Ley 3399. LICITACIÓN EN TRAMITE",
     "Concesión":"BAJO AUTOPISTA 1 - 125",
     "Concesionario":"MASBOR S.R.L.",
@@ -5990,7 +5990,7 @@
     "Concesión":"BAJO AUTOPISTA 1 - 159A - LOCAL 28",
     "Concesionario":"",
     "Domicilio":"DE LAS CIENCIAS Y E.MITRE",
-    "Rubro":"",
+    "Rubro":"VARIOS",
     "Vencimiento":"",
     "Coordenadas": {
     "x":-58.44064,
@@ -6006,7 +6006,7 @@
     "Concesión":"BAJO AUTOPISTA 1 - 159A - LOCAL 11",
     "Concesionario":"",
     "Domicilio":"DE LAS CIENCIAS Y E.MITRE",
-    "Rubro":"",
+    "Rubro":"VARIOS",
     "Vencimiento":"",
     "Coordenadas": {
     "x":-58.44064,
@@ -6417,7 +6417,7 @@
   {
     "Legajo":993,
     "Tipo de canon":"importe Fijo",
-    "Monto de canon":"210.000.00",
+    "Monto de canon":"210.000,00",
     "Normativa aplicable/concesiones":"Permiso ley 3399",
     "Concesión":"\"PLAYA DE ESTACIONAMIENTO \"\"E-06'\"",
     "Concesionario":"CIUCOR S.A.",
