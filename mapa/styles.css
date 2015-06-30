@@ -103,7 +103,7 @@ html,body{
 }
 
 #items {
-  height: 100%;
+  height: 95%;
   overflow:auto;
 }
 
@@ -190,4 +190,10 @@ select{
   float: left;
   margin-right: 3px;
 }
-  
+ 
+.imagen_concesion{
+  vertical-align: middle;
+  height: 100%;
+  display: block;
+  overflow: hidden; 
+}
