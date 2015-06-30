@@ -5,6 +5,14 @@ ICONO_HOVER = "http://gmaps-samples.googlecode.com/svn/trunk/markers/blue/blank.
 function safe_class_name(text){
   return text.replace(/[!\"#$%&'\(\)\*\+ ,\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '');
 }
+function convertToSlug(Text)
+{
+    return Text
+        .toLowerCase()
+        .replace(/[^\w ]+/g,'')
+        .replace(/ +/g,'-')
+        ;
+}
 
 function agregar_callbacks(element){
     element.mouseenter(function(e){
@@ -70,6 +78,7 @@ function agregar_callbacks(element){
       marker.infoWindow.close();
       marker = mark; // temporal donde guardaremos el nodo a cerrar
       $(".gm-style-iw").parent().stop().hide().fadeIn(1500);
+      window.location.hash = lugar.slug;
     
     } else{
 
@@ -92,6 +101,7 @@ $(document).ready(function(){
 
   lugares = []
   var rubros = new Object(); // or just {}
+  var lugares_hash = new Object(); // or just {}
   item_list = $("#items");
   $.ajax({ // ajax call starts
       url: 'ConcesionesDB.json', // JQuery loads serverside.php
@@ -122,8 +132,15 @@ $(document).ready(function(){
           salida_jq.prepend(new_div);
           salida_jq.addClass(safe_class_name(item["Rubro"]));
           salida_jq.append(mas_info);
-          mas_info.hide();
+          var share_text = encodeURIComponent(item["Concesión"]+ " Paga $"+item["Monto de canon"] + "por mes a la ciudad, más info en: " +window.location.href);
+          mas_info.append($("<a href='https://twitter.com/intent/tweet?related=PartidodelaRed&text=" + share_text + "'>Tweet</a>"));
+          //var url = window.location.href;
+          /*var url = "www.concesionopoly.com";
 
+          var fb_text = encodeURIComponent("http://queproponen.com.ar/caba/propuestas/&picture=http:%2F%2Fqueproponen.com.ar%2Fvosquepropones%2FIMG%2FshareLogo.png&name=Todas%20las%20propuestas%20de%20los%20candidatos%20para%20CABA%20en%20un%20solo%20lugar&caption=via%20queproponen.com.ar%20-%20Partido%20de%20la%20Red&description=Conocé%20todas%20las%20propuestas%20de%20los%20candidatos%20a%20Gobernador%20de%20CABA%20y%20discutilas%20directamente%20con%20los%20ellos.&redirect_uri=http://queproponen.com.ar/caba/propuestas/close.html&display=popup");
+          mas_info.append($("<a href='https://facebook.com/dialog/feed?app_id=825676227513877&link="+fb_text+ "'>Compartir</a>"));*/
+
+          mas_info.hide();
           rubros[item.Rubro] = 1; // identificador para que agarre la clave
 
           marker = map.addMarker({
@@ -138,6 +155,8 @@ $(document).ready(function(){
           });
 
           lugar.marker = marker;
+          lugar.slug = convertToSlug(item["Concesión"]);
+          lugares_hash[lugar.slug] = lugar;
           marker.ident = i;
 
           item_list.append(salida_jq);
@@ -215,6 +234,17 @@ $(document).ready(function(){
             $("#items").html(to_append);
         })
         
+        if (window.location.hash){
+          console.log(lugares_hash);
+          var lugar = lugares_hash[window.location.hash.replace('#', '')];
+          var mark = lugar.marker;
+          pos = mark.getPosition();
+          mark.setIcon(lugar.icon);
+          map.setCenter(pos['A'], pos['F']);
+          map.setZoom(15);
+          mark.infoWindow.open(mark.map,mark);
+          marker = mark;
+        }
 
 
 
