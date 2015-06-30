@@ -1,5 +1,4 @@
 ICONO_DEFAULT = "https://storage.googleapis.com/support-kms-prod/SNP_2752125_en_v0";
-//ICONO_DEFAULT = "icons/icon1.png";
 ICONO_HOVER = "http://gmaps-samples.googlecode.com/svn/trunk/markers/blue/blank.png"
 
 
@@ -8,21 +7,37 @@ function safe_class_name(text){
 }
 
 function agregar_callbacks(element){
-  element.mouseenter(function(e){
+    element.mouseenter(function(e){
     // este if es para prevenir a los hijos
-    if ($(e.target).attr("marker_id") != undefined){
-      console.log($(e.target).attr("marker_id"));
-      //map.setZoom(12);
-      var mark = lugares[$(e.target).attr("marker_id")].marker;
-      mark.setIcon(ICONO_HOVER);
-      /*pos = mark.getPosition();
-      map.setCenter(pos['A'], pos['F']);*/
+/*    if ($(e.target).attr("marker_id") == undefined){
       return false;
+    }*/
+    var target = $(e.target);
+    if (target.hasClass("mas_info")){
+      console.log(target.parent);
+      target.parent().trigger("mouseenter");
+      return;
     }
+    if ($(e.target).attr("marker_id") == undefined){
+      return;
+    }
+
+    console.log($(e.target).attr("marker_id"));
+    //map.setZoom(12);
+    var mark = lugares[$(e.target).attr("marker_id")].marker;
+    mark.setIcon(ICONO_HOVER);
+    /*pos = mark.getPosition();
+    map.setCenter(pos['A'], pos['F']);*/
   });
 
   element.on( "mouseleave", function(e){
     //map.setZoom(12);
+    var target = $(e.target);
+    if (target.hasClass("mas_info") || target.hasClass("name_concesion") || target.hasClass("fill_space")){
+      console.log(target.parent);
+      target.parent().trigger("mouseleave");
+      return;
+    }
     if ($(e.target).attr("marker_id") == undefined){
       return;
     }
@@ -91,7 +106,7 @@ $(document).ready(function(){
           mas_info = $("<div class='mas_info'></div>");
           mas_info.append($("<div class='fields'> <span class='field_name'> <span class='texto_field'> Concesión: </span></span> <span class='field_data'>" + item["Concesión"]+"</span></div>"));
           mas_info.append($("<div class='fields'> <span class='field_name'> <span class='texto_field'> Concesionario: </span></span> <span class='field_data'>" + item.Concesionario+"</span></div>"));
-          mas_info.append($("<div class='fields'> <span class='field_name'> <span class='texto_field'> Monto de canon: </span></span> <span class='field_data'>" + item["Monto de canon"]+"</span></div>"));
+          mas_info.append($("<div class='fields'> <span class='field_name'> <span class='texto_field'> Monto de canon: </span></span> <span class='field_data'>$" + item["Monto de canon"]+"</span></div>"));
           mas_info.append($("<div class='fields'> <span class='field_name'> <span class='texto_field'> Tipo de canon: </span></span> <span class='field_data'>" + item["Tipo de canon"]+"</span></div>"));
           mas_info.append($("<div class='fields'> <span class='field_name'> <span class='texto_field'> Domicilio: </span></span> <span class='field_data'>" + item["Domicilio"]+"</span></div>"));
           mas_info.append($("<div class='fields'> <span class='field_name'> <span class='texto_field'> Rubro: </span></span> <span class='field_data'>" + item["Rubro"]+"</span></div>"));
@@ -133,7 +148,7 @@ $(document).ready(function(){
           agregar_callbacks(salida_jq);
 
         });
-        lista_rubros = Object.keys(rubros);
+        lista_rubros = Object.keys(rubros).sort();
 
         var selector = $("#selector");
         for (var rubro in lista_rubros){
