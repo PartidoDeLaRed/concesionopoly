@@ -20,19 +20,11 @@
 <link href="CSS/styles.css" rel="stylesheet" type="text/css" />
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="JS/javascript.js"></script>
-<script src="JS/Utilities.js"></script>
 
 <link href='http://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
 <script src="https://apis.google.com/js/client.js"></script>
 
 <script language="javascript" type="application/javascript">
-if (window.location.hash == 'close.html') window.close();
-
-//Variables Globales
-var Ciudad = 'CABA';
-var Facebook = 'PartidoDeLaRed';
-var Twitter = 'PartidodelaRed';
 
 $(document).ready(function(e) {
 
@@ -43,16 +35,6 @@ $(document).ready(function(e) {
 		$(this).animate({opacity:1}, 1000);
     });
 
-	$.ajax({
-		method: "GET",
-		url: 'PHP/GetData.php',
-		success: function(data){
-			Ciudad = $.parseJSON(data).ciudad;
-			Facebook = $.parseJSON(data).facebook;
-			Twitter = $.parseJSON(data).twitter;
-			SetearDatos();
-		}
-	})
 });
 
 </script>
