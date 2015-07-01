@@ -8,7 +8,9 @@ export default class Browser {
     this.engine = new Engine()
     this.modals = new Modals({
       container: this.el,
-      deactivateDelay: 100
+      deactivateDelay: 500
     })
+
+    this.modals.show('welcome')
   }
 }

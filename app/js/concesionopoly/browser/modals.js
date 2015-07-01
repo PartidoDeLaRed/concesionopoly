@@ -1,5 +1,6 @@
 import merge from 'deepmerge'
 import Templates from './templates'
+import Delegate from 'dom-delegate'
 
 function defaults () {
   return {
@@ -28,6 +29,11 @@ export default class Modals {
 
     this.container = o.container || document.body
 
+    this.events = new Delegate(this.el)
+
+    this.hide = this.hide.bind(this)
+    this.show = this.show.bind(this)
+
     this.showing = null
     this.inserted = false
   }
@@ -36,10 +42,15 @@ export default class Modals {
     if (this.inserted) return this
     this.inserted = true
     this.container.insertBefore(this.el, this.container.firstChild)
+
+    this.events.on('click', '[data-modal-hide]', this.hide.bind(this))
+    this.events.on('click', `[class*="${this.options.overlayClass}"]`, this.hide.bind(this))
   }
 
   remove () {
     if (!this.inserted) return this
+    this.events.off()
+
     this.container.removeChild(this.el)
     this.inserted = false
   }

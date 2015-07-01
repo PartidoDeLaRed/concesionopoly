@@ -8,11 +8,13 @@ body
     div(style="display:none", data-templates)
       script( type="text/html" data-template="welcome").
         <div class="modal">
-          <h1>Hola!</h1>
+          <h1>Bienvenido</h1>
+          <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+          <button class="btn yellow wide" type="button" data-modal-hide>Empezar</button>
         </div>
     .board(data-board)
       .spacer
-      .chip(data-position='0')
+      .chip(data-position='30')
       .tile.on-corner.on-right.on-bottom(data-tile='0')
       .tile.on-bottom(data-tile='1')
       .tile.on-bottom(data-tile='2')
@@ -52,4 +54,4 @@ body
     var concesionopoly = new Concesionopoly({
       el: document.querySelector('[data-concesionopoly]')
     })
-  link(href='//fonts.googleapis.com/css?family=Lato:300,400,700', rel='stylesheet', type='text/css')
+  link(href='https://fonts.googleapis.com/css?family=Lato:300,400,700', rel='stylesheet', type='text/css')
