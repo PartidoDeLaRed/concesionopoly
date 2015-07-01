@@ -132,7 +132,7 @@ $(document).ready(function(){
           salida_jq.prepend(new_div);
           salida_jq.addClass(safe_class_name(item["Rubro"]));
           salida_jq.append(mas_info);
-          var share_text = encodeURIComponent(item["Concesión"]+ " Paga $"+item["Monto de canon"] + "por mes a la ciudad, más info en: " +window.location.href);
+          var share_text = encodeURIComponent(item["Concesión"]+ " Paga $"+item["Monto de canon"] + " por mes a la ciudad, más info en: " +window.location.href);
           mas_info.append($("<a href='https://twitter.com/intent/tweet?related=PartidodelaRed&text=" + share_text + "'>Tweet</a>"));
           //var url = window.location.href;
           /*var url = "www.concesionopoly.com";
