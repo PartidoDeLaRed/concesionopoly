@@ -1,67 +1,111 @@
-import { List } from 'immutable'
 import Emitter from 'emitter'
 import Dices from './dices'
 import tiles from './tiles'
-
-const dices = new Dices(2)
 
 export default class Engine extends Emitter {
   constructor () {
     super()
 
+    this.dices = new Dices(2)
+
     this.state = {
+      waiting: false,
+      ended: false,
       position: 0,
-      square: null,
-      dices: dices.flip(),
-      ownedProperties: new List
+      tile: null,
+      dices: this.dices.flip(),
+      ownedProperties: []
     }
   }
 
-  getTiles () {
-    return tiles
+  getTile (i) {
+    return tiles.get(i)
+  }
+
+  getPosition() {
+    return this.state.position
+  }
+
+  getDices() {
+    return this.state.dices
   }
 
   addProperty (property) {
-    this.state.ownedProperties = this.state.ownedProperties.push(property)
+    this.state.ownedProperties.push(property)
     this.emit('property:add', property)
     return property
   }
 
   removeLastProperty () {
-    let property = this.state.ownedProperties.last()
-    this.state.ownedProperties = this.state.ownedProperties.pop()
+    if (!this.state.ownedProperties.length) return null
+    let property = this.state.ownedProperties.pop()
     this.emit('property:remove', property)
     return property
   }
 
-  doTurn () {
-    if (this.position >= tiles.size - 1) {
-      return Promise.reject(() => new Error('GAME_ENDED'))
+  flipDices () {
+    let dices = this.dices.flip()
+    this.state.dices = dices
+    this.emit('dices:change', dices)
+    return dices
+  }
+
+  move (amount) {
+    let position = this.state.position + amount
+    if (position >= tiles.size - 1) {
+      position = tiles.size - 1
+      this.state.ended = true
     }
+    this.state.position = position
+    this.emit('position:change', position)
+    return position
+  }
 
-    let dice = dices.flip()
-    let newPosition = this.state.position + dice.total
-    if (newPosition >= tiles.size - 1) newPosition = tiles.size - 1
-    let newSquare = this.tiles(newPosition)
+  doTurn () {
+    if (this.state.waiting) throw new Error('ansdjknaskdjnask.')
+    if (this.state.ended) throw new Error('wut?')
 
-    this.state.position = newPosition
-    this.state.square = newSquare
+    let dices = this.flipDices()
+    let position = this.move(dices.total)
+    let tile = tiles.get(position)
 
-    if (newSquare.type == 'luck') {
-      return {
+    this.state.tile = tile
+
+    let turn
+    if (tile.type == 'luck') {
+      turn = {
         type: 'luck',
-        addedProperty: this.addProperty(newSquare.property)
+        tile: tile,
+        last: this.state.ended,
+        addedProperty: this.addProperty(tile.property)
       }
-    } else if (newSquare.type == 'extraordinary-tax') {
-      return {
+    } else if (tile.type == 'extraordinary-tax') {
+      turn = {
         type: 'extraordinary-tax',
+        tile: tile,
+        last: this.state.ended,
         removedProperty: this.removeLastProperty()
       }
-    } else if (newSquare.type == 'property') {
-      return {
+    } else if (tile.type == 'property') {
+      let selectOption = (price) => {
+        if (!this.state.waiting) return
+        this.state.waiting = false
+        if (tile.property.price === price) {
+          this.addProperty(tile.property)
+        }
+      }
+
+      this.state.waiting = true
+
+      turn = {
         type: 'property',
-        accept: () => this.addProperty(newSquare.property)
+        tile: tile,
+        last: this.state.ended,
+        priceOptions: tile.priceOptions,
+        selectOption: selectOption
       }
     }
+
+    return turn
   }
 }

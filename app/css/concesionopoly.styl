@@ -7,146 +7,23 @@ html
   padding: 0
 
 body
-  background-color: #d6d6d6
+  background-color: #E9E5DB
 
 .concesionopoly
   z-index: 0
   position: relative
-  padding: .5em
-  min-width: 100vw
+  padding: 10px 10px 10px 210px
+  min-width: 600px
   min-height: 100vh
+  color: #333
+  font-family: 'Lato', sans-serif
+  font-weight: 300
+  background-color: #E9E5DB
 
-.concesionopoly .modals
-  position: absolute
-  left: 0
-  top: 0
-  width: 100%
-  height: 100%
-
-  &.active
-    .overlay,
-    .modal
-      opacity: 1
-
-  .overlay
-    z-index: 5
+  .sidebar
     position: absolute
-    left: 0
-    top: 0
-    width: 100%
-    height: 100%
-    background-color: rgba(#a0a0a0, .7)
-    opacity: 0
-    transition: opacity 1s
+    left: 10px
+    top: 10px
+    width: 190px
 
-  .modal
-    z-index: 10
-    position: absolute
-    left: 50%
-    top: 50%
-    background-color: #fff
-    transform: translate(-50%, -50%)
-    opacity: 0
-    transition: opacity .5s
-
-.concesionopoly .board
-  position: relative
-  width: 671px
-  margin: 0 auto
-  max-width: 100%
-  max-height: 100%
-  background-image: url('img/concesionopoly/tablero.svg')
-  background-repeat: no-repeat
-  background-position: center center
-  background-size: 100% 100%
-  box-shadow: 4px 4px 0 rgba(#000, .1),
-              inset 0 0 20px -5px rgba(#fff, .6)
-
-  tile-width = 9.4125%
-  tile-height = 12.35%
-  chip-width = tile-height / 2
-  chip-height = tile-height / 2
-
-  .spacer
-    padding-top: 100%
-
-  .tile
-    position: absolute
-
-    &:hover
-      background-color: rgba(magenta, .1)
-
-    &.on-top,
-    &.on-bottom
-      width: tile-width
-      height: tile-height
-
-    &.on-right,
-    &.on-left
-      width: tile-height
-      height: tile-width
-
-    &.on-corner
-      width: tile-height
-      height: tile-height
-
-    &.on-right
-      right: 0
-
-    &.on-bottom
-      bottom: 0
-
-    &.on-left
-      left: 0
-
-    &.on-top
-      top: 0
-
-    for num in (1..8)
-      &[data-tile={s('"%s"', num)}]
-        right: round(tile-height + tile-width * (num - 1), 4)
-
-    for num in (9..16)
-      &[data-tile={s('"%s"', num)}]
-        bottom: round(tile-height + tile-width * (num - 9), 4)
-
-    for num in (17..24)
-      &[data-tile={s('"%s"', num)}]
-        left: round(tile-height + tile-width * (num - 17), 4)
-
-    for num in (25..32)
-      &[data-tile={s('"%s"', num)}]
-        top: round(tile-height + tile-width * (num - 25), 4)
-
-  .chip
-    position: absolute
-    width: chip-width
-    height: chip-height
-    background-color: blue
-
-    &[data-position="0"]
-      right: (( tile-height - chip-width ) / 2)
-      bottom: (( tile-height - chip-height ) / 2)
-
-    initial-pos = tile-height + ( tile-width - chip-width ) / 2
-    from-border = round(( tile-height - chip-height ) / 2, 4)
-
-    for num in (1..8)
-      &[data-position={s('"%s"', num)}]
-        right: round(initial-pos + tile-width * (num - 1), 4)
-        bottom: from-border
-
-    for num in (9..16)
-      &[data-position={s('"%s"', num)}]
-        bottom: round(initial-pos + tile-width * (num - 9), 4)
-        left: from-border
-
-    for num in (17..24)
-      &[data-position={s('"%s"', num)}]
-        left: round(initial-pos + tile-width * (num - 17), 4)
-        top: from-border
-
-    for num in (25..32)
-      &[data-position={s('"%s"', num)}]
-        top: round(initial-pos + tile-width * (num - 25), 4)
-        right: from-border
+  @import 'concesionopoly/*'

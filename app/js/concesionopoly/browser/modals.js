@@ -1,5 +1,5 @@
 import merge from 'deepmerge'
-import Templates from './templates'
+import Delegate from 'dom-delegate'
 
 function defaults () {
   return {
@@ -23,10 +23,15 @@ export default class Modals {
     overlay.className = o.overlayClass
     this.el.appendChild(overlay)
 
-    let templates = o.templates || document.querySelector('[data-templates]')
-    this.templates = new Templates(templates)
+    this.templates = o.templates
 
     this.container = o.container || document.body
+
+    this.events = new Delegate(this.el)
+    this.overlayEvents = new Delegate(overlay)
+
+    this.hide = this.hide.bind(this)
+    this.show = this.show.bind(this)
 
     this.showing = null
     this.inserted = false
@@ -36,24 +41,44 @@ export default class Modals {
     if (this.inserted) return this
     this.inserted = true
     this.container.insertBefore(this.el, this.container.firstChild)
+
+    this.events.on('click', '[data-modal-hide]', this.hide.bind(this))
+    // this.events.on('click', `[class*="${this.options.overlayClass}"]`, this.hide.bind(this))
   }
 
   remove () {
     if (!this.inserted) return this
+    this.events.off()
+
     this.container.removeChild(this.el)
     this.inserted = false
   }
 
-  show (name, data) {
+  show (name, data, closeAfter) {
     this.insert()
     this.hide()
 
     let modal = this.showing = this.templates.render(name, data)
     this.el.appendChild(modal)
+
+    let hide = () => {
+      if (this.showing === modal) this.hide()
+    }
+
+    if (modal.hasAttribute('data-modal-hide')) {
+      let hideAndOff = () => {
+        hide()
+        this.overlayEvents.off('click', hideAndOff)
+      }
+      this.overlayEvents.on('click', hideAndOff)
+    }
+
+    Delegate(modal)
     setTimeout(() => {
       this.el.classList.add(this.options.activeClass)
+      if (closeAfter) setTimeout(hide, closeAfter)
     }, 0)
-    return this
+    return modal
   }
 
   hide () {
@@ -66,6 +91,5 @@ export default class Modals {
       if (this.showing) return
       this.remove()
     }, this.options.deactivateDelay)
-    return this
   }
 }
