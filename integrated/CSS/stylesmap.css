@@ -198,3 +198,15 @@ select{
   display: block;
   overflow: hidden; 
 }
+
+.twMarker{
+  background-color: #7FC2EE;
+  height: 41px;
+  display: inline-block;
+}
+
+.fbMarker{
+  background-color: #415E9B;
+  height: 41px;
+  display: inline-block;
+}

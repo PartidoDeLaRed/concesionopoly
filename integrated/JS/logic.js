@@ -138,8 +138,8 @@ $(document).ready(function(){
           salida_jq.prepend(new_div);
           salida_jq.addClass(safe_class_name(item["Rubro"]));
           salida_jq.append(mas_info);
-          var tw = $("<span onclick='javascript:Compartirtw("+i +")' href='#'>Tweet</span>");
-          var fb = $("<span onclick='javascript:Compartirfb("+i +")' href='#'>Compartir</span>");
+          var tw = $("<span onclick='javascript:Compartirtw("+i +")' href='#' class='twitterButton'></img>Tweet</span>");
+          var fb = $("<span onclick='javascript:Compartirfb("+i +")' href='#' class='facebookButton'></img>Compartir</span>");
           mas_info.append(tw);
           mas_info.append(fb);
 
