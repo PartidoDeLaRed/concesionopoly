@@ -1,6 +1,6 @@
 import flyTemplate from 'fly-template'
 
-export default class Templates {
+class Templates {
   constructor (container) {
     this.templates = {}
     this.el = container
@@ -22,3 +22,5 @@ export default class Templates {
     return template
   }
 }
+
+export default Templates

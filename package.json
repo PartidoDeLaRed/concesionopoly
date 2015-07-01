@@ -12,7 +12,7 @@
     "watch:js": "./node_modules/watch/cli.js 'npm run build:js' ./app/js",
     "watch:css": "./node_modules/pleeease-cli/bin/pleeease watch",
     "watch:html": "npm run build:html -- -w",
-    "build": "npm run build:js && npm run build:css && npm run build:html & npm run build:img",
+    "build": "npm run build:js && npm run build:css && npm run build:html && npm run build:img",
     "watch": "npm run watch:js & npm run watch:css & npm run watch:html",
     "clean": "rm -rf ./build/*"
   },

@@ -284,7 +284,23 @@ const tiles = [
   }
 ]
 
+function guid() {
+  function s4() {
+    return Math.floor((1 + Math.random()) * 0x10000)
+      .toString(16)
+      .substring(1);
+  }
+  return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+    s4() + '-' + s4() + s4() + s4()
+}
+
+tiles.forEach((tile) => {
+  if (tile.property) {
+    tile.property.id = guid()
+  }
+})
+
 export default {
-  get: i => merge({}, tiles[i]),
+  get: i => merge({}, tiles[parseInt(i, 10)]),
   size: tiles.length
 }

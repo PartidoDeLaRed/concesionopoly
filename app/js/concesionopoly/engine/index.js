@@ -18,6 +18,10 @@ export default class Engine extends Emitter {
     }
   }
 
+  getTile (i) {
+    return tiles.get(i)
+  }
+
   getPosition() {
     return this.state.position
   }
@@ -33,6 +37,7 @@ export default class Engine extends Emitter {
   }
 
   removeLastProperty () {
+    if (!this.state.ownedProperties.length) return null
     let property = this.state.ownedProperties.pop()
     this.emit('property:remove', property)
     return property

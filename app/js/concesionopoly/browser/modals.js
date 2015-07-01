@@ -1,5 +1,4 @@
 import merge from 'deepmerge'
-import Templates from './templates'
 import Delegate from 'dom-delegate'
 
 function defaults () {
@@ -24,12 +23,12 @@ export default class Modals {
     overlay.className = o.overlayClass
     this.el.appendChild(overlay)
 
-    let templates = o.templates || document.querySelector('[data-templates]')
-    this.templates = new Templates(templates)
+    this.templates = o.templates
 
     this.container = o.container || document.body
 
     this.events = new Delegate(this.el)
+    this.overlayEvents = new Delegate(overlay)
 
     this.hide = this.hide.bind(this)
     this.show = this.show.bind(this)
@@ -61,11 +60,23 @@ export default class Modals {
 
     let modal = this.showing = this.templates.render(name, data)
     this.el.appendChild(modal)
+
+    let hide = () => {
+      if (this.showing === modal) this.hide()
+    }
+
+    if (modal.hasAttribute('data-modal-hide')) {
+      let hideAndOff = () => {
+        hide()
+        this.overlayEvents.off('click', hideAndOff)
+      }
+      this.overlayEvents.on('click', hideAndOff)
+    }
+
+    Delegate(modal)
     setTimeout(() => {
       this.el.classList.add(this.options.activeClass)
-      if (closeAfter) setTimeout(() => {
-        if (this.showing === modal) this.hide()
-      }, closeAfter)
+      if (closeAfter) setTimeout(hide, closeAfter)
     }, 0)
     return modal
   }

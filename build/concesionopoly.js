@@ -9,7 +9,7 @@ var _concesionopolyIndex2 = _interopRequireDefault(_concesionopolyIndex);
 
 window.Concesionopoly = _concesionopolyIndex2['default'];
 
-},{"./concesionopoly/index":10}],2:[function(require,module,exports){
+},{"./concesionopoly/index":11}],2:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -110,6 +110,14 @@ var _domDelegate = require('dom-delegate');
 
 var _domDelegate2 = _interopRequireDefault(_domDelegate);
 
+var _propertiesList = require('./properties-list');
+
+var _propertiesList2 = _interopRequireDefault(_propertiesList);
+
+var _templates = require('./templates');
+
+var _templates2 = _interopRequireDefault(_templates);
+
 var _engine = require('../engine');
 
 var _engine2 = _interopRequireDefault(_engine);
@@ -137,15 +145,26 @@ var Browser = (function () {
 
     this.engine = new _engine2['default']();
 
+    this.templates = new _templates2['default'](this.el.querySelector('[data-templates]'));
+
     this.modals = new _modals2['default']({
       container: this.el,
-      deactivateDelay: 500
+      deactivateDelay: 500,
+      templates: this.templates
+    });
+
+    this.propertiesList = new _propertiesList2['default']({
+      el: this.el.querySelector('[data-properties-list]'),
+      templates: this.templates
     });
 
     this.dices = new _dices2['default'](this.el.querySelector('[data-dices]'));
     this.chip = new _chip2['default'](this.el.querySelector('[data-chip]'));
 
     this.doTurn = this.doTurn.bind(this);
+
+    this.engine.on('property:add', this.propertiesList.add);
+    this.engine.on('property:remove', this.propertiesList.remove);
 
     this.dices.set(this.engine.getDices());
     this.engine.on('dices:change', this.dices.set);
@@ -155,10 +174,25 @@ var Browser = (function () {
 
     this.enableTurn();
 
-    this.modals.show('welcome');
+    this.loadHelpModals();
   }
 
   _createClass(Browser, [{
+    key: 'loadHelpModals',
+    value: function loadHelpModals() {
+      var _this = this;
+
+      this.events.on('click', '[data-tile]', function (e, target) {
+        var index = target.getAttribute('data-tile');
+        if (!index) return;
+        var tile = _this.engine.getTile(index);
+
+        if (tile.type === 'property') {
+          _this.modals.show('property-info', tile.property);
+        }
+      });
+    }
+  }, {
     key: 'enableTurn',
     value: function enableTurn(lastTurn) {
       if (lastTurn && lastTurn.last) {
@@ -178,13 +212,20 @@ var Browser = (function () {
         return this.renderPropertyTurn(turn);
       }
 
-      this.modals.show(turn.type, turn.tile);
+      if (turn.type === 'extraordinary-tax') {
+        if (turn.removedProperty) this.modals.show(turn.type, turn.tile);
+      }
+
+      if (turn.type === 'luck') {
+        if (turn.addedProperty) this.modals.show(turn.type, turn.tile);
+      }
+
       this.enableTurn(turn);
     }
   }, {
     key: 'renderPropertyTurn',
     value: function renderPropertyTurn(turn) {
-      var _this = this;
+      var _this2 = this;
 
       var modal = this.modals.show('concession', turn.tile);
       var events = new _domDelegate2['default'](modal);
@@ -192,8 +233,8 @@ var Browser = (function () {
       events.on('click', '[data-price-option]', function (e, button) {
         var selectedPrice = button.getAttribute('data-price-option');
         turn.selectOption(parseInt(selectedPrice, 10));
-        _this.modals.hide();
-        _this.enableTurn(turn);
+        _this2.modals.hide();
+        _this2.enableTurn(turn);
       });
     }
   }]);
@@ -203,8 +244,9 @@ var Browser = (function () {
 
 exports['default'] = Browser;
 module.exports = exports['default'];
+// this.modals.show('welcome')
 
-},{"../engine":8,"./chip":2,"./dices":3,"./modals":5,"dom-delegate":13}],5:[function(require,module,exports){
+},{"../engine":9,"./chip":2,"./dices":3,"./modals":5,"./properties-list":6,"./templates":7,"dom-delegate":14}],5:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -220,10 +262,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 var _deepmerge = require('deepmerge');
 
 var _deepmerge2 = _interopRequireDefault(_deepmerge);
-
-var _templates = require('./templates');
-
-var _templates2 = _interopRequireDefault(_templates);
 
 var _domDelegate = require('dom-delegate');
 
@@ -255,12 +293,12 @@ var Modals = (function () {
     overlay.className = o.overlayClass;
     this.el.appendChild(overlay);
 
-    var templates = o.templates || document.querySelector('[data-templates]');
-    this.templates = new _templates2['default'](templates);
+    this.templates = o.templates;
 
     this.container = o.container || document.body;
 
     this.events = new _domDelegate2['default'](this.el);
+    this.overlayEvents = new _domDelegate2['default'](overlay);
 
     this.hide = this.hide.bind(this);
     this.show = this.show.bind(this);
@@ -297,11 +335,25 @@ var Modals = (function () {
 
       var modal = this.showing = this.templates.render(name, data);
       this.el.appendChild(modal);
+
+      var hide = function hide() {
+        if (_this.showing === modal) _this.hide();
+      };
+
+      if (modal.hasAttribute('data-modal-hide')) {
+        (function () {
+          var hideAndOff = function hideAndOff() {
+            hide();
+            _this.overlayEvents.off('click', hideAndOff);
+          };
+          _this.overlayEvents.on('click', hideAndOff);
+        })();
+      }
+
+      (0, _domDelegate2['default'])(modal);
       setTimeout(function () {
         _this.el.classList.add(_this.options.activeClass);
-        if (closeAfter) setTimeout(function () {
-          if (_this.showing === modal) _this.hide();
-        }, closeAfter);
+        if (closeAfter) setTimeout(hide, closeAfter);
       }, 0);
       return modal;
     }
@@ -329,7 +381,60 @@ exports['default'] = Modals;
 module.exports = exports['default'];
 // this.events.on('click', `[class*="${this.options.overlayClass}"]`, this.hide.bind(this))
 
-},{"./templates":6,"deepmerge":11,"dom-delegate":13}],6:[function(require,module,exports){
+},{"deepmerge":12,"dom-delegate":14}],6:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+var PropertiesList = (function () {
+  function PropertiesList() {
+    var options = arguments[0] === undefined ? {} : arguments[0];
+
+    _classCallCheck(this, PropertiesList);
+
+    this.el = options.el;
+    this.templates = options.templates;
+    this.engine = options.engine;
+
+    this.items = {};
+    this.size = 0;
+
+    this.add = this.add.bind(this);
+    this.remove = this.remove.bind(this);
+  }
+
+  _createClass(PropertiesList, [{
+    key: 'add',
+    value: function add(property) {
+      if (this.items[property.id]) throw new Error('Insanity: doing the same thing over and over again and expecting different results.');
+      var item = this.templates.render('properties-list-item', property);
+      this.items[property.id] = item;
+      this.size++;
+      if (this.size) this.el.classList.remove('empty');
+      this.el.appendChild(item);
+    }
+  }, {
+    key: 'remove',
+    value: function remove(property) {
+      this.el.removeChild(this.items[property.id]);
+      this.size--;
+      if (this.size) this.el.classList.add('empty');
+    }
+  }]);
+
+  return PropertiesList;
+})();
+
+exports['default'] = PropertiesList;
+module.exports = exports['default'];
+
+},{}],7:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -380,7 +485,7 @@ var Templates = (function () {
 exports['default'] = Templates;
 module.exports = exports['default'];
 
-},{"fly-template":15}],7:[function(require,module,exports){
+},{"fly-template":16}],8:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -421,7 +526,7 @@ var Dices = (function () {
 exports["default"] = Dices;
 module.exports = exports["default"];
 
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -471,6 +576,11 @@ var Engine = (function (_Emitter) {
   _inherits(Engine, _Emitter);
 
   _createClass(Engine, [{
+    key: 'getTile',
+    value: function getTile(i) {
+      return _tiles2['default'].get(i);
+    }
+  }, {
     key: 'getPosition',
     value: function getPosition() {
       return this.state.position;
@@ -490,6 +600,7 @@ var Engine = (function (_Emitter) {
   }, {
     key: 'removeLastProperty',
     value: function removeLastProperty() {
+      if (!this.state.ownedProperties.length) return null;
       var property = this.state.ownedProperties.pop();
       this.emit('property:remove', property);
       return property;
@@ -573,7 +684,7 @@ var Engine = (function (_Emitter) {
 exports['default'] = Engine;
 module.exports = exports['default'];
 
-},{"./dices":7,"./tiles":9,"emitter":14}],9:[function(require,module,exports){
+},{"./dices":8,"./tiles":10,"emitter":15}],10:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -614,7 +725,7 @@ var tiles = [{
   }
 }, {
   type: 'extraordinary-tax',
-  message: 'Te vendieron una conseción muy barata pero con papeles truchos, el Gobierno de la Ciudad te cancela el contrato.'
+  message: 'Firmaste un contrato trucho, el Gobierno de la Ciudad te cancela una Concesión.'
 }, {
   type: 'property',
   priceOptions: [1000, 3000],
@@ -825,7 +936,7 @@ var tiles = [{
   }
 }, {
   type: 'extraordinary-tax',
-  message: 'Te vendieron una conseción muy barata pero con papeles truchos, el Gobierno de la Ciudad te cancela el contrato.'
+  message: 'Firmaste un contrato trucho, el Gobierno de la Ciudad te cancela una Concesión.'
 }, {
   type: 'property',
   priceOptions: [1000, 3000],
@@ -836,15 +947,28 @@ var tiles = [{
   }
 }];
 
+function guid() {
+  function s4() {
+    return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
+  }
+  return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
+}
+
+tiles.forEach(function (tile) {
+  if (tile.property) {
+    tile.property.id = guid();
+  }
+});
+
 exports['default'] = {
   get: function get(i) {
-    return (0, _deepmerge2['default'])({}, tiles[i]);
+    return (0, _deepmerge2['default'])({}, tiles[parseInt(i, 10)]);
   },
   size: tiles.length
 };
 module.exports = exports['default'];
 
-},{"deepmerge":11}],10:[function(require,module,exports){
+},{"deepmerge":12}],11:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -865,7 +989,7 @@ function Concesionopoly(options) {
 
 module.exports = exports['default'];
 
-},{"./browser":4}],11:[function(require,module,exports){
+},{"./browser":4}],12:[function(require,module,exports){
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
         define(factory);
@@ -919,7 +1043,7 @@ return function deepmerge(target, src) {
 
 }));
 
-},{}],12:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 /*jshint browser:true, node:true*/
 
 'use strict';
@@ -1350,7 +1474,7 @@ Delegate.prototype.destroy = function() {
   this.root();
 };
 
-},{}],13:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 /*jshint browser:true, node:true*/
 
 'use strict';
@@ -1371,7 +1495,7 @@ module.exports = function(root) {
 
 module.exports.Delegate = Delegate;
 
-},{"./delegate":12}],14:[function(require,module,exports){
+},{"./delegate":13}],15:[function(require,module,exports){
 "use strict";
 
 var _classCallCheck = function (instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } };
@@ -1525,7 +1649,7 @@ var Emitter = (function () {
  */
 exports["default"] = Emitter;
 module.exports = exports["default"];
-},{}],15:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 function parse(str) {
   var i,
       l,
