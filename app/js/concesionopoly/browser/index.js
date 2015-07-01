@@ -21,22 +21,41 @@ export default class Browser {
 
     this.doTurn = this.doTurn.bind(this)
 
-    this.dices.set(this.engine.state.dices)
+    this.dices.set(this.engine.getDices())
     this.engine.on('dices:change', this.dices.set)
 
-    this.chip.set(this.engine.state.position)
+    this.chip.set(this.engine.getPosition())
     this.engine.on('position:change', this.chip.set)
 
-    this.events.on('click', '[data-dices]', this.doTurn)
+    this.enableTurn()
 
     this.modals.show('welcome')
+  }
+
+  enableTurn() {
+    this.events.on('click', '[data-dices]', this.doTurn)
   }
 
   doTurn () {
     this.events.off('click', '[data-dices]', this.doTurn)
 
-    let r = this.engine.doTurn()
+    let turn = this.engine.doTurn()
 
-    if (r.accept) r.accept()
+    if (turn.type === 'property') {
+      this.renderTurnProperty(turn)
+    }
+
+    if (!turn.last) this.enableTurn()
+  }
+
+  renderTurnProperty (turn) {
+    let modal = this.modals.show('concession', turn.tile)
+    let events = new Delegate(modal)
+
+    events.on('click', '[data-price-option]', (e, button) => {
+      let selectedPrice = button.getAttribute('data-price-option')
+      turn.selectOption(parseInt(selectedPrice, 10))
+      this.modals.hide()
+    })
   }
 }

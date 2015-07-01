@@ -9,11 +9,21 @@ export default class Engine extends Emitter {
     this.dices = new Dices(2)
 
     this.state = {
+      waiting: false,
+      ended: false,
       position: 0,
-      square: null,
+      tile: null,
       dices: this.dices.flip(),
       ownedProperties: []
     }
+  }
+
+  getPosition() {
+    return this.state.position
+  }
+
+  getDices() {
+    return this.state.dices
   }
 
   addProperty (property) {
@@ -36,40 +46,61 @@ export default class Engine extends Emitter {
   }
 
   move (amount) {
-    let newPosition = this.state.position + amount
-    if (newPosition >= tiles.length) newPosition = tiles.length - 1
-    this.state.position = newPosition
-    this.emit('position:change', newPosition)
-    return newPosition
+    let position = this.state.position + amount
+    if (position >= tiles.size - 1) {
+      position = tiles.size - 1
+      this.state.ended = true
+    }
+    this.state.position = position
+    this.emit('position:change', position)
+    return position
   }
 
   doTurn () {
-    if (this.position >= tiles.length - 1) {
-      return Promise.reject(() => new Error('GAME_ENDED'))
-    }
+    if (this.state.waiting) throw new Error('ansdjknaskdjnask.')
+    if (this.state.ended) throw new Error('wut?')
 
     let dices = this.flipDices()
-    let newPosition = this.move(dices.total)
-    let newSquare = tiles[newPosition]
+    let position = this.move(dices.total)
+    let tile = tiles.get(position)
 
-    this.state.square = newSquare
+    this.state.tile = tile
 
-    if (newSquare.type == 'luck') {
-      return {
+    let turn
+    if (tile.type == 'luck') {
+      turn = {
         type: 'luck',
-        addedProperty: this.addProperty(newSquare.property)
+        tile: tile,
+        last: !!this.state.ended,
+        addedProperty: this.addProperty(tile.property)
       }
-    } else if (newSquare.type == 'extraordinary-tax') {
-      return {
+    } else if (tile.type == 'extraordinary-tax') {
+      turn = {
         type: 'extraordinary-tax',
+        tile: tile,
+        last: !!this.state.ended,
         removedProperty: this.removeLastProperty()
       }
-    } else if (newSquare.type == 'property') {
-      return {
+    } else if (tile.type == 'property') {
+      let selectOption = (price) => {
+        if (!this.state.waiting) throw Error('uopa.')
+        this.state.waiting = false
+        if (tile.property.price === price) {
+          this.addProperty(tile.property)
+        }
+      }
+
+      this.state.waiting = true
+
+      turn = {
         type: 'property',
-        priceOptions: newSquare.priceOptions,
-        accept: () => this.addProperty(newSquare.property)
+        tile: tile,
+        last: !!this.state.ended,
+        priceOptions: tile.priceOptions,
+        selectOption: selectOption
       }
     }
+
+    return turn
   }
 }

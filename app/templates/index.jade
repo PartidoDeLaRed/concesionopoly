@@ -1,0 +1,11 @@
+mixin template(name)
+  script(type='text/html', data-template=name)
+    block
+
+.templates(style='display:none', data-templates)
+  +template('welcome')
+    include ./welcome.html
+  +template('concession')
+    include ./concession.html
+  +template('properties-list-item')
+    include ./properties-list-item.html

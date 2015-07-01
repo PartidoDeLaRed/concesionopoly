@@ -147,25 +147,48 @@ var Browser = (function () {
 
     this.doTurn = this.doTurn.bind(this);
 
-    this.dices.set(this.engine.state.dices);
+    this.dices.set(this.engine.getDices());
     this.engine.on('dices:change', this.dices.set);
 
-    this.chip.set(this.engine.state.position);
+    this.chip.set(this.engine.getPosition());
     this.engine.on('position:change', this.chip.set);
 
-    this.events.on('click', '[data-dices]', this.doTurn);
+    this.enableTurn();
 
     this.modals.show('welcome');
   }
 
   _createClass(Browser, [{
+    key: 'enableTurn',
+    value: function enableTurn() {
+      this.events.on('click', '[data-dices]', this.doTurn);
+    }
+  }, {
     key: 'doTurn',
     value: function doTurn() {
       this.events.off('click', '[data-dices]', this.doTurn);
 
-      var r = this.engine.doTurn();
+      var turn = this.engine.doTurn();
 
-      if (r.accept) r.accept();
+      if (turn.type === 'property') {
+        this.renderTurnProperty(turn);
+      }
+
+      if (!turn.last) this.enableTurn();
+    }
+  }, {
+    key: 'renderTurnProperty',
+    value: function renderTurnProperty(turn) {
+      var _this = this;
+
+      var modal = this.modals.show('concession', turn.tile);
+      var events = new _domDelegate2['default'](modal);
+
+      events.on('click', '[data-price-option]', function (e, button) {
+        var selectedPrice = button.getAttribute('data-price-option');
+        turn.selectOption(parseInt(selectedPrice, 10));
+        _this.modals.hide();
+      });
     }
   }]);
 
@@ -248,7 +271,6 @@ var Modals = (function () {
       this.container.insertBefore(this.el, this.container.firstChild);
 
       this.events.on('click', '[data-modal-hide]', this.hide.bind(this));
-      this.events.on('click', '[class*="' + this.options.overlayClass + '"]', this.hide.bind(this));
     }
   }, {
     key: 'remove',
@@ -272,7 +294,7 @@ var Modals = (function () {
       setTimeout(function () {
         _this.el.classList.add(_this.options.activeClass);
       }, 0);
-      return this;
+      return modal;
     }
   }, {
     key: 'hide',
@@ -288,7 +310,6 @@ var Modals = (function () {
         if (_this2.showing) return;
         _this2.remove();
       }, this.options.deactivateDelay);
-      return this;
     }
   }]);
 
@@ -297,6 +318,7 @@ var Modals = (function () {
 
 exports['default'] = Modals;
 module.exports = exports['default'];
+// this.events.on('click', `[class*="${this.options.overlayClass}"]`, this.hide.bind(this))
 
 },{"./templates":6,"deepmerge":11,"dom-delegate":13}],6:[function(require,module,exports){
 'use strict';
@@ -428,8 +450,10 @@ var Engine = (function (_Emitter) {
     this.dices = new _dices2['default'](2);
 
     this.state = {
+      waiting: false,
+      ended: false,
       position: 0,
-      square: null,
+      tile: null,
       dices: this.dices.flip(),
       ownedProperties: []
     };
@@ -438,6 +462,16 @@ var Engine = (function (_Emitter) {
   _inherits(Engine, _Emitter);
 
   _createClass(Engine, [{
+    key: 'getPosition',
+    value: function getPosition() {
+      return this.state.position;
+    }
+  }, {
+    key: 'getDices',
+    value: function getDices() {
+      return this.state.dices;
+    }
+  }, {
     key: 'addProperty',
     value: function addProperty(property) {
       this.state.ownedProperties.push(property);
@@ -462,48 +496,65 @@ var Engine = (function (_Emitter) {
   }, {
     key: 'move',
     value: function move(amount) {
-      var newPosition = this.state.position + amount;
-      if (newPosition >= _tiles2['default'].length) newPosition = _tiles2['default'].length - 1;
-      this.state.position = newPosition;
-      this.emit('position:change', newPosition);
-      return newPosition;
+      var position = this.state.position + amount;
+      if (position >= _tiles2['default'].size - 1) {
+        position = _tiles2['default'].size - 1;
+        this.state.ended = true;
+      }
+      this.state.position = position;
+      this.emit('position:change', position);
+      return position;
     }
   }, {
     key: 'doTurn',
     value: function doTurn() {
       var _this = this;
 
-      if (this.position >= _tiles2['default'].length - 1) {
-        return Promise.reject(function () {
-          return new Error('GAME_ENDED');
-        });
-      }
+      if (this.state.waiting) throw new Error('ansdjknaskdjnask.');
+      if (this.state.ended) throw new Error('wut?');
 
       var dices = this.flipDices();
-      var newPosition = this.move(dices.total);
-      var newSquare = _tiles2['default'][newPosition];
+      var position = this.move(dices.total);
+      var tile = _tiles2['default'].get(position);
 
-      this.state.square = newSquare;
+      this.state.tile = tile;
 
-      if (newSquare.type == 'luck') {
-        return {
+      var turn = undefined;
+      if (tile.type == 'luck') {
+        turn = {
           type: 'luck',
-          addedProperty: this.addProperty(newSquare.property)
+          tile: tile,
+          last: !!this.state.ended,
+          addedProperty: this.addProperty(tile.property)
         };
-      } else if (newSquare.type == 'extraordinary-tax') {
-        return {
+      } else if (tile.type == 'extraordinary-tax') {
+        turn = {
           type: 'extraordinary-tax',
+          tile: tile,
+          last: !!this.state.ended,
           removedProperty: this.removeLastProperty()
         };
-      } else if (newSquare.type == 'property') {
-        return {
-          type: 'property',
-          priceOptions: newSquare.priceOptions,
-          accept: function accept() {
-            return _this.addProperty(newSquare.property);
+      } else if (tile.type == 'property') {
+        var selectOption = function selectOption(price) {
+          if (!_this.state.waiting) throw Error('uopa.');
+          _this.state.waiting = false;
+          if (tile.property.price === price) {
+            _this.addProperty(tile.property);
           }
         };
+
+        this.state.waiting = true;
+
+        turn = {
+          type: 'property',
+          tile: tile,
+          last: !!this.state.ended,
+          priceOptions: tile.priceOptions,
+          selectOption: selectOption
+        };
       }
+
+      return turn;
     }
   }]);
 
@@ -519,17 +570,28 @@ module.exports = exports['default'];
 Object.defineProperty(exports, '__esModule', {
   value: true
 });
-exports['default'] = [{
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var _deepmerge = require('deepmerge');
+
+var _deepmerge2 = _interopRequireDefault(_deepmerge);
+
+var tiles = [{
+  type: 'property'
+}, {
   type: 'property',
   priceOptions: [1000, 3000],
   property: {
     name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
     price: 1000
   }
 }, {
   type: 'luck',
   property: {
     name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
     price: 1000
   }
 }, {
@@ -537,95 +599,7 @@ exports['default'] = [{
   priceOptions: [1000, 3000],
   property: {
     name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000
-  }
-}, {
-  type: 'property',
-  priceOptions: [1000, 3000],
-  property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000
-  }
-}, {
-  type: 'property',
-  priceOptions: [1000, 3000],
-  property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000
-  }
-}, {
-  type: 'property',
-  priceOptions: [1000, 3000],
-  property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000
-  }
-}, {
-  type: 'property',
-  priceOptions: [1000, 3000],
-  property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000
-  }
-}, {
-  type: 'property',
-  priceOptions: [1000, 3000],
-  property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000
-  }
-}, {
-  type: 'property',
-  priceOptions: [1000, 3000],
-  property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000
-  }
-}, {
-  type: 'property',
-  priceOptions: [1000, 3000],
-  property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000
-  }
-}, {
-  type: 'property',
-  priceOptions: [1000, 3000],
-  property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000
-  }
-}, {
-  type: 'luck',
-  property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000
-  }
-}, {
-  type: 'property',
-  priceOptions: [1000, 3000],
-  property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000
-  }
-}, {
-  type: 'property',
-  priceOptions: [1000, 3000],
-  property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000
-  }
-}, {
-  type: 'luck',
-  property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000
-  }
-}, {
-  type: 'property',
-  priceOptions: [1000, 3000],
-  property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
     price: 1000
   }
 }, {
@@ -635,6 +609,7 @@ exports['default'] = [{
   priceOptions: [1000, 3000],
   property: {
     name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
     price: 1000
   }
 }, {
@@ -642,12 +617,14 @@ exports['default'] = [{
   priceOptions: [1000, 3000],
   property: {
     name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
     price: 1000
   }
 }, {
   type: 'luck',
   property: {
     name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
     price: 1000
   }
 }, {
@@ -655,6 +632,180 @@ exports['default'] = [{
   priceOptions: [1000, 3000],
   property: {
     name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
+    price: 1000
+  }
+}, {
+  type: 'property',
+  priceOptions: [1000, 3000],
+  property: {
+    name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
+    price: 1000
+  }
+}, {
+  type: 'property',
+  priceOptions: [1000, 3000],
+  property: {
+    name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
+    price: 1000
+  }
+}, {
+  type: 'property',
+  priceOptions: [1000, 3000],
+  property: {
+    name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
+    price: 1000
+  }
+}, {
+  type: 'property',
+  priceOptions: [1000, 3000],
+  property: {
+    name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
+    price: 1000
+  }
+}, {
+  type: 'property',
+  priceOptions: [1000, 3000],
+  property: {
+    name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
+    price: 1000
+  }
+}, {
+  type: 'property',
+  priceOptions: [1000, 3000],
+  property: {
+    name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
+    price: 1000
+  }
+}, {
+  type: 'luck',
+  property: {
+    name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
+    price: 1000
+  }
+}, {
+  type: 'property',
+  priceOptions: [1000, 3000],
+  property: {
+    name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
+    price: 1000
+  }
+}, {
+  type: 'luck',
+  property: {
+    name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
+    price: 1000
+  }
+}, {
+  type: 'property',
+  priceOptions: [1000, 3000],
+  property: {
+    name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
+    price: 1000
+  }
+}, {
+  type: 'property',
+  priceOptions: [1000, 3000],
+  property: {
+    name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
+    price: 1000
+  }
+}, {
+  type: 'property',
+  priceOptions: [1000, 3000],
+  property: {
+    name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
+    price: 1000
+  }
+}, {
+  type: 'property',
+  priceOptions: [1000, 3000],
+  property: {
+    name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
+    price: 1000
+  }
+}, {
+  type: 'property',
+  priceOptions: [1000, 3000],
+  property: {
+    name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
+    price: 1000
+  }
+}, {
+  type: 'property',
+  priceOptions: [1000, 3000],
+  property: {
+    name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
+    price: 1000
+  }
+}, {
+  type: 'property',
+  priceOptions: [1000, 3000],
+  property: {
+    name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
+    price: 1000
+  }
+}, {
+  type: 'property',
+  priceOptions: [1000, 3000],
+  property: {
+    name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
+    price: 1000
+  }
+}, {
+  type: 'property',
+  priceOptions: [1000, 3000],
+  property: {
+    name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
+    price: 1000
+  }
+}, {
+  type: 'property',
+  priceOptions: [1000, 3000],
+  property: {
+    name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
+    price: 1000
+  }
+}, {
+  type: 'property',
+  priceOptions: [1000, 3000],
+  property: {
+    name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
+    price: 1000
+  }
+}, {
+  type: 'luck',
+  property: {
+    name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
+    price: 1000
+  }
+}, {
+  type: 'property',
+  priceOptions: [1000, 3000],
+  property: {
+    name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
     price: 1000
   }
 }, {
@@ -664,101 +815,20 @@ exports['default'] = [{
   priceOptions: [1000, 3000],
   property: {
     name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000
-  }
-}, {
-  type: 'property',
-  priceOptions: [1000, 3000],
-  property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000
-  }
-}, {
-  type: 'luck',
-  property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000
-  }
-}, {
-  type: 'property',
-  priceOptions: [1000, 3000],
-  property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000
-  }
-}, {
-  type: 'property',
-  priceOptions: [1000, 3000],
-  property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000
-  }
-}, {
-  type: 'property',
-  priceOptions: [1000, 3000],
-  property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000
-  }
-}, {
-  type: 'property',
-  priceOptions: [1000, 3000],
-  property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000
-  }
-}, {
-  type: 'property',
-  priceOptions: [1000, 3000],
-  property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000
-  }
-}, {
-  type: 'property',
-  priceOptions: [1000, 3000],
-  property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000
-  }
-}, {
-  type: 'property',
-  priceOptions: [1000, 3000],
-  property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000
-  }
-}, {
-  type: 'property',
-  priceOptions: [1000, 3000],
-  property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000
-  }
-}, {
-  type: 'luck',
-  property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000
-  }
-}, {
-  type: 'property',
-  priceOptions: [1000, 3000],
-  property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    price: 1000
-  }
-}, {
-  type: 'property',
-  priceOptions: [1000, 3000],
-  property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
     price: 1000
   }
 }];
+
+exports['default'] = {
+  get: function get(i) {
+    return (0, _deepmerge2['default'])({}, tiles[i]);
+  },
+  size: tiles.length
+};
 module.exports = exports['default'];
 
-},{}],10:[function(require,module,exports){
+},{"deepmerge":11}],10:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {

@@ -1,0 +1,18 @@
+<div class="modal concession">
+  <h1>Carta de Concesión</h1>
+  <div class="info">
+    <h2>${this.property.name}</h2>
+    <p>${this.property.description}</p>
+  </div>
+  <div class="options">
+    <h2>¿Cuánto crees que cuesta mensualmente esta concesión?</h2>
+    <button
+      class="btn white wide"
+      type="button"
+      data-price-option="${this.priceOptions[0]}">$ ${this.priceOptions[0]}</button>
+    <button
+      class="btn white wide"
+      type="button"
+      data-price-option="${this.priceOptions[1]}">$ ${this.priceOptions[1]}</button>
+  </div>
+</div>

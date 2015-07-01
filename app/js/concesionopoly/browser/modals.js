@@ -44,7 +44,7 @@ export default class Modals {
     this.container.insertBefore(this.el, this.container.firstChild)
 
     this.events.on('click', '[data-modal-hide]', this.hide.bind(this))
-    this.events.on('click', `[class*="${this.options.overlayClass}"]`, this.hide.bind(this))
+    // this.events.on('click', `[class*="${this.options.overlayClass}"]`, this.hide.bind(this))
   }
 
   remove () {
@@ -64,7 +64,7 @@ export default class Modals {
     setTimeout(() => {
       this.el.classList.add(this.options.activeClass)
     }, 0)
-    return this
+    return modal
   }
 
   hide () {
@@ -77,6 +77,5 @@ export default class Modals {
       if (this.showing) return
       this.remove()
     }, this.options.deactivateDelay)
-    return this
   }
 }
