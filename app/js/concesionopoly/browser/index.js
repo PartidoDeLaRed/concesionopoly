@@ -2,6 +2,7 @@ import Delegate from 'dom-delegate'
 import Engine from '../engine'
 import Modals from './modals'
 import Dices from './dices'
+import Chip from './chip'
 
 export default class Browser {
   constructor (options = {}) {
@@ -16,6 +17,7 @@ export default class Browser {
     })
 
     this.dices = new Dices(this.el.querySelector('[data-dices]'))
+    this.chip = new Chip(this.el.querySelector('[data-chip]'))
 
     this.doTurn = this.doTurn.bind(this)
 
@@ -28,6 +30,7 @@ export default class Browser {
 
   setState () {
     this.dices.set(this.engine.state.dices)
+    this.chip.set(this.engine.state.position)
   }
 
   doTurn () {
