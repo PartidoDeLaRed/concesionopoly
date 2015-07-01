@@ -9,16 +9,73 @@ var _concesionopolyIndex2 = _interopRequireDefault(_concesionopolyIndex);
 
 window.Concesionopoly = _concesionopolyIndex2['default'];
 
-},{"./concesionopoly/index":8}],2:[function(require,module,exports){
+},{"./concesionopoly/index":9}],2:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
   value: true
 });
 
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+var Dices = (function () {
+  function Dices(el) {
+    _classCallCheck(this, Dices);
+
+    this.dices = [];
+    this.el = el;
+  }
+
+  _createClass(Dices, [{
+    key: 'createDice',
+    value: function createDice() {
+      var dice = document.createElement('div');
+      dice.className = 'dice';[1, 2, 3, 4, 5, 6].forEach(function (v) {
+        var side = document.createElement('div');
+        side.className = 'side side-' + v;
+        dice.appendChild(side);
+      });
+
+      this.dices.push(dice);
+      this.el.appendChild(dice);
+      return dice;
+    }
+  }, {
+    key: 'set',
+    value: function set(dices) {
+      var _this = this;
+
+      dices.values.forEach(function (value, i) {
+        var dice = _this.dices[i] || _this.createDice();
+        dice.setAttribute('data-dice-value', value);
+      });
+    }
+  }]);
+
+  return Dices;
+})();
+
+exports['default'] = Dices;
+module.exports = exports['default'];
+
+},{}],3:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+var _domDelegate = require('dom-delegate');
+
+var _domDelegate2 = _interopRequireDefault(_domDelegate);
 
 var _engine = require('../engine');
 
@@ -28,26 +85,55 @@ var _modals = require('./modals');
 
 var _modals2 = _interopRequireDefault(_modals);
 
-var Browser = function Browser() {
-  var options = arguments[0] === undefined ? {} : arguments[0];
+var _dices = require('./dices');
 
-  _classCallCheck(this, Browser);
+var _dices2 = _interopRequireDefault(_dices);
 
-  this.el = options.el;
+var Browser = (function () {
+  function Browser() {
+    var options = arguments[0] === undefined ? {} : arguments[0];
 
-  this.engine = new _engine2['default']();
-  this.modals = new _modals2['default']({
-    container: this.el,
-    deactivateDelay: 500
-  });
+    _classCallCheck(this, Browser);
 
-  this.modals.show('welcome');
-};
+    this.el = options.el;
+    this.events = new _domDelegate2['default'](this.el);
+
+    this.engine = new _engine2['default']();
+
+    this.modals = new _modals2['default']({
+      container: this.el,
+      deactivateDelay: 500
+    });
+
+    this.dices = new _dices2['default'](this.el.querySelector('[data-dices]'));
+
+    this.doTurn = this.doTurn.bind(this);
+
+    this.setState();
+
+    this.events.on('click', '[data-dices]', this.doTurn);
+  }
+
+  _createClass(Browser, [{
+    key: 'setState',
+    value: function setState() {
+      this.dices.set(this.engine.state.dices);
+    }
+  }, {
+    key: 'doTurn',
+    value: function doTurn() {
+      this.events.off('click', '[data-dices]', this.doTurn);
+    }
+  }]);
+
+  return Browser;
+})();
 
 exports['default'] = Browser;
 module.exports = exports['default'];
+// this.modals.show('welcome')
 
-},{"../engine":6,"./modals":3}],3:[function(require,module,exports){
+},{"../engine":7,"./dices":2,"./modals":4,"dom-delegate":12}],4:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -170,7 +256,7 @@ var Modals = (function () {
 exports['default'] = Modals;
 module.exports = exports['default'];
 
-},{"./templates":4,"deepmerge":9,"dom-delegate":11}],4:[function(require,module,exports){
+},{"./templates":5,"deepmerge":10,"dom-delegate":12}],5:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -221,7 +307,7 @@ var Templates = (function () {
 exports['default'] = Templates;
 module.exports = exports['default'];
 
-},{"fly-template":13}],5:[function(require,module,exports){
+},{"fly-template":14}],6:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -268,7 +354,7 @@ var Dices = (function () {
 exports['default'] = Dices;
 module.exports = exports['default'];
 
-},{"immutable":14}],6:[function(require,module,exports){
+},{"immutable":15}],7:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -318,11 +404,6 @@ var Engine = (function (_Emitter) {
   _inherits(Engine, _Emitter);
 
   _createClass(Engine, [{
-    key: 'getTiles',
-    value: function getTiles() {
-      return _tiles2['default'];
-    }
-  }, {
     key: 'addProperty',
     value: function addProperty(property) {
       this.state.ownedProperties = this.state.ownedProperties.push(property);
@@ -351,8 +432,9 @@ var Engine = (function (_Emitter) {
       var dice = dices.flip();
       var newPosition = this.state.position + dice.total;
       if (newPosition >= _tiles2['default'].size - 1) newPosition = _tiles2['default'].size - 1;
-      var newSquare = this.tiles(newPosition);
+      var newSquare = _tiles2['default'].get(newPosition);
 
+      this.state.dices = dice;
       this.state.position = newPosition;
       this.state.square = newSquare;
 
@@ -383,7 +465,7 @@ var Engine = (function (_Emitter) {
 exports['default'] = Engine;
 module.exports = exports['default'];
 
-},{"./dices":5,"./tiles":7,"emitter":12,"immutable":14}],7:[function(require,module,exports){
+},{"./dices":6,"./tiles":8,"emitter":13,"immutable":15}],8:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -635,7 +717,7 @@ exports['default'] = _immutable2['default'].fromJS([{
 }]);
 module.exports = exports['default'];
 
-},{"immutable":14}],8:[function(require,module,exports){
+},{"immutable":15}],9:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -656,7 +738,7 @@ function Concesionopoly(options) {
 
 module.exports = exports['default'];
 
-},{"./browser":2}],9:[function(require,module,exports){
+},{"./browser":3}],10:[function(require,module,exports){
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
         define(factory);
@@ -710,7 +792,7 @@ return function deepmerge(target, src) {
 
 }));
 
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 /*jshint browser:true, node:true*/
 
 'use strict';
@@ -1141,7 +1223,7 @@ Delegate.prototype.destroy = function() {
   this.root();
 };
 
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 /*jshint browser:true, node:true*/
 
 'use strict';
@@ -1162,7 +1244,7 @@ module.exports = function(root) {
 
 module.exports.Delegate = Delegate;
 
-},{"./delegate":10}],12:[function(require,module,exports){
+},{"./delegate":11}],13:[function(require,module,exports){
 "use strict";
 
 var _classCallCheck = function (instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } };
@@ -1316,7 +1398,7 @@ var Emitter = (function () {
  */
 exports["default"] = Emitter;
 module.exports = exports["default"];
-},{}],13:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 function parse(str) {
   var i,
       l,
@@ -1382,7 +1464,7 @@ API.parse = parse;
 API.convert = convert;
 
 module.exports = API;
-},{}],14:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 /**
  *  Copyright (c) 2014-2015, Facebook, Inc.
  *  All rights reserved.

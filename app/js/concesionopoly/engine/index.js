@@ -17,10 +17,6 @@ export default class Engine extends Emitter {
     }
   }
 
-  getTiles () {
-    return tiles
-  }
-
   addProperty (property) {
     this.state.ownedProperties = this.state.ownedProperties.push(property)
     this.emit('property:add', property)
@@ -42,8 +38,9 @@ export default class Engine extends Emitter {
     let dice = dices.flip()
     let newPosition = this.state.position + dice.total
     if (newPosition >= tiles.size - 1) newPosition = tiles.size - 1
-    let newSquare = this.tiles(newPosition)
+    let newSquare = tiles.get(newPosition)
 
+    this.state.dices = dice
     this.state.position = newPosition
     this.state.square = newSquare
 

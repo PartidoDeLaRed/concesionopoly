@@ -5,16 +5,24 @@ head
   link(href='concesionopoly.css', rel='stylesheet', type='text/css')
 body
   .concesionopoly(data-concesionopoly)
-    div(style="display:none", data-templates)
+    .templates(style="display:none", data-templates)
       script( type="text/html" data-template="welcome").
-        <div class="modal">
+        <div class="modal welcome">
           <h1>Bienvenido</h1>
           <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
           <button class="btn yellow wide" type="button" data-modal-hide>Empezar</button>
         </div>
+      script( type="text/html" data-template="concession").
+        <div class="modal concession">
+          <h1>Bienvenido</h1>
+          <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+          <button class="btn yellow wide" type="button" data-modal-hide>Empezar</button>
+        </div>
+    .sidebar
+      .dices(data-dices)
     .board(data-board)
       .spacer
-      .chip(data-position='30')
+      .chip(data-position='0')
       .tile.on-corner.on-right.on-bottom(data-tile='0')
       .tile.on-bottom(data-tile='1')
       .tile.on-bottom(data-tile='2')
