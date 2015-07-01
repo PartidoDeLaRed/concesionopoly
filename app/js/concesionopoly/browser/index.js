@@ -32,8 +32,12 @@ export default class Browser {
     this.modals.show('welcome')
   }
 
-  enableTurn() {
-    this.events.on('click', '[data-dices]', this.doTurn)
+  enableTurn(lastTurn) {
+    if (lastTurn && lastTurn.last) {
+      this.modals.show('end')
+    } else {
+      this.events.on('click', '[data-dices]', this.doTurn)
+    }
   }
 
   doTurn () {
@@ -42,13 +46,14 @@ export default class Browser {
     let turn = this.engine.doTurn()
 
     if (turn.type === 'property') {
-      this.renderTurnProperty(turn)
+      return this.renderPropertyTurn(turn)
     }
 
-    if (!turn.last) this.enableTurn()
+    this.modals.show(turn.type, turn.tile)
+    this.enableTurn(turn)
   }
 
-  renderTurnProperty (turn) {
+  renderPropertyTurn (turn) {
     let modal = this.modals.show('concession', turn.tile)
     let events = new Delegate(modal)
 
@@ -56,6 +61,7 @@ export default class Browser {
       let selectedPrice = button.getAttribute('data-price-option')
       turn.selectOption(parseInt(selectedPrice, 10))
       this.modals.hide()
+      this.enableTurn(turn)
     })
   }
 }

@@ -55,7 +55,7 @@ export default class Modals {
     this.inserted = false
   }
 
-  show (name, data) {
+  show (name, data, closeAfter) {
     this.insert()
     this.hide()
 
@@ -63,6 +63,9 @@ export default class Modals {
     this.el.appendChild(modal)
     setTimeout(() => {
       this.el.classList.add(this.options.activeClass)
+      if (closeAfter) setTimeout(() => {
+        if (this.showing === modal) this.hide()
+      }, closeAfter)
     }, 0)
     return modal
   }

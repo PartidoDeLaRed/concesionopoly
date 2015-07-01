@@ -71,14 +71,14 @@ export default class Engine extends Emitter {
       turn = {
         type: 'luck',
         tile: tile,
-        last: !!this.state.ended,
+        last: this.state.ended,
         addedProperty: this.addProperty(tile.property)
       }
     } else if (tile.type == 'extraordinary-tax') {
       turn = {
         type: 'extraordinary-tax',
         tile: tile,
-        last: !!this.state.ended,
+        last: this.state.ended,
         removedProperty: this.removeLastProperty()
       }
     } else if (tile.type == 'property') {
@@ -95,7 +95,7 @@ export default class Engine extends Emitter {
       turn = {
         type: 'property',
         tile: tile,
-        last: !!this.state.ended,
+        last: this.state.ended,
         priceOptions: tile.priceOptions,
         selectOption: selectOption
       }

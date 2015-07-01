@@ -5,6 +5,12 @@ mixin template(name)
 .templates(style='display:none', data-templates)
   +template('welcome')
     include ./welcome.html
+  +template('end')
+    include ./end.html
+  +template('extraordinary-tax')
+    include ./extraordinary-tax.html
+  +template('luck')
+    include ./luck.html
   +template('concession')
     include ./concession.html
   +template('properties-list-item')

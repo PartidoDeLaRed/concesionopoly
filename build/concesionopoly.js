@@ -160,8 +160,12 @@ var Browser = (function () {
 
   _createClass(Browser, [{
     key: 'enableTurn',
-    value: function enableTurn() {
-      this.events.on('click', '[data-dices]', this.doTurn);
+    value: function enableTurn(lastTurn) {
+      if (lastTurn && lastTurn.last) {
+        this.modals.show('end');
+      } else {
+        this.events.on('click', '[data-dices]', this.doTurn);
+      }
     }
   }, {
     key: 'doTurn',
@@ -171,14 +175,15 @@ var Browser = (function () {
       var turn = this.engine.doTurn();
 
       if (turn.type === 'property') {
-        this.renderTurnProperty(turn);
+        return this.renderPropertyTurn(turn);
       }
 
-      if (!turn.last) this.enableTurn();
+      this.modals.show(turn.type, turn.tile);
+      this.enableTurn(turn);
     }
   }, {
-    key: 'renderTurnProperty',
-    value: function renderTurnProperty(turn) {
+    key: 'renderPropertyTurn',
+    value: function renderPropertyTurn(turn) {
       var _this = this;
 
       var modal = this.modals.show('concession', turn.tile);
@@ -188,6 +193,7 @@ var Browser = (function () {
         var selectedPrice = button.getAttribute('data-price-option');
         turn.selectOption(parseInt(selectedPrice, 10));
         _this.modals.hide();
+        _this.enableTurn(turn);
       });
     }
   }]);
@@ -283,7 +289,7 @@ var Modals = (function () {
     }
   }, {
     key: 'show',
-    value: function show(name, data) {
+    value: function show(name, data, closeAfter) {
       var _this = this;
 
       this.insert();
@@ -293,6 +299,9 @@ var Modals = (function () {
       this.el.appendChild(modal);
       setTimeout(function () {
         _this.el.classList.add(_this.options.activeClass);
+        if (closeAfter) setTimeout(function () {
+          if (_this.showing === modal) _this.hide();
+        }, closeAfter);
       }, 0);
       return modal;
     }
@@ -524,14 +533,14 @@ var Engine = (function (_Emitter) {
         turn = {
           type: 'luck',
           tile: tile,
-          last: !!this.state.ended,
+          last: this.state.ended,
           addedProperty: this.addProperty(tile.property)
         };
       } else if (tile.type == 'extraordinary-tax') {
         turn = {
           type: 'extraordinary-tax',
           tile: tile,
-          last: !!this.state.ended,
+          last: this.state.ended,
           removedProperty: this.removeLastProperty()
         };
       } else if (tile.type == 'property') {
@@ -548,7 +557,7 @@ var Engine = (function (_Emitter) {
         turn = {
           type: 'property',
           tile: tile,
-          last: !!this.state.ended,
+          last: this.state.ended,
           priceOptions: tile.priceOptions,
           selectOption: selectOption
         };
@@ -589,6 +598,7 @@ var tiles = [{
   }
 }, {
   type: 'luck',
+  message: 'Un amigo de un amigo es diputado, y te consiguió la concesión por las Canchas de Tenis Parque Sarmiento gratis.',
   property: {
     name: 'Canchas de Tenis Parque Sarmiento',
     description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
@@ -603,70 +613,8 @@ var tiles = [{
     price: 1000
   }
 }, {
-  type: 'extraordinary-tax'
-}, {
-  type: 'property',
-  priceOptions: [1000, 3000],
-  property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
-    price: 1000
-  }
-}, {
-  type: 'property',
-  priceOptions: [1000, 3000],
-  property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
-    price: 1000
-  }
-}, {
-  type: 'luck',
-  property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
-    price: 1000
-  }
-}, {
-  type: 'property',
-  priceOptions: [1000, 3000],
-  property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
-    price: 1000
-  }
-}, {
-  type: 'property',
-  priceOptions: [1000, 3000],
-  property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
-    price: 1000
-  }
-}, {
-  type: 'property',
-  priceOptions: [1000, 3000],
-  property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
-    price: 1000
-  }
-}, {
-  type: 'property',
-  priceOptions: [1000, 3000],
-  property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
-    price: 1000
-  }
-}, {
-  type: 'property',
-  priceOptions: [1000, 3000],
-  property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
-    price: 1000
-  }
+  type: 'extraordinary-tax',
+  message: 'Te vendieron una conseción muy barata pero con papeles truchos, el Gobierno de la Ciudad te cancela el contrato.'
 }, {
   type: 'property',
   priceOptions: [1000, 3000],
@@ -685,53 +633,7 @@ var tiles = [{
   }
 }, {
   type: 'luck',
-  property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
-    price: 1000
-  }
-}, {
-  type: 'property',
-  priceOptions: [1000, 3000],
-  property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
-    price: 1000
-  }
-}, {
-  type: 'luck',
-  property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
-    price: 1000
-  }
-}, {
-  type: 'property',
-  priceOptions: [1000, 3000],
-  property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
-    price: 1000
-  }
-}, {
-  type: 'property',
-  priceOptions: [1000, 3000],
-  property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
-    price: 1000
-  }
-}, {
-  type: 'property',
-  priceOptions: [1000, 3000],
-  property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
-    price: 1000
-  }
-}, {
-  type: 'property',
-  priceOptions: [1000, 3000],
+  message: 'Un amigo de un amigo es diputado, y te consiguió la concesión por las Canchas de Tenis Parque Sarmiento gratis.',
   property: {
     name: 'Canchas de Tenis Parque Sarmiento',
     description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
@@ -795,6 +697,7 @@ var tiles = [{
   }
 }, {
   type: 'luck',
+  message: 'Un amigo de un amigo es diputado, y te consiguió la concesión por las Canchas de Tenis Parque Sarmiento gratis.',
   property: {
     name: 'Canchas de Tenis Parque Sarmiento',
     description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
@@ -809,7 +712,120 @@ var tiles = [{
     price: 1000
   }
 }, {
-  type: 'extraordinary-tax'
+  type: 'luck',
+  message: 'Un amigo de un amigo es diputado, y te consiguió la concesión por las Canchas de Tenis Parque Sarmiento gratis.',
+  property: {
+    name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
+    price: 1000
+  }
+}, {
+  type: 'property',
+  priceOptions: [1000, 3000],
+  property: {
+    name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
+    price: 1000
+  }
+}, {
+  type: 'property',
+  priceOptions: [1000, 3000],
+  property: {
+    name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
+    price: 1000
+  }
+}, {
+  type: 'property',
+  priceOptions: [1000, 3000],
+  property: {
+    name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
+    price: 1000
+  }
+}, {
+  type: 'property',
+  priceOptions: [1000, 3000],
+  property: {
+    name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
+    price: 1000
+  }
+}, {
+  type: 'property',
+  priceOptions: [1000, 3000],
+  property: {
+    name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
+    price: 1000
+  }
+}, {
+  type: 'property',
+  priceOptions: [1000, 3000],
+  property: {
+    name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
+    price: 1000
+  }
+}, {
+  type: 'property',
+  priceOptions: [1000, 3000],
+  property: {
+    name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
+    price: 1000
+  }
+}, {
+  type: 'property',
+  priceOptions: [1000, 3000],
+  property: {
+    name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
+    price: 1000
+  }
+}, {
+  type: 'property',
+  priceOptions: [1000, 3000],
+  property: {
+    name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
+    price: 1000
+  }
+}, {
+  type: 'property',
+  priceOptions: [1000, 3000],
+  property: {
+    name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
+    price: 1000
+  }
+}, {
+  type: 'property',
+  priceOptions: [1000, 3000],
+  property: {
+    name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
+    price: 1000
+  }
+}, {
+  type: 'luck',
+  message: 'Un amigo de un amigo es diputado, y te consiguió la concesión por las Canchas de Tenis Parque Sarmiento gratis.',
+  property: {
+    name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
+    price: 1000
+  }
+}, {
+  type: 'property',
+  priceOptions: [1000, 3000],
+  property: {
+    name: 'Canchas de Tenis Parque Sarmiento',
+    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
+    price: 1000
+  }
+}, {
+  type: 'extraordinary-tax',
+  message: 'Te vendieron una conseción muy barata pero con papeles truchos, el Gobierno de la Ciudad te cancela el contrato.'
 }, {
   type: 'property',
   priceOptions: [1000, 3000],

@@ -12,6 +12,7 @@
 
     .modal
       opacity: 1
+      transition-delay: .5s
 
   .overlay
     z-index: 5
@@ -23,7 +24,10 @@
     background-color: rgba(#a0a0a0, .7)
     background-image: linear-gradient(to bottom right, #555, #000);
     opacity: 0
-    transition: opacity .5s
+    -webkit-transform: translate3d(0, 0, 0)
+    transition-property: opacity
+    transition-duration: .5s
+    transition-delay: 0
 
   .modal
     z-index: 10
@@ -35,7 +39,7 @@
     width: 350px
     max-width: calc(100% - 20px)
     background-color: #fff
-    transform: translate(-50%, -50%)
+    transform: translate3d(-50%, -50%, 0)
     opacity: 0
     transition: opacity .6s
     box-shadow: 4px 4px 0 #979797
