@@ -33,7 +33,7 @@ const tiles = [
   },
   {
     type: 'extraordinary-tax',
-    message: 'Te vendieron una conseción muy barata pero con papeles truchos, el Gobierno de la Ciudad te cancela el contrato.'
+    message: 'Firmaste un contrato trucho, el Gobierno de la Ciudad te cancela una Concesión.'
   },
   {
     type: 'property',
@@ -271,7 +271,7 @@ const tiles = [
   },
   {
     type: 'extraordinary-tax',
-    message: 'Te vendieron una conseción muy barata pero con papeles truchos, el Gobierno de la Ciudad te cancela el contrato.'
+    message: 'Firmaste un contrato trucho, el Gobierno de la Ciudad te cancela una Concesión.'
   },
   {
     type: 'property',
