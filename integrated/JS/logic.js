@@ -111,12 +111,18 @@ $(document).ready(function(){
       function hola(data){
         $.each(data, function(i, item) {
           var lugar = new Lugar(item["Monto de canon"], safe_class_name(item["Rubro"]));
+          lugar.item = item;
 
           //console.log(item.Coordenadas);
           mas_info = $("<div class='mas_info'></div>");
+          var money = '';
+          if (lugar.monto != 0){
+            money = '$';
+          }
+          lugar.money = money;
           mas_info.append($("<div class='fields'> <span class='field_name'> <span class='texto_field'> Concesión: </span></span> <span class='field_data'>" + item["Concesión"]+"</span></div>"));
           mas_info.append($("<div class='fields'> <span class='field_name'> <span class='texto_field'> Concesionario: </span></span> <span class='field_data'>" + item.Concesionario+"</span></div>"));
-          mas_info.append($("<div class='fields'> <span class='field_name'> <span class='texto_field'> Monto de canon: </span></span> <span class='field_data'>$" + item["Monto de canon"]+"</span></div>"));
+          mas_info.append($("<div class='fields'> <span class='field_name'> <span class='texto_field'> Monto de canon: </span></span> <span class='field_data'>"+ money + item["Monto de canon"]+"</span></div>"));
           mas_info.append($("<div class='fields'> <span class='field_name'> <span class='texto_field'> Tipo de canon: </span></span> <span class='field_data'>" + item["Tipo de canon"]+"</span></div>"));
           mas_info.append($("<div class='fields'> <span class='field_name'> <span class='texto_field'> Domicilio: </span></span> <span class='field_data'>" + item["Domicilio"]+"</span></div>"));
           mas_info.append($("<div class='fields'> <span class='field_name'> <span class='texto_field'> Rubro: </span></span> <span class='field_data'>" + item["Rubro"]+"</span></div>"));
@@ -132,8 +138,16 @@ $(document).ready(function(){
           salida_jq.prepend(new_div);
           salida_jq.addClass(safe_class_name(item["Rubro"]));
           salida_jq.append(mas_info);
-          var share_text = encodeURIComponent(item["Concesión"]+ " Paga $"+item["Monto de canon"] + " por mes a la ciudad, más info en: " +window.location.href);
-          mas_info.append($("<a href='https://twitter.com/intent/tweet?related=PartidodelaRed&text=" + share_text + "'>Tweet</a>"));
+          var tw = $("<span onclick='javascript:Compartirtw("+i +")' href='#'>Tweet</span>");
+          var fb = $("<span onclick='javascript:Compartirfb("+i +")' href='#'>Compartir</span>");
+          mas_info.append(tw);
+          mas_info.append(fb);
+
+          tw.on("click", function(e){
+            e.preventDefault();
+            console.log("hola");
+          });
+
           //var url = window.location.href;
           /*var url = "www.concesionopoly.com";
 
@@ -285,3 +299,26 @@ $(document).ready(function(){
   });
 
 });
+
+function Compartirtw (id) {
+  var lugar = lugares[id];
+  var share_text = encodeURIComponent(lugar.item["Concesión"]+ " Paga "+lugar.money+lugar.item["Monto de canon"] + " por mes a la ciudad, más info en: " +window.location.href);
+  window.open('https://twitter.com/intent/tweet?'+
+    'related=PartidodelaRed&'+
+    'text='+ share_text, 'tweet', 'width=900,height=300,menubar=no,status=no,titlebar=no,top=200,left='+(screen.width-900)/2);
+  console.log(lugares[id]);
+}
+
+function Compartirfb (id) {
+  var lugar = lugares[id];
+  var share_text = encodeURIComponent(lugar.item["Concesión"]+ " Paga "+lugar.money+lugar.item["Monto de canon"] + " por mes a la ciudad, más info en: " +window.location.href);
+  window.open('http://www.facebook.com/dialog/feed?app_id=825676227513877' +
+        '&link='+location.origin+location.pathname +
+        //'&picture=http:%2F%2Fqueproponen.com.ar%2Fvosquepropones%2FIMG%2FshareLogo.png' +
+        '&name=' + share_text +
+        '&caption=' + 'via concesionopoly.com.ar - Partido de la Red' +
+        '&description=' + 'Conocé todas las concesiones otorgadas por la Ciudad de Buenos Aires.' +
+        '&redirect_uri='+location.origin+location.pathname+'close.html' +
+        '&display=popup'
+    , 'Compartir las concesiones', 'width=900,height=300,menubar=no,status=no,titlebar=no,top=200,left='+(screen.width-900)/2);
+}

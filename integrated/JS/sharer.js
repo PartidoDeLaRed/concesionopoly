@@ -10,7 +10,7 @@ function CompartirInicio(tipo){
     window.open('http://www.facebook.com/dialog/feed?app_id=825676227513877' +
         '&link='+location.origin+location.pathname +
         //'&picture=http:%2F%2Fqueproponen.com.ar%2Fvosquepropones%2FIMG%2FshareLogo.png' +
-        '&name=' + 'Todas las propuestas de los candidatos para '+Ciudad+' en un solo lugar' +
+        '&name=' + 'Conocé todas las concesiones otorgadas por la Ciudad de Buenos Aires. ' +
         '&caption=' + 'via concesionopoly.com.ar - Partido de la Red' +
         '&description=' + 'Conocé todas las concesiones otorgadas por la Ciudad de Buenos Aires.' +
         '&redirect_uri='+location.origin+location.pathname+'close.html' +
