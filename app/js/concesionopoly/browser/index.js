@@ -1,16 +1,14 @@
 import Engine from '../engine'
+import Modals from './modals'
 
 export default class Browser {
-  constructor (el) {
-    this.board = el
-    this.engine = new Engine(this.loadState())
-  }
+  constructor (options = {}) {
+    this.el = options.el
 
-  loadState () {
-    return {}
-  }
-
-  saveState () {
-    return true // returns true
+    this.engine = new Engine()
+    this.modals = new Modals({
+      container: this.el,
+      deactivateDelay: 100
+    })
   }
 }

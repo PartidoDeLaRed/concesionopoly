@@ -1,0 +1,5 @@
+{
+  "in": [ "./app/css/concesionopoly.styl" ],
+  "out": "./build/concesionopoly.css",
+  "stylus": true
+}

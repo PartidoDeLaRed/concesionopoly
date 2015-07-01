@@ -1,4 +1,4 @@
-import { IndexedSeq, Repeat } from 'immutable'
+import { Repeat } from 'immutable'
 
 class Dices {
   constructor (amount) {
@@ -9,15 +9,6 @@ class Dices {
     let values = Repeat(null, this.amount).map(function(){
       return Math.floor(Math.random() * 6 + 1)
     })
-
-    return {
-      values: values,
-      total: this.sum(values)
-    }
-  }
-
-  arrange (value) {
-    let values = Repeat(value, this.amount)
 
     return {
       values: values,

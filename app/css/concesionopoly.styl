@@ -7,12 +7,51 @@ html
   padding: 0
 
 body
-  background-color: #fcfcfc
+  background-color: #d6d6d6
 
-.board
+.concesionopoly
+  z-index: 0
   position: relative
-  width: 650px
-  height: 650px
+  padding: .5em
+  min-width: 100vw
+  min-height: 100vh
+
+.concesionopoly .modals
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+
+  &.active
+    .overlay,
+    .modal
+      opacity: 1
+
+  .overlay
+    z-index: 5
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(#a0a0a0, .7)
+    opacity: 0
+    transition: opacity 1s
+
+  .modal
+    z-index: 10
+    position: absolute
+    left: 50%
+    top: 50%
+    background-color: #fff
+    transform: translate(-50%, -50%)
+    opacity: 0
+    transition: opacity .5s
+
+.concesionopoly .board
+  position: relative
+  width: 671px
   margin: 0 auto
   max-width: 100%
   max-height: 100%
@@ -20,31 +59,36 @@ body
   background-repeat: no-repeat
   background-position: center center
   background-size: 100% 100%
+  box-shadow: 4px 4px 0 rgba(#000, .1),
+              inset 0 0 20px -5px rgba(#fff, .6)
 
-  .square
-    width = 8.6142%
-    height = 11.2359%
+  tile-width = 9.4125%
+  tile-height = 12.35%
+  chip-width = tile-height / 2
+  chip-height = tile-height / 2
 
+  .spacer
+    padding-top: 100%
+
+  .tile
     position: absolute
-    opacity: .5
-    cursor: pointer
 
     &:hover
-      background-color: magenta
+      background-color: rgba(magenta, .1)
 
     &.on-top,
     &.on-bottom
-      width: width
-      height: height
+      width: tile-width
+      height: tile-height
 
     &.on-right,
     &.on-left
-      width: height
-      height: width
+      width: tile-height
+      height: tile-width
 
     &.on-corner
-      width: height
-      height: height
+      width: tile-height
+      height: tile-height
 
     &.on-right
       right: 0
@@ -58,18 +102,51 @@ body
     &.on-top
       top: 0
 
-    for num in (1..9)
-      &[data-square={s('"%s"', num)}]
-        left: round(height + width * (num - 1), 4)
+    for num in (1..8)
+      &[data-tile={s('"%s"', num)}]
+        right: round(tile-height + tile-width * (num - 1), 4)
 
-    for num in (11..19)
-      &[data-square={s('"%s"', num)}]
-        top: round(height + width * (num - 11), 4)
+    for num in (9..16)
+      &[data-tile={s('"%s"', num)}]
+        bottom: round(tile-height + tile-width * (num - 9), 4)
 
-    for num in (21..29)
-      &[data-square={s('"%s"', num)}]
-        right: round(height + width * (num - 21), 4)
+    for num in (17..24)
+      &[data-tile={s('"%s"', num)}]
+        left: round(tile-height + tile-width * (num - 17), 4)
 
-    for num in (31..39)
-      &[data-square={s('"%s"', num)}]
-        top: round(height + width * (num - 31), 4)
+    for num in (25..32)
+      &[data-tile={s('"%s"', num)}]
+        top: round(tile-height + tile-width * (num - 25), 4)
+
+  .chip
+    position: absolute
+    width: chip-width
+    height: chip-height
+    background-color: blue
+
+    &[data-position="0"]
+      right: (( tile-height - chip-width ) / 2)
+      bottom: (( tile-height - chip-height ) / 2)
+
+    initial-pos = tile-height + ( tile-width - chip-width ) / 2
+    from-border = round(( tile-height - chip-height ) / 2, 4)
+
+    for num in (1..8)
+      &[data-position={s('"%s"', num)}]
+        right: round(initial-pos + tile-width * (num - 1), 4)
+        bottom: from-border
+
+    for num in (9..16)
+      &[data-position={s('"%s"', num)}]
+        bottom: round(initial-pos + tile-width * (num - 9), 4)
+        left: from-border
+
+    for num in (17..24)
+      &[data-position={s('"%s"', num)}]
+        left: round(initial-pos + tile-width * (num - 17), 4)
+        top: from-border
+
+    for num in (25..32)
+      &[data-position={s('"%s"', num)}]
+        top: round(initial-pos + tile-width * (num - 25), 4)
+        right: from-border

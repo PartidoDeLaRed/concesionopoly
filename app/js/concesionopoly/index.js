@@ -1,7 +1,6 @@
 import Browser from './browser'
 
-export default function Concesionopoly (board) {
-  let browser = new Browser(board)
-  let engine = browser.engine
-  return engine.getState.bind(engine.getState)
+export default function Concesionopoly (options) {
+  let browser = new Browser(options)
+  return browser
 }
