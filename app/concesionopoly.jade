@@ -5,9 +5,13 @@ head
   link(href='concesionopoly.css', rel='stylesheet', type='text/css')
 body
   .concesionopoly(data-concesionopoly)
-    .board
+    div(style="display:none", data-templates)
+      script( type="text/html" data-template="welcome").
+        .modal
+          h1 Hola!
+    .board(data-board)
       .spacer
-      .chip(data-position='32')
+      .chip(data-position='0')
       .tile.on-corner.on-right.on-bottom(data-tile='0')
       .tile.on-bottom(data-tile='1')
       .tile.on-bottom(data-tile='2')
@@ -41,6 +45,7 @@ body
       .tile.on-right(data-tile='30')
       .tile.on-right(data-tile='31')
       .tile.on-right(data-tile='32')
+  script(src='//cdn.polyfill.io/v1/polyfill.min.js')
   script(src='concesionopoly.js')
   script.
     var concesionopoly = new Concesionopoly({

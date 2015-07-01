@@ -6,11 +6,11 @@
   "scripts": {
     "postinstall": "mkdir -p ./build",
     "build:js": "./node_modules/browserify/bin/cmd.js -e ./app/js/concesionopoly.js -t babelify -o ./build/concesionopoly.js",
-    "build:css": "./node_modules/stylus/bin/stylus $(find './app/css' -iname '*.styl') --out ./build",
+    "build:css": "./node_modules/pleeease-cli/bin/pleeease compile",
     "build:html": "./node_modules/jade/bin/jade.js $(find './app' -iname '*.jade') --out ./build",
     "build:img": "cp -rf ./app/img ./build/img",
     "watch:js": "./node_modules/watchify/bin/cmd.js -e ./app/js/concesionopoly.js -t babelify -o ./build/concesionopoly.js",
-    "watch:css": "npm run build:css -- -w",
+    "watch:css": "./node_modules/pleeease-cli/bin/pleeease watch",
     "watch:html": "npm run build:html -- -w",
     "build": "npm run build:js && npm run build:css && npm run build:html & npm run build:img",
     "watch": "npm run watch:js & npm run watch:css & npm run watch:html",
@@ -30,10 +30,14 @@
     "babelify": "^6.1.2",
     "browserify": "^10.2.4",
     "emitter": "mango/emitter",
+    "fly-template": "^0.1.3",
     "immutable": "^3.7.4",
     "jade": "^1.11.0",
-    "stylus": "^0.51.1",
-    "watch": "^0.16.0",
+    "object-merge": "^2.5.1",
+    "pleeease-cli": "^3.2.8",
     "watchify": "^3.2.3"
+  },
+  "dependencies": {
+    "picomodal": "^2.1.0"
   }
 }

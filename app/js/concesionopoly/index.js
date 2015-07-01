@@ -1,6 +1,6 @@
 import Browser from './browser'
 
-export default function Concesionopoly (board) {
-  let browser = new Browser(board)
+export default function Concesionopoly (options) {
+  let browser = new Browser(options)
   return browser
 }
