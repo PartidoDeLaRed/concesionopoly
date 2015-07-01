@@ -44,7 +44,7 @@ export default class Browser {
 
     this.loadHelpModals()
 
-    // this.modals.show('welcome')
+    this.modals.show('welcome')
   }
 
   loadHelpModals () {

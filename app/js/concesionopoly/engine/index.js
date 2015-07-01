@@ -88,7 +88,7 @@ export default class Engine extends Emitter {
       }
     } else if (tile.type == 'property') {
       let selectOption = (price) => {
-        if (!this.state.waiting) throw Error('uopa.')
+        if (!this.state.waiting) return
         this.state.waiting = false
         if (tile.property.price === price) {
           this.addProperty(tile.property)

@@ -1,13 +1,13 @@
 class Dices {
-  constructor (amount) {
-    this.amount = amount || 1
+  constructor (amount = 1) {
+    this.amount = amount
   }
 
   flip () {
     let values = []
 
-    let pending = this.amount + 1
-    while (--pending) values.push(Math.floor(Math.random() * 6 + 1))
+    let pending = this.amount
+    while (pending--) values.push(Math.floor(Math.random() * 6 + 1))
 
     return {
       values: values,
