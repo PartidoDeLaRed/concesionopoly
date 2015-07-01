@@ -1560,3 +1560,7 @@ a{
 .homecont{
 	max-width: 900px;
 }
+
+.smallercont{
+	max-width: 500px;
+}

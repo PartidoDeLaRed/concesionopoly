@@ -138,6 +138,7 @@ code {
   border-bottom-width: 0;
   font-size: 12px;
   cursor: pointer;
+  text-align: left;
 }
 
 .lista:hover {
