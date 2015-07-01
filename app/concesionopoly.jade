@@ -7,8 +7,9 @@ body
   .concesionopoly(data-concesionopoly)
     div(style="display:none", data-templates)
       script( type="text/html" data-template="welcome").
-        .modal
-          h1 Hola!
+        <div class="modal">
+          <h1>Hola!</h1>
+        </div>
     .board(data-board)
       .spacer
       .chip(data-position='0')

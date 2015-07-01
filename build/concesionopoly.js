@@ -37,8 +37,8 @@ var Browser = function Browser() {
 
   this.engine = new _engine2['default']();
   this.modals = new _modals2['default']({
-    wrapper: this.el,
-    deactivateDelay: 500
+    container: this.el,
+    deactivateDelay: 100
   });
 };
 
@@ -88,40 +88,45 @@ var Modals = (function () {
     this.el = document.createElement('div');
     this.el.className = o.className;
 
-    var overlay = this.overlay = document.createElement('div');
+    var overlay = document.createElement('div');
     overlay.className = o.overlayClass;
     this.el.appendChild(overlay);
-
-    var container = this.container = o.container || document.body;
 
     var templates = o.templates || document.querySelector('[data-templates]');
     this.templates = new _templates2['default'](templates);
 
+    this.container = o.container || document.body;
+
     this.showing = null;
+    this.inserted = false;
   }
 
   _createClass(Modals, [{
-    key: 'append',
-    value: function append() {
+    key: 'insert',
+    value: function insert() {
+      if (this.inserted) return this;
+      this.inserted = true;
       this.container.insertBefore(this.el, this.container.firstChild);
     }
   }, {
     key: 'remove',
     value: function remove() {
+      if (!this.inserted) return this;
       this.container.removeChild(this.el);
+      this.inserted = false;
     }
   }, {
     key: 'show',
     value: function show(name, data) {
       var _this = this;
 
-      if (this.showing) this.hide();
+      this.insert();
+      this.hide();
+
       var modal = this.showing = this.templates.render(name, data);
       this.el.appendChild(modal);
-      this.el.classList.add(this.options.activeClass);
       setTimeout(function () {
-        _this.overlay.classList.add(_this.options.activeClass);
-        modal.classList.add(_this.options.activeClass);
+        _this.el.classList.add(_this.options.activeClass);
       }, 0);
       return this;
     }
@@ -132,16 +137,12 @@ var Modals = (function () {
 
       if (!this.showing) return this;
       var modal = this.showing;
-      modal.classList.remove(this.options.activeClass);
       this.showing = null;
-      this.overlay.classList.remove(this.options.activeClass);
+      this.el.classList.remove(this.options.activeClass);
       setTimeout(function () {
         _this2.el.removeChild(modal);
         if (_this2.showing) return;
-        setTimeout(function () {
-          if (_this2.showing) return;
-          _this2.el.classList.remove(_this2.options.activeClass);
-        }, 0);
+        _this2.remove();
       }, this.options.deactivateDelay);
       return this;
     }

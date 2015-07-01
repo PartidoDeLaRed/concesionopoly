@@ -6,6 +6,9 @@ export default class Browser {
     this.el = options.el
 
     this.engine = new Engine()
-    this.modals = new Modals({ wrapper: this.el })
+    this.modals = new Modals({
+      container: this.el,
+      deactivateDelay: 100
+    })
   }
 }

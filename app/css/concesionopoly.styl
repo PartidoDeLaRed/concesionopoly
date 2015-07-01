@@ -17,7 +17,6 @@ body
   min-height: 100vh
 
 .concesionopoly .modals
-  display: none
   position: absolute
   left: 0
   top: 0
@@ -25,9 +24,8 @@ body
   height: 100%
 
   &.active
-    display: block
     .overlay,
-    .modal.active
+    .modal
       opacity: 1
 
   .overlay
@@ -39,7 +37,7 @@ body
     height: 100%
     background-color: rgba(#a0a0a0, .7)
     opacity: 0
-    transition: opacity .15s
+    transition: opacity 1s
 
   .modal
     z-index: 10
@@ -49,7 +47,7 @@ body
     background-color: #fff
     transform: translate(-50%, -50%)
     opacity: 0
-    transition: opacity .15s
+    transition: opacity .5s
 
 .concesionopoly .board
   position: relative
