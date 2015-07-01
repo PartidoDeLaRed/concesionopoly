@@ -122,7 +122,7 @@ $(document).ready(function(){
           lugar.money = money;
           mas_info.append($("<div class='fields'> <span class='field_name'> <span class='texto_field'> Concesión: </span></span> <span class='field_data'>" + item["Concesión"]+"</span></div>"));
           mas_info.append($("<div class='fields'> <span class='field_name'> <span class='texto_field'> Concesionario: </span></span> <span class='field_data'>" + item.Concesionario+"</span></div>"));
-          mas_info.append($("<div class='fields'> <span class='field_name'> <span class='texto_field'> Monto de canon: </span></span> <span class='field_data'>"+ money + item["Monto de canon"]+"</span></div>"));
+          mas_info.append($("<div class='fields'> <span class='field_name'> <span class='texto_field'> Monto de canon: </span></span> <span class='field_data money_color'>"+ money + item["Monto de canon"]+"</span></div>"));
           mas_info.append($("<div class='fields'> <span class='field_name'> <span class='texto_field'> Tipo de canon: </span></span> <span class='field_data'>" + item["Tipo de canon"]+"</span></div>"));
           mas_info.append($("<div class='fields'> <span class='field_name'> <span class='texto_field'> Domicilio: </span></span> <span class='field_data'>" + item["Domicilio"]+"</span></div>"));
           mas_info.append($("<div class='fields'> <span class='field_name'> <span class='texto_field'> Rubro: </span></span> <span class='field_data'>" + item["Rubro"]+"</span></div>"));

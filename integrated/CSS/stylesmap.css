@@ -210,3 +210,7 @@ select{
   height: 41px;
   display: inline-block;
 }
+
+.money_color{
+  color: #981E08;
+}
