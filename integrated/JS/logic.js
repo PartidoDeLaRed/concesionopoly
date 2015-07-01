@@ -313,7 +313,7 @@ function Compartirtw (id) {
 function Compartirfb (id) {
   var lugar = lugares[id];
   var share_text = encodeURIComponent(lugar.item["Concesión"]+ " Paga "+lugar.money+lugar.item["Monto de canon"] + " por mes a la ciudad, más info en: " +window.location.href);
-  window.open('http://www.facebook.com/dialog/feed?app_id=825676227513877' +
+  window.open('http://www.facebook.com/dialog/feed?app_id=1596481937283116' +
         '&link='+location.origin+location.pathname +
         //'&picture=http:%2F%2Fqueproponen.com.ar%2Fvosquepropones%2FIMG%2FshareLogo.png' +
         '&name=' + share_text +
