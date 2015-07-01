@@ -1,0 +1,109 @@
+.board
+  position: relative
+  width: 671px
+  max-width: 100%
+  max-height: 100%
+  background-image: url('img/concesionopoly/tablero.svg')
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: 100% 100%
+  box-shadow: 4px 4px 0 #979797,
+              inset 0 0 20px -5px rgba(#fff, .6)
+
+  tile-width = 9.4125%
+  tile-height = 12.35%
+  chip-width = 12%
+  chip-height = chip-width * .75
+
+  .spacer
+    padding-top: 100%
+
+  .tile
+    position: absolute
+
+    &:hover
+      background-color: rgba(magenta, .1)
+
+    &.on-top,
+    &.on-bottom
+      width: tile-width
+      height: tile-height
+
+    &.on-right,
+    &.on-left
+      width: tile-height
+      height: tile-width
+
+    &.on-corner
+      width: tile-height
+      height: tile-height
+
+    &.on-right
+      right: 0
+
+    &.on-bottom
+      bottom: 0
+
+    &.on-left
+      left: 0
+
+    &.on-top
+      top: 0
+
+    for num in (1..8)
+      &[data-tile={s('"%s"', num)}]
+        right: round(tile-height + tile-width * (num - 1), 4)
+
+    for num in (9..16)
+      &[data-tile={s('"%s"', num)}]
+        bottom: round(tile-height + tile-width * (num - 9), 4)
+
+    for num in (17..24)
+      &[data-tile={s('"%s"', num)}]
+        left: round(tile-height + tile-width * (num - 17), 4)
+
+    for num in (25..32)
+      &[data-tile={s('"%s"', num)}]
+        top: round(tile-height + tile-width * (num - 25), 4)
+
+  .chip
+    z-index: 5
+    position: absolute
+    margin: 0
+    width: chip-width
+    height: chip-height
+    background: url('img/concesionopoly/chip.png') no-repeat center center
+    background-size: auto 100%
+    transition: all 1s
+    right: 0
+    bottom: 0
+
+    initial-right = tile-height + ( tile-width - chip-width ) / 2
+    initial-bottom = tile-height + 1 + ( tile-width - chip-width ) / 2
+    from-border = round(( tile-height - chip-height ) / 2, 4)
+    board-width = 100% - tile-height
+
+    &[data-position="0"]
+      margin-right: from-border
+      margin-bottom: from-border
+
+    for num in (1..8)
+      &[data-position={s('"%s"', num)}]
+        margin-right: round(initial-right + tile-width * (num - 1), 4)
+        margin-bottom: from-border
+
+    for num in (9..16)
+      &[data-position={s('"%s"', num)}]
+        margin-right: board-width
+        margin-bottom: round(initial-bottom + tile-width * (num - 9), 4)
+
+    for num in (17..24)
+      &[data-position={s('"%s"', num)}]
+        margin-right: round(initial-right + tile-width * (24 - num), 4)
+        margin-bottom: board-width + 1%
+
+    for num in (25..32)
+      &[data-position={s('"%s"', num)}]
+        margin: 0
+        margin-right: from-border
+        margin-bottom: round(initial-bottom + tile-width * (32 - num), 4)

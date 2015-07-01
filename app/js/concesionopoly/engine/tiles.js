@@ -1,6 +1,4 @@
-import Immutable from 'immutable'
-
-export default Immutable.fromJS([
+export default [
   {
     type: 'property',
     priceOptions: [ 1000, 3000 ],
@@ -273,4 +271,4 @@ export default Immutable.fromJS([
       price: 1000
     }
   }
-])
+]

@@ -29,7 +29,7 @@ export default class Browser {
 
     this.events.on('click', '[data-dices]', this.doTurn)
 
-    // this.modals.show('welcome')
+    this.modals.show('welcome')
   }
 
   doTurn () {

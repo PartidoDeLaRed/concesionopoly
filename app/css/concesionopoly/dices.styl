@@ -1,0 +1,91 @@
+.dices
+  position: relative
+  margin-bottom: 10px
+  padding: 15px
+  background-color: #0089AE
+
+  h1
+    margin: 0 0 1em
+    padding: 0
+    text-align: center
+    color: #fff
+    font-size: .8em
+    font-weight: 300
+    line-height: 1.4
+    text-transform: uppercase
+    background-color: #0089AE
+
+  size = 48px
+  p-size = 7px
+  p-l = 10px
+  p-r = size - p-l - p-size
+  p-c = size / 2 - p-size / 2
+
+  .dice
+    position: relative
+    display: inline-block
+    margin: 0 1em
+    width: size
+
+    &:after
+      display: block
+      content: ''
+      padding-top: 100%
+
+    for num in (1..6)
+      &[data-dice-value={s('"%s"', num)}] .side-{num}
+        opacity: 1
+
+  .side
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    border-radius: 2px
+    background-color: #BEBEBE
+    opacity: 0
+    transition: opacity .5s .1s
+
+    &:after
+      content: ''
+      display: block
+      position: absolute;
+      left: 0
+      top: 0
+      width: p-size
+      height: p-size
+      border-radius: 100%
+
+    &.side-1:after
+      box-shadow: p-c p-c 0 #fff
+
+    &.side-2:after
+      box-shadow: p-l p-l 0 #fff,
+                  p-r p-r 0 #fff
+
+    &.side-3:after
+      box-shadow: p-l p-l 0 #fff,
+                  p-c p-c 0 #fff,
+                  p-r p-r 0 #fff
+
+    &.side-4:after
+      box-shadow: p-l p-l 0 #fff,
+                  p-r p-l 0 #fff,
+                  p-l p-r 0 #fff,
+                  p-r p-r 0 #fff
+
+    &.side-5:after
+      box-shadow: p-l p-l 0 #fff,
+                  p-r p-l 0 #fff,
+                  p-l p-r 0 #fff,
+                  p-r p-r 0 #fff,
+                  p-c p-c 0 #fff
+
+    &.side-6:after
+      box-shadow: p-l p-l 0 #fff,
+                  p-r p-l 0 #fff,
+                  p-l p-r 0 #fff,
+                  p-r p-r 0 #fff,
+                  p-l p-c 0 #fff,
+                  p-r p-c 0 #fff
