@@ -1,0 +1,19 @@
+
+
+
+function CompartirInicio(tipo){
+  if(tipo == 0)
+    window.open('https://twitter.com/intent/tweet?'+
+    'related=PartidodelaRed&'+
+    'text='+ '%23yvosquepropones las propuestas de todos los candidatos para en un solo lugar '+location.origin+location.pathname, 'tweet', 'width=900,height=300,menubar=no,status=no,titlebar=no,top=200,left='+(screen.width-900)/2);
+  else
+    window.open('http://www.facebook.com/dialog/feed?app_id=825676227513877' +
+        '&link='+location.origin+location.pathname +
+        '&picture=http:%2F%2Fqueproponen.com.ar%2Fvosquepropones%2FIMG%2FshareLogo.png' +
+        '&name=' + 'Todas las propuestas de los candidatos para '+Ciudad+' en un solo lugar' +
+        '&caption=' + 'via queproponen.com.ar - Partido de la Red' +
+        '&description=' + 'Conocé todas las propuestas de los candidatos a Gobernador de '+ Ciudad +' y discutilas directamente con los ellos.' +
+        '&redirect_uri='+location.origin+location.pathname+'close.html' +
+        '&display=popup'
+    , 'Compartí todas las propuestas', 'width=900,height=300,menubar=no,status=no,titlebar=no,top=200,left='+(screen.width-900)/2);
+}
