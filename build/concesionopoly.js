@@ -175,6 +175,8 @@ var Browser = (function () {
     this.enableTurn();
 
     this.loadHelpModals();
+
+    this.modals.show('welcome');
   }
 
   _createClass(Browser, [{
@@ -244,7 +246,6 @@ var Browser = (function () {
 
 exports['default'] = Browser;
 module.exports = exports['default'];
-// this.modals.show('welcome')
 
 },{"../engine":9,"./chip":2,"./dices":3,"./modals":5,"./properties-list":6,"./templates":7,"dom-delegate":14}],5:[function(require,module,exports){
 'use strict';
@@ -497,10 +498,12 @@ var _createClass = (function () { function defineProperties(target, props) { for
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var Dices = (function () {
-  function Dices(amount) {
+  function Dices() {
+    var amount = arguments[0] === undefined ? 1 : arguments[0];
+
     _classCallCheck(this, Dices);
 
-    this.amount = amount || 1;
+    this.amount = amount;
   }
 
   _createClass(Dices, [{
@@ -508,8 +511,8 @@ var Dices = (function () {
     value: function flip() {
       var values = [];
 
-      var pending = this.amount + 1;
-      while (--pending) values.push(Math.floor(Math.random() * 6 + 1));
+      var pending = this.amount;
+      while (pending--) values.push(Math.floor(Math.random() * 6 + 1));
 
       return {
         values: values,
@@ -656,7 +659,7 @@ var Engine = (function (_Emitter) {
         };
       } else if (tile.type == 'property') {
         var selectOption = function selectOption(price) {
-          if (!_this.state.waiting) throw Error('uopa.');
+          if (!_this.state.waiting) return;
           _this.state.waiting = false;
           if (tile.property.price === price) {
             _this.addProperty(tile.property);
