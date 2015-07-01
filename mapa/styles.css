@@ -3,7 +3,14 @@ body{
   margin:0;
   padding:0;
   font-family: 'Helvetica', 'Arial', sans-serif;
+  font-size: 1em;
 }
+
+/*@media all and (max-width: 600px) {
+  body {
+    font-size: 1.05em;
+  }
+}*/
 
 h1{
   font-family: 'Convergence';
@@ -84,10 +91,19 @@ html,body{
   border-radius:2px;*/
 }
 
-#list{
-  height: 100%;
+#list {
   width: 25%;
   float: left;
+  height: 100%;
+}
+@media all and (max-width: 600px) {
+  #list {
+    width: 40%;
+  }
+}
+
+#items {
+  height: 95%;
   overflow:auto;
 }
 
@@ -99,20 +115,15 @@ html,body{
   background:#6699cc;
   float: right;
 }
+@media all and (max-width: 600px) {
+  #map,
+  #panorama {
+    width: 60%;
+  }  
+}
 
 .span11, .popin{
   height: 100%
-}
-
-#sponsors {
-  font-size: 12px;
-  text-align: center;
-  padding: 4px 6px;
-}
-
-#sponsors img {
-  height: 40px;
-  margin: 4px;
 }
 
 code {
@@ -136,6 +147,53 @@ code {
     margin: 5px 0;
     padding: 10px;
     background-color: #eee;
-    font-weight: bold;
     line-height: 17px;
+}
+
+
+.field_name, .field_data{
+  display: inline-block;
+  width: 50%;
+  overflow:hidden;
+  max-width: 300px;
+}
+
+
+.field_name{
+  text-align: right;
+  font-weight: bold;
+}
+
+.field_data{
+  text-align: left;
+  float: right;
+}
+
+.fields{
+  display: table-row;
+}
+
+.texto_field{
+  margin: 3px;
+}
+
+
+.name_concesion, .imagen_concesion{
+  vertical-align: middle;
+}
+
+select{
+  width: 100%;
+}
+
+.fill_space{
+  float: left;
+  margin-right: 3px;
+}
+ 
+.imagen_concesion{
+  vertical-align: middle;
+  height: 100%;
+  display: block;
+  overflow: hidden; 
 }

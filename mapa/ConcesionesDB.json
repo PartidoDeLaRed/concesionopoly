@@ -9,7 +9,7 @@
     "Rubro":"PREDIOS COMERCIALES",
     "Vencimiento":"17/11/2018",
     "Coordenadas": {
-    "x":-58.393260,
+    "x":-58.39326,
     "y":-34.585442
     }
   }
@@ -25,8 +25,8 @@
     "Rubro":"GASTRONOMICOS",
     "Vencimiento":"10/12/2015",
     "Coordenadas": {
-    "x":-58.432399,
-    "y":-34.544108
+    "x":-58.432367,
+    "y":-34.544131
     }
   }
 ,
@@ -105,8 +105,8 @@
     "Rubro":"PLAYAS DE ESTACIONAMIENTO",
     "Vencimiento":"04/02/2018",
     "Coordenadas": {
-    "x":-58.381982,
-    "y":-34.592834
+    "x":-58.382415,
+    "y":-34.59544
     }
   }
 ,
@@ -121,7 +121,7 @@
     "Rubro":"PLAYAS DE ESTACIONAMIENTO",
     "Vencimiento":"31/12/2018",
     "Coordenadas": {
-    "x":-58.381730,
+    "x":-58.38173,
     "y":-34.604987
     }
   }
@@ -153,8 +153,8 @@
     "Rubro":"PERSONAS CON NECESIDADES ESPECIALES",
     "Vencimiento":"Decreto 1553",
     "Coordenadas": {
-    "x":-58.379278,
-    "y":-34.600154
+    "x":-58.379248,
+    "y":-34.600646
     }
   }
 ,
@@ -185,8 +185,8 @@
     "Rubro":"PERSONAS CON NECESIDADES ESPECIALES",
     "Vencimiento":"Decreto 1553",
     "Coordenadas": {
-    "x":-58.400810,
-    "y":-34.584357
+    "x":-58.401623,
+    "y":-34.584973
     }
   }
 ,
@@ -233,8 +233,24 @@
     "Rubro":"PREDIOS COMERCIALES",
     "Vencimiento":"28/12/2003",
     "Coordenadas": {
-    "x":-58.402733,
-    "y":-34.583313
+    "x":-58.402736,
+    "y":-34.583052
+    }
+  }
+,
+  {
+    "Legajo":65,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"64.800,00",
+    "Normativa aplicable/concesiones":"\"Proyecto de Ley Legislatura(Exp 2359-D-2013) que propicia otorgar a la \"\"Asociación Golf Club José Jurado\"\" un permiso de uso oneroso e intransferible por el término de veinte (20) años\"",
+    "Concesión":"GOLF CLUB JOSE JURADO",
+    "Concesionario":"ASOCIACION CIVIL GOLF CLUB JOSE JURADO",
+    "Domicilio":"ROCA, CNEL. AV. 5025",
+    "Rubro":"DEPORTES",
+    "Vencimiento":"30/11/2015",
+    "Coordenadas": {
+    "x":-58.453244,
+    "y":-34.68179
     }
   }
 ,
@@ -313,8 +329,24 @@
     "Rubro":"PERSONAS CON NECESIDADES ESPECIALES",
     "Vencimiento":"Decreto 1553",
     "Coordenadas": {
-    "x":-58.392999,
-    "y":-34.637223
+    "x":-58.392273,
+    "y":-34.639349
+    }
+  }
+,
+  {
+    "Legajo":82,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"55.000,00",
+    "Normativa aplicable/concesiones":"Pliegos Nueva Licitación conf LEY 4003 Y LEY 4888",
+    "Concesión":"SECTOR 1: CONTROL DE ESTACIONAMIENTO INDEBIDO EN MICRO Y MAC",
+    "Concesionario":"B.R.D. S.A.I.C.F.I.",
+    "Domicilio":"AV JUJUY Y CORDOBA",
+    "Rubro":"CONTROL VEHICULAR",
+    "Vencimiento":"25/03/2001",
+    "Coordenadas": {
+    "x":-58.381570,
+    "y":-34.603736
     }
   }
 ,
@@ -329,8 +361,8 @@
     "Rubro":"PERSONAS CON NECESIDADES ESPECIALES",
     "Vencimiento":"Decreto 1553",
     "Coordenadas": {
-    "x":-58.457300,
-    "y":-34.684318
+    "x":-58.455339,
+    "y":-34.68471
     }
   }
 ,
@@ -345,8 +377,8 @@
     "Rubro":"PERSONAS CON NECESIDADES ESPECIALES",
     "Vencimiento":"Decreto 1553",
     "Coordenadas": {
-    "x":-58.457300,
-    "y":-34.684318
+    "x":-58.455339,
+    "y":-34.68471
     }
   }
 ,
@@ -377,8 +409,8 @@
     "Rubro":"PERSONAS CON NECESIDADES ESPECIALES",
     "Vencimiento":"Decreto 1553",
     "Coordenadas": {
-    "x":-58.380813,
-    "y":-34.605501
+    "x":-58.380528,
+    "y":-34.605488
     }
   }
 ,
@@ -399,6 +431,22 @@
   }
 ,
   {
+    "Legajo":89,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"177.487,00",
+    "Normativa aplicable/concesiones":"DEC-4507-MCBA-1991. RES-4446/SHyF/1997 . DECRETO 4507-91",
+    "Concesión":"PLAYA DE EST. CENTRO CULTURAL GRAL. SAN MARTIN",
+    "Concesionario":"EMECOM S.A.",
+    "Domicilio":"SARMIENTO 1537",
+    "Rubro":"PLAYAS DE ESTACIONAMIENTO",
+    "Vencimiento":"20/05/2017",
+    "Coordenadas": {
+    "x":-58.388338,
+    "y":-34.605357
+    }
+  }
+,
+  {
     "Legajo":91,
     "Tipo de canon":"Importe Variable",
     "Monto de canon":"Importe Variable",
@@ -409,8 +457,8 @@
     "Rubro":"PERSONAS CON NECESIDADES ESPECIALES",
     "Vencimiento":"Decreto 1553",
     "Coordenadas": {
-    "x":-58.360192,
-    "y":-34.638951
+    "x":-58.360211,
+    "y":-34.638776
     }
   }
 ,
@@ -425,8 +473,24 @@
     "Rubro":"VARIOS",
     "Vencimiento":"30/06/2021",
     "Coordenadas": {
-    "x":-58.398013,
-    "y":-34.570536
+    "x":-58.397049,
+    "y":-34.56938
+    }
+  }
+,
+  {
+    "Legajo":93,
+    "Tipo de canon":"Importe Variable",
+    "Monto de canon":"Importe Variable",
+    "Normativa aplicable/concesiones":"Otorgado por aplicación Ley Nac. 24308, Decreto 1553/GCBA/97, Decreto 1187/GCBA/08",
+    "Concesión":"KIOSCO HOSPITAL FERNANDEZ",
+    "Concesionario":"LATELA DOMINGO",
+    "Domicilio":"CERVI�O 3356",
+    "Rubro":"PERSONAS CON NECESIDADES ESPECIALES",
+    "Vencimiento":"Decreto 1553",
+    "Coordenadas": {
+    "x":-58.406956,
+    "y":-34.581412
     }
   }
 ,
@@ -441,8 +505,8 @@
     "Rubro":"PLAYAS DE ESTACIONAMIENTO",
     "Vencimiento":"01/10/2011",
     "Coordenadas": {
-    "x":-58.415753,
-    "y":-34.589155
+    "x":-58.412393,
+    "y":-34.59175
     }
   }
 ,
@@ -473,8 +537,8 @@
     "Rubro":"PERSONAS CON NECESIDADES ESPECIALES",
     "Vencimiento":"Decreto 1553",
     "Coordenadas": {
-    "x":-58.413069,
-    "y":-34.642858
+    "x":-58.411354,
+    "y":-34.643364
     }
   }
 ,
@@ -505,8 +569,8 @@
     "Rubro":"PLAYAS DE ESTACIONAMIENTO",
     "Vencimiento":"17/03/2012",
     "Coordenadas": {
-    "x":-58.385356,
-    "y":-34.600509
+    "x":-58.383948,
+    "y":-34.60043
     }
   }
 ,
@@ -521,8 +585,8 @@
     "Rubro":"PERSONAS CON NECESIDADES ESPECIALES",
     "Vencimiento":"Decreto 1553",
     "Coordenadas": {
-    "x":-58.366024,
-    "y":-34.627787
+    "x":-58.365547,
+    "y":-34.6281
     }
   }
 ,
@@ -537,8 +601,8 @@
     "Rubro":"PERSONAS CON NECESIDADES ESPECIALES",
     "Vencimiento":"Decreto 1553",
     "Coordenadas": {
-    "x":-58.469421,
-    "y":-34.624296
+    "x":-58.469632,
+    "y":-34.623836
     }
   }
 ,
@@ -553,8 +617,8 @@
     "Rubro":"PERSONAS CON NECESIDADES ESPECIALES",
     "Vencimiento":"Decreto 1553",
     "Coordenadas": {
-    "x":-58.380819,
-    "y":-34.605499
+    "x":-58.380528,
+    "y":-34.605488
     }
   }
 ,
@@ -570,7 +634,7 @@
     "Vencimiento":"Decreto 1553",
     "Coordenadas": {
     "x":-58.470973,
-    "y":-34.565100
+    "y":-34.5651
     }
   }
 ,
@@ -587,6 +651,22 @@
     "Coordenadas": {
     "x":-58.429708,
     "y":-34.550511
+    }
+  }
+,
+  {
+    "Legajo":113,
+    "Tipo de canon":"Importe Variable",
+    "Monto de canon":"1.701,17",
+    "Normativa aplicable/concesiones":"Otorgado por aplicación Ley Nac. 24308, Decreto 1553/GCBA/97, Decreto 1187/GCBA108",
+    "Concesión":"KIOSCO HOSPITAL TORNÚ",
+    "Concesionario":"ALLEGRANZA RAMON ENRIQUE",
+    "Domicilio":"AV. EX COMBATIENTES DE MALVINAS 3002",
+    "Rubro":"PERSONAS CON NECESIDADES ESPECIALES",
+    "Vencimiento":"Decreto 1553",
+    "Coordenadas": {
+    "x":-58.470893,
+    "y":-34.58731
     }
   }
 ,
@@ -633,7 +713,7 @@
     "Rubro":"PERSONAS CON NECESIDADES ESPECIALES",
     "Vencimiento":"Decreto 1553",
     "Coordenadas": {
-    "x":-58.377610,
+    "x":-58.37761,
     "y":-34.628909
     }
   }
@@ -649,8 +729,8 @@
     "Rubro":"PERSONAS CON NECESIDADES ESPECIALES",
     "Vencimiento":"Decreto 1553",
     "Coordenadas": {
-    "x":-58.406761,
-    "y":-34.581044
+    "x":-58.406956,
+    "y":-34.581412
     }
   }
 ,
@@ -681,8 +761,8 @@
     "Rubro":"PERSONAS CON NECESIDADES ESPECIALES",
     "Vencimiento":"Decreto 1553",
     "Coordenadas": {
-    "x":-58.402695,
-    "y":-34.584429
+    "x":-58.401623,
+    "y":-34.584973
     }
   }
 ,
@@ -697,8 +777,8 @@
     "Rubro":"PERSONAS CON NECESIDADES ESPECIALES",
     "Vencimiento":"Decreto 1553",
     "Coordenadas": {
-    "x":-58.391167,
-    "y":-34.626006
+    "x":-58.390742,
+    "y":-34.625983
     }
   }
 ,
@@ -713,8 +793,8 @@
     "Rubro":"PERSONAS CON NECESIDADES ESPECIALES",
     "Vencimiento":"Decreto 1553",
     "Coordenadas": {
-    "x":-58.380819,
-    "y":-34.605499
+    "x":-58.380528,
+    "y":-34.605488
     }
   }
 ,
@@ -761,8 +841,8 @@
     "Rubro":"VARIOS",
     "Vencimiento":"08/11/2015",
     "Coordenadas": {
-    "x":-58.391575,
-    "y":-34.586498
+    "x":-58.392607,
+    "y":-34.586164
     }
   }
 ,
@@ -777,8 +857,8 @@
     "Rubro":"GASTRONOMICOS",
     "Vencimiento":"15/11/2012",
     "Coordenadas": {
-    "x":-58.432944,
-    "y":-34.543770
+    "x":-58.432929,
+    "y":-34.543778
     }
   }
 ,
@@ -825,8 +905,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.435016,
-    "y":-34.622044
+    "x":-58.43547,
+    "y":-34.622135
     }
   }
 ,
@@ -841,8 +921,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.439373,
-    "y":-34.602807
+    "x":-58.439205,
+    "y":-34.602985
     }
   }
 ,
@@ -857,8 +937,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.411717,
-    "y":-34.617889
+    "x":-58.411803,
+    "y":-34.617447
     }
   }
 ,
@@ -873,8 +953,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.481579,
-    "y":-34.640066
+    "x":-58.482026,
+    "y":-34.640453
     }
   }
 ,
@@ -889,8 +969,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.516531,
-    "y":-34.620609
+    "x":-58.516984,
+    "y":-34.621014
     }
   }
 ,
@@ -905,8 +985,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.459912,
-    "y":-34.629427
+    "x":-58.459777,
+    "y":-34.629714
     }
   }
 ,
@@ -921,8 +1001,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.368908,
-    "y":-34.614368
+    "x":-58.36874,
+    "y":-34.614357
     }
   }
 ,
@@ -937,8 +1017,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.490353,
-    "y":-34.561678
+    "x":-58.490102,
+    "y":-34.561557
     }
   }
 ,
@@ -953,7 +1033,7 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.503780,
+    "x":-58.50378,
     "y":-34.629356
     }
   }
@@ -969,8 +1049,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.467055,
-    "y":-34.622636
+    "x":-58.467428,
+    "y":-34.622748
     }
   }
 ,
@@ -985,8 +1065,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.379968,
-    "y":-34.641244
+    "x":-58.380108,
+    "y":-34.641286
     }
   }
 ,
@@ -1001,8 +1081,24 @@
     "Rubro":"VARIOS",
     "Vencimiento":"Ley 4158/12",
     "Coordenadas": {
-    "x":-58.376936,
-    "y":-34.629985
+    "x":-58.376222,
+    "y":-34.629681
+    }
+  }
+,
+  {
+    "Legajo":188,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"6.000,00",
+    "Normativa aplicable/concesiones":"EX 69271/1998/MGEYA",
+    "Concesión":"ANTENA LS1 RADIO CIUDAD",
+    "Concesionario":"RADIO JAI",
+    "Domicilio":"AV. Escalada 4501",
+    "Rubro":"VARIOS",
+    "Vencimiento":"03/01/2012",
+    "Coordenadas": {
+    "x":-58.4510287,
+    "y":-34.6714831
     }
   }
 ,
@@ -1017,8 +1113,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.442847,
-    "y":-34.588661
+    "x":-58.443221,
+    "y":-34.588999
     }
   }
 ,
@@ -1033,8 +1129,24 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.496063,
-    "y":-34.591025
+    "x":-58.467079,
+    "y":-34.67935
+    }
+  }
+,
+  {
+    "Legajo":198,
+    "Tipo de canon":"Gratuitos a Cooperadoras",
+    "Monto de canon":"Gratuitos a Cooperadoras",
+    "Normativa aplicable/concesiones":"Ordenanza 35514",
+    "Concesión":"COLEGIO BERNARDINO RIVADAVIA - DEN° 3",
+    "Concesionario":"ASOC. COOP. DEL COLEGIO NAC. B . RIVADAVIA",
+    "Domicilio":"AV. SAN JUAN 1545",
+    "Rubro":"COOPERADORA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.387827,
+    "y":-34.622156
     }
   }
 ,
@@ -1049,8 +1161,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.507363,
-    "y":-34.645767
+    "x":-58.514892,
+    "y":-34.642721
     }
   }
 ,
@@ -1065,8 +1177,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.502516,
-    "y":-34.599542
+    "x":-58.50231,
+    "y":-34.599414
     }
   }
 ,
@@ -1081,8 +1193,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.480373,
-    "y":-34.677458
+    "x":-58.48011,
+    "y":-34.677668
     }
   }
 ,
@@ -1099,6 +1211,22 @@
     "Coordenadas": {
     "x":-58.480862,
     "y":-34.640631
+    }
+  }
+,
+  {
+    "Legajo":206,
+    "Tipo de canon":"Gratuitos a Cooperadoras",
+    "Monto de canon":"Gratuitos a Cooperadoras",
+    "Normativa aplicable/concesiones":"Ordenanza 35514",
+    "Concesión":"E. DE COM. AMERICA - DEN° 13",
+    "Concesionario":"COOPERADORA DE E. DE COM. AMERICA",
+    "Domicilio":"AV. DELLEPIANE Y AV. ESCALADA",
+    "Rubro":"COOPERADORA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.472975,
+    "y":-34.662451
     }
   }
 ,
@@ -1129,8 +1257,24 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.503780,
+    "x":-58.50378,
     "y":-34.629356
+    }
+  }
+,
+  {
+    "Legajo":214,
+    "Tipo de canon":"Gratuitos a Cooperadoras",
+    "Monto de canon":"Gratuitos a Cooperadoras",
+    "Normativa aplicable/concesiones":"Ordenanza 35514",
+    "Concesión":"INST. DE DEPORTES - DEN° 10",
+    "Concesionario":"ASOC. COOP. ISEF DR. E. ROMERO BREST",
+    "Domicilio":"CRISOLOGO LARRALDE 1050",
+    "Rubro":"COOPERADORA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.459923,
+    "y":-34.544729
     }
   }
 ,
@@ -1145,8 +1289,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.396010,
-    "y":-34.599788
+    "x":-58.396005,
+    "y":-34.59994
     }
   }
 ,
@@ -1161,8 +1305,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.435033,
-    "y":-34.579716
+    "x":-58.434758,
+    "y":-34.579931
     }
   }
 ,
@@ -1177,8 +1321,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.430805,
-    "y":-34.576706
+    "x":-58.43068,
+    "y":-34.576411
     }
   }
 ,
@@ -1193,8 +1337,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.440761,
-    "y":-34.551160
+    "x":-58.441298,
+    "y":-34.551477
     }
   }
 ,
@@ -1209,8 +1353,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.403580,
-    "y":-34.618335
+    "x":-58.403013,
+    "y":-34.6182
     }
   }
 ,
@@ -1242,7 +1386,7 @@
     "Vencimiento":"14/12/2026",
     "Coordenadas": {
     "x":-58.490984,
-    "y":-34.560850
+    "y":-34.56085
     }
   }
 ,
@@ -1289,8 +1433,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.394093,
-    "y":-34.601661
+    "x":-58.393747,
+    "y":-34.601639
     }
   }
 ,
@@ -1305,8 +1449,24 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.510267,
-    "y":-34.579514
+    "x":-58.510078,
+    "y":-34.579397
+    }
+  }
+,
+  {
+    "Legajo":229,
+    "Tipo de canon":"Gratuitos a Cooperadoras",
+    "Monto de canon":"Gratuitos a Cooperadoras",
+    "Normativa aplicable/concesiones":"Ordenanza 35514",
+    "Concesión":"COLEGIO JULIO ARGENTINO ROCA - DEN° 10",
+    "Concesionario":"ASOC. COOP. DE COLEGIO JULIO ARGENTINO ROCA",
+    "Domicilio":"ZUBERBULHER 1850",
+    "Rubro":"COOPERADORA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.459248,
+    "y":-34.569375
     }
   }
 ,
@@ -1321,8 +1481,24 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.438426,
-    "y":-34.619083
+    "x":-58.438679,
+    "y":-34.618694
+    }
+  }
+,
+  {
+    "Legajo":231,
+    "Tipo de canon":"Gratuitos a Cooperadoras",
+    "Monto de canon":"Gratuitos a Cooperadoras",
+    "Normativa aplicable/concesiones":"Ordenanza 35514",
+    "Concesión":"E. MUNICIPAL TÉCNICA REPÚBLICA FRANCESA • DEN° 10",
+    "Concesionario":"ASOC. COOP. ET NRO 28 DE 19 REPUBLICA FRANCESA",
+    "Domicilio":"CUBA 2410",
+    "Rubro":"COOPERADORA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.457648,
+    "y":-34.558037
     }
   }
 ,
@@ -1353,8 +1529,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.508374,
-    "y":-34.621342
+    "x":-58.508563,
+    "y":-34.621195
     }
   }
 ,
@@ -1385,8 +1561,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.495741,
-    "y":-34.601788
+    "x":-58.495688,
+    "y":-34.602039
     }
   }
 ,
@@ -1401,8 +1577,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.483548,
-    "y":-34.640491
+    "x":-58.483104,
+    "y":-34.640398
     }
   }
 ,
@@ -1433,8 +1609,24 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.404593,
-    "y":-34.625690
+    "x":-58.404566,
+    "y":-34.625836
+    }
+  }
+,
+  {
+    "Legajo":242,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos oficiales",
+    "Concesión":"BAJO AUTOPISTA 6 - 602",
+    "Concesionario":"MINISTERIO DE AMBIENTE Y ESPACIO PUBLICO",
+    "Domicilio":"TAND�IL Y OLIVERA",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.483711,
+    "y":-34.646323
     }
   }
 ,
@@ -1449,8 +1641,88 @@
     "Rubro":"PLAYAS DE ESTACIONAMIENTO",
     "Vencimiento":"29/09/2014",
     "Coordenadas": {
-    "x":-58.484569,
-    "y":-34.645291
+    "x":-58.484973,
+    "y":-34.645733
+    }
+  }
+,
+  {
+    "Legajo":244,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"10.798,21",
+    "Normativa aplicable/concesiones":"Permiso Ley 3399. LICITACIÓN EN TRAMITE",
+    "Concesión":"BAJO AUTOPISTA 6 - 604",
+    "Concesionario":"NORMA CLAUDIA BIDEGAIN",
+    "Domicilio":"DIRECTORIO Y CHASCOMUS",
+    "Rubro":"DEPORTES",
+    "Vencimiento":"29/09/2014",
+    "Coordenadas": {
+    "x":-58.484973,
+    "y":-34.645733
+    }
+  }
+,
+  {
+    "Legajo":245,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos oficiales",
+    "Concesión":"BAJO AUTOPISTA 6 - 605",
+    "Concesionario":"POLICÍA FEDERAL",
+    "Domicilio":"CHASCOMÚS - RODÓ - MOZART",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"N/A",
+    "Coordenadas": {
+    "x":-58.486484,
+    "y":-34.645401
+    }
+  }
+,
+  {
+    "Legajo":246,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismosir°8-i0-9/960854- -DGCONC",
+    "Concesión":"BAJO AUTOPISTA 6 - 606A",
+    "Concesionario":"GCBA",
+    "Domicilio":"RODÓ HACIA TAPALQUE",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"N/A",
+    "Coordenadas": {
+    "x":-58.487796,
+    "y":-34.644812
+    }
+  }
+,
+  {
+    "Legajo":247,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"50.025,00",
+    "Normativa aplicable/concesiones":"Permiso Ley 3399. LICITACIÓN EN TRAMITE",
+    "Concesión":"BAJO AUTOPISTA 6 - 606B/607",
+    "Concesionario":"SUPERMERCADO MAYORISTA YAGUAR SA.",
+    "Domicilio":"J.B. ALBERDI - TAPALQUÉ Y TAPALQUÉ - RODÓ",
+    "Rubro":"PREDIOS COMERCIALES",
+    "Vencimiento":"29/09/2014",
+    "Coordenadas": {
+    "x":-58.490878,
+    "y":-34.642759
+    }
+  }
+,
+  {
+    "Legajo":249,
+    "Tipo de canon":"Gratuitos Asoc. Civiles / Empresas",
+    "Monto de canon":"Gratuitos Asoc. Civiles / Empresas",
+    "Normativa aplicable/concesiones":"PERMISO OTORGADO POR LEY 4478/12 POR EL TÉRMINO DE 10 AÑOS",
+    "Concesión":"BAJO AUTOPISTA 6 - 608A",
+    "Concesionario":"FUNDACIÓN NUEVA GENERACIÓN DEL DEPORTE",
+    "Domicilio":"J. B. ALBERDI - ZELADA",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"19/12/2022",
+    "Coordenadas": {
+    "x":-58.490878,
+    "y":-34.642759
     }
   }
 ,
@@ -1465,8 +1737,120 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.375582,
-    "y":-34.630247
+    "x":-58.375709,
+    "y":-34.630066
+    }
+  }
+,
+  {
+    "Legajo":251,
+    "Tipo de canon":"GRATUITO",
+    "Monto de canon":"GRATUITO",
+    "Normativa aplicable/concesiones":"SE ESTÁ ANALIZANDO EN LA LEGISLATURA EL INGRESO DE PROYECTO DE LEY",
+    "Concesión":"BAJO AUTOPISTA 6 - 608B",
+    "Concesionario":"CTRO JUBILADOS SAN MIGUEL ARCANGEL ASOCIACION CIVIL",
+    "Domicilio":"ZELADA Y J. B. ALBERDI",
+    "Rubro":"PREDIOS COMERCIALES",
+    "Vencimiento":"29/09/2009.",
+    "Coordenadas": {
+    "x":-58.490878,
+    "y":-34.642759
+    }
+  }
+,
+  {
+    "Legajo":254,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos oficiales",
+    "Concesión":"BAJO AUTOPISTA 6 - 609B",
+    "Concesionario":"AUSA",
+    "Domicilio":"ZELADA Y CAJARAVILLA",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.491194,
+    "y":-34.641361
+    }
+  }
+,
+  {
+    "Legajo":256,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos oficiales",
+    "Concesión":"BAJO AUTOPISTA 6 - 611A",
+    "Concesionario":"POLICÍA FEDERAL",
+    "Domicilio":"RAFAELA - RAMÓN FALCÓN",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.493138,
+    "y":-34.639144
+    }
+  }
+,
+  {
+    "Legajo":257,
+    "Tipo de canon":"Gratuitos Asoc. Civiles",
+    "Monto de canon":"Gratuitos Asoc. Civiles",
+    "Normativa aplicable/concesiones":"OTORGADO POR LEY 2546/07 POR EL TÉRMINO DE 10 AÑOS",
+    "Concesión":"BAJO AUTOPISTA 6 - 611B",
+    "Concesionario":"\"ASOC. CENTRO JUBILADOS Y PENSIONADOS \"\"VILLA LURO CENTRAL\"\"\"",
+    "Domicilio":"FALCÓN - RAFAELA",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"01/05/2017",
+    "Coordenadas": {
+    "x":-58.493138,
+    "y":-34.639144
+    }
+  }
+,
+  {
+    "Legajo":258,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"16.500,00",
+    "Normativa aplicable/concesiones":"Permiso Ley 3399. PREDIO DESTINADO A PLAYA DE ACARREO - SIST. ESTREGULADO -LEY 4888 Y 5126",
+    "Concesión":"BAJO AUTOPISTA 6 - 612A",
+    "Concesionario":"ESTACIONAMIENTO RAMÓN FALCÓN S.A.",
+    "Domicilio":"RAMÓN FALCÓN - RIVADAVIA",
+    "Rubro":"PLAYAS DE ESTACIONAMIENTO",
+    "Vencimiento":"29/09/2014",
+    "Coordenadas": {
+    "x":-58.496555,
+    "y":-34.637034
+    }
+  }
+,
+  {
+    "Legajo":261,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"14.000,00",
+    "Normativa aplicable/concesiones":"Permiso Ley 3399. CON LICITACIÓN EN TRÁMITE",
+    "Concesión":"BAJO AUTOPISTA 6 - 613B",
+    "Concesionario":"BUENOS AIRES ENTRETENIMIENTOS",
+    "Domicilio":"RIVADAVIA - CALDERÓN",
+    "Rubro":"DEPORTES",
+    "Vencimiento":"29/09/2014",
+    "Coordenadas": {
+    "x":-58.496555,
+    "y":-34.637034
+    }
+  }
+,
+  {
+    "Legajo":262,
+    "Tipo de canon":"Gratuitos Asoc. Civiles / Empresas",
+    "Monto de canon":"Gratuitos Asoc. Civiles / Empresas",
+    "Normativa aplicable/concesiones":"OTORGADO POR LEY 3193/09 POR EL TÉRMINO DE 10 AÑOS",
+    "Concesión":"BAJO AUTOPISTA 6 - 614A",
+    "Concesionario":"CTRO. DE JUBILADOS LA AMISTAD",
+    "Domicilio":"CALDERÓN - MILTON. ACCESO POR YERBAL 5025",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"17/09/2019",
+    "Coordenadas": {
+    "x":-58.496737,
+    "y":-34.636132
     }
   }
 ,
@@ -1482,7 +1866,103 @@
     "Vencimiento":"",
     "Coordenadas": {
     "x":-58.498187,
-    "y":-34.636330
+    "y":-34.63633
+    }
+  }
+,
+  {
+    "Legajo":264,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Titularidad Estado Nacional",
+    "Concesión":"BAJO AUTOPISTA 6 - 615",
+    "Concesionario":"FFCC.",
+    "Domicilio":"MILTON Y LOPE DE VEGA",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.499872,
+    "y":-34.635598
+    }
+  }
+,
+  {
+    "Legajo":265,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"7.500,00",
+    "Normativa aplicable/concesiones":"ATP Hasta tanto se resuelva conflicto por ocupación indebida en via pública",
+    "Concesión":"BAJO AUTOPISTA 6 - 616",
+    "Concesionario":"CASTCOMERCIAL S.R.L",
+    "Domicilio":"LOPE DE VEGA Y VIRGILIO",
+    "Rubro":"PLAYAS DE ESTACIONAMIENTO",
+    "Vencimiento":"23/06/2013",
+    "Coordenadas": {
+    "x":-58.499872,
+    "y":-34.635598
+    }
+  }
+,
+  {
+    "Legajo":266,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos oficiales",
+    "Concesión":"BAJO AUTOPISTA 1 - 101",
+    "Concesionario":"G.C.B.A.",
+    "Domicilio":"HUERGO Y AZOPARDO",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.367106,
+    "y":-34.622141
+    }
+  }
+,
+  {
+    "Legajo":267,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Titularidad Estado Nacional sil' a ill•",
+    "Concesión":"BAJO AUTOPISTA 6 - 617",
+    "Concesionario":"FFCC",
+    "Domicilio":"VIRGILIO Y MOLIERE",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.501342,
+    "y":-34.635722
+    }
+  }
+,
+  {
+    "Legajo":268,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Titularidad Estado Nacional",
+    "Concesión":"BAJO AUTOPISTA 6 - 618",
+    "Concesionario":"FFCC",
+    "Domicilio":"MOLIERE Y VI�CTOR HUGO ",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.502503,
+    "y":-34.635775
+    }
+  }
+,
+  {
+    "Legajo":269,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos oficiales",
+    "Concesión":"BAJO AUTOPISTA 1 - 102",
+    "Concesionario":"G.C.B.A.",
+    "Domicilio":"AZOPARDO Y PASEO COLON",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.366837,
+    "y":-34.622797
     }
   }
 ,
@@ -1497,8 +1977,8 @@
     "Rubro":"LOCALES BAJO AUTOPISTA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.503889,
-    "y":-34.635660
+    "x":-58.503774,
+    "y":-34.635926
     }
   }
 ,
@@ -1513,8 +1993,8 @@
     "Rubro":"LOCALES BAJO AUTOPISTA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.504702,
-    "y":-34.637481
+    "x":-58.505127,
+    "y":-34.635825
     }
   }
 ,
@@ -1535,6 +2015,70 @@
   }
 ,
   {
+    "Legajo":275,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"5.290,00",
+    "Normativa aplicable/concesiones":"PREDIO DESTINADO A PLAYA DE ACARREO - SIST. EST. MEDIDO LEY 4888 y 5126",
+    "Concesión":"BAJO AUTOPISTA 6 - 623",
+    "Concesionario":"ARIAUDO MONICA ELSA",
+    "Domicilio":"BARRAGÁN - GALLARDO - MADERO",
+    "Rubro":"PLAYAS DE ESTACIONAMIENTO",
+    "Vencimiento":"31/08/2010",
+    "Coordenadas": {
+    "x":-58.522697,
+    "y":-34.637164
+    }
+  }
+,
+  {
+    "Legajo":277,
+    "Tipo de canon":"Gratuitos Asoc. Civiles",
+    "Monto de canon":"Gratuitos Asoc. Civiles",
+    "Normativa aplicable/concesiones":"OTORGADO POR LEY 4704/13 POR EL TÉRMINO DE 20 AÑOS",
+    "Concesión":"BAJO AUTOPISTA 6 - 624B",
+    "Concesionario":"CENTRO DE JUBILADOS VOLVER A VIVIR",
+    "Domicilio":"MADERO Y GALLARDO SOBRE RESERVISTAS ARGENTINOS",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"Ley aún no publicada",
+    "Coordenadas": {
+    "x":-58.524048,
+    "y":-34.636532
+    }
+  }
+,
+  {
+    "Legajo":279,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"11.000,00",
+    "Normativa aplicable/concesiones":"Permiso Ley 3399. LICITACIÓN EN TRAMITE",
+    "Concesión":"BAJO AUTOPISTA 6 - 626",
+    "Concesionario":"GANA COMPLEJO DEPORTIVO S.A.",
+    "Domicilio":"MADERO Y GANA",
+    "Rubro":"DEPORTES",
+    "Vencimiento":"29/09/2014",
+    "Coordenadas": {
+    "x":-58.52549,
+    "y":-34.636211
+    }
+  }
+,
+  {
+    "Legajo":280,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"25.800,00",
+    "Normativa aplicable/concesiones":"La Licitación comenzará una vez que se concrete el cargo impuesto de extracción de tanques de combustible y remediación de suelos",
+    "Concesión":"BAJO AUTOPISTA 6 - 627",
+    "Concesionario":"GASOLEO S.A.",
+    "Domicilio":"GANA Y CUZCO",
+    "Rubro":"PREDIOS COMERCIALES",
+    "Vencimiento":"29/09/2014",
+    "Coordenadas": {
+    "x":-58.52687,
+    "y":-34.635409
+    }
+  }
+,
+  {
     "Legajo":281,
     "Tipo de canon":"Gratuitos Asoc.Civiles",
     "Monto de canon":"Gratuitos Asoc. Civiles",
@@ -1551,6 +2095,22 @@
   }
 ,
   {
+    "Legajo":282,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos oficiales",
+    "Concesión":"BAJO AUTOPISTA 6 - 628",
+    "Concesionario":"GCBA",
+    "Domicilio":"CUZCO - GRAL. PAZ",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.528204,
+    "y":-34.634842
+    }
+  }
+,
+  {
     "Legajo":292,
     "Tipo de canon":"Importe Variable",
     "Monto de canon":"45.000,00",
@@ -1561,8 +2121,8 @@
     "Rubro":"DEPORTES",
     "Vencimiento":"31/03/2016",
     "Coordenadas": {
-    "x":-58.470015,
-    "y":-34.697856
+    "x":-58.470646,
+    "y":-34.698438
     }
   }
 ,
@@ -1577,7 +2137,7 @@
     "Rubro":"DEPORTES",
     "Vencimiento":"07/12/2016",
     "Coordenadas": {
-    "x":-58.470030,
+    "x":-58.47003,
     "y":-34.554641
     }
   }
@@ -1609,8 +2169,88 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.384325,
-    "y":-34.639085
+    "x":-58.383815,
+    "y":-34.64072
+    }
+  }
+,
+  {
+    "Legajo":300,
+    "Tipo de canon":"Gratuitos Asoc. Civiles /",
+    "Monto de canon":"Gratuitos Asoc. Civiles / mpresas Empresas",
+    "Normativa aplicable/concesiones":"Ley 1042/03",
+    "Concesión":"CLUB ATLETICO BARRACAS JUNIORS",
+    "Concesionario":"CLUB ATLETICO BARRACAS JUNIORS",
+    "Domicilio":"AV GRAL HORNOS 1850",
+    "Rubro":"DEPORTES",
+    "Vencimiento":"31/12/2021",
+    "Coordenadas": {
+    "x":-58.37371,
+    "y":-34.647603
+    }
+  }
+,
+  {
+    "Legajo":317,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos oficiales",
+    "Concesión":"BAJO AUTOPISTA 6 - 600",
+    "Concesionario":"G.C.B.A.",
+    "Domicilio":"ENLACE HASTA REMEDIOS",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.482791,
+    "y":-34.647067
+    }
+  }
+,
+  {
+    "Legajo":318,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos oficiales",
+    "Concesión":"BAJO AUTOPISTA 6 - 601",
+    "Concesionario":"G.C.B.A.",
+    "Domicilio":"REMEDIOS - TANDÍL - MORETO",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.483711,
+    "y":-34.646323
+    }
+  }
+,
+  {
+    "Legajo":319,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos oficiales",
+    "Concesión":"BAJO AUTOPISTA 1 - 103A",
+    "Concesionario":"G.C.B.A",
+    "Domicilio":"BALCARCE Y PASEO COLON",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.37053,
+    "y":-34.622586
+    }
+  }
+,
+  {
+    "Legajo":320,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos oficiales",
+    "Concesión":"BAJO AUTOPISTA 1 - 103B",
+    "Concesionario":"G.C.B.A",
+    "Domicilio":"BALCARCE Y PASEO COLON",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.37053,
+    "y":-34.622586
     }
   }
 ,
@@ -1625,8 +2265,24 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.392999,
-    "y":-34.637223
+    "x":-58.392273,
+    "y":-34.639349
+    }
+  }
+,
+  {
+    "Legajo":337,
+    "Tipo de canon":"Contraprestación",
+    "Monto de canon":"",
+    "Normativa aplicable/concesiones":"Afectado a proyecto urbanístico",
+    "Concesión":"PLAYA DE ESTACIONAMIENTO A NIVEL",
+    "Concesionario":"FACULTAD DE DERECHO - UBA",
+    "Domicilio":"JUAN A BIBILONI Y EDUARDO JUAN COUTURE",
+    "Rubro":"PLAYAS DE ESTACIONAMIENTO",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.392253,
+    "y":-34.581697
     }
   }
 ,
@@ -1641,8 +2297,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.469421,
-    "y":-34.624296
+    "x":-58.469632,
+    "y":-34.623836
     }
   }
 ,
@@ -1657,8 +2313,8 @@
     "Rubro":"DEPORTES",
     "Vencimiento":"04/09/2006",
     "Coordenadas": {
-    "x":-58.446679,
-    "y":-34.547191
+    "x":-58.446833,
+    "y":-34.547893
     }
   }
 ,
@@ -1711,6 +2367,38 @@
   }
 ,
   {
+    "Legajo":370,
+    "Tipo de canon":"Gratuitos a Cooperadoras",
+    "Monto de canon":"Gratuitos a Cooperadoras",
+    "Normativa aplicable/concesiones":"Ordenanza 35514",
+    "Concesión":"HOSPITAL MARIA CURIE",
+    "Concesionario":"ASOC. COOP. DEL HOSPITAL MARIA CURIE",
+    "Domicilio":"AV. PATRICIAS ARGENTINAS 750",
+    "Rubro":"COOPERADORA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.438435,
+    "y":-34.606718
+    }
+  }
+,
+  {
+    "Legajo":371,
+    "Tipo de canon":"Gratuitos Asoc. Civiles / Empresas",
+    "Monto de canon":"Gratuitos Asoc. Civiles / Empresas",
+    "Normativa aplicable/concesiones":"Permiso revocado por Decreto 962/08 Por Decr.620/09 se desestimó recurso- Exp 90342/07 remision a la Procuracion General prosecución de la desocupación por la via judicial",
+    "Concesión":"PLAYA DE ESTACIONAMIENTO AV DORREGO & AV DEL LIBERTADOR",
+    "Concesionario":"HIPODROMO ARGENTINO DE PALERMO SA",
+    "Domicilio":"AV DORREGO 3503 & AV DEL LIBERTADOR",
+    "Rubro":"PLAYAS DE ESTACIONAMIENTO",
+    "Vencimiento":"04/08/2008",
+    "Coordenadas": {
+    "x":-58.422138,
+    "y":-34.569706
+    }
+  }
+,
+  {
     "Legajo":373,
     "Tipo de canon":"Gratuitos a Cooperadoras",
     "Monto de canon":"Gratuitos a Cooperadoras",
@@ -1743,6 +2431,38 @@
   }
 ,
   {
+    "Legajo":388,
+    "Tipo de canon":"Importe Variable",
+    "Monto de canon":"Importe Variable",
+    "Normativa aplicable/concesiones":"Otorgado por Ley 3730/10",
+    "Concesión":"PARQUE JORGE NEWBERY",
+    "Concesionario":"CLUB DE AMIGOS ASOCIACION CIVIL",
+    "Domicilio":"AV. PTE. FIGUEROA ALCORTA, AV. SARMIENTO Y AV. CASARES",
+    "Rubro":"DEPORTES",
+    "Vencimiento":"02/09/2022",
+    "Coordenadas": {
+    "x":-58.409458,
+    "y":-34.569009
+    }
+  }
+,
+  {
+    "Legajo":393,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"O (pagó canon anticipado)",
+    "Normativa aplicable/concesiones":"Resolución Conjunta N° 160-MDEGC-MDUGC/11. Resolución Conjunta N° 092-MDEGC-MJGGC/13, se prorrogó la concesión por el plazo de 94 días.",
+    "Concesión":"\"PLAYA SUBTERRANEA - \"\"E-01\"\". \"\"BOUCHARD\"\"\"",
+    "Concesionario":"PLAYAS SUBTERRANEAS S.A.",
+    "Domicilio":"Av. LEANDRO N. ALEM, TTE. GRAL. JUAN D. PERON, BOUCHARD Y SARMIENTO",
+    "Rubro":"PLAYAS DE ESTACIONAMIENTO",
+    "Vencimiento":"12/08/2016",
+    "Coordenadas": {
+    "x":-58.370058,
+    "y":-34.605348
+    }
+  }
+,
+  {
     "Legajo":397,
     "Tipo de canon":"Importe Fijo",
     "Monto de canon":"30",
@@ -1753,8 +2473,8 @@
     "Rubro":"PERSONAS CON NECESIDADES ESPECIALES",
     "Vencimiento":"Decreto 1553",
     "Coordenadas": {
-    "x":-58.376985,
-    "y":-34.629909
+    "x":-58.376222,
+    "y":-34.629681
     }
   }
 ,
@@ -1769,8 +2489,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.406761,
-    "y":-34.581044
+    "x":-58.406956,
+    "y":-34.581412
     }
   }
 ,
@@ -1801,8 +2521,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.470987,
-    "y":-34.565108
+    "x":-58.471781,
+    "y":-34.564231
     }
   }
 ,
@@ -1833,8 +2553,24 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.400810,
-    "y":-34.584357
+    "x":-58.401623,
+    "y":-34.584973
+    }
+  }
+,
+  {
+    "Legajo":418,
+    "Tipo de canon":"Gratuitos a Cooperadoras",
+    "Monto de canon":"Gratuitos a Cooperadoras",
+    "Normativa aplicable/concesiones":"Ordenanza 35514",
+    "Concesión":"HOSPITAL DE OFTALMOLOGIA SANTA LUCIA",
+    "Concesionario":"ASOCIACION COOPERADORA DEL HTAL DE OFTAMOLOGIA SANTA LUCIA",
+    "Domicilio":"SAN JUAN AV. 2021, CABA ",
+    "Rubro":"COOPERADORA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.394495,
+    "y":-34.62254
     }
   }
 ,
@@ -1849,8 +2585,24 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.453676,
-    "y":-34.644127
+    "x":-58.454515,
+    "y":-34.644749
+    }
+  }
+,
+  {
+    "Legajo":422,
+    "Tipo de canon":"Gratuitos a Cooperadoras",
+    "Monto de canon":"Gratuitos a Cooperadoras",
+    "Normativa aplicable/concesiones":"Ordenanza 35514 IF-2015-07960854- -DGCONC",
+    "Concesión":"HOSPITAL DR. JOSE T. BORDA",
+    "Concesionario":"ASOCIACION COOPERADORA DEL HOSPITAL DR. JOSE T. BORDA",
+    "Domicilio":"RAMON CARDILLO 375",
+    "Rubro":"COOPERADORA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.381876,
+    "y":-34.636542
     }
   }
 ,
@@ -1865,8 +2617,24 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.412086,
-    "y":-34.593953
+    "x":-58.41144,
+    "y":-34.594257
+    }
+  }
+,
+  {
+    "Legajo":424,
+    "Tipo de canon":"Gratuitos a Cooperadoras",
+    "Monto de canon":"Gratuitos a Cooperadoras",
+    "Normativa aplicable/concesiones":"Ordenanza 35514",
+    "Concesión":"HOSPITAL GENERAL DE AGUDOS COSME ARGERICH",
+    "Concesionario":"ASOCIACION COOPERADORA DEL HOSPITAL GENERAL DE AGUDOS COSME",
+    "Domicilio":"CORBETA PI Y MARGAL 750",
+    "Rubro":"COOPERADORA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.365547,
+    "y":-34.6281
     }
   }
 ,
@@ -1913,8 +2681,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.413069,
-    "y":-34.642858
+    "x":-58.411354,
+    "y":-34.643364
     }
   }
 ,
@@ -1945,7 +2713,7 @@
     "Rubro":"DEPORTES",
     "Vencimiento":"03/12/2029",
     "Coordenadas": {
-    "x":-58.503110,
+    "x":-58.50311,
     "y":-34.660135
     }
   }
@@ -1983,6 +2751,54 @@
   }
 ,
   {
+    "Legajo":454,
+    "Tipo de canon":"Gratuitos Asoc.Civiles",
+    "Monto de canon":"Gratuitos Asoc. Civiles",
+    "Normativa aplicable/concesiones":"Análisis situación ocupacional",
+    "Concesión":"PARQUE SANTOJANNI",
+    "Concesionario":"CENTRO DE JUBILADOS Y PENSIONADOS PARQUE SANTOJANNI",
+    "Domicilio":"PATRON 6226 & MARTINIANO LEGUIZAMON",
+    "Rubro":"VARIOS",
+    "Vencimiento":"07/05/2011",
+    "Coordenadas": {
+    "x":-58.513621,
+    "y":-34.646502
+    }
+  }
+,
+  {
+    "Legajo":455,
+    "Tipo de canon":"Contraprestación",
+    "Monto de canon":"Contraprestación por realización de obra",
+    "Normativa aplicable/concesiones":"LEY 17.520 - DISP-176-DGCyP-2003. DEC-225-97",
+    "Concesión":"\"PLAYA SUBTERRANEA - \"\"E-05\"\" \"\"PLAZA VICENTE LOPEZ\"\"\"",
+    "Concesionario":"ESTACIONAMIENTO VICENTE LOPEZ S.A.",
+    "Domicilio":"MONTEVIDEO & PARANA & ARENALES",
+    "Rubro":"PLAYAS DE ESTACIONAMIENTO",
+    "Vencimiento":"30/04/2019",
+    "Coordenadas": {
+    "x":-58.389009,
+    "y":-34.592484
+    }
+  }
+,
+  {
+    "Legajo":459,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"26.000,00",
+    "Normativa aplicable/concesiones":"Permiso Ley 3399",
+    "Concesión":"EX BRISAS DEL PLATA",
+    "Concesionario":"EL MIRASOL DE LA RECOVA S.A.",
+    "Domicilio":"AV TRISTAN ACHAVAL RODRIGUEZ 1381",
+    "Rubro":"GASTRONOMICOS",
+    "Vencimiento":"01/11/2015",
+    "Coordenadas": {
+    "x":-58.356964,
+    "y":-34.61603
+    }
+  }
+,
+  {
     "Legajo":463,
     "Tipo de canon":"Gratuitos Asoc. Civiles",
     "Monto de canon":"Gratuitos Asoc. Civiles",
@@ -1993,8 +2809,8 @@
     "Rubro":"VARIOS",
     "Vencimiento":"31/10/2014",
     "Coordenadas": {
-    "x":-58.394121,
-    "y":-34.582619
+    "x":-58.394533,
+    "y":-34.58322
     }
   }
 ,
@@ -2009,8 +2825,24 @@
     "Rubro":"DEPORTES",
     "Vencimiento":"06/12/2026",
     "Coordenadas": {
-    "x":-58.495795,
-    "y":-34.558619
+    "x":-58.495205,
+    "y":-34.558551
+    }
+  }
+,
+  {
+    "Legajo":478,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"1.200,00",
+    "Normativa aplicable/concesiones":"Decreto N°1274/2007",
+    "Concesión":"CALESITA PLAZA UNIDAD NACIONAL",
+    "Concesionario":"FONTICHELLI CATALINA ELENA",
+    "Domicilio":"D.GALLO, MURGUIONDO, M.LEGUIZAMON Y CAFATE - PZA U. NACIONAL",
+    "Rubro":"CALESITAS",
+    "Vencimiento":"20/03/2018",
+    "Coordenadas": {
+    "x":-58.476564,
+    "y":-34.677595
     }
   }
 ,
@@ -2041,8 +2873,72 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.440838,
-    "y":-34.553977
+    "x":-58.441223,
+    "y":-34.553532
+    }
+  }
+,
+  {
+    "Legajo":527,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"1.200,00",
+    "Normativa aplicable/concesiones":"Decreto N°1274/2007",
+    "Concesión":"CALESITA PLAZA SALABERRY",
+    "Concesionario":"VIGNATTI, MIGUEL ANGEL",
+    "Domicilio":"PLAZA SALABERRY - GUAIMINI, ITAQUI, Y AVDAS DE LA CRUZ Y PIE",
+    "Rubro":"CALESITAS",
+    "Vencimiento":"16/11/2015",
+    "Coordenadas": {
+    "x":-58.506318,
+    "y":-34.6557326
+    }
+  }
+,
+  {
+    "Legajo":528,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"1.200,00",
+    "Normativa aplicable/concesiones":"EX 98456/10",
+    "Concesión":"CALESITA PLAZA SUDAMERICANA",
+    "Concesionario":"VIGNATTI, MIGUEL ANGEL",
+    "Domicilio":"PLAZA SUDAMERICANA - AV F. DE LA CRUZ Y ITAQUI.GUAMINI PIEDRA BUENA",
+    "Rubro":"CALESITAS",
+    "Vencimiento":"16/11/2015",
+    "Coordenadas": {
+    "x":-58.47412,
+    "y":-34.688494
+    }
+  }
+,
+  {
+    "Legajo":531,
+    "Tipo de canon":"Gratuitos Asoc. Civiles",
+    "Monto de canon":"Gratuitos Asoc. Civiles",
+    "Normativa aplicable/concesiones":"OTORGADO POR LEY 5144/14 POR EL TÉRMINO DE 10 AÑOS",
+    "Concesión":"BAJO AUTOPISTA 1 - 104A",
+    "Concesionario":"FUNDACIÓN LOS CARAS SUCIAS",
+    "Domicilio":"BALCARCE HACIA DEFENSA",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"proyecto ley otorgamiento inicial (10 años)",
+    "Coordenadas": {
+    "x":-58.37053,
+    "y":-34.622586
+    }
+  }
+,
+  {
+    "Legajo":533,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"3.407,36",
+    "Normativa aplicable/concesiones":"Antes afectado a Proyecto Ferias del Sur LICITACIÓN EN TRAMITE",
+    "Concesión":"BAJO AUTOPISTA 1 - 104C",
+    "Concesionario":"\"COOPERATIVA DE TRABAJO \"\"ARTESANOS DE ARGENTINA\"\" LTDA\"",
+    "Domicilio":"DEFENSA Y BALCARCE",
+    "Rubro":"PREDIOS COMERCIALES",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.37053,
+    "y":-34.622586
     }
   }
 ,
@@ -2057,8 +2953,8 @@
     "Rubro":"LOCALES BAJO AUTOPISTA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.371859,
-    "y":-34.613620
+    "x":-58.371339,
+    "y":-34.622437
     }
   }
 ,
@@ -2073,8 +2969,8 @@
     "Rubro":"PREDIOS COMERCIALES",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.371859,
-    "y":-34.613620
+    "x":-58.371339,
+    "y":-34.622437
     }
   }
 ,
@@ -2089,8 +2985,8 @@
     "Rubro":"LOCALES BAJO AUTOPISTA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.371859,
-    "y":-34.613620
+    "x":-58.371339,
+    "y":-34.622437
     }
   }
 ,
@@ -2105,8 +3001,344 @@
     "Rubro":"LOCALES BAJO AUTOPISTA",
     "Vencimiento":"19/12/2022",
     "Coordenadas": {
-    "x":-58.374647,
-    "y":-34.613816
+    "x":-58.374201,
+    "y":-34.622584
+    }
+  }
+,
+  {
+    "Legajo":540,
+    "Tipo de canon":"Gratuitos Asoc. Civiles",
+    "Monto de canon":"Gratuitos Asoc. Civiles",
+    "Normativa aplicable/concesiones":"PERMISO OTORGADOFP9K~Zt3/1BERML TÉRMINO DE 10 AÑOS",
+    "Concesión":"BAJO AUTOPISTA 1 - 107A",
+    "Concesionario":"\"CENTRO DE JUBILADOS Y PENSIONADOS \"\"TITA\"\"\"",
+    "Domicilio":"PERU Y CHACABUCO",
+    "Rubro":"PREDIOS COMERCIALES",
+    "Vencimiento":"19/12/2022",
+    "Coordenadas": {
+    "x":-58.374201,
+    "y":-34.622584
+    }
+  }
+,
+  {
+    "Legajo":542,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos Oficiales",
+    "Concesión":"BAJO AUTOPISTA 1 - 108A/B/C y Cocheras",
+    "Concesionario":"AUTOPISTAS URBANAS S.A.",
+    "Domicilio":"CHACABUCO-PIEDRAS",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"29/09/2015",
+    "Coordenadas": {
+    "x":-58.375626,
+    "y":-34.623042
+    }
+  }
+,
+  {
+    "Legajo":544,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"PERMISO OTORGADO POR LEY N° 2607/07 POR EL TÉRMINO DE QUINCE AÑOS",
+    "Concesión":"BAJO AUTOPISTA 1 - 109",
+    "Concesionario":"SINDICATO DEL SEGURO",
+    "Domicilio":"PIEDRAS-TACUARI",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"02/05/2022",
+    "Coordenadas": {
+    "x":-58.377537,
+    "y":-34.623197
+    }
+  }
+,
+  {
+    "Legajo":546,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"65.000,00",
+    "Normativa aplicable/concesiones":"Decreto N° 402/GCBN2012, Contraprestación Obra",
+    "Concesión":"BAJO AUTOPISTA 1 - 111",
+    "Concesionario":"CANAL 13",
+    "Domicilio":"SALTA-LIMA (Bajo Autopista 25 de Mayo (AU-1)",
+    "Rubro":"PLAYAS DE ESTACIONAMIENTO",
+    "Vencimiento":"29/09/2014",
+    "Coordenadas": {
+    "x":-58.381498,
+    "y":-34.622817
+    }
+  }
+,
+  {
+    "Legajo":547,
+    "Tipo de canon":"Gratuitos Asoc. Civiles",
+    "Monto de canon":"Gratuitos Asoc, Civiles",
+    "Normativa aplicable/concesiones":"PERMISO OTORGADO POR LEY N° 3713 / 10 POR  EL TÉRMINO DE 20 AÑOS",
+    "Concesión":"BAJO AUTOPISTA 1 - 112",
+    "Concesionario":"UTHGRA",
+    "Domicilio":"SALTA-SGO.DEL ESTERO",
+    "Rubro":"DEPORTES",
+    "Vencimiento":"12/12/1930",
+    "Coordenadas": {
+    "x":-58.383009,
+    "y":-34.622911
+    }
+  }
+,
+  {
+    "Legajo":549,
+    "Tipo de canon":"Gratuitos a Organismos",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Oficiales Afectado a Organismos Oficiales",
+    "Concesión":"BAJO AUTOPISTA 1 - 113A",
+    "Concesionario":"POLICÍA FEDERAL",
+    "Domicilio":"SGO.DEL ESTERO-SAN JOSE",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"28/06/1935",
+    "Coordenadas": {
+    "x":-58.384403,
+    "y":-34.622909
+    }
+  }
+,
+  {
+    "Legajo":550,
+    "Tipo de canon":"IMPORTE FIJO",
+    "Monto de canon":"21.000,00",
+    "Normativa aplicable/concesiones":"PERMISO LEY 3399. LICITACION EN TRAMITE.",
+    "Concesión":"BAJO AUTOPISTA 1 - 114",
+    "Concesionario":"TRANSPORTADORA DE CAUDALES JUNCADELLA S.A.",
+    "Domicilio":"SAN JOSE-L.S.PEÑA",
+    "Rubro":"PREDIOS COMERCIALES",
+    "Vencimiento":"29/09/2014",
+    "Coordenadas": {
+    "x":-58.385863,
+    "y":-34.623166
+    }
+  }
+,
+  {
+    "Legajo":554,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"Comprendido en el canon del Legajo N'' 785",
+    "Normativa aplicable/concesiones":"Acta de Tenencia Provisoria. CON LICITACIÓN EN TRÁMITE",
+    "Concesión":"BAJO AUTOPISTA 1 - 117A",
+    "Concesionario":"GEA 8 S.A.",
+    "Domicilio":"SOLIS Y ENTRE RIOS",
+    "Rubro":"PLAYAS DE ESTACIONAMIENTO",
+    "Vencimiento":"hasta licitacion o subasta. Este año.",
+    "Coordenadas": {
+    "x":-58.389829,
+    "y":-34.623234
+    }
+  }
+,
+  {
+    "Legajo":555,
+    "Tipo de canon":"Gratuitos a Entidades de Bien Público ",
+    "Monto de canon":"Gratuitos a Entidades de Bien Público",
+    "Normativa aplicable/concesiones":"El permisionario será reubicado a través del MDSGC. El predio será transferido a SBASE",
+    "Concesión":"BAJO AUTOPISTA 1 - 117B",
+    "Concesionario":"G.C.B.A. - Federación de Instituciones Comunitarias de Constitución",
+    "Domicilio":"SOLIS Y ENTRE RIOS",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.389829,
+    "y":-34.623234
+    }
+  }
+,
+  {
+    "Legajo":559,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos Oficiales",
+    "Concesión":"BAJO AUTOPISTA 1 - 120A",
+    "Concesionario":"POLICÍA FEDERAL",
+    "Domicilio":"SARANDI Y RINCON",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.394001,
+    "y":-34.62347
+    }
+  }
+,
+  {
+    "Legajo":560,
+    "Tipo de canon":"GRATUITOS A ENTIDADES DE BIEN PUBLICO",
+    "Monto de canon":"Gratuitos a Entidades de Bien Público",
+    "Normativa aplicable/concesiones":"Permiso otorgado por ley 4478 de 2012 por el termino de 10 años.",
+    "Concesión":"BAJO AUTOPISTA 1 - 120B",
+    "Concesionario":"FUNDACIÓN NUEVA GENERACIÓN DEL DEPORTE",
+    "Domicilio":"RINCON Y SARANDI",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"19/09/2022",
+    "Coordenadas": {
+    "x":-58.394978,
+    "y":-34.624544
+    }
+  }
+,
+  {
+    "Legajo":561,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"22.000,00",
+    "Normativa aplicable/concesiones":"Permiso Ley 3399. LICITACIÓN EN TRAMITE",
+    "Concesión":"BAJO AUTOPISTA 1 - 121",
+    "Concesionario":"AIRSEC SA",
+    "Domicilio":"RINCON Y  PASCO",
+    "Rubro":"PLAYAS DE ESTACIONAMIENTO",
+    "Vencimiento":"29/09/2014",
+    "Coordenadas": {
+    "x":-58.394978,
+    "y":-34.624544
+    }
+  }
+,
+  {
+    "Legajo":562,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"PERMISO OTORGADO POR LEY 4478/12 POR EL TÉRMINO DE 10 AÑOS",
+    "Concesión":"BAJO AUTOPISTA 1 - 122A",
+    "Concesionario":"ASOC.CIVIL,SOC.Y CULTURAL.CTRO DE ESTUDIO Y PART.DE LA COMUN",
+    "Domicilio":"PASCO Y PICHINCHA",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"19/12/2022",
+    "Coordenadas": {
+    "x":-58.396656,
+    "y":-34.624792
+    }
+  }
+,
+  {
+    "Legajo":563,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"44.239,21",
+    "Normativa aplicable/concesiones":"Permiso Ley 3399. LICITACIÓN EN TRAMITE",
+    "Concesión":"BAJO AUTOPISTA 1 - 122B/123",
+    "Concesionario":"PASCO TENIS PADDLE S.A.",
+    "Domicilio":"PICHINCHA Y MATHEU",
+    "Rubro":"DEPORTES",
+    "Vencimiento":"29/09/2014",
+    "Coordenadas": {
+    "x":-58.397492,
+    "y":-34.624756
+    }
+  }
+,
+  {
+    "Legajo":565,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"951,67",
+    "Normativa aplicable/concesiones":"PERMISO OTORGADO POR LEY 5193/14 POR EL TÉRMINO DE VEINTE AÑOS",
+    "Concesión":"BAJO AUTOPISTA 1 - 122C",
+    "Concesionario":"FUNDACIÓN HTAL. DE PEDIATRÍA DR. GARRAHAM",
+    "Domicilio":"PICHINCHA HACIA PASCO",
+    "Rubro":"PREDIOS COMERCIALES",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.397492,
+    "y":-34.624756
+    }
+  }
+,
+  {
+    "Legajo":567,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"Comprendido en el canon del Legajo N° 785",
+    "Normativa aplicable/concesiones":"Acta de Tenencia Provisoria. CON LICITACIÓN EN TRÁMITE",
+    "Concesión":"BAJO AUTOPISTA 1 - 124",
+    "Concesionario":"GEA 8 S.A.",
+    "Domicilio":"MATHEU Y ALBERTI",
+    "Rubro":"PLAYAS DE ESTACIONAMIENTO",
+    "Vencimiento":"hasta licitacion o subasta",
+    "Coordenadas": {
+    "x":-58.399037,
+    "y":-34.625443
+    }
+  }
+,
+  {
+    "Legajo":568,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"25.300,00",
+    "Normativa aplicable/concesiones":"Permiso Ley 3399. LICITACIÓN EN TRAMITE",
+    "Concesión":"BAJO AUTOPISTA 1 - 125",
+    "Concesionario":"MASBOR S.R.L.",
+    "Domicilio":"ALBERTI Y JUJUY",
+    "Rubro":"PREDIOS COMERCIALES",
+    "Vencimiento":"29/09/2014",
+    "Coordenadas": {
+    "x":-58.40026,
+    "y":-34.625552
+    }
+  }
+,
+  {
+    "Legajo":569,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"Comprendido en el canon del Legajo N' 785",
+    "Normativa aplicable/concesiones":"Acta de Tenencia Provisoria. CON LICITACIÓN EN TRÁMITE",
+    "Concesión":"BAJO AUTOPISTA 1 - 126A",
+    "Concesionario":"GEA 8 S.A.",
+    "Domicilio":"JUJUY Y CATAMARCA",
+    "Rubro":"PLAYAS DE ESTACIONAMIENTO",
+    "Vencimiento":"hasta licitacion o subasta",
+    "Coordenadas": {
+    "x":-58.402346,
+    "y":-34.626092
+    }
+  }
+,
+  {
+    "Legajo":571,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos Oficiales",
+    "Concesión":"BAJO AUTOPISTA 1 - 127",
+    "Concesionario":"POLICÍA FEDERAL",
+    "Domicilio":"CATAMARCA Y LUCA",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.403013,
+    "y":-34.626202
+    }
+  }
+,
+  {
+    "Legajo":572,
+    "Tipo de canon":"Gratuitos a Cooperadoras",
+    "Monto de canon":"Gratuitos a Cooperadoras",
+    "Normativa aplicable/concesiones":"Ordenanza 35514",
+    "Concesión":"BAJO AUTOPISTA 1 - 128",
+    "Concesionario":"ASOC. COOPERADORA DE LA ESC. TCA. 11 DE 6 - MANUEL BELGRANO",
+    "Domicilio":"LUCA Y DEAN FUNES",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.404072,
+    "y":-34.626404
+    }
+  }
+,
+  {
+    "Legajo":573,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"20.000,00",
+    "Normativa aplicable/concesiones":"Permiso Ley 3399. LIClipetpi0_07W8WANSIoNc",
+    "Concesión":"BAJO AUTOPISTA 1 - 129",
+    "Concesionario":"JOSE LUIS CORNIOLA",
+    "Domicilio":"DEAN FUNES Y RIOJA",
+    "Rubro":"PLAYAS DE ESTACIONAMIENTO",
+    "Vencimiento":"29/09/2014",
+    "Coordenadas": {
+    "x":-58.405547,
+    "y":-34.626607
     }
   }
 ,
@@ -2121,8 +3353,8 @@
     "Rubro":"LOCALES BAJO AUTOPISTA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.406634,
-    "y":-34.628275
+    "x":-58.406859,
+    "y":-34.626735
     }
   }
 ,
@@ -2137,8 +3369,600 @@
     "Rubro":"LOCALES BAJO AUTOPISTA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.408687,
-    "y":-34.626379
+    "x":-58.408194,
+    "y":-34.626863
+    }
+  }
+,
+  {
+    "Legajo":577,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"18.000,00",
+    "Normativa aplicable/concesiones":"LICITACIÓN EN TRAMITE",
+    "Concesión":"BAJO AUTOPISTA 1 - 132/133",
+    "Concesionario":"C.R.V. S.A.",
+    "Domicilio":"URQUIZA Y PRUDAN",
+    "Rubro":"DEPORTES",
+    "Vencimiento":"29/09/2014",
+    "Coordenadas": {
+    "x":-58.408703,
+    "y":-34.626754
+    }
+  }
+,
+  {
+    "Legajo":580,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"44.850,00",
+    "Normativa aplicable/concesiones":"Se firmará Acta de Tenencia Provisoria hasta su reubicación en CCL",
+    "Concesión":"BAJO AUTOPISTA 1 - 134A",
+    "Concesionario":"VÍCTOR MASSON - TRANSPORTE CRUZ DEL SUR S.A.",
+    "Domicilio":"24 DE NOVIEMBRE Y LORIA",
+    "Rubro":"PLAYAS DE ESTACIONAMIENTO",
+    "Vencimiento":"29/09/2014",
+    "Coordenadas": {
+    "x":-58.410211,
+    "y":-34.626854
+    }
+  }
+,
+  {
+    "Legajo":581,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"10.000,00",
+    "Normativa aplicable/concesiones":"con Proyecto de ser asignado a Empresas de Transporte Público por solicitud de la SSTRANS",
+    "Concesión":"BAJO AUTOPISTA 1 - 135A",
+    "Concesionario":"C.R.V. S.A.",
+    "Domicilio":"LORIA  Y  V.LINIERS",
+    "Rubro":"DEPORTES",
+    "Vencimiento":"29/09/2014",
+    "Coordenadas": {
+    "x":-58.412017,
+    "y":-34.627105
+    }
+  }
+,
+  {
+    "Legajo":583,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"27.600,00",
+    "Normativa aplicable/concesiones":"con Proyecto de ser asignado a Empresas de Transporte Público por solicitud de la SSTRANS",
+    "Concesión":"BAJO AUTOPISTA 1 - 135B",
+    "Concesionario":"VICTOR MASSON TRANSPORTES CRUZ DEL SUR S.A",
+    "Domicilio":"LORIA  Y  V.LINIERS",
+    "Rubro":"PLAYAS DE ESTACIONAMIENTO",
+    "Vencimiento":"29/09/2014",
+    "Coordenadas": {
+    "x":-58.412017,
+    "y":-34.627105
+    }
+  }
+,
+  {
+    "Legajo":584,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"Comprendido en el canon del Legajo N° 785",
+    "Normativa aplicable/concesiones":"Acta de Tenencia Provisoria. CON LICITACIÓN EN TRÁMITE",
+    "Concesión":"BAJO AUTOPISTA 1 - 136",
+    "Concesionario":"GEA 8 S.A.",
+    "Domicilio":"LINIERS Y MAZA",
+    "Rubro":"PLAYAS DE ESTACIONAMIENTO",
+    "Vencimiento":"hasta licitacion o subasta",
+    "Coordenadas": {
+    "x":-58.413455,
+    "y":-34.627183
+    }
+  }
+,
+  {
+    "Legajo":585,
+    "Tipo de canon":"Gratuitos Asoc. Civiles",
+    "Monto de canon":"Gratuitos Asoc. Civiles",
+    "Normativa aplicable/concesiones":"OTORGADO POR LEY 2330/07 POR EL TÉRMINO DE 20 años",
+    "Concesión":"BAJO AUTOPISTA 1 - 137",
+    "Concesionario":"APANOVI",
+    "Domicilio":"MAZA Y BOEDO",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"08/06/2027",
+    "Coordenadas": {
+    "x":-58.414652,
+    "y":-34.627286
+    }
+  }
+,
+  {
+    "Legajo":586,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"Comprendido en el canon del Legajo N° 785",
+    "Normativa aplicable/concesiones":"Acta de Tenencia Provisoria. CON LICITACIÓN EN TRÁMITE",
+    "Concesión":"BAJO AUTOPISTA 1 - 138",
+    "Concesionario":"GEA 8 S.A.",
+    "Domicilio":"BOEDO Y COLOMBRES",
+    "Rubro":"PLAYAS DE ESTACIONAMIENTO",
+    "Vencimiento":"hasta licitacion o subasta",
+    "Coordenadas": {
+    "x":-58.416079,
+    "y":-34.627437
+    }
+  }
+,
+  {
+    "Legajo":588,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"23.000,00",
+    "Normativa aplicable/concesiones":"La Licitación comenzará una vez que culminen las obras del Metrobus 25 de Mayo en virtud que el permisionario debió ceder parte del predio a la contratista de AUSA para su uso como obrador",
+    "Concesión":"BAJO AUTOPISTA 1 - 140",
+    "Concesionario":"SUTEC SA",
+    "Domicilio":"CASTRO BARROS Y CASTRO",
+    "Rubro":"PREDIOS COMERCIALES",
+    "Vencimiento":"29/09/2011",
+    "Coordenadas": {
+    "x":-58.418437,
+    "y":-34.627761
+    }
+  }
+,
+  {
+    "Legajo":589,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos Oficiales",
+    "Concesión":"BAJO AUTOPISTA 1 - 141A",
+    "Concesionario":"P.F.A.",
+    "Domicilio":"CASTRO Y QUINTINO BOCAYUVA",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.419894,
+    "y":-34.627994
+    }
+  }
+,
+  {
+    "Legajo":590,
+    "Tipo de canon":"Gratuitos Asoc. Civiles",
+    "Monto de canon":"Gratuitos Asoc. Civiles",
+    "Normativa aplicable/concesiones":"OTORGADO POR LEY 1967/07 POR EL TÉRMINO DE 15 AÑOS",
+    "Concesión":"BAJO AUTOPISTA 1 - 141B",
+    "Concesionario":"SINDICATO PEONES DE TAXI",
+    "Domicilio":"BOCAYUVA HACIA CASTRO",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"02/05/2022",
+    "Coordenadas": {
+    "x":-58.421688,
+    "y":-34.628382
+    }
+  }
+,
+  {
+    "Legajo":591,
+    "Tipo de canon":"Gratuitos Asoc. Civiles",
+    "Monto de canon":"Gratuitos Asoc. Civiles",
+    "Normativa aplicable/concesiones":"PERMISO OTORGADO POR LEY 4478/12 POR EL TÉRMINO DE 10 AÑOS",
+    "Concesión":"BAJO AUTOPISTA 1 - 142",
+    "Concesionario":"NUEVA GENERACIÓN 2000",
+    "Domicilio":"BOCAYUVA Y 33 ORIENTALES",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"19/12/2022",
+    "Coordenadas": {
+    "x":-58.421688,
+    "y":-34.628382
+    }
+  }
+,
+  {
+    "Legajo":593,
+    "Tipo de canon":"Gratuitos Asoc. Civiles",
+    "Monto de canon":"Gratuitos Asoc. Civiles",
+    "Normativa aplicable/concesiones":"PERMISO OTORGADO POR LEY 4478/12 POR EL TÉRMINO DE 10 AÑOS",
+    "Concesión":"BAJO AUTOPISTA 1 - 143A",
+    "Concesionario":"ASOC. CIVIL CLUB SOC. Y DEPORT. ESTRELLA DE BOEDO",
+    "Domicilio":"33 ORIENTALES Y MARMOL",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"19/12/2022",
+    "Coordenadas": {
+    "x":-58.422429,
+    "y":-34.62842
+    }
+  }
+,
+  {
+    "Legajo":594,
+    "Tipo de canon":"Gratuitos Asoc. Civiles",
+    "Monto de canon":"Gratuitos Asoc. Civiles",
+    "Normativa aplicable/concesiones":"PERMISO OTORGADO POR LEY 4478/12 POR EL TÉRMINO DE 10 AÑOS",
+    "Concesión":"BAJO AUTOPISTA 1 - 143B",
+    "Concesionario":"CASA SOCIAL EL SOL DE BOEDO",
+    "Domicilio":"33 ORIENTALES Y MARMOL",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"19/12/2022",
+    "Coordenadas": {
+    "x":-58.422429,
+    "y":-34.62842
+    }
+  }
+,
+  {
+    "Legajo":595,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos Oficiales",
+    "Concesión":"BAJO AUTOPISTA 1 - 144",
+    "Concesionario":"POLICÍA FEDERAL",
+    "Domicilio":"MARMOL Y MUÑIZ",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.423756,
+    "y":-34.628545
+    }
+  }
+,
+  {
+    "Legajo":596,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"Comprendido en el canon del Legajo N° 785",
+    "Normativa aplicable/concesiones":"Acta de Tenencia Provisoria. CON LICITACIÓN EN TRÁMITE",
+    "Concesión":"BAJO AUTOPISTA 1 - 145",
+    "Concesionario":"GEA 8 S.A.",
+    "Domicilio":"MUÑIZ Y AV.LA PLATA",
+    "Rubro":"PLAYAS DE ESTACIONAMIENTO",
+    "Vencimiento":"hasta licitacion o subasta",
+    "Coordenadas": {
+    "x":-58.425712,
+    "y":-34.628783
+    }
+  }
+,
+  {
+    "Legajo":597,
+    "Tipo de canon":"Gratuitos Asoc. Civiles",
+    "Monto de canon":"Gratuitos Asoc. Civiles",
+    "Normativa aplicable/concesiones":"PERMISO OTORGADO POR LEY 4478/12 POR EL TÉRMINO DE 10 AÑOS",
+    "Concesión":"BAJO AUTOPISTA 1 - 146",
+    "Concesionario":"FEDERACION DE INSTITUCIONES COMUNITARIAS DE CABALLITO",
+    "Domicilio":"AV.LA PLATA Y SENILLOSA",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"19/12/2022",
+    "Coordenadas": {
+    "x":-58.427067,
+    "y":-34.628959
+    }
+  }
+,
+  {
+    "Legajo":598,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"33.289,91",
+    "Normativa aplicable/concesiones":"Permiso Ley 3399. LICITACIÓN EN TRAMITE I F-9 (1 1 --1179(-,f1R-■4- _nrir n-Nic",
+    "Concesión":"BAJO AUTOPISTA 1 - 147/148",
+    "Concesionario":"TERCER TIEMPO S.A.",
+    "Domicilio":"SENILLOSA Y DOBLAS",
+    "Rubro":"DEPORTES",
+    "Vencimiento":"29/09/2014",
+    "Coordenadas": {
+    "x":-58.427792,
+    "y":-34.629039
+    }
+  }
+,
+  {
+    "Legajo":602,
+    "Tipo de canon":"Gratuitos Asao. Civiles",
+    "Monto de canon":"Gratuitos Asoc. Civiles",
+    "Normativa aplicable/concesiones":"",
+    "Concesión":"BAJO AUTOPISTA 1 - 149",
+    "Concesionario":"ASOCIACION HOMERO MANZI",
+    "Domicilio":"VIEL Y BEAUCHEF",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.430562,
+    "y":-34.629546
+    }
+  }
+,
+  {
+    "Legajo":603,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"Comprendido en el canon del Legajo N° 785",
+    "Normativa aplicable/concesiones":"Acta de Tenencia Provisoria. CON LICITACIÓN EN TRÁMITE",
+    "Concesión":"BAJO AUTOPISTA 1 - 150",
+    "Concesionario":"GEA 8 S.A.",
+    "Domicilio":"BEAUCHEF Y J.M.MORENO",
+    "Rubro":"PLAYAS DE ESTACIONAMIENTO",
+    "Vencimiento":"hasta licitacion o subasta",
+    "Coordenadas": {
+    "x":-58.431979,
+    "y":-34.629635
+    }
+  }
+,
+  {
+    "Legajo":604,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"22.813,13",
+    "Normativa aplicable/concesiones":"Permiso Ley 3399. LICITACIÓN EN TRAMITE",
+    "Concesión":"BAJO AUTOPISTA 1 - 151/152",
+    "Concesionario":"INNOCENTI, MARCELO FABIAN",
+    "Domicilio":"J.M.MORENO Y CRAIG Y RIGLOS",
+    "Rubro":"DEPORTES",
+    "Vencimiento":"29/09/2014",
+    "Coordenadas": {
+    "x":-58.433484,
+    "y":-34.629881
+    }
+  }
+,
+  {
+    "Legajo":606,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos Oficiales",
+    "Concesión":"BAJO AUTOPISTA 1 - 153A",
+    "Concesionario":"POLICÍA FEDERAL",
+    "Domicilio":"RIGLOS Y J.DE CALASANZ",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.435273,
+    "y":-34.630124
+    }
+  }
+,
+  {
+    "Legajo":607,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos Oficiales",
+    "Concesión":"BAJO AUTOPISTA 1 - 153B",
+    "Concesionario":"POLICÍA FEDERAL",
+    "Domicilio":"RIGLOS Y J.DE CALASANZ",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.435273,
+    "y":-34.630124
+    }
+  }
+,
+  {
+    "Legajo":608,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"21.528,00",
+    "Normativa aplicable/concesiones":"LICITACIÓN EN TRAMITE",
+    "Concesión":"BAJO AUTOPISTA 1 - 154A",
+    "Concesionario":"DEL BARCO S.R.L.",
+    "Domicilio":"J.DE CALASANZ Y CENTENERA",
+    "Rubro":"DEPORTES",
+    "Vencimiento":"29/09/2014",
+    "Coordenadas": {
+    "x":-58.436798,
+    "y":-34.630426
+    }
+  }
+,
+  {
+    "Legajo":610,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"18.745,00",
+    "Normativa aplicable/concesiones":"Permiso Ley 3399. LICITACIÓN EN TRAMITE",
+    "Concesión":"BAJO AUTOPISTA 1 - 155",
+    "Concesionario":"CANTEN SA",
+    "Domicilio":"CENTENERA Y DEL COMERCIO",
+    "Rubro":"DEPORTES",
+    "Vencimiento":"29/09/2014",
+    "Coordenadas": {
+    "x":-58.438641,
+    "y":-34.630827
+    }
+  }
+,
+  {
+    "Legajo":612,
+    "Tipo de canon":"Gratuitos Asco. Civiles",
+    "Monto de canon":"Gratuitos Asco. Civiles",
+    "Normativa aplicable/concesiones":"PERMISO OTORGADO POR LEY 4478/12 POR EL TÉRMINO DE 10 AÑOS",
+    "Concesión":"BAJO AUTOPISTA 1 - 156",
+    "Concesionario":"FEDERACION DE INSTITUCIONES COMUNITARIAS DE BS. AS.",
+    "Domicilio":"DEL COMERCIO Y  EL PROGRESO.",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"19/12/2022",
+    "Coordenadas": {
+    "x":-58.439492,
+    "y":-34.631183
+    }
+  }
+,
+  {
+    "Legajo":613,
+    "Tipo de canon":"Gratuitos Asoc. Civiles",
+    "Monto de canon":"Gratuitos Asco. Civiles",
+    "Normativa aplicable/concesiones":"PERMISO OTORGADO POR LEY 4478/12 POR EL TÉRMINO DE 10 AÑOS",
+    "Concesión":"BAJO AUTOPISTA 1 - 157",
+    "Concesionario":"FEDERACION DE INSTITUCIONES COMUNITARIAS de BS AS",
+    "Domicilio":"EL PROGRESO  Y  CACHIMAYO",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"19/12/2022",
+    "Coordenadas": {
+    "x":-58.43965,
+    "y":-34.631436
+    }
+  }
+,
+  {
+    "Legajo":614,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"Comprendido en el canon del Legajo N° 785",
+    "Normativa aplicable/concesiones":"Acta de Tenencia Provisoria. CON LICITACIÓN EN TRÁMITE IF-2ali-C37cM,I)Ri4- -wrc)mc",
+    "Concesión":"BAJO AUTOPISTA 1 - 158",
+    "Concesionario":"GEA 8 S.A.",
+    "Domicilio":"CACHIMAYO Y DE LAS CIENCIAS",
+    "Rubro":"PLAYAS DE ESTACIONAMIENTO",
+    "Vencimiento":"hasta licitacion o subasta",
+    "Coordenadas": {
+    "x":-58.440057,
+    "y":-34.631668
+    }
+  }
+,
+  {
+    "Legajo":617,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"528",
+    "Normativa aplicable/concesiones":"A LICITAR PREVIA REALIZACION DE OBRA PUESTA EN VALOR",
+    "Concesión":"BAJO AUTOPISTA 1 - 159C",
+    "Concesionario":"LAMBOGLIA DAMIAN EZEQUIEL",
+    "Domicilio":"(PJE) DE LAS CIENCIAS Y E.MITRE  Y  LOCAL 13",
+    "Rubro":"PREDIOS COMERCIALES",
+    "Vencimiento":"05/09/2012",
+    "Coordenadas": {
+    "x":-58.44064,
+    "y":-34.632107
+    }
+  }
+,
+  {
+    "Legajo":621,
+    "Tipo de canon":"Importe Fijo -",
+    "Monto de canon":"380",
+    "Normativa aplicable/concesiones":"A LICITAR PREVIA REALIZACION DE OBRA PUESTA EN VALOR",
+    "Concesión":"BAJO AUTOPISTA 1 - 159H - GALERIA EMILIO MITRE",
+    "Concesionario":"ERNESTO WENCESLAO SOSA",
+    "Domicilio":"DE LAS CIENCIAS Y E.MITRE",
+    "Rubro":"PREDIOS COMERCIALES",
+    "Vencimiento":"01/11/2012",
+    "Coordenadas": {
+    "x":-58.44064,
+    "y":-34.632107
+    }
+  }
+,
+  {
+    "Legajo":624,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos Oficiales",
+    "Concesión":"BAJO AUTOPISTA 1 - 159J - GALERIA EMILIO MITRE",
+    "Concesionario":"SUBSECRETARIA DE ATENCION CIUDADANA",
+    "Domicilio":"DE LAS CIENCIAS Y E.MITRE",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.44064,
+    "y":-34.632107
+    }
+  }
+,
+  {
+    "Legajo":625,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos Oficiales",
+    "Concesión":"BAJO AUTOPISTA 1 - 159K - GALERIA EMILIO MITRE",
+    "Concesionario":"SUBSECRETARIA DE ATENCION CIUDADANA",
+    "Domicilio":"DE LAS CIENCIAS Y E.MITRE",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.44064,
+    "y":-34.632107
+    }
+  }
+,
+  {
+    "Legajo":626,
+    "Tipo de canon":"Gratuitos aOrganismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos Oficiales",
+    "Concesión":"BAJO AUTOPISTA 1 - 159L - GALERIA EMILIO MITRE",
+    "Concesionario":"SUBSECRETARIA DE ATENCION CIUDADANA",
+    "Domicilio":"DE LAS CIENCIAS Y E.MITRE",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.44064,
+    "y":-34.632107
+    }
+  }
+,
+  {
+    "Legajo":627,
+    "Tipo de canon":"Gratuitos aOrganismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos Oficiales",
+    "Concesión":"BAJO AUTOPISTA 1 - 159M - GALERIA EMILIO MITRE",
+    "Concesionario":"SUBSECRETARIA DE ATENCION CIUDADANA",
+    "Domicilio":"DE LAS CIENCIAS Y E.MITRE",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.44064,
+    "y":-34.632107
+    }
+  }
+,
+  {
+    "Legajo":630,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"380",
+    "Normativa aplicable/concesiones":"A LICITAR PREVIA REALIZACION DE OBRA PUESTA EN VALOR",
+    "Concesión":"BAJO AUTOPISTA 1 - 159E - GALERIA EMILIO MITRE",
+    "Concesionario":"PETRONGARI OSCAR",
+    "Domicilio":"DE LAS CIENCIAS Y E.MITRE",
+    "Rubro":"PREDIOS COMERCIALES",
+    "Vencimiento":"01/11/2012",
+    "Coordenadas": {
+    "x":-58.44064,
+    "y":-34.632107
+    }
+  }
+,
+  {
+    "Legajo":634,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"560",
+    "Normativa aplicable/concesiones":"CON DECRETO DE DESOCUPACION",
+    "Concesión":"BAJO AUTOPISTA 1 - 160B - GALERIA EMILIO MITRE",
+    "Concesionario":"ASOC. MUTUAL UNIVERSITARIA MANUEL UGARTE",
+    "Domicilio":"GALERÍA E.MITRE Y LOCAL 2",
+    "Rubro":"PREDIOS COMERCIALES",
+    "Vencimiento":"29/09/2010",
+    "Coordenadas": {
+    "x":-58.44107,
+    "y":-34.632411
+    }
+  }
+,
+  {
+    "Legajo":636,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"430",
+    "Normativa aplicable/concesiones":"A LICITAR PREVIA REALIZACION DE OBRA PUESTA EN VALOR",
+    "Concesión":"BAJO AUTOPISTA 1 - 160D - GALERIA EMILIO MITRE",
+    "Concesionario":"JORGE TAROCCO",
+    "Domicilio":"GALERÍA E.MITRE Y LOCAL 4 Y ANEXO BAULERA 9",
+    "Rubro":"PREDIOS COMERCIALES",
+    "Vencimiento":"01/10/2012",
+    "Coordenadas": {
+    "x":-58.441261,
+    "y":-34.632165
+    }
+  }
+,
+  {
+    "Legajo":638,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"860",
+    "Normativa aplicable/concesiones":"A LICITAR PREVIA REALIZACION DE OBRA PUESTA EN VALOR",
+    "Concesión":"BAJO AUTOPISTA 1 - 160G - GALERIA EMILIO MITRE",
+    "Concesionario":"MARÍA ANGELICA SCHWARZ LUCIANI",
+    "Domicilio":"GALERÍA E.MITRE Y LOCAL 5, 6 Y ANEXO BAULERA 10",
+    "Rubro":"PREDIOS COMERCIALES",
+    "Vencimiento":"01/10/2012",
+    "Coordenadas": {
+    "x":-58.441261,
+    "y":-34.632165
     }
   }
 ,
@@ -2175,6 +3999,38 @@
   }
 ,
   {
+    "Legajo":641,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos Oficiales 1P-2.ülí-f17Q6(W4- -DGC(1NC",
+    "Concesión":"BAJO AUTOPISTA 1 - 160J",
+    "Concesionario":"CTRO. CULT. ADAM BS AS - MIN. CULTURA",
+    "Domicilio":"E.MITRE Y CURAPALIGUE",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.44107,
+    "y":-34.632411
+    }
+  }
+,
+  {
+    "Legajo":642,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos Oficiales",
+    "Concesión":"BAJO AUTOPISTA 1 - 160K",
+    "Concesionario":"INSTITUTO DE EDUCACIÓN FÍSICA Nº2 PROF. FEDERICO W. DICKENS",
+    "Domicilio":"E.MITRE  Y  CURAPALIGUE",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.44107,
+    "y":-34.632411
+    }
+  }
+,
+  {
     "Legajo":647,
     "Tipo de canon":"Gratuitos Asoc. Civiles / Empresas",
     "Monto de canon":"Gratuitos Asoc. Civiles / Empresas",
@@ -2185,8 +4041,232 @@
     "Rubro":"LOCALES BAJO AUTOPISTA",
     "Vencimiento":"19/12/2022",
     "Coordenadas": {
-    "x":-58.449482,
-    "y":-34.636259
+    "x":-58.449399,
+    "y":-34.636331
+    }
+  }
+,
+  {
+    "Legajo":648,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos Oficiales",
+    "Concesión":"BAJO AUTOPISTA 1 - 164",
+    "Concesionario":"SBASE-GCBA",
+    "Domicilio":"DAVILA Y PUMACAHUA",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.449399,
+    "y":-34.636331
+    }
+  }
+,
+  {
+    "Legajo":649,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"11.000,00",
+    "Normativa aplicable/concesiones":"Permiso Ley 3399. LICITACIÓN EN TRAMITE",
+    "Concesión":"BAJO AUTOPISTA 1 - 165",
+    "Concesionario":"APANOVI",
+    "Domicilio":"AU1 ENTRE AV. CARABOBO Y PUMACAHUA",
+    "Rubro":"PLAYAS DE ESTACIONAMIENTO",
+    "Vencimiento":"29/09/2014",
+    "Coordenadas": {
+    "x":-58.450493,
+    "y":-34.636681
+    }
+  }
+,
+  {
+    "Legajo":650,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"34.385,00",
+    "Normativa aplicable/concesiones":"Permiso Ley 3399. LICITACION EN TRAMITE",
+    "Concesión":"BAJO AUTOPISTA 1 - 166A/167/168",
+    "Concesionario":"INNOCENTI, MARCELO FABIAN",
+    "Domicilio":"AU1 ENTRE CARABOBO  Y  LAUTARO  Y  CAMACUÁ Y BONORINO.",
+    "Rubro":"DEPORTES",
+    "Vencimiento":"29/09/2014",
+    "Coordenadas": {
+    "x":-58.451874,
+    "y":-34.636368
+    }
+  }
+,
+  {
+    "Legajo":653,
+    "Tipo de canon":"Gratuitos a Entidades de Bien Público",
+    "Monto de canon":"Gratuitos a Entidades de Bien Público",
+    "Normativa aplicable/concesiones":"PERMISO OTORGADO POR LEY 4478/12 POR EL TÉRMINO DE 10 AÑOS",
+    "Concesión":"BAJO AUTOPISTA 1 - 166B",
+    "Concesionario":"CENTRO DE JUBILADOS Y PENSIONADOS COMPARTIENDO ALEGRIAS",
+    "Domicilio":"LAUTARO HACIA CARABOBO",
+    "Rubro":"VARIOS",
+    "Vencimiento":"19/12/2022",
+    "Coordenadas": {
+    "x":-58.452837,
+    "y":-34.636953
+    }
+  }
+,
+  {
+    "Legajo":655,
+    "Tipo de canon":"Gratuitos Asoc. Civiles",
+    "Monto de canon":"Gratuitos Asoc. Civiles",
+    "Normativa aplicable/concesiones":"CON DECRETO DE DESOCUPACION",
+    "Concesión":"BAJO AUTOPISTA 1 - 169",
+    "Concesionario":"FEDERACION INSTITUCIONES COMUNITARIAS DE FLORES",
+    "Domicilio":"BONORINO  Y  MEMBRILLAR",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"10/02/2012",
+    "Coordenadas": {
+    "x":-58.454561,
+    "y":-34.637744
+    }
+  }
+,
+  {
+    "Legajo":656,
+    "Tipo de canon":"Gratuitos a Organismos",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos Oficiales",
+    "Concesión":"BAJO AUTOPISTA 1 - 170",
+    "Concesionario":"POLICÍA FEDERAL - COMISARÍA 38",
+    "Domicilio":"MEMBRILLAR  Y  RIVERA INDARTE",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.45556,
+    "y":-34.638388
+    }
+  }
+,
+  {
+    "Legajo":657,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"16.425,45",
+    "Normativa aplicable/concesiones":"Permiso Ley 3399. LICITACIÓN EN TRAMITE",
+    "Concesión":"BAJO AUTOPISTA 1 - 171",
+    "Concesionario":"MANCUSO MIGUEL ALEJANDRO",
+    "Domicilio":"RIVERA INDARTE Y  PEDERNERA",
+    "Rubro":"DEPORTES",
+    "Vencimiento":"30/09/2014",
+    "Coordenadas": {
+    "x":-58.456433,
+    "y":-34.638528
+    }
+  }
+,
+  {
+    "Legajo":658,
+    "Tipo de canon":"Gratuitos Asoc. Civiles / Empresas",
+    "Monto de canon":"Gratuitos Asoc. Civiles / Empresas",
+    "Normativa aplicable/concesiones":"OTORGADO POR LEY 2848/2008 POR EL TÉRMINO DE 20 AÑOS",
+    "Concesión":"BAJO AUTOPISTA 1 - 172A",
+    "Concesionario":"ASOCIACIÓN VECINAL DEPORTIVO BUENOS AIRES",
+    "Domicilio":"PEDERNERA HACIA AV.VARELA",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"04/09/2028",
+    "Coordenadas": {
+    "x":-58.458053,
+    "y":-34.639899
+    }
+  }
+,
+  {
+    "Legajo":659,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos Oficiales",
+    "Concesión":"BAJO AUTOPISTA 1 - 172B",
+    "Concesionario":"SBASE",
+    "Domicilio":"AV.VARELA HACIA PEDERNERA",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.458053,
+    "y":-34.639899
+    }
+  }
+,
+  {
+    "Legajo":660,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"10.580,00",
+    "Normativa aplicable/concesiones":"Permiso Ley 3399. LICITACIÓN EN TRAMITE",
+    "Concesión":"BAJO AUTOPISTA 1 - 173A",
+    "Concesionario":"CACOPARDO ANA ESTER",
+    "Domicilio":"VARELA HACIA ARROTEA",
+    "Rubro":"PLAYAS DE ESTACIONAMIENTO",
+    "Vencimiento":"29/09/2014",
+    "Coordenadas": {
+    "x":-58.458053,
+    "y":-34.639899
+    }
+  }
+,
+  {
+    "Legajo":663,
+    "Tipo de canon":"Gratuitos Asoc. Civiles",
+    "Monto de canon":"Gratuitos Asoc. Civiles",
+    "Normativa aplicable/concesiones":"PERMISO OTORGADO POR LEY 4478/12 POR EL TÉRMINO DE 10 AÑOS",
+    "Concesión":"BAJO AUTOPISTA 1 - 175",
+    "Concesionario":"ASOC. MUTUAL FUTBOLISTAS SOLIDARIOS / CTRO. SOC Y CULT. FLORES SUR",
+    "Domicilio":"CULPINA Y PILLADO",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"19/12/2022",
+    "Coordenadas": {
+    "x":-58.459125,
+    "y":-34.640772
+    }
+  }
+,
+  {
+    "Legajo":664,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos Oficiales",
+    "Concesión":"BAJO AUTOPISTA 1 - 176A",
+    "Concesionario":"G.C.B.A.",
+    "Domicilio":"PILLADO Y CASTAÑON",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.45976,
+    "y":-34.64119
+    }
+  }
+,
+  {
+    "Legajo":665,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"14.547,50",
+    "Normativa aplicable/concesiones":"LICITACIÓN EN TRAMITE",
+    "Concesión":"BAJO AUTOPISTA 1 - 177A",
+    "Concesionario":"GUTIERREZ CARLOS",
+    "Domicilio":"SAN PEDRITO Y CASTAÑÓN",
+    "Rubro":"DEPORTES",
+    "Vencimiento":"29/09/2014",
+    "Coordenadas": {
+    "x":-58.461261,
+    "y":-34.642459
+    }
+  }
+,
+  {
+    "Legajo":666,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos Oficiales",
+    "Concesión":"BAJO AUTOPISTA 1 - 178 ",
+    "Concesionario":"SBASE - GCBA",
+    "Domicilio":"SAN PEDRITO Y MARIANO ACOSTA",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.461261,
+    "y":-34.642459
     }
   }
 ,
@@ -2201,8 +4281,200 @@
     "Rubro":"PLAYAS DE ESTACIONAMIENTO",
     "Vencimiento":"14/01/2018",
     "Coordenadas": {
-    "x":-58.379013,
-    "y":-34.626083
+    "x":-58.382234,
+    "y":-34.626939
+    }
+  }
+,
+  {
+    "Legajo":668,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Playa de remoción Integra concesión 82.",
+    "Concesión":"BAJO AUTOPISTA 9 - 902",
+    "Concesionario":"B.R.D. S.A.I.C.F.I.",
+    "Domicilio":"J.DE GARAY Y COCHABAMBA",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.379034,
+    "y":-34.626088
+    }
+  }
+,
+  {
+    "Legajo":669,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos Oficiales",
+    "Concesión":"BAJO AUTOPISTA 9 - 903",
+    "Concesionario":"GCBA",
+    "Domicilio":"BRASIL Y CASEROS",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.378984,
+    "y":-34.627557
+    }
+  }
+,
+  {
+    "Legajo":670,
+    "Tipo de canon":"Gratuitos a Organismos",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos Oficiales",
+    "Concesión":"BAJO AUTOPISTA 9 - 904",
+    "Concesionario":"G.C.B.A",
+    "Domicilio":"CASEROS Y FINOCCHIETO",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.378497,
+    "y":-34.628974
+    }
+  }
+,
+  {
+    "Legajo":672,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos Oficiales",
+    "Concesión":"BAJO AUTOPISTA 9 - 906",
+    "Concesionario":"GCBA-POLICÍA FEDERAL",
+    "Domicilio":"FINOCCHIETO Y SAMPERIO",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.379131,
+    "y":-34.631412
+    }
+  }
+,
+  {
+    "Legajo":673,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"89.000,00",
+    "Normativa aplicable/concesiones":"SE LLAMARA A LICITACION UNA VEZ QUE SE APRUEBE EL CAMBIO DE ZONIFICACION",
+    "Concesión":"BAJO AUTOPISTA 9 - 907",
+    "Concesionario":"MULTICANAL/CABLEVISON",
+    "Domicilio":"SAMPERIO Y A.DEL VALLE",
+    "Rubro":"PLAYAS DE ESTACIONAMIENTO",
+    "Vencimiento":"15/09/2014",
+    "Coordenadas": {
+    "x":-58.377159,
+    "y":-34.634713
+    }
+  }
+,
+  {
+    "Legajo":674,
+    "Tipo de canon":"Gratuitas a Entidades de Bien Público",
+    "Monto de canon":"Gratuitos a Entidades deBien Público B",
+    "Normativa aplicable/concesiones":"EX 639632/10",
+    "Concesión":"CALESITA en BAJO AUTOPISTA 9 - 908",
+    "Concesionario":"ASOC. VECINAL REP. DE BARRACAS",
+    "Domicilio":"BRANDSEN  Y  ARISTOBULO DEL VALLE",
+    "Rubro":"CALESITAS",
+    "Vencimiento":"18/08/2015",
+    "Coordenadas": {
+    "x":-58.37698,
+    "y":-34.638086
+    }
+  }
+,
+  {
+    "Legajo":675,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos Oficiales",
+    "Concesión":"BAJO AUTOPISTA 9 - 909",
+    "Concesionario":"GCBA",
+    "Domicilio":"BRANDSEN  Y  ARISTOBULO DEL VALLE",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.37698,
+    "y":-34.638086
+    }
+  }
+,
+  {
+    "Legajo":677,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos Oficiales",
+    "Concesión":"BAJO AUTOPISTA 9 - 911",
+    "Concesionario":"GCBA",
+    "Domicilio":"ARAOZ DE LAMADRID Y B.QUINQUELA MARTIN",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.375667,
+    "y":-34.642531
+    }
+  }
+,
+  {
+    "Legajo":678,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos Oficiales",
+    "Concesión":"BAJO AUTOPISTA 9 - 912",
+    "Concesionario":"GCBA",
+    "Domicilio":"B.QUINQUELA MARTIN NORTE Y B.Q. MARTIN SUR",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.37514,
+    "y":-34.644421
+    }
+  }
+,
+  {
+    "Legajo":680,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos Oficiales",
+    "Concesión":"BAJO AUTOPISTA 9 - 913B",
+    "Concesionario":"GCBA",
+    "Domicilio":"CALIFORNIA HACIA AUSTRALIA (B.Q. MARTIN (S))",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.376857,
+    "y":-34.644419
+    }
+  }
+,
+  {
+    "Legajo":681,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos Oficiales",
+    "Concesión":"BAJO AUTOPISTA 9 - 914",
+    "Concesionario":"COMISARIA 30",
+    "Domicilio":"CALIFORNIA Y IRIARTE",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.375313,
+    "y":-34.647251
+    }
+  }
+,
+  {
+    "Legajo":688,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"8.000,00",
+    "Normativa aplicable/concesiones":"TRAMITE POR ANTE LEGISLATURA PROYECTO DE LEY POR LA QUE SE OTORGARIA PERMISO DE USO GRATUITO",
+    "Concesión":"PLAYA DE ESTACIONAMIENTO CATALINAS SUR",
+    "Concesionario":"ASOCIACION CATALINAS SUR",
+    "Domicilio":"NECOCHEA 302/310 y 520",
+    "Rubro":"PLAYAS DE ESTACIONAMIENTO",
+    "Vencimiento":"01/01/2011",
+    "Coordenadas": {
+    "x":-58.364524,
+    "y":-34.62802
     }
   }
 ,
@@ -2217,8 +4489,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.404902,
-    "y":-34.596604
+    "x":-58.405318,
+    "y":-34.596457
     }
   }
 ,
@@ -2239,6 +4511,22 @@
   }
 ,
   {
+    "Legajo":692,
+    "Tipo de canon":"Gratuitos a Cooperadoras",
+    "Monto de canon":"Gratuitos a Cooperadoras",
+    "Normativa aplicable/concesiones":"Ordenanza 35514",
+    "Concesión":"\"ESC. TECNICA N° 9 \"\"ING. LUIS A. HUERGO\"\" DEN 7\"",
+    "Concesionario":"\"ASOC. COOPERADORA Y CULTURAL \"\"PRÉSTAMO DE HONOR\"\"\"",
+    "Domicilio":"MARTIN DE GAINZA 1050/60",
+    "Rubro":"COOPERADORA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.447445,
+    "y":-34.609084
+    }
+  }
+,
+  {
     "Legajo":693,
     "Tipo de canon":"Gratuitos a Cooperadoras",
     "Monto de canon":"Gratuitos a Cooperadoras",
@@ -2249,8 +4537,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.416361,
-    "y":-34.621717
+    "x":-58.415706,
+    "y":-34.621674
     }
   }
 ,
@@ -2265,8 +4553,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.402297,
-    "y":-34.633456
+    "x":-58.401964,
+    "y":-34.634204
     }
   }
 ,
@@ -2281,8 +4569,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.410130,
-    "y":-34.585436
+    "x":-58.409965,
+    "y":-34.585105
     }
   }
 ,
@@ -2297,8 +4585,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.454928,
-    "y":-34.630162
+    "x":-58.454531,
+    "y":-34.630028
     }
   }
 ,
@@ -2329,8 +4617,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.395151,
-    "y":-34.599611
+    "x":-58.395164,
+    "y":-34.599177
     }
   }
 ,
@@ -2345,8 +4633,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.416035,
-    "y":-34.587035
+    "x":-58.41572,
+    "y":-34.586736
     }
   }
 ,
@@ -2361,8 +4649,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.479280,
-    "y":-34.613093
+    "x":-58.479477,
+    "y":-34.612837
     }
   }
 ,
@@ -2383,6 +4671,22 @@
   }
 ,
   {
+    "Legajo":708,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"900",
+    "Normativa aplicable/concesiones":"Decreto N°1274/2007",
+    "Concesión":"CALESITA PLAZA ALMAGRO",
+    "Concesionario":"GUSTAVO VILA",
+    "Domicilio":"PLAZA ALMAGRO  Y  BULNES  Y  SARMIENTO",
+    "Rubro":"CALESITAS",
+    "Vencimiento":"20/03/2018",
+    "Coordenadas": {
+    "x":-58.418356,
+    "y":-34.605281
+    }
+  }
+,
+  {
     "Legajo":709,
     "Tipo de canon":"Importe Fijo",
     "Monto de canon":"1.200,00",
@@ -2395,6 +4699,38 @@
     "Coordenadas": {
     "x":-58.414962,
     "y":-34.575278
+    }
+  }
+,
+  {
+    "Legajo":710,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"1.200,00",
+    "Normativa aplicable/concesiones":"Decreto N°1274/2007",
+    "Concesión":"CALESITA PARQUE AVELLANEDA",
+    "Concesionario":"Juan Carlos Peraita",
+    "Domicilio":"PARQUE AVELLANEDA  Y  AV. DIRECTORIO  Y  LACARRA",
+    "Rubro":"CALESITAS",
+    "Vencimiento":"20/03/2018",
+    "Coordenadas": {
+    "x":-58.479928,
+    "y":-34.641302
+    }
+  }
+,
+  {
+    "Legajo":711,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"1.200,00",
+    "Normativa aplicable/concesiones":"Decreto N°1274/2007",
+    "Concesión":"CALESITA PLAZA BALCARCE",
+    "Concesionario":"NORA CRISTINA MAFFI",
+    "Domicilio":"CABILDO (AL 3900) Y JARAMILLO  Y  PLAZA BALCARCE",
+    "Rubro":"CALESITAS",
+    "Vencimiento":"20/03/2018",
+    "Coordenadas": {
+    "x":-58.469793,
+    "y":-34.547645
     }
   }
 ,
@@ -2431,6 +4767,22 @@
   }
 ,
   {
+    "Legajo":714,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"1.200,00",
+    "Normativa aplicable/concesiones":"Decreto N°1274/2007",
+    "Concesión":"CALESITA PARQUE LAS HERAS",
+    "Concesionario":"BEATRIZ ADELINA IGLESIAS",
+    "Domicilio":"AV GRAL LAS HERAS  Y  FRENCH  Y  PARQUE LAS HERAS",
+    "Rubro":"CALESITAS",
+    "Vencimiento":"20/03/2018",
+    "Coordenadas": {
+    "x":-58.408708,
+    "y":-34.5840206
+    }
+  }
+,
+  {
     "Legajo":715,
     "Tipo de canon":"Importe Fijo",
     "Monto de canon":"1.200,00",
@@ -2457,8 +4809,24 @@
     "Rubro":"CALESITAS",
     "Vencimiento":"20/03/2018",
     "Coordenadas": {
-    "x":-58.491850,
+    "x":-58.49185,
     "y":-34.605635
+    }
+  }
+,
+  {
+    "Legajo":717,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"900",
+    "Normativa aplicable/concesiones":"Decreto N°1274/2007",
+    "Concesión":"CALESITA PARQUE PATRICIOS",
+    "Concesionario":"ANTONIO FERNANDEZ",
+    "Domicilio":"AV. CASEROS 3200  Y  PARQUE PATRICIOS",
+    "Rubro":"CALESITAS",
+    "Vencimiento":"20/03/2018",
+    "Coordenadas": {
+    "x":-58.409035,
+    "y":-34.637716
     }
   }
 ,
@@ -2474,7 +4842,7 @@
     "Vencimiento":"20/03/2018",
     "Coordenadas": {
     "x":-58.455488,
-    "y":-34.631850
+    "y":-34.63185
     }
   }
 ,
@@ -2511,6 +4879,22 @@
   }
 ,
   {
+    "Legajo":721,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"1.200,00",
+    "Normativa aplicable/concesiones":"Decreto N°1274/2007",
+    "Concesión":"CALESITA PLAZA TTE GRAL EMILIO MITRE",
+    "Concesionario":"EDUARDO ODRIOZOLA",
+    "Domicilio":"PACHECO DE MELO  Y  LAS HERAS Y AV. PUEYRREDON Y CANTILO  Y  PZA. E. MITRE",
+    "Rubro":"CALESITAS",
+    "Vencimiento":"20/03/2018",
+    "Coordenadas": {
+    "x":-58.406912,
+    "y":-34.583248
+    }
+  }
+,
+  {
     "Legajo":722,
     "Tipo de canon":"Importe Fijo",
     "Monto de canon":"1.200,00",
@@ -2543,6 +4927,22 @@
   }
 ,
   {
+    "Legajo":724,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"1.200,00",
+    "Normativa aplicable/concesiones":"Decreto N°1274/2007",
+    "Concesión":"CALESITA PLAZA 25 DE AGOSTO",
+    "Concesionario":"RICARDO DIORIO",
+    "Domicilio":"CHARLONE Y GIRIBONE Y HEREDIA 1300",
+    "Rubro":"CALESITAS",
+    "Vencimiento":"20/03/2018",
+    "Coordenadas": {
+    "x":-58.463256,
+    "y":-34.578475
+    }
+  }
+,
+  {
     "Legajo":725,
     "Tipo de canon":"Importe Fijo",
     "Monto de canon":"1.200,00",
@@ -2554,7 +4954,7 @@
     "Vencimiento":"20/03/2018",
     "Coordenadas": {
     "x":-58.455488,
-    "y":-34.631850
+    "y":-34.63185
     }
   }
 ,
@@ -2569,8 +4969,8 @@
     "Rubro":"CALESITAS",
     "Vencimiento":"20/03/2018",
     "Coordenadas": {
-    "x":-58.434184,
-    "y":-34.608737
+    "x":-58.434735,
+    "y":-34.608731
     }
   }
 ,
@@ -2607,6 +5007,22 @@
   }
 ,
   {
+    "Legajo":729,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"900",
+    "Normativa aplicable/concesiones":"Decreto N°1274/2007",
+    "Concesión":"CALESITA PARQUE LEZAMA",
+    "Concesionario":"SUSANA BORRAJO VILA",
+    "Domicilio":"PARQUE LEZAMA  Y  AV. MARTIN GRACIA  Y  AV. ALM. BROWN",
+    "Rubro":"CALESITAS",
+    "Vencimiento":"20/03/2018",
+    "Coordenadas": {
+    "x":-58.367949,
+    "y":-34.627141
+    }
+  }
+,
+  {
     "Legajo":730,
     "Tipo de canon":"Importe Fijo",
     "Monto de canon":"1.200,00",
@@ -2634,7 +5050,7 @@
     "Vencimiento":"20/03/2018",
     "Coordenadas": {
     "x":-58.467314,
-    "y":-34.609630
+    "y":-34.60963
     }
   }
 ,
@@ -2649,7 +5065,7 @@
     "Rubro":"CALESITAS",
     "Vencimiento":"20/03/2018",
     "Coordenadas": {
-    "x":-58.444080,
+    "x":-58.44408,
     "y":-34.636317
     }
   }
@@ -2687,6 +5103,38 @@
   }
 ,
   {
+    "Legajo":768,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"12.000,00",
+    "Normativa aplicable/concesiones":"Licitación Publica en tramite por EE-1807761-MGEYADGCONC-15",
+    "Concesión":"GUARDAPALOS Y CARROS DE GOLF",
+    "Concesionario":"JORGE RICARDO MOSQUERA",
+    "Domicilio":"TORNQUINST 6385",
+    "Rubro":"DEPORTES",
+    "Vencimiento":"21/05/2013",
+    "Coordenadas": {
+    "x":-58.432623,
+    "y":-34.558221
+    }
+  }
+,
+  {
+    "Legajo":784,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"630",
+    "Normativa aplicable/concesiones":"A LICITAR",
+    "Concesión":"BAJO AUTOPISTA 1 -159D - GALERIA EMILIO MITRE",
+    "Concesionario":"ROSA NELIDA RIOS",
+    "Domicilio":"DE LAS CIENCIAS Y E.MITRE",
+    "Rubro":"PREDIOS COMERCIALES",
+    "Vencimiento":"02/12/2012",
+    "Coordenadas": {
+    "x":-58.44064,
+    "y":-34.632107
+    }
+  }
+,
+  {
     "Legajo":785,
     "Tipo de canon":"Importe Fijo",
     "Monto de canon":"253.001,57",
@@ -2697,8 +5145,56 @@
     "Rubro":"PLAYAS DE ESTACIONAMIENTO",
     "Vencimiento":"hasta licitacion.",
     "Coordenadas": {
-    "x":-58.444732,
-    "y":-34.639414
+    "x":-58.446582,
+    "y":-34.635896
+    }
+  }
+,
+  {
+    "Legajo":786,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"23.000,00",
+    "Normativa aplicable/concesiones":"Permiso Ley 3399 EX 592730/2011/MGEYA. CON 4- - LICITACION EN TRAMit'É°15 -0796085 DGCONC ___",
+    "Concesión":"KARTODROMO ARGENTINO",
+    "Concesionario":"CLUB ARGENTINO DE KARTING ASOCIACION CIVIL",
+    "Domicilio":"AV. GENERAL PAZ Y AV. GENERAL ROCA",
+    "Rubro":"DEPORTES",
+    "Vencimiento":"28/09/2016",
+    "Coordenadas": {
+    "x":-58.470646,
+    "y":-34.698438
+    }
+  }
+,
+  {
+    "Legajo":788,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"14.200,00",
+    "Normativa aplicable/concesiones":"Prórrgoa propuesta por Compensación por daños por filtraciones originados por MAyEP",
+    "Concesión":"E-PLAZOLETA CORONELES PITTA-PEDERNERA",
+    "Concesionario":"BREWDA CONSTRUCCIONES S.A.C.I.F.",
+    "Domicilio":"PLAZOLETA PITTA Y PEDERNARA AV. SARMIENTO Y STA FE",
+    "Rubro":"PLAYAS DE ESTACIONAMIENTO",
+    "Vencimiento":"09/12/2013",
+    "Coordenadas": {
+    "x":-58.4207164,
+    "y":-34.5783545
+    }
+  }
+,
+  {
+    "Legajo":789,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"519.800,00",
+    "Normativa aplicable/concesiones":"Pliegos nueva licitacion en trámite",
+    "Concesión":"PLAYA DE ESTACIONAMIENTO SUBTERRANEA E-03",
+    "Concesionario":"MEJORAMIENTO HOSPITALARIO SA - ALDIYAIV SA UTE",
+    "Domicilio":"CORDOBA ENTRE FLORIDA Y ESMERALDA",
+    "Rubro":"PLAYAS DE ESTACIONAMIENTO",
+    "Vencimiento":"05/01/2014",
+    "Coordenadas": {
+    "x":-58.375372,
+    "y":-34.598705
     }
   }
 ,
@@ -2713,8 +5209,40 @@
     "Rubro":"PLAYAS DE ESTACIONAMIENTO",
     "Vencimiento":"05/01/2014",
     "Coordenadas": {
-    "x":-58.372962,
-    "y":-34.603262
+    "x":-58.372939,
+    "y":-34.603524
+    }
+  }
+,
+  {
+    "Legajo":791,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"415.924,39",
+    "Normativa aplicable/concesiones":"Prórroga otorgada por desafectación Playa Obelisco Sur",
+    "Concesión":"PLAYA DE ESTACIONAMIENTO SUBTERRANEA E-19",
+    "Concesionario":"PLAYAS SUBTERRANEAS SA",
+    "Domicilio":"SUBSUELO PLAZA LIBERTAD",
+    "Rubro":"PLAYAS DE ESTACIONAMIENTO",
+    "Vencimiento":"30/06/2018",
+    "Coordenadas": {
+    "x":-58.3834585,
+    "y":-34.5974389
+    }
+  }
+,
+  {
+    "Legajo":794,
+    "Tipo de canon":"Gratuito Asociación Civil",
+    "Monto de canon":"Gratuito Asociación Civil",
+    "Normativa aplicable/concesiones":"EN PROCESO DE LICITACION EX 38957/2009/MGEYA",
+    "Concesión":"CENTRO CULTURAL RECOLETA - EDIF. CRONOPIOS",
+    "Concesionario":"FUNDACION MUSEO PARTICIPATIVO DE CIENCIAS",
+    "Domicilio":"CTRO. CULTURAL RECOLETA  Y  CALLE DE LOS TILOS",
+    "Rubro":"VARIOS",
+    "Vencimiento":"01/04/1999. Esperando firma LOMBARDI. Ya está adjudicado",
+    "Coordenadas": {
+    "x":-58.392607,
+    "y":-34.586164
     }
   }
 ,
@@ -2745,8 +5273,24 @@
     "Rubro":"PREDIOS COMERCIALES",
     "Vencimiento":"31/12/2013",
     "Coordenadas": {
-    "x":-58.409246,
-    "y":-34.580924
+    "x":-58.409316,
+    "y":-34.58085
+    }
+  }
+,
+  {
+    "Legajo":800,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"5.000,00",
+    "Normativa aplicable/concesiones":"Ley 4740/13 Legislatura de la Ciudad- Dispone la enajenación del predio - DGAB procederá a la venta del Ex CAM 88",
+    "Concesión":"EX CAM 88 - PASAJE EL LAZO - UF.12",
+    "Concesionario":"ANUNCIADA CICIRO",
+    "Domicilio":"SALGUERO 2620  Y  Local 12",
+    "Rubro":"PREDIOS COMERCIALES",
+    "Vencimiento":"31/12/2013",
+    "Coordenadas": {
+    "x":-58.409316,
+    "y":-34.58085
     }
   }
 ,
@@ -2761,8 +5305,24 @@
     "Rubro":"PREDIOS COMERCIALES",
     "Vencimiento":"31/12/2013",
     "Coordenadas": {
-    "x":-58.409246,
-    "y":-34.580924
+    "x":-58.409316,
+    "y":-34.58085
+    }
+  }
+,
+  {
+    "Legajo":802,
+    "Tipo de canon":"Gratuitos a Entidades de Bien Público",
+    "Monto de canon":"Gratuitos a Entidades de Bien Público",
+    "Normativa aplicable/concesiones":"OTORGADO POR LEY 5192/14 POR EL TÉRMINO DE 20 AÑOS",
+    "Concesión":"BAJO AUTOPISTA 6 - 605A",
+    "Concesionario":"HOGAR DE ANCIANOS SANTA TERESA DE JOURNET",
+    "Domicilio":"CHASCOMUS  Y  RODO",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"29/09/2014",
+    "Coordenadas": {
+    "x":-58.486484,
+    "y":-34.645401
     }
   }
 ,
@@ -2777,8 +5337,8 @@
     "Rubro":"LOCALES BAJO AUTOPISTA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.370020,
-    "y":-34.622921
+    "x":-58.37003,
+    "y":-34.622835
     }
   }
 ,
@@ -2793,8 +5353,8 @@
     "Rubro":"LOCALES BAJO AUTOPISTA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.374206,
-    "y":-34.622501
+    "x":-58.374631,
+    "y":-34.622518
     }
   }
 ,
@@ -2842,7 +5402,7 @@
     "Vencimiento":"",
     "Coordenadas": {
     "x":-58.417718,
-    "y":-34.627200
+    "y":-34.6272
     }
   }
 ,
@@ -2873,8 +5433,24 @@
     "Rubro":"LOCALES BAJO AUTOPISTA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.429814,
-    "y":-34.628841
+    "x":-58.429777,
+    "y":-34.629012
+    }
+  }
+,
+  {
+    "Legajo":811,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos Oficiales",
+    "Concesión":"PATIO RECREATIVO - 154R3",
+    "Concesionario":"ASOCIACION CIVIL ESTRADA DE ALMAGRO / GCBA DEPORTES",
+    "Domicilio":"TEJEDOR 250 e/ 266 y 226",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.429792,
+    "y":-34.62993
     }
   }
 ,
@@ -2927,6 +5503,22 @@
   }
 ,
   {
+    "Legajo":821,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"16.408,80",
+    "Normativa aplicable/concesiones":"Hasta adjudic. Licit Pliegos aprob ley 4888 playa remoción seg ley 5126",
+    "Concesión":"BAJO AUTOPISTA 1 - 110B",
+    "Concesionario":"ESTACIONAMIENTO SEC - B.R.D.",
+    "Domicilio":"BDO. DE IRIGOYEN / TACUARI",
+    "Rubro":"PLAYAS DE ESTACIONAMIENTO",
+    "Vencimiento":"31/05/2018",
+    "Coordenadas": {
+    "x":-58.37989,
+    "y":-34.622937
+    }
+  }
+,
+  {
     "Legajo":830,
     "Tipo de canon":"Gratuitos a Cooperadoras",
     "Monto de canon":"Gratuitos a Cooperadoras",
@@ -2937,8 +5529,24 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.391789,
-    "y":-34.617520
+    "x":-58.392224,
+    "y":-34.617515
+    }
+  }
+,
+  {
+    "Legajo":832,
+    "Tipo de canon":"Gratuitos a Cooperadoras",
+    "Monto de canon":"Gratuitos a Cooperadoras",
+    "Normativa aplicable/concesiones":"Ordenanza 35514",
+    "Concesión":"INSTITUTO DE EDUC. FISICA - DR. ROMERO BREST D.E. N° 10",
+    "Concesionario":"SR. RAFAEL ELISEO VAZQUEZ",
+    "Domicilio":"CRISOLOGO LARRALDE 1050",
+    "Rubro":"COOPERADORA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.456764,
+    "y":-34.543996
     }
   }
 ,
@@ -2953,8 +5561,24 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.465329,
-    "y":-34.593348
+    "x":-58.465561,
+    "y":-34.5935
+    }
+  }
+,
+  {
+    "Legajo":835,
+    "Tipo de canon":"Gratuitos a Cooperadoras",
+    "Monto de canon":"Gratuitos a Cooperadoras",
+    "Normativa aplicable/concesiones":"Ordenanza 35514",
+    "Concesión":"COLEGIO N° 2 - DOMINGO FAUSTINO SARMIENTO D.E. N° 1",
+    "Concesionario":"SR. SEBASTIAN BRUGO",
+    "Domicilio":"LIBERTAD 1257",
+    "Rubro":"COOPERADORA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.384005,
+    "y":-34.593558
     }
   }
 ,
@@ -2969,8 +5593,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.506566,
-    "y":-34.608207
+    "x":-58.506263,
+    "y":-34.608554
     }
   }
 ,
@@ -2985,8 +5609,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.512917,
-    "y":-34.605394
+    "x":-58.512762,
+    "y":-34.605567
     }
   }
 ,
@@ -3001,8 +5625,24 @@
     "Rubro":"PREDIOS COMERCIALES",
     "Vencimiento":"31/12/2013",
     "Coordenadas": {
-    "x":-58.409246,
-    "y":-34.580924
+    "x":-58.409316,
+    "y":-34.58085
+    }
+  }
+,
+  {
+    "Legajo":853,
+    "Tipo de canon":"Gratuitos a Cooperadoras",
+    "Monto de canon":"Gratuitos a Cooperadoras",
+    "Normativa aplicable/concesiones":"Ordenanza 35514",
+    "Concesión":"POLIDEPORTIVO PARQUE LAS HERAS",
+    "Concesionario":"ASOC. COOP. DISTRITO ESCOLAR Nº 1 - ESCUELAS 12, 16, 18 Y 26",
+    "Domicilio":"ENTRE SALGUERO, LAS HERAS, CNEL DIAZ Y JUNCAL",
+    "Rubro":"COOPERADORA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.408319,
+    "y":-34.586546
     }
   }
 ,
@@ -3017,8 +5657,8 @@
     "Rubro":"DEPORTES",
     "Vencimiento":"01/01/1930",
     "Coordenadas": {
-    "x":-58.366331,
-    "y":-34.626163
+    "x":-58.365818,
+    "y":-34.626127
     }
   }
 ,
@@ -3033,8 +5673,8 @@
     "Rubro":"PREDIOS COMERCIALES",
     "Vencimiento":"30/06/2011",
     "Coordenadas": {
-    "x":-58.409246,
-    "y":-34.580924
+    "x":-58.409316,
+    "y":-34.58085
     }
   }
 ,
@@ -3049,8 +5689,8 @@
     "Rubro":"PREDIOS COMERCIALES",
     "Vencimiento":"16/07/2011",
     "Coordenadas": {
-    "x":-58.409246,
-    "y":-34.580924
+    "x":-58.409316,
+    "y":-34.58085
     }
   }
 ,
@@ -3065,8 +5705,72 @@
     "Rubro":"PREDIOS COMERCIALES",
     "Vencimiento":"30/06/2011",
     "Coordenadas": {
-    "x":-58.409246,
-    "y":-34.580924
+    "x":-58.409316,
+    "y":-34.58085
+    }
+  }
+,
+  {
+    "Legajo":862,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"0",
+    "Normativa aplicable/concesiones":"Ley 4740/13 Legislatura de la Ciudad- Dispone la enajenación del predio - DGAB procederá a la venta del Ex CAM 88",
+    "Concesión":"EX CAM 88 - PASAJE EL LAZO - UF. 2",
+    "Concesionario":"ONDA KOSHER SRL",
+    "Domicilio":"Pasaje El Lazo 3141",
+    "Rubro":"PREDIOS COMERCIALES",
+    "Vencimiento":"31/05/2011",
+    "Coordenadas": {
+    "x":-58.409739,
+    "y":-34.581029
+    }
+  }
+,
+  {
+    "Legajo":863,
+    "Tipo de canon":"Importe Variable",
+    "Monto de canon":"Importe Variable",
+    "Normativa aplicable/concesiones":"Ley 4740/13 Legislatura de la Ciudad- Dispone la enajenación del predio - DGAB procederá a la venta del Ex CAM 88",
+    "Concesión":"EX CAM 88 - PASAJE EL LAZO - UF. 15-16",
+    "Concesionario":"ONDA KOSHER SRL",
+    "Domicilio":"Pasaje El Lazo 3151",
+    "Rubro":"PREDIOS COMERCIALES",
+    "Vencimiento":"31/05/2011",
+    "Coordenadas": {
+    "x":-58.409739,
+    "y":-34.581029
+    }
+  }
+,
+  {
+    "Legajo":903,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"5.000,00",
+    "Normativa aplicable/concesiones":"Disposición N' 74/DGConc/2012. Contraprestación Obra.",
+    "Concesión":"La Perla",
+    "Concesionario":"Interservices Servicios Empresareales S.A.",
+    "Domicilio":"Tristan Achaval Rodriguez 1431",
+    "Rubro":"GASTRONOMICOS",
+    "Vencimiento":"31/08/2016",
+    "Coordenadas": {
+    "x":-58.356809,
+    "y":-34.616536
+    }
+  }
+,
+  {
+    "Legajo":905,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"25.000,00",
+    "Normativa aplicable/concesiones":"Resolución N° 005/MDEGC/2010",
+    "Concesión":"La Alameda",
+    "Concesionario":"INTERSERVICE SERVICIOS EMPRESARIOS S.A",
+    "Domicilio":"Tristan Achaval Rodriguez 1431",
+    "Rubro":"GASTRONOMICOS",
+    "Vencimiento":"02/03/2015",
+    "Coordenadas": {
+    "x":-58.356809,
+    "y":-34.616536
     }
   }
 ,
@@ -3097,8 +5801,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.430037,
-    "y":-34.620893
+    "x":-58.429983,
+    "y":-34.621337
     }
   }
 ,
@@ -3113,8 +5817,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.508890,
-    "y":-34.630594
+    "x":-58.509246,
+    "y":-34.630321
     }
   }
 ,
@@ -3129,8 +5833,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.435431,
-    "y":-34.617929
+    "x":-58.43508,
+    "y":-34.61847
     }
   }
 ,
@@ -3177,8 +5881,40 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.465979,
-    "y":-34.561821
+    "x":-58.466215,
+    "y":-34.56155
+    }
+  }
+,
+  {
+    "Legajo":915,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos Oficiales",
+    "Concesión":"BAJO AUTOPISTA 1 - 104D",
+    "Concesionario":"DEFENSORIA DEL PUEBLO",
+    "Domicilio":"DEFENSA Y BALCARCE",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"16/06/2014",
+    "Coordenadas": {
+    "x":-58.371339,
+    "y":-34.622437
+    }
+  }
+,
+  {
+    "Legajo":918,
+    "Tipo de canon":"Gratuitos a - Entidades de Bien Público",
+    "Monto de canon":"Gratuitos a Entidades de Bien Público",
+    "Normativa aplicable/concesiones":"Otorgado por Ley 2249/06",
+    "Concesión":"CLUB SOCIAL Y DEPORTIVO JORGE NEWBERY",
+    "Concesionario":"CLUB SOCIAL Y DEPORTIVO JORGE NEWBERY",
+    "Domicilio":"HIRIGOYEN 2050",
+    "Rubro":"DEPORTES",
+    "Vencimiento":"14/12/2016",
+    "Coordenadas": {
+    "x":-58.524654,
+    "y":-34.622668
     }
   }
 ,
@@ -3193,8 +5929,24 @@
     "Rubro":"PLAYAS DE ESTACIONAMIENTO",
     "Vencimiento":"16/04/1930",
     "Coordenadas": {
-    "x":-58.397219,
-    "y":-34.587461
+    "x":-58.39729,
+    "y":-34.587409
+    }
+  }
+,
+  {
+    "Legajo":947,
+    "Tipo de canon":"Gratuitos a Organismos",
+    "Monto de canon":"Gratuitos a Organismos ficiales Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos Oficiales",
+    "Concesión":"BAJO AUTOPISTA 1 - 104B",
+    "Concesionario":"GCBA",
+    "Domicilio":"DEFENSA Y BALCARSE",
+    "Rubro":"VARIOS",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.371339,
+    "y":-34.622437
     }
   }
 ,
@@ -3231,6 +5983,70 @@
   }
 ,
   {
+    "Legajo":953,
+    "Tipo de canon":"Desocupado",
+    "Monto de canon":"Desocupado",
+    "Normativa aplicable/concesiones":"Desocupado",
+    "Concesión":"BAJO AUTOPISTA 1 - 159A - LOCAL 28",
+    "Concesionario":"",
+    "Domicilio":"DE LAS CIENCIAS Y E.MITRE",
+    "Rubro":"VARIOS",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.44064,
+    "y":-34.632107
+    }
+  }
+,
+  {
+    "Legajo":954,
+    "Tipo de canon":"Desocupado",
+    "Monto de canon":"Desocupado",
+    "Normativa aplicable/concesiones":"Desocupado",
+    "Concesión":"BAJO AUTOPISTA 1 - 159A - LOCAL 11",
+    "Concesionario":"",
+    "Domicilio":"DE LAS CIENCIAS Y E.MITRE",
+    "Rubro":"VARIOS",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.44064,
+    "y":-34.632107
+    }
+  }
+,
+  {
+    "Legajo":955,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"30.360,00",
+    "Normativa aplicable/concesiones":"CON PROYECTO DE LEY 2897/14",
+    "Concesión":"BAJO AUTOPISTA 1 - 139",
+    "Concesionario":"UNIÓN DE PROPIETARIOS DE TAXIS DE LA REPÚBLICA ARGENTINA",
+    "Domicilio":"COLOMBRES Y CASTRO BARROS",
+    "Rubro":"PREDIOS COMERCIALES",
+    "Vencimiento":"03/11/2011",
+    "Coordenadas": {
+    "x":-58.417284,
+    "y":-34.627741
+    }
+  }
+,
+  {
+    "Legajo":956,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"14.375,00",
+    "Normativa aplicable/concesiones":"Permiso Ley 3399 LICITACIÓN EN TRAMITE",
+    "Concesión":"BAJO AUTOPISTA 1 - 126B",
+    "Concesionario":"MASBOR S.R.L.",
+    "Domicilio":"JUJUY Y CATAMARCA",
+    "Rubro":"PREDIOS COMERCIALES",
+    "Vencimiento":"29/09/2014",
+    "Coordenadas": {
+    "x":-58.402346,
+    "y":-34.626092
+    }
+  }
+,
+  {
     "Legajo":957,
     "Tipo de canon":"Gratuitos a Cooperadoras",
     "Monto de canon":"Gratuitos a Cooperadoras",
@@ -3263,6 +6079,54 @@
   }
 ,
   {
+    "Legajo":961,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos Oficiales",
+    "Concesión":"BAJO AUTOPISTA 1 - 159F",
+    "Concesionario":"Consejo de los Derechos de Niñas, Niños y Adolescentes (G.C.B.A.)",
+    "Domicilio":"Emilio Mitre y Pasaje de las Ciencias",
+    "Rubro":"PREDIOS COMERCIALES",
+    "Vencimiento":"27/05/2014",
+    "Coordenadas": {
+    "x":-58.44064,
+    "y":-34.632107
+    }
+  }
+,
+  {
+    "Legajo":962,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"14.600,00",
+    "Normativa aplicable/concesiones":"Licitación Publica en tramite por EE-1807761-MGEYADGCONC-15",
+    "Concesión":"PROSHOP",
+    "Concesionario":"JORGE MOSQUERA",
+    "Domicilio":"AV. TORNQUINST 6385",
+    "Rubro":"DEPORTES",
+    "Vencimiento":"21/12/2013",
+    "Coordenadas": {
+    "x":-58.432623,
+    "y":-34.558221
+    }
+  }
+,
+  {
+    "Legajo":964,
+    "Tipo de canon":"Desocupado",
+    "Monto de canon":"Desocupado PREDIOS",
+    "Normativa aplicable/concesiones":"",
+    "Concesión":"BAJO AUTOPISTA 1 - 159B",
+    "Concesionario":"-",
+    "Domicilio":"DE LAS CIENCIAS Y E.MITRE",
+    "Rubro":"PREDIOS COMERCIALES",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.44064,
+    "y":-34.632107
+    }
+  }
+,
+  {
     "Legajo":965,
     "Tipo de canon":"Importe Fijo",
     "Monto de canon":"7.000,00",
@@ -3273,8 +6137,8 @@
     "Rubro":"VARIOS",
     "Vencimiento":"20/04/2012",
     "Coordenadas": {
-    "x":-58.449998,
-    "y":-34.680043
+    "x":-58.4510287,
+    "y":-34.6714831
     }
   }
 ,
@@ -3305,8 +6169,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.454580,
-    "y":-34.583840
+    "x":-58.45458,
+    "y":-34.58384
     }
   }
 ,
@@ -3321,8 +6185,8 @@
     "Rubro":"GASTRONOMICOS",
     "Vencimiento":"31/10/2017",
     "Coordenadas": {
-    "x":-58.380511,
-    "y":-34.654638
+    "x":-58.380468,
+    "y":-34.654753
     }
   }
 ,
@@ -3343,6 +6207,54 @@
   }
 ,
   {
+    "Legajo":971,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"2.500,00",
+    "Normativa aplicable/concesiones":"LICiTACIÓN EN TRAMITE",
+    "Concesión":"BAJO AUTOPISTA 1 - 115A",
+    "Concesionario":"SEPEYCO S.R.L.- BETON VIAL S.A.- U.T.E",
+    "Domicilio":"L.S.PEÑA Y CEBALLOS",
+    "Rubro":"PREDIOS COMERCIALES",
+    "Vencimiento":"29/09/2014",
+    "Coordenadas": {
+    "x":-58.387227,
+    "y":-34.623103
+    }
+  }
+,
+  {
+    "Legajo":973,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos Oficiales",
+    "Concesión":"BAJO AUTOPISTA 6 - 624A",
+    "Concesionario":"G.C.B.A. SUBSECRETARÍA DE TRANSPORTE",
+    "Domicilio":"BARRAGÁN  Y  GALLARDO  Y  MADERO",
+    "Rubro":"PLAYAS DE ESTACIONAMIENTO",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.522697,
+    "y":-34.637164
+    }
+  }
+,
+  {
+    "Legajo":974,
+    "Tipo de canon":"Gratuitos a Cooperadoras",
+    "Monto de canon":"Gratuitos a Cooperadoras",
+    "Normativa aplicable/concesiones":"Ordenanza 35514",
+    "Concesión":"STAND DE VENTAS - HALL CENTRAL TEATRO SAN MARTIN",
+    "Concesionario":"FUNDACION AMIGOS DEL TEATRO SAN MARTIN",
+    "Domicilio":" Y ",
+    "Rubro":"COOPERADORA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.3886424,
+    "y":-34.604242
+    }
+  }
+,
+  {
     "Legajo":975,
     "Tipo de canon":"Importe Fijo",
     "Monto de canon":"321,84",
@@ -3353,8 +6265,8 @@
     "Rubro":"PERSONAS CON NECESIDADES ESPECIALES",
     "Vencimiento":"Decreto 1553",
     "Coordenadas": {
-    "x":-58.369106,
-    "y":-34.640546
+    "x":-58.368735,
+    "y":-34.640507
     }
   }
 ,
@@ -3375,6 +6287,38 @@
   }
 ,
   {
+    "Legajo":979,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"530",
+    "Normativa aplicable/concesiones":"Subasta Pública",
+    "Concesión":"BAJO AUTOPISTA 1 - 160C - GALERIA MITRE",
+    "Concesionario":"Andrea Estela Cano Vergara",
+    "Domicilio":"E. MITRE 955  Y  LOCAL 3",
+    "Rubro":"PREDIOS COMERCIALES",
+    "Vencimiento":"01/11/2015",
+    "Coordenadas": {
+    "x":-58.441261,
+    "y":-34.632165
+    }
+  }
+,
+  {
+    "Legajo":980,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"90",
+    "Normativa aplicable/concesiones":"Subasta Pública",
+    "Concesión":"BAJO AUTOPISTA 1 - 160C1 - GALERIA MITRE",
+    "Concesionario":"Ana María Rago",
+    "Domicilio":"E. MITRE 955  Y  LOCAL NRO 8",
+    "Rubro":"PREDIOS COMERCIALES",
+    "Vencimiento":"01/11/2015",
+    "Coordenadas": {
+    "x":-58.441261,
+    "y":-34.632165
+    }
+  }
+,
+  {
     "Legajo":981,
     "Tipo de canon":"Gratuitos a Organismos Oficiales",
     "Monto de canon":"Gratuitos a Organismos Oficiales",
@@ -3385,8 +6329,24 @@
     "Rubro":"REPARTICIONES GUBERNAMENTALES",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.484569,
-    "y":-34.645291
+    "x":-58.484973,
+    "y":-34.645733
+    }
+  }
+,
+  {
+    "Legajo":982,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"1.200,00",
+    "Normativa aplicable/concesiones":"EX 825724 /11",
+    "Concesión":"Calesita Plaza Mariano Boedo",
+    "Concesionario":"Hector Carlos Rodriguez",
+    "Domicilio":"Estados Unidos, Sánchez de Loria y Carlos Calvo",
+    "Rubro":"CALESITAS",
+    "Vencimiento":"29/12/2015",
+    "Coordenadas": {
+    "x":-58.412439,
+    "y":-34.621882
     }
   }
 ,
@@ -3423,9 +6383,41 @@
   }
 ,
   {
+    "Legajo":990,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"20.000,00",
+    "Normativa aplicable/concesiones":"Afectado a Organismos Oficiales",
+    "Concesión":"BAJO AUTOPISTA 9 - 913A",
+    "Concesionario":"NORBERTO HECTOR LAGUELA",
+    "Domicilio":"AUSTRALIA (B.Q.MARTIN SUR) Y CALIFORNIA",
+    "Rubro":"GASTRONOMICOS",
+    "Vencimiento":"26/04/2014 -",
+    "Coordenadas": {
+    "x":-58.376857,
+    "y":-34.644419
+    }
+  }
+,
+  {
+    "Legajo":991,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"321,84",
+    "Normativa aplicable/concesiones":"Otorgado por aplicación Ley Nac. 24308, Decreto 1553/GCBA/97, Decreto 1187/GCBA/08",
+    "Concesión":"KIOSCO PARQUE DE LA CIUDAD DE BUENOS AIRES",
+    "Concesionario":"Juan Ramón Brito",
+    "Domicilio":"AUSTRALIA (B.Q.MARTIN SUR) Y CALIFORNIA",
+    "Rubro":"PERSONAS CON NECESIDADES ESPECIALES",
+    "Vencimiento":"Decreto 1553",
+    "Coordenadas": {
+    "x":-58.376857,
+    "y":-34.644419
+    }
+  }
+,
+  {
     "Legajo":993,
     "Tipo de canon":"importe Fijo",
-    "Monto de canon":"210.000.00",
+    "Monto de canon":"210.000,00",
     "Normativa aplicable/concesiones":"Permiso ley 3399",
     "Concesión":"\"PLAYA DE ESTACIONAMIENTO \"\"E-06'\"",
     "Concesionario":"CIUCOR S.A.",
@@ -3435,6 +6427,38 @@
     "Coordenadas": {
     "x":-58.397189,
     "y":-34.599730
+    }
+  }
+,
+  {
+    "Legajo":994,
+    "Tipo de canon":"Gratuitos Asoc. Civiles L",
+    "Monto de canon":"Gratuitos Asco. Civiles",
+    "Normativa aplicable/concesiones":"PERMISO OTORGADO POR LEY 5046/14 POR EL TÉRMINO DE 20 AÑOS",
+    "Concesión":"BAJO AUTOPISTA 1 - 134B",
+    "Concesionario":"SINDICATO ARGENTINO DE TELEVISIÓN, SERVICIOS AUDIOVISUALES, INTERACTIVOS Y DE DATOS (S.A.T.S.A.I.D.)",
+    "Domicilio":"24 DE NOVIEMBRE Y LORIA",
+    "Rubro":"PLAYAS DE ESTACIONAMIENTO",
+    "Vencimiento":"05/05/2016",
+    "Coordenadas": {
+    "x":-58.410211,
+    "y":-34.626854
+    }
+  }
+,
+  {
+    "Legajo":995,
+    "Tipo de canon":"Gratuitos Asoc. Civiles",
+    "Monto de canon":"Gratuitos Asco. Civiles",
+    "Normativa aplicable/concesiones":"Permiso Ley 3399",
+    "Concesión":"BAJO AUTOPISTA 9 - 916",
+    "Concesionario":"TRANSPORTE AUTOMOTOR PLAZA S.A.C.E.I. (TAPSA)",
+    "Domicilio":"RIO CUARTO Y O.CRUZ",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"27/04/2016",
+    "Coordenadas": {
+    "x":-58.374548,
+    "y":-34.649806
     }
   }
 ,
@@ -3449,8 +6473,72 @@
     "Rubro":"GASTRONOMICOS",
     "Vencimiento":"05/06/2018",
     "Coordenadas": {
-    "x":-58.391575,
-    "y":-34.586498
+    "x":-58.392607,
+    "y":-34.586164
+    }
+  }
+,
+  {
+    "Legajo":997,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"7.000,00",
+    "Normativa aplicable/concesiones":"Acta de Tenencia Provisoria",
+    "Concesión":"ANTENA LS1 RADIO CIUDAD",
+    "Concesionario":"RADIO JAI",
+    "Domicilio":"PARQUE DE LA CIUDAD  Y  Avda. Escalada 4501",
+    "Rubro":"VARIOS",
+    "Vencimiento":"03/01/2012",
+    "Coordenadas": {
+    "x":-58.4510287,
+    "y":-34.6714831
+    }
+  }
+,
+  {
+    "Legajo":999,
+    "Tipo de canon":" Importe Fijo",
+    "Monto de canon":"7.600,95",
+    "Normativa aplicable/concesiones":"Permiso Ley 3399",
+    "Concesión":"ANTENA LS1 RADIO CIUDAD",
+    "Concesionario":"RADIO JAI",
+    "Domicilio":"PARQUE DE LA CIUDAD  Y  Avda. Escalada 4501",
+    "Rubro":"VARIOS",
+    "Vencimiento":"03/01/2012",
+    "Coordenadas": {
+    "x":-58.4510287,
+    "y":-34.6714831
+    }
+  }
+,
+  {
+    "Legajo":1000,
+    "Tipo de canon":" Importe Fijo",
+    "Monto de canon":"1.200,00",
+    "Normativa aplicable/concesiones":"EX 508929/11",
+    "Concesión":"CALESITA PLAZA ECHEVERRIA",
+    "Concesionario":"JUAN PABLO COUTO",
+    "Domicilio":"NAHUEL HUAPI Y ARTURO CAPDEVILLA",
+    "Rubro":"CALESITAS",
+    "Vencimiento":"20/03/2018",
+    "Coordenadas": {
+    "x":-58.489031,
+    "y":-34.571351
+    }
+  }
+,
+  {
+    "Legajo":1001,
+    "Tipo de canon":" Importe Fijo",
+    "Monto de canon":"6.000,00",
+    "Normativa aplicable/concesiones":"Acta de Tenencia Provisoria",
+    "Concesión":"ANTENA LS1 RADIO CIUDAD",
+    "Concesionario":"RADIO JAI",
+    "Domicilio":"PARQUE DE LA CIUDAD  Y  Avda. Escalada 4501",
+    "Rubro":"VARIOS",
+    "Vencimiento":"03/01/2012",
+    "Coordenadas": {
+    "x":-58.4510287,
+    "y":-34.6714831
     }
   }
 ,
@@ -3481,8 +6569,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.374944,
-    "y":-34.634072
+    "x":-58.374798,
+    "y":-34.634168
     }
   }
 ,
@@ -3503,6 +6591,54 @@
   }
 ,
   {
+    "Legajo":1008,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos Oficiales",
+    "Concesión":"BAJO AUTOPISTA 1 - 110A",
+    "Concesionario":"D.G. GUARDIA DE AUXILIO Y EMERGENCIAS - GCBA",
+    "Domicilio":"BDO. DE IRIGOYEN / TACUARI",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.37989,
+    "y":-34.622937
+    }
+  }
+,
+  {
+    "Legajo":1010,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos Oficiales",
+    "Concesión":"BAJO AUTOPISTA 6 - 612B",
+    "Concesionario":"MINISTERIO DE JUSTICIA Y SEGURIDAD",
+    "Domicilio":"RAMON FALCON  Y  RIVADAVIA  Y  CALDERON",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.496555,
+    "y":-34.637034
+    }
+  }
+,
+  {
+    "Legajo":1011,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos Oficiales iF-201 5-07960854- -DGCONC",
+    "Concesión":"BAJO AUTOPISTA 6 - 613A",
+    "Concesionario":"MINISTERIO DE JUSTICIA Y SEGURIDAD",
+    "Domicilio":"RAMON FALCON  Y  RIVADAVIA  Y  CALDERON",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.496555,
+    "y":-34.637034
+    }
+  }
+,
+  {
     "Legajo":1012,
     "Tipo de canon":"Gratuitos a Cooperadoras",
     "Monto de canon":"Gratuitos a Cooperadoras",
@@ -3513,8 +6649,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.467040,
-    "y":-34.691904
+    "x":-58.467253,
+    "y":-34.691742
     }
   }
 ,
@@ -3535,6 +6671,54 @@
   }
 ,
   {
+    "Legajo":1014,
+    "Tipo de canon":"Gratuitos a Organismos",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos Oficiales",
+    "Concesión":"BAJO AUTOPISTA 6 - 609A",
+    "Concesionario":"Area atencion a la Victima Violencia de Genero Polic. Metrop.",
+    "Domicilio":"ZELADA  Y  CAXARAVILLE",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.491194,
+    "y":-34.641361
+    }
+  }
+,
+  {
+    "Legajo":1016,
+    "Tipo de canon":"Desocupado",
+    "Monto de canon":"Desocupado",
+    "Normativa aplicable/concesiones":"Desocupado .",
+    "Concesión":"BAJO AUTOPISTA 9 - 910",
+    "Concesionario":"-",
+    "Domicilio":"SUAREZ Y ARAOZ DE LAMADRID",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"",
+    "Coordenadas": {
+    "x":-58.376475,
+    "y":-34.639946
+    }
+  }
+,
+  {
+    "Legajo":1020,
+    "Tipo de canon":"Gratuito",
+    "Monto de canon":"Gratuito",
+    "Normativa aplicable/concesiones":"Permiso Ley 3399. EX 1225221 /2011/MGEYA",
+    "Concesión":"ESPACIO DENTRO DEL INST. SUPERIOR DE SEGURIDAD PUBLICA",
+    "Concesionario":"GAGLIANO, CARLOS FABIAN",
+    "Domicilio":"AV. STIAGO DE COMPOSTELA ESQ. FERNANDEZ",
+    "Rubro":"GASTRONOMICOS",
+    "Vencimiento":"11/08/2016",
+    "Coordenadas": {
+    "x":-58.465065,
+    "y":-34.655173
+    }
+  }
+,
+  {
     "Legajo":1021,
     "Tipo de canon":"Gratuitos Asoc. Civiles",
     "Monto de canon":"Gratuitos Asco. Civiles",
@@ -3545,8 +6729,56 @@
     "Rubro":"LOCALES BAJO AUTOPISTA",
     "Vencimiento":"19/01/2021",
     "Coordenadas": {
-    "x":-58.388003,
-    "y":-34.614718
+    "x":-58.393188,
+    "y":-34.623946
+    }
+  }
+,
+  {
+    "Legajo":1022,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"1.950,00",
+    "Normativa aplicable/concesiones":"Permiso Ley 3399",
+    "Concesión":"BAJO AUTOPISTA 1 - 160A",
+    "Concesionario":"Fabio Hector Viruega",
+    "Domicilio":"GALERÍA E.MITRE Y LOCAL 1 Y ANEXO BAULERA 7",
+    "Rubro":"LOCALES BAJO AUTOPISTA",
+    "Vencimiento":"30/11/2015",
+    "Coordenadas": {
+    "x":-58.44107,
+    "y":-34.632411
+    }
+  }
+,
+  {
+    "Legajo":1025,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos Oficiales",
+    "Concesión":"BAJO AUTOPISTA 1 - 159N - GALERIA EMILIO MITRE",
+    "Concesionario":"MINISTERIO DE JUSTICIA Y SEGURIDAD",
+    "Domicilio":"DE LAS CIENCIAS Y E.MITRE",
+    "Rubro":"REPARTICIONES GUBERNAMENTALES",
+    "Vencimiento":"02/09/2016",
+    "Coordenadas": {
+    "x":-58.44064,
+    "y":-34.632107
+    }
+  }
+,
+  {
+    "Legajo":1026,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos Oficiales",
+    "Concesión":"BAJO AUTOPISTA 1 - 159Ñ - GALERIA EMILIO MITRE",
+    "Concesionario":"MINISTERIO DE JUSTICIA Y SEGURIDAD",
+    "Domicilio":"DE LAS CIENCIAS Y E.MITRE",
+    "Rubro":"REPARTICIONES GUBERNAMENTALES",
+    "Vencimiento":"02/09/2016",
+    "Coordenadas": {
+    "x":-58.44064,
+    "y":-34.632107
     }
   }
 ,
@@ -3561,8 +6793,8 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.476880,
-    "y":-34.594742
+    "x":-58.476601,
+    "y":-34.594811
     }
   }
 ,
@@ -3595,6 +6827,22 @@
     "Coordenadas": {
     "x":-58.435431,
     "y":-34.617929
+    }
+  }
+,
+  {
+    "Legajo":1032,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"7.100,00",
+    "Normativa aplicable/concesiones":"Adjudic por Resolución N° 7001MDEGC12011",
+    "Concesión":"PARQUE 3 DE FEBRERO - EL VIVERO - LA ROSALEDA",
+    "Concesionario":"LAGOS DE PALERMO S. A.",
+    "Domicilio":"PARQUE 3 DE FEBRERO",
+    "Rubro":"BOTES Y BICISCAFOS",
+    "Vencimiento":"17/01/2017",
+    "Coordenadas": {
+    "x":-58.4170437,
+    "y":-34.5710648
     }
   }
 ,
@@ -3641,8 +6889,120 @@
     "Rubro":"COOPERADORA",
     "Vencimiento":"",
     "Coordenadas": {
-    "x":-58.438480,
+    "x":-58.43848,
     "y":-34.619107
+    }
+  }
+,
+  {
+    "Legajo":1038,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"35.000,00",
+    "Normativa aplicable/concesiones":"Permiso Ley 3399 [F 2[115 [1796Q~~4 DGCONC",
+    "Concesión":"CANCHAS DE TENIS PARQUE SARMIENTO",
+    "Concesionario":"OMAR GALDINO CARMINATTI",
+    "Domicilio":"AV. RICADO BALBIN 4750",
+    "Rubro":"DEPORTES",
+    "Vencimiento":"15/04/2015",
+    "Coordenadas": {
+    "x":-58.498287,
+    "y":-34.553126
+    }
+  }
+,
+  {
+    "Legajo":1039,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"321,84",
+    "Normativa aplicable/concesiones":"Otorgado por aplicación Ley Nac. 24308, Decreto 1553/GCBA/97, Decreto 1187/GCBA108",
+    "Concesión":"Local en Subte C - Est. Lima Sur",
+    "Concesionario":"Delia Mustacato",
+    "Domicilio":"Subte C  Y  Est. Lima Sur",
+    "Rubro":"PERSONAS CON NECESIDADES ESPECIALES",
+    "Vencimiento":"Ley 899/02- Dec 462/05",
+    "Coordenadas": {
+    "x":-58.3805876,
+    "y":-34.6089824
+    }
+  }
+,
+  {
+    "Legajo":1040,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"321,84",
+    "Normativa aplicable/concesiones":"Otorgado por aplicación Ley Nac. 24308, Decreto 15531GCBA197, Decreto 1187/GCBA/08 _",
+    "Concesión":"Local en Subte D - Estacion Tribunales",
+    "Concesionario":"Jorge Francisco Ramos",
+    "Domicilio":"Subte D  Y  Estacion Tribunales",
+    "Rubro":"PERSONAS CON NECESIDADES ESPECIALES",
+    "Vencimiento":"Ley 899/02- Dec 462/05",
+    "Coordenadas": {
+    "x":-58.385146,
+    "y":-34.6015864
+    }
+  }
+,
+  {
+    "Legajo":1042,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"321,84",
+    "Normativa aplicable/concesiones":"Otorgado por aplicación Ley Nac. 24308, Decreto 1553/GCBA/97, Decreto 1187/GCBA/08",
+    "Concesión":"Local en Subte B - Estacion Florida",
+    "Concesionario":"Jose Antonio Tohalino Arica",
+    "Domicilio":"Subte B  Y  Estacion Florida",
+    "Rubro":"PERSONAS CON NECESIDADES ESPECIALES",
+    "Vencimiento":"Ley 899/02- Dec 462/05",
+    "Coordenadas": {
+    "x":-58.3751044,
+    "y":-34.6033086
+    }
+  }
+,
+  {
+    "Legajo":1045,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"321,84",
+    "Normativa aplicable/concesiones":"Otorgado por aplicación Ley Nac. 24308, Decreto 1553/GCBA/97, Decreto 1187/GCBA/08",
+    "Concesión":"Local en Subte E - Estacion Emilio Mitre",
+    "Concesionario":"Basilia Rafaela Bartolomeo",
+    "Domicilio":"Subte E  Y  Estacion Emilio Mitre",
+    "Rubro":"PERSONAS CON NECESIDADES ESPECIALES",
+    "Vencimiento":"Ley 899/02- Dec 462/05",
+    "Coordenadas": {
+    "x":-58.4421717,
+    "y":-34.6310407
+    }
+  }
+,
+  {
+    "Legajo":1046,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"321,84",
+    "Normativa aplicable/concesiones":"Otorgado por aplicación Ley Nao. 24308, Decreto 1553/GCBA/97, Decreto 1187/GCBA108",
+    "Concesión":"Local en Subte E - Estacion Bolívar",
+    "Concesionario":"Gabriel Dario Abt",
+    "Domicilio":"Subte E  Y  Estacion Bolivar",
+    "Rubro":"PERSONAS CON NECESIDADES ESPECIALES",
+    "Vencimiento":"Ley 899/02- Dec 462/05",
+    "Coordenadas": {
+    "x":-58.3736883,
+    "y":-34.6092414
+    }
+  }
+,
+  {
+    "Legajo":1047,
+    "Tipo de canon":"Importe Variable",
+    "Monto de canon":"Importe Variable",
+    "Normativa aplicable/concesiones":"Pliegos aprobados por Dec. 491/11 y modificatorio 131/12, Concesión otorgada por Res. 416-MJGGC2012. .",
+    "Concesión":" INSPECCION TECNICA VEHICULAR",
+    "Concesionario":"SGS Argentina SA",
+    "Domicilio":"Avda. Cnel. Roca 4590, Ciudad Autónoma de Buenos Aires",
+    "Rubro":"CONTROL VEHICULAR",
+    "Vencimiento":"01/08/2017",
+    "Coordenadas": {
+    "x":-58.450718,
+    "y":-34.680896
     }
   }
 ,
@@ -3705,8 +7065,8 @@
     "Rubro":"GASTRONOMICOS",
     "Vencimiento":"27/12/2017",
     "Coordenadas": {
-    "x":-58.435131,
-    "y":-34.558357
+    "x":-58.432623,
+    "y":-34.558221
     }
   }
 ,
@@ -3759,6 +7119,22 @@
   }
 ,
   {
+    "Legajo":1056,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"34.500,00",
+    "Normativa aplicable/concesiones":"Permiso Ley 3399",
+    "Concesión":"Bajo Autopista AU6 - 610 ",
+    "Concesionario":"Transporte Spacapan SACIFIA",
+    "Domicilio":"AU6  Y  Cajaravilla  Y  Rafaela",
+    "Rubro":"PREDIOS COMERCIALES",
+    "Vencimiento":"30/05/2018",
+    "Coordenadas": {
+    "x":-58.492891,
+    "y":-34.640354
+    }
+  }
+,
+  {
     "Legajo":1057,
     "Tipo de canon":" Importe Fijo",
     "Monto de canon":"321,84",
@@ -3769,8 +7145,8 @@
     "Rubro":"PERSONAS CON NECESIDADES ESPECIALES",
     "Vencimiento":"Decreto 1553",
     "Coordenadas": {
-    "x":-58.501732,
-    "y":-34.618494
+    "x":-58.501301,
+    "y":-34.618132
     }
   }
 ,
@@ -3785,8 +7161,8 @@
     "Rubro":"PERSONAS CON NECESIDADES ESPECIALES",
     "Vencimiento":"Decreto 1553",
     "Coordenadas": {
-    "x":-58.378235,
-    "y":-34.600698
+    "x":-58.378578,
+    "y":-34.600703
     }
   }
 ,
@@ -3807,6 +7183,54 @@
   }
 ,
   {
+    "Legajo":1060,
+    "Tipo de canon":" Importe Fijo",
+    "Monto de canon":"1.200,00",
+    "Normativa aplicable/concesiones":"EX 2076042/11",
+    "Concesión":"Calesita Paseo de la Infanta",
+    "Concesionario":"Guillermo Jorge Taboada",
+    "Domicilio":"Av. Infanta Isabel",
+    "Rubro":"CALESITAS",
+    "Vencimiento":"23/01/2018",
+    "Coordenadas": {
+    "x":-58.4220132,
+    "y":-34.5704236
+    }
+  }
+,
+  {
+    "Legajo":1061,
+    "Tipo de canon":" Importe Fijo",
+    "Monto de canon":"1.200,00",
+    "Normativa aplicable/concesiones":"EX 03840286/13 iF-90.1)-07nRi1- -DC,CCINC",
+    "Concesión":"Calesita Plaza Constitucion",
+    "Concesionario":"Sergio Ruben Dalmaso",
+    "Domicilio":"Av. Garay esq Lima Este",
+    "Rubro":"CALESITAS",
+    "Vencimiento":"24/01/2018",
+    "Coordenadas": {
+    "x":-58.382234,
+    "y":-34.626939
+    }
+  }
+,
+  {
+    "Legajo":1062,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"1.200,00",
+    "Normativa aplicable/concesiones":"E,E. 626429/2013",
+    "Concesión":"Calesita Plaza Tte. Gral. P. Richieri ",
+    "Concesionario":"Carlos Gallego",
+    "Domicilio":"Beiro esq. Quevedo",
+    "Rubro":"CALESITAS",
+    "Vencimiento":"31/01/2018",
+    "Coordenadas": {
+    "x":-58.519412,
+    "y":-34.61054
+    }
+  }
+,
+  {
     "Legajo":1063,
     "Tipo de canon":"Importe Fijo",
     "Monto de canon":"4.000,00",
@@ -3817,8 +7241,8 @@
     "Rubro":"GASTRONOMICOS",
     "Vencimiento":"31/10/2015",
     "Coordenadas": {
-    "x":-58.408220,
-    "y":-34.607816
+    "x":-58.408256,
+    "y":-34.607267
     }
   }
 ,
@@ -3833,8 +7257,264 @@
     "Rubro":"GASTRONOMICOS",
     "Vencimiento":"05/08/2018",
     "Coordenadas": {
-    "x":-58.455265,
-    "y":-34.561129
+    "x":-58.455569,
+    "y":-34.56078
+    }
+  }
+,
+  {
+    "Legajo":1065,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"8.000,00",
+    "Normativa aplicable/concesiones":"Permiso Ley 3399. LICITACIÓN EN TRAMITE",
+    "Concesión":"BAJO AUTOPISTA AU6 - ENTRE MADERO Y CASCO",
+    "Concesionario":"LAHET BUEEZAS IGNACIO AGUSTIN",
+    "Domicilio":"MADERO 328",
+    "Rubro":"PLAYAS DE ESTACIONAMIENTO",
+    "Vencimiento":"29/09/2014",
+    "Coordenadas": {
+    "x":-58.525492,
+    "y":-34.635703
+    }
+  }
+,
+  {
+    "Legajo":1066,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"7.800,00",
+    "Normativa aplicable/concesiones":"Permiso Ley 3399",
+    "Concesión":"HOYO 9/10",
+    "Concesionario":"WHITE SHARK SA",
+    "Domicilio":"TORQUINST 6385",
+    "Rubro":"GASTRONOMICOS",
+    "Vencimiento":"12/12/2017",
+    "Coordenadas": {
+    "x":-58.432623,
+    "y":-34.558221
+    }
+  }
+,
+  {
+    "Legajo":1067,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"1.200,00",
+    "Normativa aplicable/concesiones":"EE-7362732/2014",
+    "Concesión":"Calesita Plaza Zapiola",
+    "Concesionario":"Ruben Daniel Soria",
+    "Domicilio":"Plaza Zapiola",
+    "Rubro":"CALESITAS",
+    "Vencimiento":"28/11/2018",
+    "Coordenadas": {
+    "x":-58.4751691,
+    "y":-34.5736124
+    }
+  }
+,
+  {
+    "Legajo":1068,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"-",
+    "Normativa aplicable/concesiones":"EE-7363343/2014 Aún no instalada",
+    "Concesión":"CALESITA PARQUE SANTOJANI",
+    "Concesionario":"SR MIGUEL ANGEL VIGNATTI",
+    "Domicilio":"Parque Santojani",
+    "Rubro":"CALESITAS",
+    "Vencimiento":"13/11/2018",
+    "Coordenadas": {
+    "x":-58.513123,
+    "y":-34.6469714
+    }
+  }
+,
+  {
+    "Legajo":1069,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"1.200,00",
+    "Normativa aplicable/concesiones":"EE-7364915/2014",
+    "Concesión":"CALESITA PLAZA TEHERAN",
+    "Concesionario":"SR FRANCISCO FILIPPELLI",
+    "Domicilio":"Plaza Teheran",
+    "Rubro":"CALESITAS",
+    "Vencimiento":"11/11/2018",
+    "Coordenadas": {
+    "x":-58.5195714,
+    "y":-34.6207049
+    }
+  }
+,
+  {
+    "Legajo":1071,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"1.200,00",
+    "Normativa aplicable/concesiones":"EE-7365171/2014",
+    "Concesión":"CALESITA PLAZA DON BOSCO",
+    "Concesionario":"SR FACUNDO DANIEL CAVALIERI",
+    "Domicilio":"Plaza Don Bosco",
+    "Rubro":"CALESITAS",
+    "Vencimiento":"07/11/2018",
+    "Coordenadas": {
+    "x":-58.5082287,
+    "y":-34.6259291
+    }
+  }
+,
+  {
+    "Legajo":1072,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"1.200,00",
+    "Normativa aplicable/concesiones":"EE-7366868/2014",
+    "Concesión":"CALESITA PLAZA MARTIN RODRIGUEZ",
+    "Concesionario":"SR NELSON OMAR BERON",
+    "Domicilio":"Plaza Martin Rodriguez",
+    "Rubro":"CALESITAS",
+    "Vencimiento":"20/11/2017",
+    "Coordenadas": {
+    "x":-58.501113,
+    "y":-34.5908319
+    }
+  }
+,
+  {
+    "Legajo":1073,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"600",
+    "Normativa aplicable/concesiones":"EE05971942/2013 Aún no instalada",
+    "Concesión":"CALESITA PLAZA CIUDAD DE BANFF",
+    "Concesionario":"SR CARLOS ENRIQUE ZUÑIGA",
+    "Domicilio":"Plaza Ciudad de Banff",
+    "Rubro":"CALESITAS",
+    "Vencimiento":"14/11/2018",
+    "Coordenadas": {
+    "x":-58.5208982,
+    "y":-34.6285102
+    }
+  }
+,
+  {
+    "Legajo":1074,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"1.200,00",
+    "Normativa aplicable/concesiones":"EE-7361955/2014",
+    "Concesión":"CALESITA PLAZA MAFALDA",
+    "Concesionario":"SR ANTONIO PEDRO BARCHUK",
+    "Domicilio":"Plaza Mafalda",
+    "Rubro":"CALESITAS",
+    "Vencimiento":"04/12/2018",
+    "Coordenadas": {
+    "x":-58.4455308,
+    "y":-34.5807389
+    }
+  }
+,
+  {
+    "Legajo":1075,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"1.200,00",
+    "Normativa aplicable/concesiones":"EE-7363003/2014",
+    "Concesión":"CALESITA PLAZA MONTECASTRO",
+    "Concesionario":"SRA INDIANA IZQUIERDO",
+    "Domicilio":"Plaza Montecastro",
+    "Rubro":"CALESITAS",
+    "Vencimiento":"22/11/2018",
+    "Coordenadas": {
+    "x":-58.4973059,
+    "y":-34.6180061
+    }
+  }
+,
+  {
+    "Legajo":1076,
+    "Tipo de canon":"Importe Fijo ",
+    "Monto de canon":"600",
+    "Normativa aplicable/concesiones":"EE-7363537/2014 Aún no instalada ir•-_,r)i,i_ri7cus-r,_1_ _ncicome",
+    "Concesión":"CALESITA PASEO RAMIREZ",
+    "Concesionario":"SR ENRIQUE FLORES",
+    "Domicilio":"Paseo Ramirez",
+    "Rubro":"CALESITAS",
+    "Vencimiento":"26/11/2018",
+    "Coordenadas": {
+    "x":-58.4683689,
+    "y":-34.5536427
+    }
+  }
+,
+  {
+    "Legajo":1078,
+    "Tipo de canon":"Contraprestación por realización de obra",
+    "Monto de canon":"Contraprestación por realización de obra",
+    "Normativa aplicable/concesiones":"Leyes Nros. 4348 y 4476. Adjudicado mediante Resolución N°2013-983-MDEGC",
+    "Concesión":"Centro de Concentracion Logística",
+    "Concesionario":"CTC Administradora SA",
+    "Domicilio":"Av. Cnel. Roca / 27 de febrero / Pergamino / AU Campora",
+    "Rubro":"VARIOS",
+    "Vencimiento":"21/01/1944",
+    "Coordenadas": {
+    "x":-58.444833,
+    "y":-34.671522
+    }
+  }
+,
+  {
+    "Legajo":1079,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"0",
+    "Normativa aplicable/concesiones":"Permiso Ley 3399",
+    "Concesión":"Predio Bajo Autopista BsAs - La Plata",
+    "Concesionario":"Silos Areneros de Buenos Aires SAC",
+    "Domicilio":"Pedro de Mendoza entre Caffarena y Suarez",
+    "Rubro":"VARIOS",
+    "Vencimiento":"31/09//2014",
+    "Coordenadas": {
+    "x":-58.35598,
+    "y":-34.628651
+    }
+  }
+,
+  {
+    "Legajo":1080,
+    "Tipo de canon":"Contraprestación por realización de obra",
+    "Monto de canon":"Contraprestación por realización de obra",
+    "Normativa aplicable/concesiones":"Permiso Ley 3399 - En proceso de devolución",
+    "Concesión":"Predio Bajo Autopista Buenos Aires - La Plata",
+    "Concesionario":"Hector Fliter - Guido Wainstein",
+    "Domicilio":"Pedro de Mendoza entre Gualeguay y B. Perez Galdos",
+    "Rubro":"VARIOS",
+    "Vencimiento":"31/09//2014",
+    "Coordenadas": {
+    "x":-58.360944,
+    "y":-34.625417
+    }
+  }
+,
+  {
+    "Legajo":1085,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"12.000,00",
+    "Normativa aplicable/concesiones":"Permiso Ley 3399. EX201408460052-MGEYADGCONC",
+    "Concesión":"ANTENA EN TORRE ESPACIAL DEL PARQUE DE LA CIUDAD",
+    "Concesionario":"RADIO PANDA S.R.L.",
+    "Domicilio":"PARQUE DE LA CIUDAD",
+    "Rubro":"VARIOS",
+    "Vencimiento":"20/04/2012",
+    "Coordenadas": {
+    "x":-58.4510287,
+    "y":-34.6714831
+    }
+  }
+,
+  {
+    "Legajo":1086,
+    "Tipo de canon":"Importe Fijo",
+    "Monto de canon":"1.000,00",
+    "Normativa aplicable/concesiones":"Permiso Ley 3399 EX2014-08460052-MGEYADGCONC",
+    "Concesión":"ANTENA EN TORRE ESPACIAL DEL PARQUE DE LA CIUDAD",
+    "Concesionario":"RADIO PANDA S.R.L.",
+    "Domicilio":"PARQUE DE LA CIUDAD",
+    "Rubro":"VARIOS",
+    "Vencimiento":"20/04/2012",
+    "Coordenadas": {
+    "x":-58.4510287,
+    "y":-34.6714831
     }
   }
 ,
@@ -3867,6 +7547,22 @@
     "Coordenadas": {
     "x":-58.400829,
     "y":-34.572239
+    }
+  }
+,
+  {
+    "Legajo":1093,
+    "Tipo de canon":"Gratuitos a Organismos Oficiales",
+    "Monto de canon":"Gratuitos a Organismos Oficiales",
+    "Normativa aplicable/concesiones":"Afectado a Organismos Oficiales",
+    "Concesión":"BAJO AUTOPISTA 1 - 118",
+    "Concesionario":"GEA 8 S.A.",
+    "Domicilio":"ENTRE RIOS Y CBTE. DE LOS POZOS",
+    "Rubro":"PLAYAS DE ESTACIONAMIENTO",
+    "Vencimiento":"hasta licitacion o subasta",
+    "Coordenadas": {
+    "x":-58.39156,
+    "y":-34.62352
     }
   }
 ]
