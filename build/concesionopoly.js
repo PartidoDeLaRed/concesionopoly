@@ -9,7 +9,39 @@ var _concesionopolyIndex2 = _interopRequireDefault(_concesionopolyIndex);
 
 window.Concesionopoly = _concesionopolyIndex2['default'];
 
-},{"./concesionopoly/index":9}],2:[function(require,module,exports){
+},{"./concesionopoly/index":10}],2:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+var Chip = (function () {
+  function Chip(el) {
+    _classCallCheck(this, Chip);
+
+    this.el = el;
+    this.set = this.set.bind(this);
+  }
+
+  _createClass(Chip, [{
+    key: 'set',
+    value: function set(position) {
+      this.el.setAttribute('data-position', position);
+    }
+  }]);
+
+  return Chip;
+})();
+
+exports['default'] = Chip;
+module.exports = exports['default'];
+
+},{}],3:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -26,6 +58,7 @@ var Dices = (function () {
 
     this.dices = [];
     this.el = el;
+    this.set = this.set.bind(this);
   }
 
   _createClass(Dices, [{
@@ -60,7 +93,7 @@ var Dices = (function () {
 exports['default'] = Dices;
 module.exports = exports['default'];
 
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -89,6 +122,10 @@ var _dices = require('./dices');
 
 var _dices2 = _interopRequireDefault(_dices);
 
+var _chip = require('./chip');
+
+var _chip2 = _interopRequireDefault(_chip);
+
 var Browser = (function () {
   function Browser() {
     var options = arguments[0] === undefined ? {} : arguments[0];
@@ -106,23 +143,27 @@ var Browser = (function () {
     });
 
     this.dices = new _dices2['default'](this.el.querySelector('[data-dices]'));
+    this.chip = new _chip2['default'](this.el.querySelector('[data-chip]'));
 
     this.doTurn = this.doTurn.bind(this);
 
-    this.setState();
+    this.dices.set(this.engine.state.dices);
+    this.engine.on('dices:change', this.dices.set);
+
+    this.chip.set(this.engine.state.position);
+    this.engine.on('position:change', this.chip.set);
 
     this.events.on('click', '[data-dices]', this.doTurn);
   }
 
   _createClass(Browser, [{
-    key: 'setState',
-    value: function setState() {
-      this.dices.set(this.engine.state.dices);
-    }
-  }, {
     key: 'doTurn',
     value: function doTurn() {
       this.events.off('click', '[data-dices]', this.doTurn);
+
+      var r = this.engine.doTurn();
+
+      if (r.accept) r.accept();
     }
   }]);
 
@@ -133,7 +174,7 @@ exports['default'] = Browser;
 module.exports = exports['default'];
 // this.modals.show('welcome')
 
-},{"../engine":7,"./dices":2,"./modals":4,"dom-delegate":12}],4:[function(require,module,exports){
+},{"../engine":8,"./chip":2,"./dices":3,"./modals":5,"dom-delegate":13}],5:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -256,7 +297,7 @@ var Modals = (function () {
 exports['default'] = Modals;
 module.exports = exports['default'];
 
-},{"./templates":5,"deepmerge":10,"dom-delegate":12}],5:[function(require,module,exports){
+},{"./templates":6,"deepmerge":11,"dom-delegate":13}],6:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -307,7 +348,7 @@ var Templates = (function () {
 exports['default'] = Templates;
 module.exports = exports['default'];
 
-},{"fly-template":14}],6:[function(require,module,exports){
+},{"fly-template":15}],7:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -354,7 +395,7 @@ var Dices = (function () {
 exports['default'] = Dices;
 module.exports = exports['default'];
 
-},{"immutable":15}],7:[function(require,module,exports){
+},{"immutable":16}],8:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -385,18 +426,18 @@ var _tiles = require('./tiles');
 
 var _tiles2 = _interopRequireDefault(_tiles);
 
-var dices = new _dices2['default'](2);
-
 var Engine = (function (_Emitter) {
   function Engine() {
     _classCallCheck(this, Engine);
 
     _get(Object.getPrototypeOf(Engine.prototype), 'constructor', this).call(this);
 
+    this.dices = new _dices2['default'](2);
+
     this.state = {
       position: 0,
       square: null,
-      dices: dices.flip(),
+      dices: this.dices.flip(),
       ownedProperties: new _immutable.List()
     };
   }
@@ -419,6 +460,23 @@ var Engine = (function (_Emitter) {
       return property;
     }
   }, {
+    key: 'flipDices',
+    value: function flipDices() {
+      var dices = this.dices.flip();
+      this.state.dices = dices;
+      this.emit('dices:change', dices);
+      return dices;
+    }
+  }, {
+    key: 'move',
+    value: function move(amount) {
+      var newPosition = this.state.position + amount;
+      if (newPosition >= _tiles2['default'].size - 1) newPosition = _tiles2['default'].size - 1;
+      this.state.position = newPosition;
+      this.emit('position:change', newPosition);
+      return newPosition;
+    }
+  }, {
     key: 'doTurn',
     value: function doTurn() {
       var _this = this;
@@ -429,30 +487,28 @@ var Engine = (function (_Emitter) {
         });
       }
 
-      var dice = dices.flip();
-      var newPosition = this.state.position + dice.total;
-      if (newPosition >= _tiles2['default'].size - 1) newPosition = _tiles2['default'].size - 1;
+      var dices = this.flipDices();
+      var newPosition = this.move(dices.total);
       var newSquare = _tiles2['default'].get(newPosition);
 
-      this.state.dices = dice;
-      this.state.position = newPosition;
       this.state.square = newSquare;
 
-      if (newSquare.type == 'luck') {
+      if (newSquare.get('type') == 'luck') {
         return {
           type: 'luck',
-          addedProperty: this.addProperty(newSquare.property)
+          addedProperty: this.addProperty(newSquare.get('property'))
         };
-      } else if (newSquare.type == 'extraordinary-tax') {
+      } else if (newSquare.get('type') == 'extraordinary-tax') {
         return {
           type: 'extraordinary-tax',
           removedProperty: this.removeLastProperty()
         };
-      } else if (newSquare.type == 'property') {
+      } else if (newSquare.get('type') == 'property') {
         return {
           type: 'property',
+          priceOptions: newSquare.get('priceOptions'),
           accept: function accept() {
-            return _this.addProperty(newSquare.property);
+            return _this.addProperty(newSquare.get('property'));
           }
         };
       }
@@ -465,7 +521,7 @@ var Engine = (function (_Emitter) {
 exports['default'] = Engine;
 module.exports = exports['default'];
 
-},{"./dices":6,"./tiles":8,"emitter":13,"immutable":15}],8:[function(require,module,exports){
+},{"./dices":7,"./tiles":9,"emitter":14,"immutable":16}],9:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -717,7 +773,7 @@ exports['default'] = _immutable2['default'].fromJS([{
 }]);
 module.exports = exports['default'];
 
-},{"immutable":15}],9:[function(require,module,exports){
+},{"immutable":16}],10:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -738,7 +794,7 @@ function Concesionopoly(options) {
 
 module.exports = exports['default'];
 
-},{"./browser":3}],10:[function(require,module,exports){
+},{"./browser":4}],11:[function(require,module,exports){
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
         define(factory);
@@ -792,7 +848,7 @@ return function deepmerge(target, src) {
 
 }));
 
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 /*jshint browser:true, node:true*/
 
 'use strict';
@@ -1223,7 +1279,7 @@ Delegate.prototype.destroy = function() {
   this.root();
 };
 
-},{}],12:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 /*jshint browser:true, node:true*/
 
 'use strict';
@@ -1244,7 +1300,7 @@ module.exports = function(root) {
 
 module.exports.Delegate = Delegate;
 
-},{"./delegate":11}],13:[function(require,module,exports){
+},{"./delegate":12}],14:[function(require,module,exports){
 "use strict";
 
 var _classCallCheck = function (instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } };
@@ -1398,7 +1454,7 @@ var Emitter = (function () {
  */
 exports["default"] = Emitter;
 module.exports = exports["default"];
-},{}],14:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 function parse(str) {
   var i,
       l,
@@ -1464,7 +1520,7 @@ API.parse = parse;
 API.convert = convert;
 
 module.exports = API;
-},{}],15:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 /**
  *  Copyright (c) 2014-2015, Facebook, Inc.
  *  All rights reserved.

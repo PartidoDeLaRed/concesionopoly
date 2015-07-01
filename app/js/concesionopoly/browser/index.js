@@ -21,19 +21,22 @@ export default class Browser {
 
     this.doTurn = this.doTurn.bind(this)
 
-    this.setState()
+    this.dices.set(this.engine.state.dices)
+    this.engine.on('dices:change', this.dices.set)
+
+    this.chip.set(this.engine.state.position)
+    this.engine.on('position:change', this.chip.set)
 
     this.events.on('click', '[data-dices]', this.doTurn)
 
     // this.modals.show('welcome')
   }
 
-  setState () {
-    this.dices.set(this.engine.state.dices)
-    this.chip.set(this.engine.state.position)
-  }
-
   doTurn () {
     this.events.off('click', '[data-dices]', this.doTurn)
+
+    let r = this.engine.doTurn()
+
+    if (r.accept) r.accept()
   }
 }

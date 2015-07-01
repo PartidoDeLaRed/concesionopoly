@@ -2,6 +2,7 @@ export default class Dices {
   constructor (el) {
     this.dices = []
     this.el = el
+    this.set = this.set.bind(this)
   }
 
   createDice () {

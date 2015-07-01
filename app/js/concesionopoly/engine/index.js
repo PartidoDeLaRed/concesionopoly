@@ -3,16 +3,16 @@ import Emitter from 'emitter'
 import Dices from './dices'
 import tiles from './tiles'
 
-const dices = new Dices(2)
-
 export default class Engine extends Emitter {
   constructor () {
     super()
 
+    this.dices = new Dices(2)
+
     this.state = {
       position: 0,
       square: null,
-      dices: dices.flip(),
+      dices: this.dices.flip(),
       ownedProperties: new List
     }
   }
@@ -30,34 +30,47 @@ export default class Engine extends Emitter {
     return property
   }
 
+  flipDices () {
+    let dices = this.dices.flip()
+    this.state.dices = dices
+    this.emit('dices:change', dices)
+    return dices
+  }
+
+  move (amount) {
+    let newPosition = this.state.position + amount
+    if (newPosition >= tiles.size - 1) newPosition = tiles.size - 1
+    this.state.position = newPosition
+    this.emit('position:change', newPosition)
+    return newPosition
+  }
+
   doTurn () {
     if (this.position >= tiles.size - 1) {
       return Promise.reject(() => new Error('GAME_ENDED'))
     }
 
-    let dice = dices.flip()
-    let newPosition = this.state.position + dice.total
-    if (newPosition >= tiles.size - 1) newPosition = tiles.size - 1
+    let dices = this.flipDices()
+    let newPosition = this.move(dices.total)
     let newSquare = tiles.get(newPosition)
 
-    this.state.dices = dice
-    this.state.position = newPosition
     this.state.square = newSquare
 
-    if (newSquare.type == 'luck') {
+    if (newSquare.get('type') == 'luck') {
       return {
         type: 'luck',
-        addedProperty: this.addProperty(newSquare.property)
+        addedProperty: this.addProperty(newSquare.get('property'))
       }
-    } else if (newSquare.type == 'extraordinary-tax') {
+    } else if (newSquare.get('type') == 'extraordinary-tax') {
       return {
         type: 'extraordinary-tax',
         removedProperty: this.removeLastProperty()
       }
-    } else if (newSquare.type == 'property') {
+    } else if (newSquare.get('type') == 'property') {
       return {
         type: 'property',
-        accept: () => this.addProperty(newSquare.property)
+        priceOptions: newSquare.get('priceOptions'),
+        accept: () => this.addProperty(newSquare.get('property'))
       }
     }
   }
