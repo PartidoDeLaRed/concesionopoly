@@ -15,7 +15,7 @@ const tiles = [
   },
   {
     type: 'luck',
-    message: 'Un amigo de un amigo es diputado, y te consiguió la concesión por las Canchas de Tenis Parque Sarmiento gratis.',
+    message: 'Tu contacto en el Gobierno te avisa que hay una concesión que no tiene ofertas y consigue un contrato a bajo costo por 99 años.',
     property: {
       name: 'Canchas de Tenis Parque Sarmiento',
       description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
@@ -33,7 +33,7 @@ const tiles = [
   },
   {
     type: 'extraordinary-tax',
-    message: 'Firmaste un contrato trucho, el Gobierno de la Ciudad te cancela una Concesión.'
+    message: 'Perdés la concesión por no seguir la normativa vigente.'
   },
   {
     type: 'property',
@@ -82,11 +82,11 @@ const tiles = [
   },
   {
     type: 'property',
-    priceOptions: [ 8000, 25000 ],
+    priceOptions: [ 1400000, 2550000 ],
     property: {
-      name: 'Estacionamiento Catalinas Sur',
-      description: 'Cuenta con 100 plazas de estacionamiento.|Está abierto las 24 hs.|Sus tarifas para autos son: $30; Estadía 12 hs $100; Estadía 24 hs $150; durante partidos de Boca $120.',
-      price: 8000
+      name: 'Zoologico de Buenos Aires',
+      description: 'Entrada para mayores de 12 años: $150.|18 hectareas en Palermo, donde el m2 vale $2.829,00 dolares, aproximadamente.',
+      price: 1400000
     }
   },
   {
@@ -190,20 +190,20 @@ const tiles = [
   },
   {
     type: 'property',
-    priceOptions: [ 197000, 520000 ],
+    priceOptions: [ 81000, 121000 ],
     property: {
-      name: 'Complejo Costa Salguero',
-      description: 'Superficie techada 20.000m2 en 17 hectareas de espacio.|Cuenta con 23 subconcesiones, entre los que se cuentan 4 estacionamientos, 2 centros de convenciones, 3 salones de conferencias y un hotel.',
-      price: 197000
+      name: 'Discoteca Pacha',
+      description: 'Capacidad para 3000 personas.|Es un grupo con 18 discotecas alrededor del mundo.|Entrada para noche común $150 aproximadamente.',
+      price: 81000
     }
   },
   {
     type: 'property',
-    priceOptions: [ 1400000, 2550000 ],
+    priceOptions: [ 8000, 25000 ],
     property: {
-      name: 'Zoologico de Buenos Aires',
-      description: 'Entrada para mayores de 12 años: $150.|18 hectareas en Palermo, donde el m2 vale $2.829,00 dolares, aproximadamente.',
-      price: 1400000
+      name: 'Estacionamiento Catalinas Sur',
+      description: 'Cuenta con 100 plazas de estacionamiento.|Está abierto las 24 hs.|Sus tarifas para autos son: $30; Estadía 12 hs $100; Estadía 24 hs $150; durante partidos de Boca $120.',
+      price: 8000
     }
   },
   {
@@ -217,20 +217,20 @@ const tiles = [
   },
   {
     type: 'property',
-    priceOptions: [ 81000, 121000 ],
-    property: {
-      name: 'Discoteca Pacha',
-      description: 'Capacidad para 3000 personas.|Es un grupo con 18 discotecas alrededor del mundo.|Entrada para noche común $150 aproximadamente.',
-      price: 81000
-    }
-  },
-  {
-    type: 'property',
     priceOptions: [ 132000, 49000 ],
     property: {
       name: 'Buenos Aires Design',
       description: 'Posee 140 espacios de estacionamiento.|Cuenta con 72 locales.',
       price: 49000
+    }
+  },
+  {
+    type: 'property',
+    priceOptions: [ 197000, 520000 ],
+    property: {
+      name: 'Complejo Costa Salguero',
+      description: 'Superficie techada 20.000m2 en 17 hectareas de espacio.|Cuenta con 23 subconcesiones, entre los que se cuentan 4 estacionamientos, 2 centros de convenciones, 3 salones de conferencias y un hotel.',
+      price: 197000
     }
   },
   {
@@ -271,7 +271,7 @@ const tiles = [
   },
   {
     type: 'extraordinary-tax',
-    message: 'Firmaste un contrato trucho, el Gobierno de la Ciudad te cancela una Concesión.'
+    message: 'No llegaste a pagar la concesión a tiempo, te la sacan y vuelve a concurso.'
   },
   {
     type: 'property',
