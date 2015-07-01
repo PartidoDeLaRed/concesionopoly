@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="theme-color" content="#5DB9D2">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+
+<meta name="description" content="Conocé todas concesiones de la Ciudad de Benos Aires" />
+<meta name="keywords" content="concesiones, presupuesto, buenos aires" />
+
+<!-- <link rel="icon" type="image/png" href="http://queproponen.com.ar/../CSS/icon.png"> -->
+<!-- <meta property="og:image" content="http://queproponen.com.ar/../../CSS/backgroundHeader.jpg" /> -->
+<meta property="og:title" content="Concesionopoly - Partido de la Red"/>
+<meta property="og:url" content="http://concesionopoly.com.ar"/>
+<meta property="og:site_name" content="Concesionopoly - Partido de la Red"/>
+<meta property="og:description" content="Conocé todas las concesiones otorgadas por la Ciudad de Buenos Aires."/>
+<title>Concesionopoly - Partido de la Red</title>
+
+<link href="../CSS/styles.css" rel="stylesheet" type="text/css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+<link href='http://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+<script src="https://apis.google.com/js/client.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=true"></script>
+<script type="text/javascript" src="../JS/gmaps.js"></script>
+<link href='../CSS/stylesmap.css' rel='stylesheet' type='text/css' />
+
+</head>
+
+<body>
+	<script>
+		window.fbAsyncInit = function() {
+			FB.init({
+			  appId      : '825676227513877',
+			  xfbml      : true,
+			  version    : 'v2.3'
+			});
+		};
+		
+		(function(d, s, id){
+			 var js, fjs = d.getElementsByTagName(s)[0];
+			 if (d.getElementById(id)) {return;}
+			 js = d.createElement(s); js.id = id;
+			 js.src = '//connect.facebook.net/es_LA/sdk.js';
+			 fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+    </script>
+    
+    <script>
+		window.twttr = (function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0],
+			t = window.twttr || {};
+			if (d.getElementById(id)) return t;
+			js = d.createElement(s);
+			js.id = id;
+			js.src = "https://platform.twitter.com/widgets.js";
+			fjs.parentNode.insertBefore(js, fjs);
+			
+			t._e = [];
+			t.ready = function(f) {
+			t._e.push(f);
+			};
+			
+			return t;
+		}(document, "script", "twitter-wjs"));
+	</script>
+
+	<div class="headerContainer">
+    	<div class="bannerAfiliacion">Si vivís en CABA y querés que el Partido de la Red sea una opción en 2017, <a href="http://4milfundadores.com" target="_blank">¡Afiliate!</a></div>
+        <div class="widthLimiter">
+	        <div class="logo"></div>
+            <div class="headerText">
+				<div class="title"><a href="/">Concesionopoly</a></div>
+            </div>
+            <nav class="menu">
+                <div id="generalesMenuItem" class="selected" onclick="javascript:CargaGenerales()"><a href="../juego">Jugar</a></div>
+                <div id="PASOMenuItem"><a href="../mapa">Mapa</a></div>
+                <div style="border:none !important"><a href="../about">Acerca de</a></div>
+            </nav>
+  		</div>
+    </div>
+	
+    <div id="contenido" class="mainContainer">
+    	<div class="contentContainer">
+    	<div class="mainSharer"><a class="twitterButton" onclick="javascript:CompartirInicio(0)">Compartí en Twitter</a><a class="facebookButton" onclick="javascript:CompartirInicio(1)">Compartí en Facebook</a></div>
+	    	<!-- <iframe src="../mapa/test-plot.html" width="100%" height="700"></iframe> -->
+	    	<!-- Empieza el mapa -->
+	 
+		<p>Acá Rocio y Feli van a escribir un texto brillante</p>
+
+        </div>
+    </div>
+
+	<div class='footerContainer'>
+        <div style="max-width: 960px; margin:auto;">
+            <div style="font-size:30px; padding: 0px;">Concesionopoly</div>
+            <div class="contactContainer">
+            	<div style="font-size: 23px;">Contactanos</div>
+                <a class="page" href="http://partidodelared.org" target="_blank"></a>
+                <a class="facebook" href="http://facebook.com/PartidoDeLaRed" target="_blank"></a>
+                <a class="twitter" href="http://twitter.com/PartidodelaRed" target="_blank"></a>
+                <a class="google" href="http://plus.google.com/101519187164139196788" target="_blank"></a>
+            </div>
+        </div>
+        <div class="creditsContainer">
+            <div>Hecho con <div class="heartIcon"></div> por pares del Partido de la Red - 2015</div>
+        </div>
+  	</div>
+
+	<div class="likeButtons">
+    	<div style="display:block;">
+			<div class="fb-like" data-href="https://facebook.com/PartidoDeLaRed" data-width="150" data-layout="box_count" data-action="like" data-show-faces="false" data-share="false"></div>
+        </div>
+    	<div style="display:block;">   
+            <a id="followButton" href="https://twitter.com/PartidodelaRed" class="twitter-follow-button" data-show-count="false" data-lang="es" data-size="large" data-show-screen-name="false">@PartidodelaRed</a>
+        </div>
+	</div>
+</body>
+
+<script type="text/javascript" src="../JS/sharer.js"></script>
+</html>
