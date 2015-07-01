@@ -143,10 +143,6 @@ $(document).ready(function(){
           mas_info.append(tw);
           mas_info.append(fb);
 
-          tw.on("click", function(e){
-            e.preventDefault();
-            console.log("hola");
-          });
 
           //var url = window.location.href;
           /*var url = "www.concesionopoly.com";
@@ -164,7 +160,12 @@ $(document).ready(function(){
                     icon: lugar.icon,
                     infoWindow: {
                       content: mas_info.html()
-                    }
+                    },
+                    click: function(e) {
+                        this.infoWindow.open(this.map, this);
+                        window.location.hash = lugares[this.ident].slug;
+                       }
+
 
           });
 
