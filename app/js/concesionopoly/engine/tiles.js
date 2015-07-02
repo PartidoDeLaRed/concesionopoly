@@ -55,7 +55,7 @@ const tiles = [
   },
   {
     type: 'luck',
-    message: 'Un amigo de un amigo es diputado, y te consiguió la concesión por las Canchas de Tenis Parque Sarmiento gratis.',
+    message: 'El gobierno nacional decreta facilidades para blanquear dólares, decidís poner un boliche en costanera.',
     property: {
       name: 'Canchas de Tenis Parque Sarmiento',
       description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
@@ -253,7 +253,7 @@ const tiles = [
   },
   {
     type: 'luck',
-    message: 'Un amigo de un amigo es diputado, y te consiguió la concesión por las Canchas de Tenis Parque Sarmiento gratis.',
+    message: 'Tu concesión pasa desapercibida otra vez mas y el gobierno de turno te pa renueva sin preguntar.',
     property: {
       name: 'Canchas de Tenis Parque Sarmiento',
       description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
@@ -271,7 +271,7 @@ const tiles = [
   },
   {
     type: 'extraordinary-tax',
-    message: 'No llegaste a pagar la concesión a tiempo, te la sacan y vuelve a concurso.'
+    message: 'Se hace público el canon que pagás mensualmente a causa del Concesionopoly, perdés una concesión.'
   },
   {
     type: 'property',

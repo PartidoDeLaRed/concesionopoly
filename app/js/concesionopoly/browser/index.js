@@ -61,7 +61,10 @@ export default class Browser {
 
   enableTurn(lastTurn) {
     if (lastTurn && lastTurn.last) {
-      this.modals.show('end')
+      this.modals.show('end', {
+        count: this.engine.state.ownedProperties.length,
+        cost: this.engine.state.ownedProperties.reduce((a, b) => (a.price || a || 0) + b.price)
+      })
     } else {
       this.events.on('click', '[data-dices]', this.doTurn)
     }
