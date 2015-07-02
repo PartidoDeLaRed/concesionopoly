@@ -88,11 +88,13 @@ export default class Engine extends Emitter {
       }
     } else if (tile.type == 'property') {
       let selectOption = (price) => {
-        if (!this.state.waiting) return
+        if (!this.state.waiting) return false
         this.state.waiting = false
         if (tile.property.price === price) {
           this.addProperty(tile.property)
+          return true
         }
+        return false
       }
 
       this.state.waiting = true

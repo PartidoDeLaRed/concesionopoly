@@ -7,7 +7,7 @@
     "postinstall": "mkdir -p ./build",
     "build:js": "./node_modules/browserify/bin/cmd.js -e ./app/js/concesionopoly.js -t babelify -o ./build/concesionopoly.js",
     "build:css": "./node_modules/pleeease-cli/bin/pleeease compile",
-    "build:html": "./node_modules/jade/bin/jade.js $(find './app' -iname '*.jade') --out ./build",
+    "build:html": "./node_modules/jade/bin/jade.js $(find './app' -iname '*.jade') --out ./build --pretty",
     "build:img": "cp -rf ./app/img ./build/img",
     "watch:js": "./node_modules/watch/cli.js 'npm run build:js' ./app/js",
     "watch:css": "./node_modules/pleeease-cli/bin/pleeease watch",

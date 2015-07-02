@@ -96,8 +96,11 @@ export default class Browser {
 
     events.on('click', '[data-price-option]', (e, button) => {
       let selectedPrice = button.getAttribute('data-price-option')
-      turn.selectOption(parseInt(selectedPrice, 10))
-      this.modals.hide()
+      if (turn.selectOption(parseInt(selectedPrice, 10))) {
+        this.modals.show('concession-correct', turn.tile, 5000)
+      } else {
+        this.modals.show('concession-incorrect', turn.tile, 5000)
+      }
       this.enableTurn(turn)
     })
   }

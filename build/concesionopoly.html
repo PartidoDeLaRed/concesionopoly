@@ -1,10 +1,22 @@
-<!DOCTYPE html><html></html><head><meta charset="utf-8"><title>Concesionopoly</title><link href="concesionopoly.css" rel="stylesheet" type="text/css"></head><body><div data-concesionopoly class="concesionopoly"><div style="display:none" data-templates class="templates"><script type="text/html" data-template="welcome"><div class="modal welcome" data-modal-hide>
+<!DOCTYPE html>
+<html></html>
+<head>
+  <meta charset="utf-8">
+  <title>Concesionopoly</title>
+  <link href="concesionopoly.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div data-concesionopoly class="concesionopoly">
+    <div style="display:none" data-templates class="templates">
+          <script type="text/html" data-template="welcome"><div class="modal welcome" data-modal-hide>
   <h1>Bienvenido</h1>
   <p>Tirá los dados, acertá en cada casillero el monto de la concesión y quédate con la mayor cantidad de concesiones. Usá las pistas para ganar!</p>
   <button class="btn yellow wide" type="button">Empezar</button>
-</div></script><script type="text/html" data-template="end"><div class="modal end">
+</div>
+          </script>
+          <script type="text/html" data-template="end"><div class="modal end">
   <h1>Terminaste!</h1>
-  <p>Conseguiste un total de <strong>${this.count}</strong> concesiones con un costo total de <strong>$${this.cost}</strong> por mes.</p>
+  <p>Conseguiste un total de <strong>${this.count}</strong> concesiones con un costo de <strong>$${this.cost}</strong> por mes.</p>
   <p>&nbsp;</p>
   <p>
     <a class="link" href="https://twitter.com/intent/tweet?text=%40partidodelared%20Consegu%C3%AD%20${this.count}%20concesiones%20a%20un%20costo%20de%20%24${this.cost}%20por%20mes%20jugando%20al%20%23concesionopoly%20en%20http%3A%2F%2Fconcesionopoly.com.ar" target="_blank">Compartir en Twitter</a>
@@ -17,15 +29,21 @@
   <p>
     <a href="/integrated/mapa" title="Ver Mapa"><img src="img/concesionopoly/mapa-icon.png"></a>
   </p>
-</div></script><script type="text/html" data-template="extraordinary-tax"><div class="modal extraordinary-tax" data-modal-hide>
+</div>
+          </script>
+          <script type="text/html" data-template="extraordinary-tax"><div class="modal extraordinary-tax" data-modal-hide>
   <h1>Impuesto Extraordinario</h1>
   <p>${this.message}</p>
   <button class="btn yellow wide" type="button">Continuar</button>
-</div></script><script type="text/html" data-template="luck"><div class="modal luck" data-modal-hide>
+</div>
+          </script>
+          <script type="text/html" data-template="luck"><div class="modal luck" data-modal-hide>
   <h1>Carta de Suerte</h1>
   <p>${this.message}</p>
   <button class="btn yellow wide" type="button">Continuar</button>
-</div></script><script type="text/html" data-template="concession"><div class="modal concession">
+</div>
+          </script>
+          <script type="text/html" data-template="concession"><div class="modal concession">
   <h1>Carta de Concesión</h1>
   <div class="info">
     <h2>${this.property.name}</h2>
@@ -42,15 +60,89 @@
       type="button"
       data-price-option="${this.priceOptions[1]}">$ ${this.priceOptions[1]}</button>
   </div>
-</div></script><script type="text/html" data-template="property-info"><div class="modal concession only-info" data-modal-hide>
+</div>
+          </script>
+          <script type="text/html" data-template="concession-correct"><div class="modal" data-modal-hide>
+  <h1>Carta de Concesión</h1>
+  <h2>¡Correcto!</h2>
+  <p><strong>${this.property.name}</strong> tiene un costo de <strong>${this.property.price}</strong> mensual.</p>
+  <button class="btn yellow wide" type="button">Continuar</button>
+</div>
+          </script>
+          <script type="text/html" data-template="concession-incorrect"><div class="modal" data-modal-hide>
+  <h1>Carta de Concesión</h1>
+  <h2>Incorrecto</h2>
+  <p><strong>${this.property.name}</strong> tiene un costo de <strong>${this.property.price}</strong> mensual.</p>
+  <button class="btn yellow wide" type="button">Continuar</button>
+</div>
+          </script>
+          <script type="text/html" data-template="property-info"><div class="modal concession only-info" data-modal-hide>
   <h1>Concesión</h1>
   <div class="info">
     <h2>${this.name}</h2>
     ${this.description}
   </div>
-</div></script><script type="text/html" data-template="properties-list-item"><div class="item" data-id="${this.id}">
+</div>
+          </script>
+          <script type="text/html" data-template="properties-list-item"><div class="item" data-id="${this.id}">
   <h2>${this.name}</h2>
   <p>$ ${this.price}</p>
-</div></script></div><div class="sidebar"><div data-dices class="dices"><h1>Hacé click para tirar los dados</h1></div><div data-properties-list class="properties-list empty"><h1>Tus Concesiones</h1><p class="empty-msg">(todavía no tenés concesiones, tirá los dados para probar suerte)</p></div></div><div data-board class="board"><div class="spacer"></div><div data-position="0" data-chip class="chip"></div><div data-tile='0' class="tile on-corner on-right on-bottom"></div><div data-tile='1' class="tile on-bottom"></div><div data-tile='2' class="tile on-bottom"></div><div data-tile='3' class="tile on-bottom"></div><div data-tile='4' class="tile on-bottom"></div><div data-tile='5' class="tile on-bottom"></div><div data-tile='6' class="tile on-bottom"></div><div data-tile='7' class="tile on-bottom"></div><div data-tile='8' class="tile on-bottom"></div><div data-tile='9' class="tile on-left"></div><div data-tile='10' class="tile on-left"></div><div data-tile='11' class="tile on-left"></div><div data-tile='12' class="tile on-left"></div><div data-tile='13' class="tile on-left"></div><div data-tile='14' class="tile on-left"></div><div data-tile='15' class="tile on-left"></div><div data-tile='16' class="tile on-left"></div><div data-tile='17' class="tile on-top"></div><div data-tile='18' class="tile on-top"></div><div data-tile='19' class="tile on-top"></div><div data-tile='20' class="tile on-top"></div><div data-tile='21' class="tile on-top"></div><div data-tile='22' class="tile on-top"></div><div data-tile='23' class="tile on-top"></div><div data-tile='24' class="tile on-top"></div><div data-tile='25' class="tile on-right"></div><div data-tile='26' class="tile on-right"></div><div data-tile='27' class="tile on-right"></div><div data-tile='28' class="tile on-right"></div><div data-tile='29' class="tile on-right"></div><div data-tile='30' class="tile on-right"></div><div data-tile='31' class="tile on-right"></div><div data-tile='32' class="tile on-right"></div></div></div><script src="//cdn.polyfill.io/v1/polyfill.min.js"></script><script src="concesionopoly.js"></script><script>var concesionopoly = new Concesionopoly({
-  el: document.querySelector('[data-concesionopoly]')
-})</script><link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css"></body>
+</div>
+          </script>
+    </div>
+    <div class="sidebar">
+      <div data-dices class="dices">
+        <h1>Hacé click para tirar los dados</h1>
+      </div>
+      <div data-properties-list class="properties-list empty">
+        <h1>Tus Concesiones</h1>
+        <p class="empty-msg">(todavía no tenés concesiones, tirá los dados para probar suerte)</p>
+      </div>
+    </div>
+    <div data-board class="board">
+      <div class="spacer"></div>
+      <div data-position="0" data-chip class="chip"></div>
+      <div data-tile='0' class="tile on-corner on-right on-bottom"></div>
+      <div data-tile='1' class="tile on-bottom"></div>
+      <div data-tile='2' class="tile on-bottom"></div>
+      <div data-tile='3' class="tile on-bottom"></div>
+      <div data-tile='4' class="tile on-bottom"></div>
+      <div data-tile='5' class="tile on-bottom"></div>
+      <div data-tile='6' class="tile on-bottom"></div>
+      <div data-tile='7' class="tile on-bottom"></div>
+      <div data-tile='8' class="tile on-bottom"></div>
+      <div data-tile='9' class="tile on-left"></div>
+      <div data-tile='10' class="tile on-left"></div>
+      <div data-tile='11' class="tile on-left"></div>
+      <div data-tile='12' class="tile on-left"></div>
+      <div data-tile='13' class="tile on-left"></div>
+      <div data-tile='14' class="tile on-left"></div>
+      <div data-tile='15' class="tile on-left"></div>
+      <div data-tile='16' class="tile on-left"></div>
+      <div data-tile='17' class="tile on-top"></div>
+      <div data-tile='18' class="tile on-top"></div>
+      <div data-tile='19' class="tile on-top"></div>
+      <div data-tile='20' class="tile on-top"></div>
+      <div data-tile='21' class="tile on-top"></div>
+      <div data-tile='22' class="tile on-top"></div>
+      <div data-tile='23' class="tile on-top"></div>
+      <div data-tile='24' class="tile on-top"></div>
+      <div data-tile='25' class="tile on-right"></div>
+      <div data-tile='26' class="tile on-right"></div>
+      <div data-tile='27' class="tile on-right"></div>
+      <div data-tile='28' class="tile on-right"></div>
+      <div data-tile='29' class="tile on-right"></div>
+      <div data-tile='30' class="tile on-right"></div>
+      <div data-tile='31' class="tile on-right"></div>
+      <div data-tile='32' class="tile on-right"></div>
+    </div>
+  </div>
+  <script src="//cdn.polyfill.io/v1/polyfill.min.js"></script>
+  <script src="concesionopoly.js"></script>
+  <script>
+    var concesionopoly = new Concesionopoly({
+      el: document.querySelector('[data-concesionopoly]')
+    })
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+</body>

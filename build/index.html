@@ -1,28 +1,41 @@
-<div style="display:none" data-templates="data-templates" class="templates"><script type="text/html" data-template="welcome"><div class="modal welcome" data-modal-hide>
+
+<div style="display:none" data-templates="data-templates" class="templates">
+  <script type="text/html" data-template="welcome"><div class="modal welcome" data-modal-hide>
   <h1>Bienvenido</h1>
   <p>Tirá los dados, acertá en cada casillero el monto de la concesión y quédate con la mayor cantidad de concesiones. Usá las pistas para ganar!</p>
   <button class="btn yellow wide" type="button">Empezar</button>
-</div></script><script type="text/html" data-template="end"><div class="modal end">
+</div>
+  </script>
+  <script type="text/html" data-template="end"><div class="modal end">
   <h1>Terminaste!</h1>
-  <p>Conseguiste un total de <strong>${this.count}</strong> concesiones con un costo total de <strong>$${this.cost}</strong> por mes.</p>
-  <p>A continuación podes ver un mapa completo con todas las concesiones de la ciudad:</p>
-
+  <p>Conseguiste un total de <strong>${this.count}</strong> concesiones con un costo de <strong>$${this.cost}</strong> por mes.</p>
+  <p>&nbsp;</p>
   <p>
-    <a href="https://twitter.com/intent/tweet?button_hashtag=concesionopoly&text=Conseguí ${this.count} concesiones con un costo de $${this.cost}." class="twitter-hashtag-button" data-size="large" data-related="partidodelared" data-url="http://concesionopoly.com.ar" data-dnt="true">Tweet #concesionopoly</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    <a class="link" href="https://twitter.com/intent/tweet?text=%40partidodelared%20Consegu%C3%AD%20${this.count}%20concesiones%20a%20un%20costo%20de%20%24${this.cost}%20por%20mes%20jugando%20al%20%23concesionopoly%20en%20http%3A%2F%2Fconcesionopoly.com.ar" target="_blank">Compartir en Twitter</a>
   </p>
+  <p>
+    <a class="link" href="http://www.facebook.com/sharer.php?p[url]=20http%3A%2F%2Fconcesionopoly.com.ar" target="_blank">Compartir en Facebook</a>
+  </p>
+  <p>&nbsp;</p>
+  <p>A continuación podes ver un mapa completo con todas las concesiones de la ciudad:</p>
   <p>
     <a href="/integrated/mapa" title="Ver Mapa"><img src="img/concesionopoly/mapa-icon.png"></a>
   </p>
-</div></script><script type="text/html" data-template="extraordinary-tax"><div class="modal extraordinary-tax" data-modal-hide>
+</div>
+  </script>
+  <script type="text/html" data-template="extraordinary-tax"><div class="modal extraordinary-tax" data-modal-hide>
   <h1>Impuesto Extraordinario</h1>
   <p>${this.message}</p>
   <button class="btn yellow wide" type="button">Continuar</button>
-</div></script><script type="text/html" data-template="luck"><div class="modal luck" data-modal-hide>
+</div>
+  </script>
+  <script type="text/html" data-template="luck"><div class="modal luck" data-modal-hide>
   <h1>Carta de Suerte</h1>
   <p>${this.message}</p>
   <button class="btn yellow wide" type="button">Continuar</button>
-</div></script><script type="text/html" data-template="concession"><div class="modal concession">
+</div>
+  </script>
+  <script type="text/html" data-template="concession"><div class="modal concession">
   <h1>Carta de Concesión</h1>
   <div class="info">
     <h2>${this.property.name}</h2>
@@ -39,13 +52,19 @@
       type="button"
       data-price-option="${this.priceOptions[1]}">$ ${this.priceOptions[1]}</button>
   </div>
-</div></script><script type="text/html" data-template="property-info"><div class="modal concession only-info" data-modal-hide>
+</div>
+  </script>
+  <script type="text/html" data-template="property-info"><div class="modal concession only-info" data-modal-hide>
   <h1>Concesión</h1>
   <div class="info">
     <h2>${this.name}</h2>
     ${this.description}
   </div>
-</div></script><script type="text/html" data-template="properties-list-item"><div class="item" data-id="${this.id}">
+</div>
+  </script>
+  <script type="text/html" data-template="properties-list-item"><div class="item" data-id="${this.id}">
   <h2>${this.name}</h2>
   <p>$ ${this.price}</p>
-</div></script></div>
+</div>
+  </script>
+</div>

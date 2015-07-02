@@ -239,8 +239,11 @@ var Browser = (function () {
 
       events.on('click', '[data-price-option]', function (e, button) {
         var selectedPrice = button.getAttribute('data-price-option');
-        turn.selectOption(parseInt(selectedPrice, 10));
-        _this2.modals.hide();
+        if (turn.selectOption(parseInt(selectedPrice, 10))) {
+          _this2.modals.show('concession-correct', turn.tile, 5000);
+        } else {
+          _this2.modals.show('concession-incorrect', turn.tile, 5000);
+        }
         _this2.enableTurn(turn);
       });
     }
@@ -664,11 +667,13 @@ var Engine = (function (_Emitter) {
         };
       } else if (tile.type == 'property') {
         var selectOption = function selectOption(price) {
-          if (!_this.state.waiting) return;
+          if (!_this.state.waiting) return false;
           _this.state.waiting = false;
           if (tile.property.price === price) {
             _this.addProperty(tile.property);
+            return true;
           }
+          return false;
         };
 
         this.state.waiting = true;
@@ -754,9 +759,9 @@ var tiles = [{
   type: 'luck',
   message: 'El gobierno nacional decreta facilidades para blanquear dólares, decidís poner un boliche en costanera.',
   property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
-    price: 1000
+    name: 'Canchas de fútbol X BAJO AUTOPISTA 1 - 115B/116',
+    description: 'Alquiler de cancha por hora $500 aproximadamente.|7 canchas de césped sintetico.|5 canchas de tenis de polvo de labrillo, cubieras.',
+    price: 35000
   }
 }, {
   type: 'property',
@@ -816,11 +821,11 @@ var tiles = [{
   }
 }, {
   type: 'luck',
-  message: 'Un amigo de un amigo es diputado, y te consiguió la concesión por las Canchas de Tenis Parque Sarmiento gratis.',
+  message: 'Sale a concurso una concesión sin indexación por inflación, el canon es irrisorio y la conseguís sin problemas.',
   property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
-    price: 1000
+    name: 'Restaurant Gardiner',
+    description: 'Precio promedio $340 por persona.|250 cubiertos.|Fundado en 1989, mismos dueños que Happening.',
+    price: 60000
   }
 }, {
   type: 'property',
@@ -832,11 +837,11 @@ var tiles = [{
   }
 }, {
   type: 'luck',
-  message: 'Un amigo de un amigo es diputado, y te consiguió la concesión por las Canchas de Tenis Parque Sarmiento gratis.',
+  message: 'A tu cuñado le deben un favor y te adjudican una concesión.',
   property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
-    price: 1000
+    name: 'Restaurant La Perla',
+    description: 'Precio promedio $100 por persona.|Más de 150 cubiertos.|Empresa con 3 sucursales.',
+    price: 5000
   }
 }, {
   type: 'property',
@@ -928,11 +933,11 @@ var tiles = [{
   }
 }, {
   type: 'luck',
-  message: 'Tu concesión pasa desapercibida otra vez mas y el gobierno de turno te pa renueva sin preguntar.',
+  message: 'Tu concesión pasa desapercibida otra vez mas y el gobierno de turno te renueva sin preguntar.',
   property: {
-    name: 'Canchas de Tenis Parque Sarmiento',
-    description: '160 hectáreas que se alquilan para la producción de exposiciones, conciertos, festivales y ferias empresariales',
-    price: 1000
+    name: 'Kartodromo Argentino',
+    description: 'Promedio de alquiler de karting $250.|Derecho de pista $300',
+    price: 23000
   }
 }, {
   type: 'property',
