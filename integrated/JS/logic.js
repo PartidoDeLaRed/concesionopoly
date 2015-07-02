@@ -303,7 +303,7 @@ $(document).ready(function(){
 
 function Compartirtw (id) {
   var lugar = lugares[id];
-  var share_text = encodeURIComponent(lugar.item["Concesión"]+ " Paga "+lugar.money+lugar.item["Monto de canon"] + " por mes a la ciudad, más info en: " +window.location.href);
+  var share_text = encodeURIComponent(lugar.item["Concesión"]+ " Paga "+lugar.money+lugar.item["Monto de canon"] + " por mes a la ciudad, más info en: " +window.location.href+ " 23concesionopoly");
   window.open('https://twitter.com/intent/tweet?'+
     'related=PartidodelaRed&'+
     'text='+ share_text, 'tweet', 'width=900,height=300,menubar=no,status=no,titlebar=no,top=200,left='+(screen.width-900)/2);
