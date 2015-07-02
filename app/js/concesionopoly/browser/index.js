@@ -61,7 +61,10 @@ export default class Browser {
 
   enableTurn(lastTurn) {
     if (lastTurn && lastTurn.last) {
-      this.modals.show('end')
+      this.modals.show('end', {
+        count: this.engine.state.ownedProperties.length,
+        cost: this.engine.state.ownedProperties.reduce((a, b) => (a.price || a || 0) + b.price)
+      })
     } else {
       this.events.on('click', '[data-dices]', this.doTurn)
     }
@@ -93,8 +96,11 @@ export default class Browser {
 
     events.on('click', '[data-price-option]', (e, button) => {
       let selectedPrice = button.getAttribute('data-price-option')
-      turn.selectOption(parseInt(selectedPrice, 10))
-      this.modals.hide()
+      if (turn.selectOption(parseInt(selectedPrice, 10))) {
+        this.modals.show('concession-correct', turn.tile, 5000)
+      } else {
+        this.modals.show('concession-incorrect', turn.tile, 5000)
+      }
       this.enableTurn(turn)
     })
   }
