@@ -155,28 +155,30 @@ code {
 
 .field_name, .field_data{
   display: inline-block;
-  width: 50%;
   overflow:hidden;
   max-width: 300px;
+  min-width: 110px;
+  text-align: left;
 }
 
 
 .field_name{
-  text-align: right;
   font-weight: bold;
 }
 
 .field_data{
   text-align: left;
-  float: right;
+  vertical-align: top;
 }
 
 .fields{
   display: table-row;
+  text-align: left;
 }
 
 .texto_field{
   margin: 3px;
+  vertical-align: top;
 }
 
 
