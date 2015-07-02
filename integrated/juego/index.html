@@ -1,11 +1,11 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+<!DOCTYPE html>
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="theme-color" content="#5DB9D2">
 <meta name="viewport" content="width=device-width, user-scalable=no">
 
-<meta name="description" content="Conocé todas concesiones de la Ciudad de Benos Aires" />
+<meta name="description" content="Jugá al Concesionópoly y conocé las concesiones de la Ciudad de Benos Aires" />
 <meta name="keywords" content="concesiones, presupuesto, buenos aires" />
 
 <!-- <link rel="icon" type="image/png" href="http://queproponen.com.ar/../CSS/icon.png"> -->
@@ -19,15 +19,10 @@
 <link href="../CSS/styles.css" rel="stylesheet" type="text/css" />
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
-
 <link href='http://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
 <script src="https://apis.google.com/js/client.js"></script>
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-<script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=true"></script>
-<script type="text/javascript" src="../JS/gmaps.js"></script>
-<link href='../CSS/stylesmap.css' rel='stylesheet' type='text/css' />
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -50,7 +45,7 @@
 			  version    : 'v2.3'
 			});
 		};
-		
+
 		(function(d, s, id){
 			 var js, fjs = d.getElementsByTagName(s)[0];
 			 if (d.getElementById(id)) {return;}
@@ -59,7 +54,7 @@
 			 fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
     </script>
-    
+
     <script>
 		window.twttr = (function(d, s, id) {
 			var js, fjs = d.getElementsByTagName(s)[0],
@@ -69,12 +64,12 @@
 			js.id = id;
 			js.src = "https://platform.twitter.com/widgets.js";
 			fjs.parentNode.insertBefore(js, fjs);
-			
+
 			t._e = [];
 			t.ready = function(f) {
 			t._e.push(f);
 			};
-			
+
 			return t;
 		}(document, "script", "twitter-wjs"));
 	</script>
@@ -93,16 +88,37 @@
             </nav>
   		</div>
     </div>
-	
+
     <div id="contenido" class="mainContainer">
     	<div class="contentContainer">
     	<div class="mainSharer"><a class="twitterButton" onclick="javascript:CompartirInicio(0)">Compartí en Twitter</a><a class="facebookButton" onclick="javascript:CompartirInicio(1)">Compartí en Facebook</a></div>
-	    	<!-- <iframe src="../mapa/test-plot.html" width="100%" height="700"></iframe> -->
-	    	<!-- Empieza el mapa -->
-	 
-		<p>Acá Mati va a poner el juego</p>
+<!-- =================== CONCESIONOPOLY =================== -->
+      <style type="text/css">
+        .concesionopoly-wrapper {
+          position: relative;
+          min-width: 600px;
+          height: 900px;
+          height: 100vh;
+        }
+        .concesionopoly-wrapper .spacer {
+          display: block;
+          padding-top: 100%;
+        }
+        .concesionopoly-wrapper iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
 
-        </div>
+      </style>
+      <div class="concesionopoly-wrapper">
+        <span class="spacer"></span>
+        <iframe src="app/concesionopoly.html"></iframe>
+      </div>
+<!-- =================== CONCESIONOPOLY =================== -->
+      </div>
     </div>
 
 	<div class='footerContainer'>
