@@ -303,7 +303,7 @@ $(document).ready(function(){
 
 function Compartirtw (id) {
   var lugar = lugares[id];
-  var share_text = encodeURIComponent(lugar.item["Concesión"]+ " Paga "+lugar.money+lugar.item["Monto de canon"] + " por mes a la ciudad, más info en: " +window.location.href);
+  var share_text = encodeURIComponent(lugar.item["Concesión"]+ " Paga "+lugar.money+lugar.item["Monto de canon"] + " por mes a la ciudad, más info en: " +window.location.href+ "  #concesionopoly");
   window.open('https://twitter.com/intent/tweet?'+
     'related=PartidodelaRed&'+
     'text='+ share_text, 'tweet', 'width=900,height=300,menubar=no,status=no,titlebar=no,top=200,left='+(screen.width-900)/2);
@@ -316,6 +316,7 @@ function Compartirfb (id) {
   window.open('http://www.facebook.com/dialog/feed?app_id=1596481937283116' +
         '&link='+location.origin+location.pathname +
         //'&picture=http:%2F%2Fqueproponen.com.ar%2Fvosquepropones%2FIMG%2FshareLogo.png' +
+        '&picture=http:%2F%2Fconcesionopoly.com.ar%2FIMG%2Flogo-medianaranja.png' +
         '&name=' + share_text +
         '&caption=' + 'via concesionopoly.com.ar - Partido de la Red' +
         '&description=' + 'Conocé todas las concesiones otorgadas por la Ciudad de Buenos Aires.' +
