@@ -31,6 +31,7 @@ export default class Engine extends Emitter {
   }
 
   addProperty (property) {
+    if (!property) return null
     this.state.ownedProperties.push(property)
     this.emit('property:add', property)
     return property
@@ -72,21 +73,21 @@ export default class Engine extends Emitter {
     this.state.tile = tile
 
     let turn
-    if (tile.type == 'luck') {
+    if (tile.type === 'luck') {
       turn = {
         type: 'luck',
         tile: tile,
         last: this.state.ended,
         addedProperty: this.addProperty(tile.property)
       }
-    } else if (tile.type == 'extraordinary-tax') {
+    } else if (tile.type === 'extraordinary-tax') {
       turn = {
         type: 'extraordinary-tax',
         tile: tile,
         last: this.state.ended,
         removedProperty: this.removeLastProperty()
       }
-    } else if (tile.type == 'property') {
+    } else if (tile.type === 'property') {
       let selectOption = (price) => {
         if (!this.state.waiting) return false
         this.state.waiting = false

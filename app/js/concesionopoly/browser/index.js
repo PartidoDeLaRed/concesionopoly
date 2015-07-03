@@ -9,27 +9,23 @@ import Chip from './chip'
 export default class Browser {
   constructor (options = {}) {
     this.el = options.el
+
+    this.doTurn = this.doTurn.bind(this)
+
     this.events = new Delegate(this.el)
-
     this.engine = new Engine()
-
     this.templates = new Templates(this.el.querySelector('[data-templates]'))
-
+    this.dices = new Dices(this.el.querySelector('[data-dices]'))
+    this.chip = new Chip(this.el.querySelector('[data-chip]'))
     this.modals = new Modals({
       container: this.el,
       deactivateDelay: 500,
       templates: this.templates
     })
-
     this.propertiesList = new PropertiesList({
       el: this.el.querySelector('[data-properties-list]'),
       templates: this.templates
     })
-
-    this.dices = new Dices(this.el.querySelector('[data-dices]'))
-    this.chip = new Chip(this.el.querySelector('[data-chip]'))
-
-    this.doTurn = this.doTurn.bind(this)
 
     this.engine.on('property:add', this.propertiesList.add)
     this.engine.on('property:remove', this.propertiesList.remove)
@@ -40,9 +36,9 @@ export default class Browser {
     this.chip.set(this.engine.getPosition())
     this.engine.on('position:change', this.chip.set)
 
-    this.enableTurn()
-
     this.loadHelpModals()
+
+    this.enableTurn()
 
     this.modals.show('welcome')
   }
@@ -59,19 +55,29 @@ export default class Browser {
     })
   }
 
-  enableTurn(lastTurn) {
+  enableTurn (lastTurn) {
     if (lastTurn && lastTurn.last) {
+      let owned = this.engine.state.ownedProperties
+      let count = owned.length
+      let cost = count === 0 ? 0
+               : count === 1 ? owned[0].price
+               : owned.reduce((a, b) => (a.price || a || 0) + b.price)
       this.modals.show('end', {
-        count: this.engine.state.ownedProperties.length,
-        cost: this.engine.state.ownedProperties.reduce((a, b) => (a.price || a || 0) + b.price)
+        count: count,
+        countText: `concesion${count !== 1 ? 'es' : ''}`,
+        cost: cost
       })
     } else {
       this.events.on('click', '[data-dices]', this.doTurn)
     }
   }
 
+  disableTurn () {
+    this.events.off('click', '[data-dices]')
+  }
+
   doTurn () {
-    this.events.off('click', '[data-dices]', this.doTurn)
+    this.disableTurn()
 
     let turn = this.engine.doTurn()
 

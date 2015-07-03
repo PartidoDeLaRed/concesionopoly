@@ -141,27 +141,23 @@ var Browser = (function () {
     _classCallCheck(this, Browser);
 
     this.el = options.el;
+
+    this.doTurn = this.doTurn.bind(this);
+
     this.events = new _domDelegate2['default'](this.el);
-
     this.engine = new _engine2['default']();
-
     this.templates = new _templates2['default'](this.el.querySelector('[data-templates]'));
-
+    this.dices = new _dices2['default'](this.el.querySelector('[data-dices]'));
+    this.chip = new _chip2['default'](this.el.querySelector('[data-chip]'));
     this.modals = new _modals2['default']({
       container: this.el,
       deactivateDelay: 500,
       templates: this.templates
     });
-
     this.propertiesList = new _propertiesList2['default']({
       el: this.el.querySelector('[data-properties-list]'),
       templates: this.templates
     });
-
-    this.dices = new _dices2['default'](this.el.querySelector('[data-dices]'));
-    this.chip = new _chip2['default'](this.el.querySelector('[data-chip]'));
-
-    this.doTurn = this.doTurn.bind(this);
 
     this.engine.on('property:add', this.propertiesList.add);
     this.engine.on('property:remove', this.propertiesList.remove);
@@ -172,9 +168,9 @@ var Browser = (function () {
     this.chip.set(this.engine.getPosition());
     this.engine.on('position:change', this.chip.set);
 
-    this.enableTurn();
-
     this.loadHelpModals();
+
+    this.enableTurn();
 
     this.modals.show('welcome');
   }
@@ -198,20 +194,29 @@ var Browser = (function () {
     key: 'enableTurn',
     value: function enableTurn(lastTurn) {
       if (lastTurn && lastTurn.last) {
+        var owned = this.engine.state.ownedProperties;
+        var count = owned.length;
+        var cost = count === 0 ? 0 : count === 1 ? owned[0].price : owned.reduce(function (a, b) {
+          return (a.price || a || 0) + b.price;
+        });
         this.modals.show('end', {
-          count: this.engine.state.ownedProperties.length,
-          cost: this.engine.state.ownedProperties.reduce(function (a, b) {
-            return (a.price || a || 0) + b.price;
-          })
+          count: count,
+          countText: 'concesion' + (count !== 1 ? 'es' : ''),
+          cost: cost
         });
       } else {
         this.events.on('click', '[data-dices]', this.doTurn);
       }
     }
   }, {
+    key: 'disableTurn',
+    value: function disableTurn() {
+      this.events.off('click', '[data-dices]');
+    }
+  }, {
     key: 'doTurn',
     value: function doTurn() {
-      this.events.off('click', '[data-dices]', this.doTurn);
+      this.disableTurn();
 
       var turn = this.engine.doTurn();
 
@@ -604,6 +609,7 @@ var Engine = (function (_Emitter) {
   }, {
     key: 'addProperty',
     value: function addProperty(property) {
+      if (!property) return null;
       this.state.ownedProperties.push(property);
       this.emit('property:add', property);
       return property;
@@ -651,21 +657,21 @@ var Engine = (function (_Emitter) {
       this.state.tile = tile;
 
       var turn = undefined;
-      if (tile.type == 'luck') {
+      if (tile.type === 'luck') {
         turn = {
           type: 'luck',
           tile: tile,
           last: this.state.ended,
           addedProperty: this.addProperty(tile.property)
         };
-      } else if (tile.type == 'extraordinary-tax') {
+      } else if (tile.type === 'extraordinary-tax') {
         turn = {
           type: 'extraordinary-tax',
           tile: tile,
           last: this.state.ended,
           removedProperty: this.removeLastProperty()
         };
-      } else if (tile.type == 'property') {
+      } else if (tile.type === 'property') {
         var selectOption = function selectOption(price) {
           if (!_this.state.waiting) return false;
           _this.state.waiting = false;
@@ -1000,8 +1006,7 @@ var _browser = require('./browser');
 var _browser2 = _interopRequireDefault(_browser);
 
 function Concesionopoly(options) {
-  var browser = new _browser2['default'](options);
-  return browser;
+  new _browser2['default'](options);
 }
 
 module.exports = exports['default'];
