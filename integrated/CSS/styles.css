@@ -1,4 +1,4 @@
-﻿@charset "utf-8";
+@charset "utf-8";
 /* CSS Document */
 
 *{
@@ -902,16 +902,19 @@ img {
   text-decoration: none;
   font-size: 15px;
 
-  padding: 10px 10px 10px 35px;
-  margin: 10px 5px 0 0px;
+  padding: 8px 8px 8px 30px;
+  margin: 10px 1%;
   color: #fff;
   position:relative;
   cursor:pointer;
   opacity:.8;
   transition:all 200ms;
+  width: 48%;
+  font-weight: normal;
 }
 .twitterButton::before{
-	width: 22px;    height: 22px;    position: absolute;    margin: 0px 7px;    left: 0;
+	width: 18px;
+	height: 18px;    position: absolute;    margin: 0px 7px;    left: 0;
 	padding-left: 25px;
 	content: '';
 	background-image:url(../IMG/twitterIcon.png);
@@ -980,17 +983,29 @@ img {
 	border-radius: 3px;
 	text-decoration: none;
 	font-size: 15px;
-	padding: 10px 10px 10px 35px;
-	margin: 10px 5px 0 0px;
+
+
+	padding: 8px 8px 8px 30px;
+
+
+
+	margin: 10px 1%;
+
 	color: #fff;
 	position:relative;
 	cursor:pointer;
 	opacity:.8;
 	transition:all 200ms;
+
+
+	width: 48%;
+
+	font-weight: normal;
+
 }
 .facebookButton::before{
-	width: 22px;
-	height: 22px;
+	width: 18px;
+	height: 18px;
 	position: absolute;
 	margin: 0px 7px;
 	left: 0;
@@ -1100,6 +1115,10 @@ img {
   width: 100%;
   background: #169CBF;
   color: #F5F7FA;
+}
+
+.footerContainer > div:first-child {
+  padding: 10px 0;
 }
 
 .linksContainer {
@@ -1572,5 +1591,7 @@ a{
 }
 
 .about-description p {
+  margin-top: 15px;
   margin-bottom: 15px;
+	font-size: 16px;
 }
