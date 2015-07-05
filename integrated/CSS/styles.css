@@ -1543,6 +1543,9 @@ iframe{
     background-color: #fff;
     transition: all 300ms;
 }
+.link.QueProponen:hover {
+    border-color: rgb(16, 156, 191);    background-color: #fff;    transition: all 300ms;
+}
 
 .link {
     width: 48%;
@@ -1596,9 +1599,14 @@ a{
 }
 
 .about-description p {
-  margin-top: 15px;
-  margin-bottom: 15px;
+	margin-top: 15px;
+	margin-bottom: 15px;
 	font-size: 16px;
+	text-align: left;
+	max-width: 700px;
+}
+.about-description{
+	margin: 0 auto;
 }
 
 #home_title{

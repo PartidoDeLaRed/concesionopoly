@@ -134,8 +134,11 @@ code {
 
 .lista{
   padding: 10px;
-  border: 1px solid #ddd;
-  border-bottom-width: 0;
+  border-radius: 4px;
+  border: 1px solid #e3e5e3;
+  border-bottom-color: #e3e5e3;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
   font-size: 12px;
   cursor: pointer;
   text-align: left;
