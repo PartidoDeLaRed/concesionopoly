@@ -79,6 +79,7 @@ function agregar_callbacks(element){
       marker = mark; // temporal donde guardaremos el nodo a cerrar
       $(".gm-style-iw").parent().stop().hide().fadeIn(1500);
       window.location.hash = lugar.slug;
+      ga('send', 'event', 'url', 'changed', window.location.hash, 1);
     
     } else{
 
@@ -164,6 +165,7 @@ $(document).ready(function(){
                     click: function(e) {
                         this.infoWindow.open(this.map, this);
                         window.location.hash = lugares[this.ident].slug;
+                        ga('send', 'event', 'url', 'enter', window.location.hash, 1);
                        }
 
 
