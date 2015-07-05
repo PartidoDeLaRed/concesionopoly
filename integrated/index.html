@@ -22,17 +22,27 @@
 
 <link href='http://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
 <script src="https://apis.google.com/js/client.js"></script>
+<link type="text/css" rel="stylesheet" href="CSS/lightslider.css" />                  
+<script src="JS/lightslider.js"></script>
+
 
 <script language="javascript" type="application/javascript">
 
 $(document).ready(function(e) {
 
-	var height = $(window).innerHeight() - $('.headerContainer').outerHeight(true) - $('.footerContainer').outerHeight(true) - 14;
-	$('.mainContainer').css('min-height', height + 'px');
+    var height = $(window).innerHeight() - $('.headerContainer').outerHeight(true) - $('.footerContainer').outerHeight(true) - 14;
+    $('.mainContainer').css('min-height', height + 'px');
 
-	$('.link').each(function(index, element) {
-		$(this).animate({opacity:1}, 1000);
+    $('.link').each(function(index, element) {
+        $(this).animate({opacity:1}, 1000);
     });
+    $("#content-slider").lightSlider({
+                speed:2000,
+                auto:false,
+                loop:true,
+                keyPress:true,
+                pause: 3000
+            }).play();
 
 });
 
@@ -51,7 +61,15 @@ $(document).ready(function(e) {
 </head>
 
 <body>
-
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.1.1/gh-fork-ribbon.min.css" />
+    <!--[if lt IE 9]>
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.1.1/gh-fork-ribbon.ie.min.css" />
+    <![endif]-->
+    <div class="github-fork-ribbon-wrapper right">
+        <div class="github-fork-ribbon">
+            <a href="https://github.com/PartidoDeLaRed/concesionopoly">Fork me on GitHub</a>
+        </div>
+    </div>
 	<script>
 		window.fbAsyncInit = function() {
 			FB.init({
@@ -120,6 +138,108 @@ $(document).ready(function(e) {
                     </div><div class="text">Todas las concesiones de la ciudad, con toda la información posible, ubicadas en un mapa.
                 </div></div>
             </a>
+            <div class="demo">
+                <div class="item">
+                    <ul id="content-slider" class="content-slider">
+                    <li class="in_slide">
+                        <a href="/mapa/#buenos-aires-design">
+                            <h3>Buenos Aires Design</h3>
+                            <h4>Monto: ~$49.000</h4>
+                        </a>
+                    </li>
+                    <li class="in_slide">
+                        <a href="/mapa/#complejo-costa-salguero">
+                            <h3>Complejo Costa Salguero</h3>
+                            <h4>Monto: ~$197.000</h4>
+                        </a>
+                    </li>
+                    <li class="in_slide">
+                        <a href="/mapa/#jardn-zoologico">
+                            <h3>Zoologico de Buenos Aires</h3>
+                            <h4>Monto: ~$1.400.000-</h4>
+                        </a>
+                    </li>
+                    <li class="in_slide">
+                        <a href="/mapa/#pizza-banana">
+                            <h3>Resto Pizza Banana</h3>
+                            <h4>Monto: ~$27.000</h4>
+                        </a>
+                    </li>
+                    <li class="in_slide">
+                        <a href="/mapa/#club-hipico-municipal-gral-san-martin">
+                            <h3>Club Hipico Argentino</h3>
+                            <h4>Monto: ~$3.200</h4>
+                        </a>
+                    </li>
+                    <li class="in_slide">
+                        <a href="/mapa/#canchas-de-tenis-parque-sarmiento">
+                            <h3>Canchas de Tenis Parque Sarmiento</h3>
+                            <h4>Monto: ~$35000</h4>
+                        </a>
+                    </li>
+                    <li class="in_slide">
+                        <a href="/mapa/#playa-de-est-centro-cultural-gral-san-martin">
+                            <h3>Estacionamiento Centro Cultural San Martín</h3>
+                            <h4>Monto: ~$177.000</h4>
+                        </a>
+                    </li>
+                    <li class="in_slide">
+                        <a href="mapa/#eplazoleta-coroneles-pittapedernera">
+                            <h3>Estacionamiento Plazoleta Coroneles Pitta Pedernera</h3>
+                            <h4>Monto: ~$14.000</h4>
+                        </a>
+                    </li>
+                    <li class="in_slide">
+                        <a href="/mapa/#autodromo-de-la-ciudad-de-buenos-aires-oscar-y-juan-galvez">
+                            <h3>Autódromo de la Ciudad</h3>
+                            <h4>Monto: ~$45.000</h4>
+                        </a>
+                    </li>
+                    <li class="in_slide">
+                        <a href="/mapa/#rodizio">
+                            <h3>Restaurant Rodizio</h3>
+                            <h4>Monto: ~$75.000</h4>
+                        </a>
+                    </li>
+                    <li class="in_slide">
+                        <a href="/mapa/#happening">
+                            <h3>Restaurant Happening</h3>
+                            <h4>Monto: ~$80.000</h4>
+                        </a>
+                    </li>
+                    <li class="in_slide">
+                        <a href="/mapa/#la-perla">
+                            <h3>Restaurant La Perla</h3>
+                            <h4>Monto: ~$5.000</h4>
+                        </a>
+                    </li>
+                    <li class="in_slide">
+                        <a href="/mapa/#tequila">
+                            <h3>Disco Tequila</h3>
+                            <h4>Monto: ~$26.000</h4>
+                        </a>
+                    </li>
+                    <li class="in_slide">
+                        <a href="/mapa/#playa-de-estacionamiento-catalinas-sur">
+                            <h3>Estacionamiento Catalinas Sur</h3>
+                            <h4>Monto: ~$8.000</h4>
+                        </a>
+                    </li>
+                    <!-- <li class="in_slide">
+                        <h3></h3>
+                        <h4>Monto: $</h4>
+                    </li>
+                    <li class="in_slide">
+                        <h3></h3>
+                        <h4>Monto: $</h4>
+                    </li>
+                    <li class="in_slide">
+                        <h3></h3>
+                        <h4>Monto: $</h4>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
 
 <!-- <div class="about-description">
     <p>

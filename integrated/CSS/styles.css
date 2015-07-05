@@ -1617,3 +1617,44 @@ a{
 	line-height: 43px;
 	opacity: .8;
 }
+
+
+ul{
+	list-style: none outside none;
+    padding-left: 0;
+    margin: 0;
+}
+.demo .item{
+    margin-top: 25px;
+}
+.content-slider li{
+    background-color: #ed3020;
+    text-align: center;
+    color: #FFF;
+    min-height: 140px;
+    max-height: 160px;
+}
+.content-slider{
+    margin: 0;
+    /*padding: 70px 0;*/
+}
+
+.in_slide{
+	padding: 20px 0;	
+}
+h3{
+	height: 50px;
+}
+h4{
+	top: 20px;
+	position: relative;
+}
+
+.demo{
+	margin: 0 auto;
+  width: 100%;
+}
+
+.in_slide a{
+	color: white;
+}

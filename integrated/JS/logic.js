@@ -145,6 +145,7 @@ $(document).ready(function(){
           var fb = $("<span onclick='javascript:Compartirfb("+i +")' href='#' class='facebookButton'></img>Compartir</span>");
           mas_info.append(tw);
           mas_info.append(fb);
+          mas_info.append($("<div> <a target='_blank' href='https://docs.google.com/forms/d/18tR57y6amIsLOsNCft8MUQXDLKUmYHweCV4-m30zNQs/viewform?usp=send_form'>Encontré un error </a></div>"));
 
 
           //var url = window.location.href;
@@ -188,20 +189,24 @@ $(document).ready(function(){
           agregar_callbacks(salida_jq);
 
         });
-        rubros["SIN CATEGORÍA"] = 1;
+        //rubros["SIN CATEGORÍA"] = 1;
         lista_rubros = Object.keys(rubros).sort();
 
         var selector = $("#selector");
         for (var rubro in lista_rubros){
           var nombre_rubro = lista_rubros[rubro];
           if (nombre_rubro == "#N/A"){
-            nombre_rubro = "SIN CATEGORÍA"
+            //nombre_rubro = "SIN CATEGORÍA"
+            selector.append($('<option>', {
+              value: safe_class_name(nombre_rubro),
+              text: "SIN CATEGORÍA"
+            }));
+          }else{
+            selector.append($('<option>', {
+              value: safe_class_name(nombre_rubro),
+              text: nombre_rubro
+            }));
           }
-
-          selector.append($('<option>', {
-            value: safe_class_name(nombre_rubro),
-            text: nombre_rubro
-          }));
         };
 
         selector.change(function () {
