@@ -1,5 +1,12 @@
 # Concesionopoly
 
+### Live Website
+http://concesionopoly.com.ar/
+
+### Contributing
+Pull request are welcome and once merged, changes are deployed automagically.
+
+
 ### Install
 
 First, make sure to have [node.js](https://nodejs.org/) installed, then:
